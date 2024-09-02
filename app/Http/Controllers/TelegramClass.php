@@ -2,12 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Codes;
-use App\Models\Requests;
 use App\Models\Settings;
-use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\BannedIp;
 
 class TelegramClass 
 {

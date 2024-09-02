@@ -6,7 +6,7 @@ use App\Models\Codes;
 use App\Models\Requests;
 use App\Models\Settings;
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Workers;
 use App\Models\BannedIp;
 
 class AdminController extends Controller
@@ -15,7 +15,7 @@ class AdminController extends Controller
         $activeUser = auth()->user();
         $settings = Settings::find(1);
         $requestsCount = Requests::all()->count();
-        return view("settings", [
+        return view("admin.settings", [
             "activeUser" => $activeUser,
             "requests" => $requestsCount,
             "settings" => $settings,
@@ -25,7 +25,7 @@ class AdminController extends Controller
         $bannedIp = BannedIp::all();
         $activeUser = auth()->user();
         $requestsCount = Requests::all()->count();
-        return view("ips", [
+        return view("admin.ips", [
             "bannedIps" => $bannedIp, 
             "activeUser" => $activeUser,
             "requests" => $requestsCount,
@@ -38,7 +38,7 @@ class AdminController extends Controller
         $totalActivations = Codes::where('userId', $activeUser->id)->sum('activations');
         $requestsCount = Requests::all()->count();
 
-        return view("index", [
+        return view("admin.index", [
             "activeUser" => $activeUser, 
             "count" => $count,
             "requests" => $requestsCount,
@@ -57,19 +57,19 @@ class AdminController extends Controller
             $codes = Codes::all();
         }
         $requestsCount = Requests::all()->count();
-        return view("codes", [
+        return view("admin.codes", [
             "activeUser" => $user,
             "codes" => $codes,
             "requests" => $requestsCount,
         ]);
     }
 
-    public function users(){
-        $users = User::all();
+    public function workers(){
+        $workers = Workers::all();
         $activeUser = auth()->user();
         $requestsCount = Requests::all()->count();
-        return view("users", [
-            "users" =>  $users,
+        return view("admin.workers", [
+            "workers" =>  $workers,
             "activeUser" => $activeUser,
             "requests" => $requestsCount,
         ]);
@@ -79,13 +79,13 @@ class AdminController extends Controller
         if(auth()->check()){
             return redirect()->route("index");
         }
-        return view("login");
+        return view("admin.login");
     }
 
     public function requests(){
         $activeUser = auth()->user();
         $requestsCount = Requests::all()->count();
-        return view("requests", [
+        return view("admin.requests", [
             "requests" => Requests::all(), 
             "activeUser" => $activeUser,
             "requestsCount" => $requestsCount,
@@ -96,6 +96,6 @@ class AdminController extends Controller
         if(auth()->check()){
             return redirect()->route("index");
         }
-        return view("signup");
+        return view("admin.signup");
     }
 }

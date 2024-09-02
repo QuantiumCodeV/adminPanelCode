@@ -6,7 +6,7 @@ use App\Models\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use App\Models\User;
+use App\Models\Workers;
 use App\Models\BannedIp;
 use App\Http\Controllers\TelegramClass;
 
@@ -48,14 +48,14 @@ class RequestController extends Controller
 
         $request = Requests::find($request->id);
 
-        $user = new User;
+        $worker = new Workers;
 
-        $user->name = $request->name;
-        $user->password = $request->password;
-        $user->status = "user";
-        $user->ip = $request->ip;
+        $worker->name = $request->name;
+        $worker->password = $request->password;
+        $worker->status = "user";
+        $worker->ip = $request->ip;
 
-        $user->save();
+        $worker->save();
 
         $request->delete();
 
@@ -68,7 +68,7 @@ class RequestController extends Controller
     {
         // Валидация
         $validator = Validator::make($request->all(), [
-            'login' => 'required|max:255|unique:users,name|unique:requests,name',
+            'login' => 'required|max:255|unique:workers,name|unique:requests,name',
             'password' => 'required',
             'confirmPassword' => "required"
         ]);

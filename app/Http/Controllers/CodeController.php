@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Codes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Models\User;
+use App\Models\Workers;
 
 
 use App\Http\Controllers\TelegramClass;
@@ -32,7 +32,7 @@ class CodeController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'code' => 'required|max:255|unique:codes',
-            "userId" => "required|exists:users,id"
+            "workerId" => "required|exists:workers,id"
         ]);
 
         if ($validator->fails()) {
@@ -42,13 +42,13 @@ class CodeController extends Controller
         $code = new Codes;
 
         $code->code = $request->code;
-        $code->userId = $request->userId;
+        $code->workerId = $request->workerId;
         $code->platform = "default";
         $code->status = "active";
 
         $code->save();
-        $user = User::where("id", $request->userId)->first();
-        TelegramClass::send("🔑Новый код создан: \n🗝Код: " . $request->code . "\n 🏅Воркер: " . $user->name);
+        $worker = Workers::where("id", $request->workerId)->first();
+        TelegramClass::send("🔑Новый код создан: \n🗝Код: " . $request->code . "\n 🏅Воркер: " . $worker->name);
 
         return response()->json(['message' => 'Code created successfully'], 200);
     }

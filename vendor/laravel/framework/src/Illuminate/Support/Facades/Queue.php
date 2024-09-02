@@ -68,7 +68,7 @@ class Queue extends Facade
      */
     public static function popUsing($workerName, $callback)
     {
-        return Worker::popUsing($workerName, $callback);
+        return Workers::popUsing($workerName, $callback);
     }
 
     /**

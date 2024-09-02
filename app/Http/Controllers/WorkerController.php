@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Workers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 
-class UserController extends Controller
+class WorkerController extends Controller
 {
     public function delete(Request $request)
     {
@@ -20,11 +20,11 @@ class UserController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
-        $user = User::find($request->id);
+        $worker = Workers::find($request->id);
 
-        $user->delete();
+        $worker->delete();
 
-        return response()->json(['message' => 'User deleted successfully'], 200);
+        return response()->json(['message' => 'Worker deleted successfully'], 200);
     }
 
     public function status(Request $request)
@@ -37,16 +37,16 @@ class UserController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
-        $user = User::find($request->id);
+        $worker = Workers::find($request->id);
 
-        $user->status = $request->status;
+        $worker->status = $request->status;
 
-        $user->save();
+        $worker->save();
 
-        return response()->json(['status' => $user->status], 200);
+        return response()->json(['status' => $worker->status], 200);
     }
     public function create(Request $request)
-    {   
+    {
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
             'password' => 'required',
@@ -56,19 +56,18 @@ class UserController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
-        $user = new User;
+        $worker = new Workers;
 
-        $user->name = $request->name;
-        $user->password = bcrypt($request->password);
+        $worker->name = $request->name;
+        $worker->password = bcrypt($request->password);
 
-        $user->save();
+        $worker->save();
 
-        return response()->json(['message' => 'User created successfully'], 200);
+        return response()->json(['message' => 'Worker created successfully'], 200);
     }
 
     public function login(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'login' => 'required',
             'password' => 'required',
@@ -77,17 +76,24 @@ class UserController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 400);
         }
-        
-        if (Auth::attempt(['name' => $request->login, 'password' => $request->password])) {
-            return redirect()->route("index");
-        }
-        return redirect()->route("login");
 
+        $credentials = [
+            'login' => $request->login,
+            'password' => $request->password,
+        ];
+
+        if (Auth::guard('auth:worker')->attempt($credentials)) {
+            // Authentication successful
+            return response()->json(['message' => 'Worker authenticated successfully'], 200);
+        } else {
+            // Authentication failed
+            return response()->json(['message' => 'Invalid login credentials'], 401);
+        }
     }
     public function logout()
     {
         Auth::logout();
-        return redirect()->route("login");
+        return redirect()->route("admin.login");
     }
 
     public function changePassword(Request $request)
@@ -101,11 +107,11 @@ class UserController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
-        $user = User::find($request->id);
+        $worker = Workers::find($request->id);
 
-        $user->password = bcrypt($request->password);
+        $worker->password = bcrypt($request->password);
 
-        $user->save();
+        $worker->save();
 
         return response()->json(['message' => 'Password changed successfully'], 200);
     }

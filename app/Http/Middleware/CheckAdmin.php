@@ -15,7 +15,7 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->check() && auth()->user()->status == "admin") {
+        if (auth()->check() && auth()->user()->status == "admin" && $request->user()->isWorker()) {
             return $next($request);
         }
         return redirect()->route("login");
