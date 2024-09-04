@@ -178,18 +178,20 @@ Route::get('/listenup', function () {
 
 
 // Другие файлы
-Route::prefix("/product")->group(function(){
+Route::prefix("/product")->group(function () {
 
-Route::get('/introduction', function () {
+    Route::get('/introduction', function () {
 
-    return view('introduction');
+        return view('introduction');
+    });
+
+    Route::get('/meeting-recorder', function () {
+
+        return view('meeting-recorder');
+    });
+
+    
 });
-
-Route::get('/meeting-recorder', function () {
-
-    return view('meeting-recorder');
-});
-
 Route::get('/use-cases/user-interviews', function () {
     return view('use-cases.user-interviews');
 });
@@ -240,5 +242,3 @@ Route::prefix('/real-saas-design-inspirations-companies')->group(function () {
         return view('zapier');
     });
 });
-
-
