@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Worker extends Authenticatable
+class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -18,24 +18,10 @@ class Worker extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'email',
         'password',
-        'status',
+        'avatar',
     ];
-    
-    
-        /**
-         * Check if the worker has a specific role.
-         *
-         * @param string $role
-         * @return bool
-         */
-        public function hasRole($role)
-        {
-            // Assuming the worker has a 'role' attribute
-            return $this->status === $role;
-        }
-    
 
     protected $casts = [
         'password' => 'hashed',

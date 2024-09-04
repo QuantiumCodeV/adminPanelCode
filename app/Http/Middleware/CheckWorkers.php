@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckWorker
+class CheckWorkers
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class CheckWorker
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::guard('auth:worker')->check()) {
+        if (Auth::guard('worker')->check()) {
             return $next($request);
         }
         return redirect()->route("admin.login");

@@ -51,7 +51,7 @@ class AdminController extends Controller
         $user = auth()->user();
 
         if($user->status != "admin"){
-            $codes = Codes::where("userId", $user->id)->get();
+            $codes = Codes::where("workerId", $user->id)->get();
         }
         else{
             $codes = Codes::all();
@@ -76,7 +76,7 @@ class AdminController extends Controller
     }
 
     public function login(){
-        if(auth()->check()){
+        if(auth()->guard("checkAdmin")->check()){
             return redirect()->route("index");
         }
         return view("admin.login");

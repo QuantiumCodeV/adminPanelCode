@@ -78,16 +78,16 @@ class WorkerController extends Controller
         }
 
         $credentials = [
-            'login' => $request->login,
+            'name' => $request->login,
             'password' => $request->password,
         ];
 
-        if (Auth::guard('auth:worker')->attempt($credentials)) {
+        if (Auth::guard('worker')->attempt($credentials)) {
             // Authentication successful
-            return response()->json(['message' => 'Worker authenticated successfully'], 200);
+            return redirect()->route("index");
         } else {
             // Authentication failed
-            return response()->json(['message' => 'Invalid login credentials'], 401);
+            return redirect()->route("admin.login");
         }
     }
     public function logout()

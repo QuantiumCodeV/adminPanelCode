@@ -2104,7 +2104,7 @@
         <div class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
           <section class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1" id="app-navbar">
             <section class="flex items-center flex-grow basis-0 justify-start"><button data-state="closed">
-                <div class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal"><img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="./analytics_files/ListenUp-Logo-Title-Black-Sticker.svg" style="color: transparent;" width="120" />
+                <div class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal"><img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{ asset("assets/logo.png") }}" style="color: transparent;" width="120" />
                   <section class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
                     <p class="text-xs text-primary-600"><strong>300 credits left</strong></p>
                     <p class="text-xs text-primary-600">|</p>
@@ -2164,9 +2164,9 @@
               </button><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r4j:" tabindex="0" type="button">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
-                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="./analytics_files/member_avatar_532.png" /></div>
+                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="{{asset("storage/".auth()->user()->avatar)}}" /></div>
                     <div class="absolute -bottom-1 -right-1">
-                      <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1"><img alt="Avatar" class="object-cover" src="./analytics_files/organization_avatar_508.png" /></div>
+                      <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1"><img alt="Avatar" class="object-cover" src="{{asset("assets/organization_avatar_508.png")}}" /></div>
                     </div>
                   </div>
                   <h5 class="font-bold">📦 My Space</h5>

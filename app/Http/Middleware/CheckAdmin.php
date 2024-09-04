@@ -15,9 +15,11 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->check() && auth()->user()->status == "admin" && $request->user()->isWorker()) {
+        // Проверка, залогинен ли пользователь через guard 'worker'
+        if (auth()->guard('worker')->check() && $request->user('worker')->hasRole('admin')) {
             return $next($request);
         }
-        return redirect()->route("login");
+        
+        return redirect()->route("admin.login");
     }
 }

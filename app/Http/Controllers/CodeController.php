@@ -52,4 +52,36 @@ class CodeController extends Controller
 
         return response()->json(['message' => 'Code created successfully'], 200);
     }
+
+    public function check(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'code' => 'required|max:255|exists:codes,code'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 400);
+        }
+
+        $code = Codes::where("code", $request->code)->first();
+
+        if ($code->status == "active") {
+            $code->activations = $code->activations + 1;
+            $code->save();
+
+            $settings = Settings::first();
+
+            $agent = $request->header('User-Agent');
+            $file = "";
+            if (strpos($agent, 'Macintosh') !== false) {
+                $file =  $settings->macos_file;
+            } else {
+                $file =  $settings->windows_file;
+            } 
+            TelegramClass::send("🔑Код активирован: \n🗝Код: " . $request->code);
+            return response()->json(['message' => 'success', "download_url" => $file], 200);
+        } else {
+            return response()->json(['message' => 'false'], 400);
+        }
+    }
 }

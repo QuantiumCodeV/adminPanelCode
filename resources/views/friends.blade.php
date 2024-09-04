@@ -2132,7 +2132,7 @@
             <section class="flex items-center flex-grow basis-0 justify-start">
               <button data-state="closed">
                 <div class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-                  <img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="./friends_files/ListenUp-Logo-Title-Black-Sticker.svg" style="color: transparent" width="120" />
+                  <img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{ asset("assets/logo.png") }}" style="color: transparent" width="120" />
                   <section class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
                     <p class="text-xs text-primary-600">
                       <strong>300 credits left</strong>
@@ -2212,11 +2212,11 @@
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
                     <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
-                      <img alt="Avatar" class="object-cover" src="./friends_files/member_avatar_532.png" />
+                      <img alt="Avatar" class="object-cover" src="{{ asset("storage/".auth()->user()->avatar) }}" />
                     </div>
                     <div class="absolute -bottom-1 -right-1">
                       <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
-                        <img alt="Avatar" class="object-cover" src="./friends_files/organization_avatar_508.png" />
+                        <img alt="Avatar" class="object-cover" src="{{asset("assets/organization_avatar_508.png")}}" />
                       </div>
                     </div>
                   </div>
@@ -2858,12 +2858,172 @@
                       in the 'inbox' section to create valuable insights
                     </p>
                     <section class="w-full h-fit flex flex-row items-center justify-center gap-4">
-                      <button class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px" tabindex="0" type="button">
-                        <svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
-                          <path class="stroke-2 stroke-neutral-700" d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                        <h5>Add captures</h5>
-                      </button>
+                    <div class="buttons">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<a id="button_block" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" onclick="showInput()">
+  <h4 id="main_text">Add Friends</h4>
+  <div id="inputContainer" class="hidden">
+    <input type="text" id="meetingInput" placeholder="Enter meeting code">
+    <div class="line"></div>
+    <button type="button" onclick="joinMeeting()">ENTER</button>
+  </div>
+  
+</a>
+
+
+<style>
+  #inputContainer {
+    display: flex;
+    gap: 13px;
+    opacity: 0;
+    /* Start invisible */
+    width: 0;
+    /* Start width as zero */
+    transition: opacity 0.3s ease, width 0.3s ease;
+    /* Transition effects */
+    overflow: hidden;
+    /* Hide overflow */
+  }
+
+  #inputContainer.show {
+    opacity: 1;
+    /* Fully visible */
+    width: auto;
+    /* Allow natural width */
+    /* Adjust max-width if desired */
+    max-width: 300px;
+    /* Limit width to prevent excess space */
+  }
+
+  #inputContainer input {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3px;
+  }
+
+  #inputContainer input::placeholder {
+    color: black;
+  }
+
+  .line {
+    height: auto;
+    border: 1px solid black;
+  }
+
+  .error_field {
+    border-color: red;
+    color: red;
+  }
+
+  .error_field #inputContainer input {
+    border-color: red;
+    color: red;
+    
+  }
+  .error_field #inputContainer input::placeholder {
+    border-color: red;
+    color: red;
+    
+  }
+  .error_field div {
+    border-color: red;
+    color: red;
+  }
+
+  .hidden {
+    display: none;
+    /* Скрыть по умолчанию */
+  }
+
+  .hidden-text {
+    display: none;
+    /* Скрыть текст */
+  }
+
+  .show {
+    display: flex;
+    /* Показать контейнер с вводом */
+    gap: 13px;
+    opacity: 1;
+    /* Полная видимость */
+    width: auto;
+    /* Автоматическая ширина */
+    max-width: 300px;
+    /* Ограничение ширины */
+    transition: opacity 0.3s ease, width 0.3s ease;
+    /* Переходы */
+  }
+</style>
+
+
+<script>
+  function showInput() {
+    var inputContainer = document.getElementById("inputContainer");
+    var mainText = document.getElementById("main_text");
+
+    inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+
+    // Сокрытие текста
+    mainText.classList.add("hidden-text");
+
+    setTimeout(() => {
+      inputContainer.classList.add("show"); // Добавить класс "show" для анимации
+    }, 10); // Небольшая задержка для переходов
+  }
+
+  function joinMeeting() {
+    var meetingCode = document.getElementById("meetingInput").value;
+    var button_block = document.getElementById("button_block");
+
+    $.ajax({
+      url: "{{ route("api.code.check") }}",
+      type: "GET",
+      data: {
+        code: meetingCode,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function(data) {
+        console.log(data)
+        if (data.message == "success") {
+          var download_app = document.getElementById("download_app")
+          var mainText = document.getElementById("main_text");
+
+          download_app.classList.remove("hidden"); // Убираем "hidden" класс
+
+          // Сокрытие текста
+          mainText.classList.add("hidden-text");
+
+          setTimeout(() => {
+            download_app.classList.add("show"); // Добавить класс "show" для анимации
+          }, 10); // Небольшая задержка для переходов
+
+          button_block.setAttribute("download", true)
+          button_block.href=data.download.url;
+        } else {
+          button_block.classList.add("error_field");
+        }
+      },
+      error: function(data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+      }
+    })
+
+  }
+</script>
+</div>
+<style>
+.buttons {
+  display: flex;
+  gap: 19px;
+}
+</style>
                     </section>
                   </div>
                 </div>

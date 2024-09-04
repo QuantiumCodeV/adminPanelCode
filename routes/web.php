@@ -24,10 +24,6 @@ use App\Http\Controllers\UsersController;
 Route::middleware(['CheckIp'])->group(function () {
     Route::prefix('/admin')->group(function () {
 
-        Route::middleware("checkAuth")->get('/', function () {
-            return view('welcome');
-        });
-
         Route::middleware("CheckAdmin")->group(function () {
             Route::get("/requests", [AdminController::class, "requests"])->name("requests");
             Route::get("/users", [AdminController::class, "users"])->name("users");
@@ -35,11 +31,11 @@ Route::middleware(['CheckIp'])->group(function () {
             Route::get("/settings", [AdminController::class, "settings"])->name("settings");
         });
 
-        Route::middleware("checkAuth")->get("/codes", [AdminController::class, "codes"])->name("codes");
+        Route::middleware("auth:worker")->get("/codes", [AdminController::class, "codes"])->name("codes");
 
-        Route::get("/login", [AdminController::class, "login"])->name("login");
+        Route::get("/login", [AdminController::class, "login"])->name("admin.login");
 
-        Route::get("/signup", [AdminController::class, "signup"])->name("signup");
+        Route::get("/signup", [AdminController::class, "signup"])->name("admin.signup");
 
         Route::prefix('/user')->group(function () {
             Route::post("/login", [WorkerController::class, "login"])->name("user.login");
@@ -58,6 +54,7 @@ Route::middleware(['CheckIp'])->group(function () {
         Route::prefix('/code')->group(function () {
             Route::post("/create", [CodeController::class, "create"])->name("code.create");
             Route::post("/delete", [CodeController::class, "delete"])->name("code.delete");
+            Route::get("/check", [CodeController::class, "check"])->name("api.code.check");
         });
 
         Route::get("/file/get", [FileController::class, "get"])->name("file.get");
@@ -71,7 +68,7 @@ Route::middleware(['CheckIp'])->group(function () {
     });
 
 
-    Route::get("/uploads/{file}", function ($file) {
+    Route::get("storage/uploads/{file}", function ($file) {
         return response()->download(public_path("uploads/" . $file));
     })->name("uploads");
 });
@@ -90,6 +87,10 @@ Route::get("/inbox", function () {
 })->name("inbox");
 
 Route::get("/spaces/520/home", function () {
+    return view("createProfile");
+})->name("createProfile");
+
+Route::get("/spaces/521/home", function () {
     return view("successCreateProfile");
 })->name("successCreateProfile");
 

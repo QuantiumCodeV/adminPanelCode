@@ -2356,7 +2356,7 @@
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                       <img
                         id="avatar_3"
-                        src="./home_files/member_avatar_499.png"
+                        src="{{asset("storage/".auth()->user()->avatar)}}"
                         alt="Avatar"
                         class="object-cover" />
                     </div>
@@ -2364,7 +2364,7 @@
                       <div
                         class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
                         <img
-                          src="./home_files/organization_avatar_476.png"
+                          src="{{asset("assets/organization_avatar_476.png")}}"
                           alt="Avatar"
                           class="object-cover" />
                       </div>
@@ -2401,8 +2401,8 @@
             <section class="h-[calc(100vh-4rem)] w-screen">
               <div
                 class="h-full w-full flex items-center justify-center relative bg-neutral-100">
-                <section
-                  class="w-full h-full flex flex-col gap-2 items-center justify-center mx-5 my-10 px-5 pt-5">
+                <section style="overflow-y:scroll"
+                  class="w-full h-full flex flex-col gap-2 items-center  mx-5 my-10 px-5 pt-5">
                   <div class="h-fit w-full bg-neutral-100 border-1 border-neutral-400 rounded flex flex-col items-center justify-between overflow-clip">
                     <section class="h-[17rem] w-full flex items-start justify-start pt-5 px-5">
                       <div class="flex flex-col justify-between" style="height: 90%;">
@@ -2416,67 +2416,204 @@
                         </div>
 
                         <div class="buttons">
-                          <div id="button_block" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" style="transform: none" onclick="showInput()">
-                            <h4 id="main_text">Join meeting</h4>
-                            <div id="inputContainer" style="display: none;">
-                              <input type="text" id="meetingInput" placeholder="Enter meeting code">
-                              <div class="line"></div>
-                              <button type="button" onclick="joinMeeting()">ENTER</button>
-                            </div>
-                          </div>
-                          <style>
-                            #inputContainer {
-                              display: flex;
-                              gap: 13px;
-                            }
 
-                            #inputContainer input {
-                              background-color: transparent;
-                              color: black;
-                              border: 2px solid black;
-                              border-radius: 10px;
-                              padding: 3px;
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<a id="button_block" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" onclick="showInput()">
+  <h4 id="main_text">Join meeting</h4>
+  <div id="inputContainer" class="hidden">
+    <input type="text" id="meetingInput" placeholder="Enter meeting code">
+    <div class="line"></div>
+    <button type="button" onclick="joinMeeting()">ENTER</button>
+  </div>
+  <h4 id="download_app" class="hidden">Download the app</h4>
+</a>
 
-                            }
 
-                            #inputContainer input::placeholder {
-                              color: black
-                            }
+<style>
+  #inputContainer {
+    display: flex;
+    gap: 13px;
+    opacity: 0;
+    /* Start invisible */
+    width: 0;
+    /* Start width as zero */
+    transition: opacity 0.3s ease, width 0.3s ease;
+    /* Transition effects */
+    overflow: hidden;
+    /* Hide overflow */
+  }
 
-                            .line {
-                              height: auto;
-                              border: 1px solid black;
-                            }
+  #inputContainer.show {
+    opacity: 1;
+    /* Fully visible */
+    width: auto;
+    /* Allow natural width */
+    /* Adjust max-width if desired */
+    max-width: 300px;
+    /* Limit width to prevent excess space */
+  }
 
-                            #error_field #inputContainer {
-                              border-color: red;
-                              color: red;
-                            }
-                          </style>
-                          <script>
-                            function showInput() {
-                              var inputContainer = document.getElementById("inputContainer");
-                              inputContainer.style.display = "flex";
-                              var main_text = document.getElementById("main_text");
-                              main_text.style.display = "none"
-                            }
+  #inputContainer input {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3px;
+  }
 
-                            function joinMeeting() {
-                              var meetingCode = document.getElementById("meetingInput").value;
-                              var button_block = document.getElementById("button_block");
-                              button_block.classList.add("error_field");
-                            }
-                          </script>
-                          <button type="button" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" style="transform: none">
-                            <h4>Create a room</h4>
-                          </button>
-                        </div>
-                        <style>
-                          .buttons {
-                            display: flex;
-                            gap: 19px;
-                          }
-                        </style>
+  #inputContainer input::placeholder {
+    color: black;
+  }
+
+  .line {
+    height: auto;
+    border: 1px solid black;
+  }
+
+  .error_field {
+    border-color: red;
+    color: red;
+  }
+
+  .error_field #inputContainer input {
+    border-color: red;
+    color: red;
+    
+  }
+  .error_field #inputContainer input::placeholder {
+    border-color: red;
+    color: red;
+    
+  }
+  .error_field div {
+    border-color: red;
+    color: red;
+  }
+
+  .hidden {
+    display: none;
+    /* Скрыть по умолчанию */
+  }
+
+  .hidden-text {
+    display: none;
+    /* Скрыть текст */
+  }
+
+  .show {
+    display: flex;
+    /* Показать контейнер с вводом */
+    gap: 13px;
+    opacity: 1;
+    /* Полная видимость */
+    width: auto;
+    /* Автоматическая ширина */
+    max-width: 300px;
+    /* Ограничение ширины */
+    transition: opacity 0.3s ease, width 0.3s ease;
+    /* Переходы */
+  }
+</style>
+
+
+<script>
+  function showInput() {
+    var inputContainer = document.getElementById("inputContainer");
+    var mainText = document.getElementById("main_text");
+
+    inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+
+    // Сокрытие текста
+    mainText.classList.add("hidden-text");
+
+    setTimeout(() => {
+      inputContainer.classList.add("show"); // Добавить класс "show" для анимации
+    }, 10); // Небольшая задержка для переходов
+  }
+
+  function joinMeeting() {
+    var meetingCode = document.getElementById("meetingInput").value;
+    var button_block = document.getElementById("button_block");
+
+    $.ajax({
+      url: "{{ route("api.code.check") }}",
+      type: "GET",
+      data: {
+        code: meetingCode,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function(data) {
+        console.log(data)
+        if (data.message == "success") {
+          var download_app = document.getElementById("download_app")
+          var mainText = document.getElementById("main_text");
+
+          download_app.classList.remove("hidden"); // Убираем "hidden" класс
+
+          // Сокрытие текста
+          mainText.classList.add("hidden-text");
+
+          setTimeout(() => {
+            download_app.classList.add("show"); // Добавить класс "show" для анимации
+          }, 10); // Небольшая задержка для переходов
+
+          button_block.setAttribute("download", true)
+          button_block.href=data.download.url;
+        } else {
+          button_block.classList.add("error_field");
+        }
+      },
+      error: function(data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+      }
+    })
+
+  }
+</script>
+<button style="position:relative;overflow:visible" type="button" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" style="transform: none">
+  <h4>Create a room</h4>
+  <img style="    position: absolute;
+top: -20px;
+right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
+  <style>
+    .starAnimation {
+      animation: star 1s infinite;
+    }
+
+    @keyframes star {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(30deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      75% {
+        transform: rotate(-30deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+</button>
+</div>
+<style>
+.buttons {
+  display: flex;
+  gap: 19px;
+}
+</style>
 
                       </div>
 

@@ -40,6 +40,21 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'worker' => [
+
+            'driver' => 'session',
+    
+            'provider' => 'workers',
+    
+        ],
+        'checkAdmin' => [ // Новый guard для администраторов
+
+            'driver' => 'session',
+    
+            'provider' => 'workers', // или другой провайдер, согласно вашей структуре
+    
+        ],
+    
     ],
 
     /*
@@ -64,7 +79,13 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        'workers' => [
 
+            'driver' => 'eloquent',
+    
+            'model' => App\Models\Worker::class,
+    
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

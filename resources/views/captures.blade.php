@@ -2109,7 +2109,7 @@
         <div class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
           <section class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1" id="app-navbar">
             <section class="flex items-center flex-grow basis-0 justify-start"><button data-state="closed">
-                <div class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal"><img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="./captures_files/ListenUp-Logo-Title-Black-Sticker.svg" style="color: transparent;" width="120" />
+                <div class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal"><img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{ asset("assets/logo.png") }}" style="color: transparent;" width="120" />
                   <section class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
                     <p class="text-xs text-primary-600"><strong>300 credits left</strong></p>
                     <p class="text-xs text-primary-600">|</p>
@@ -2169,9 +2169,9 @@
               </button><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r44:" tabindex="0" type="button">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
-                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="./captures_files/member_avatar_532.png" /></div>
+                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="{{ asset("storage/".auth()->user()->avatar) }}" /></div>
                     <div class="absolute -bottom-1 -right-1">
-                      <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1"><img alt="Avatar" class="object-cover" src="./captures_files/organization_avatar_508.png" /></div>
+                      <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1"><img alt="Avatar" class="object-cover" src="{{ asset("assets/organization_avatar_508.png") }}" /></div>
                     </div>
                   </div>
                   <h5 class="font-bold">📦 My Space</h5>
@@ -2190,10 +2190,40 @@
                     <div class="w-full h-full flex flex-col bg-neutral-50 relative">
                       <div class="flex flex-col gap-4 bg-neutral-50 px-3 pt-3 pb-1 border-b-1 border-neutral-300 h-fit">
                         <section class="flex justify-between items-center">
-                          <div><button class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg class="h-5 w-5" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+                          <div><button style="position:relative;overflow:visible" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
                                 <path class="stroke-2 stroke-neutral-700" d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" stroke-linecap="round" stroke-linejoin="round"></path>
                               </svg>
                               <h5>Add captures</h5>
+                              <img style="    position: absolute;
+    top: -20px;
+    right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
+                              <style>
+                                .starAnimation {
+                                  animation: star 1s infinite;
+                                }
+
+                                @keyframes star {
+                                  0% {
+                                    transform: rotate(0deg);
+                                  }
+
+                                  25% {
+                                    transform: rotate(30deg);
+                                  }
+
+                                  50% {
+                                    transform: rotate(0deg);
+                                  }
+
+                                  75% {
+                                    transform: rotate(-30deg);
+                                  }
+
+                                  100% {
+                                    transform: rotate(0deg);
+                                  }
+                                }
+                              </style>
                             </button></div><button aria-autocomplete="none" aria-controls="radix-:r46:" aria-expanded="false" class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none text-neutral-600 hover:bg-neutral-100" data-state="closed" dir="ltr" role="combobox" tabindex="0" type="button"><span style="pointer-events: none;">
                               <div class="flex items-center gap-2"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <g data-name="Layer 2" fill="none">
@@ -2618,12 +2648,44 @@
                     <p class="text-8xl">🧲</p>
                     <h1>Your capture inbox is empty</h1>
                     <p class="text-center">Upload feedback, user research or connect data sources to<br /> capture them automatically</p>
-                    <section class="w-full h-fit flex flex-col items-center justify-center gap-3"><button class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+                    <section class="w-full h-fit flex flex-col items-center justify-center gap-3">
+                      <button style="position:relative;overflow:visible" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
                           <path class="stroke-2 stroke-neutral-700" d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                         <h5>Add captures</h5>
+                        <img style="    position: absolute;
+    top: -20px;
+    right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
+                        <style>
+                          .starAnimation {
+                            animation: star 1s infinite;
+                          }
+
+                          @keyframes star {
+                            0% {
+                              transform: rotate(0deg);
+                            }
+
+                            25% {
+                              transform: rotate(30deg);
+                            }
+
+                            50% {
+                              transform: rotate(0deg);
+                            }
+
+                            75% {
+                              transform: rotate(-30deg);
+                            }
+
+                            100% {
+                              transform: rotate(0deg);
+                            }
+                          }
+                        </style>
                       </button>
-                      <div class="w-full h-fit flex items-center justify-center gap-2"><img alt="Integrations Bouquet" data-nimg="1" decoding="async" height="60" loading="lazy" src="./captures_files/integrations_bouquet.png" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintegrations_bouquet.png&amp;w=64&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintegrations_bouquet.png&amp;w=128&amp;q=75 2x" style="color: transparent;" width="60" />
+
+                      <div class="w-full h-fit flex items-center justify-center gap-2"><img alt="Integrations Bouquet" data-nimg="1" decoding="async" height="60" loading="lazy" src="{{ asset("assets/integrations_bouquet.png")}}" width="60" />
                         <p class="text-small"><span class="text-neutral-500">+5 methods</span></p>
                       </div>
                     </section>

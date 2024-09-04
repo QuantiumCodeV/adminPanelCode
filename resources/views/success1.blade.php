@@ -600,7 +600,7 @@
                   height="25"
                   decoding="async"
                   data-nimg="1"
-                  src="./success1_files/ListenUp-Logo-Title-Black-Sticker.svg"
+                  src="{{ asset("assets/logo.png") }}"
                   style="color: transparent"
                 />
               </div>

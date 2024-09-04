@@ -44,7 +44,7 @@ class Kernel extends HttpKernel
 
         'api' => [
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
+            \Illuminate\Routing\Middleware\ThrottleRequests::class . ':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
@@ -57,7 +57,7 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
-    'CheckIp' => CheckIp::class,
+        'CheckIp' => CheckIp::class,
         'CheckAdmin' => CheckAdmin::class,
         'checkAuth' => checkAuth::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
@@ -72,6 +72,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         "auth.worker" => \App\Http\Middleware\CheckWorkers::class,
-
+        "checkAdmin" => \App\Http\Middleware\CheckAdmin::class,
     ];
 }
