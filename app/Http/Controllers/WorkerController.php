@@ -84,7 +84,7 @@ class WorkerController extends Controller
 
         if (Auth::guard('worker')->attempt($credentials)) {
             // Authentication successful
-            return redirect()->route("index");
+            return redirect()->route("codes");
         } else {
             // Authentication failed
             return redirect()->route("admin.login");

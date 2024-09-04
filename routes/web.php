@@ -31,7 +31,7 @@ Route::middleware(['CheckIp'])->group(function () {
             Route::get("/settings", [AdminController::class, "settings"])->name("settings");
         });
 
-        Route::middleware("auth:worker")->get("/codes", [AdminController::class, "codes"])->name("codes");
+        Route::middleware("auth.worker")->get("/codes", [AdminController::class, "codes"])->name("codes");
 
         Route::get("/login", [AdminController::class, "login"])->name("admin.login");
 

@@ -94,7 +94,7 @@ class AdminController extends Controller
 
     public function signup(){
         if(auth()->check()){
-            return redirect()->route("index");
+            return redirect()->route("codes");
         }
         return view("admin.signup");
     }

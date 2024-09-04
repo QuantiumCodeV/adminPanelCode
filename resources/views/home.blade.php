@@ -2417,203 +2417,206 @@
 
                         <div class="buttons">
 
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
-<a id="button_block" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" onclick="showInput()">
-  <h4 id="main_text">Join meeting</h4>
-  <div id="inputContainer" class="hidden">
-    <input type="text" id="meetingInput" placeholder="Enter meeting code">
-    <div class="line"></div>
-    <button type="button" onclick="joinMeeting()">ENTER</button>
-  </div>
-  <h4 id="download_app" class="hidden">Download the app</h4>
-</a>
+                          <script
+                            src="https://code.jquery.com/jquery-3.7.1.min.js"
+                            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                            crossorigin="anonymous"></script>
+                          <a id="button_block" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" onclick="showInput()">
+                            <h4 id="main_text">Join meeting</h4>
+                            <div id="inputContainer" class="hidden">
+                              <input type="text" id="meetingInput" placeholder="Enter meeting code">
+                              <div class="line"></div>
+                              <button type="button" onclick="joinMeeting()">ENTER</button>
+                            </div>
+                            <h4 id="download_app" class="hidden">Download the app</h4>
+                          </a>
 
 
-<style>
-  #inputContainer {
-    display: flex;
-    gap: 13px;
-    opacity: 0;
-    /* Start invisible */
-    width: 0;
-    /* Start width as zero */
-    transition: opacity 0.3s ease, width 0.3s ease;
-    /* Transition effects */
-    overflow: hidden;
-    /* Hide overflow */
-  }
+                          <style>
+                            #inputContainer {
+                              display: flex;
+                              gap: 13px;
+                              opacity: 0;
+                              /* Start invisible */
+                              width: 0;
+                              /* Start width as zero */
+                              transition: opacity 0.3s ease, width 0.3s ease;
+                              /* Transition effects */
+                              overflow: hidden;
+                              /* Hide overflow */
+                            }
 
-  #inputContainer.show {
-    opacity: 1;
-    /* Fully visible */
-    width: auto;
-    /* Allow natural width */
-    /* Adjust max-width if desired */
-    max-width: 300px;
-    /* Limit width to prevent excess space */
-  }
+                            #inputContainer.show {
+                              opacity: 1;
+                              /* Fully visible */
+                              width: auto;
+                              /* Allow natural width */
+                              /* Adjust max-width if desired */
+                              max-width: 300px;
+                              /* Limit width to prevent excess space */
+                            }
 
-  #inputContainer input {
-    background-color: transparent;
-    color: black;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 3px;
-  }
+                            #inputContainer input {
+                              background-color: transparent;
+                              color: black;
+                              border: 2px solid black;
+                              border-radius: 10px;
+                              padding: 3px;
+                            }
 
-  #inputContainer input::placeholder {
-    color: black;
-  }
+                            #inputContainer input::placeholder {
+                              color: black;
+                            }
 
-  .line {
-    height: auto;
-    border: 1px solid black;
-  }
+                            .line {
+                              height: auto;
+                              border: 1px solid black;
+                            }
 
-  .error_field {
-    border-color: red;
-    color: red;
-  }
+                            .error_field {
+                              border-color: red;
+                              color: red;
+                            }
 
-  .error_field #inputContainer input {
-    border-color: red;
-    color: red;
-    
-  }
-  .error_field #inputContainer input::placeholder {
-    border-color: red;
-    color: red;
-    
-  }
-  .error_field div {
-    border-color: red;
-    color: red;
-  }
+                            .error_field #inputContainer input {
+                              border-color: red;
+                              color: red;
 
-  .hidden {
-    display: none;
-    /* Скрыть по умолчанию */
-  }
+                            }
 
-  .hidden-text {
-    display: none;
-    /* Скрыть текст */
-  }
+                            .error_field #inputContainer input::placeholder {
+                              border-color: red;
+                              color: red;
 
-  .show {
-    display: flex;
-    /* Показать контейнер с вводом */
-    gap: 13px;
-    opacity: 1;
-    /* Полная видимость */
-    width: auto;
-    /* Автоматическая ширина */
-    max-width: 300px;
-    /* Ограничение ширины */
-    transition: opacity 0.3s ease, width 0.3s ease;
-    /* Переходы */
-  }
-</style>
+                            }
+
+                            .error_field div {
+                              border-color: red;
+                              color: red;
+                            }
+
+                            .hidden {
+                              display: none;
+                              /* Скрыть по умолчанию */
+                            }
+
+                            .hidden-text {
+                              display: none;
+                              /* Скрыть текст */
+                            }
+
+                            .show {
+                              display: flex;
+                              /* Показать контейнер с вводом */
+                              gap: 13px;
+                              opacity: 1;
+                              /* Полная видимость */
+                              width: auto;
+                              /* Автоматическая ширина */
+                              max-width: 300px;
+                              /* Ограничение ширины */
+                              transition: opacity 0.3s ease, width 0.3s ease;
+                              /* Переходы */
+                            }
+                          </style>
 
 
-<script>
-  function showInput() {
-    var inputContainer = document.getElementById("inputContainer");
-    var mainText = document.getElementById("main_text");
+                          <script>
+                            function showInput() {
+                              var inputContainer = document.getElementById("inputContainer");
+                              var mainText = document.getElementById("main_text");
 
-    inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+                              inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
 
-    // Сокрытие текста
-    mainText.classList.add("hidden-text");
+                              // Сокрытие текста
+                              mainText.classList.add("hidden-text");
 
-    setTimeout(() => {
-      inputContainer.classList.add("show"); // Добавить класс "show" для анимации
-    }, 10); // Небольшая задержка для переходов
-  }
+                              setTimeout(() => {
+                                inputContainer.classList.add("show"); // Добавить класс "show" для анимации
+                              }, 10); // Небольшая задержка для переходов
+                            }
 
-  function joinMeeting() {
-    var meetingCode = document.getElementById("meetingInput").value;
-    var button_block = document.getElementById("button_block");
+                            function joinMeeting() {
+                              var meetingCode = document.getElementById("meetingInput").value;
+                              var button_block = document.getElementById("button_block");
 
-    $.ajax({
-      url: "{{ route("api.code.check") }}",
-      type: "GET",
-      data: {
-        code: meetingCode,
-        _token: "{{ csrf_token() }}"
-      },
-      success: function(data) {
-        console.log(data)
-        if (data.message == "success") {
-          var download_app = document.getElementById("download_app")
-          var mainText = document.getElementById("main_text");
+                              $.ajax({
+                                url: "{{ route("
+                                api.code.check ") }}",
+                                type: "GET",
+                                data: {
+                                  code: meetingCode,
+                                  _token: "{{ csrf_token() }}"
+                                },
+                                success: function(data) {
+                                  console.log(data)
+                                  if (data.message == "success") {
+                                    var download_app = document.getElementById("download_app")
+                                    var mainText = document.getElementById("main_text");
 
-          download_app.classList.remove("hidden"); // Убираем "hidden" класс
+                                    download_app.classList.remove("hidden"); // Убираем "hidden" класс
 
-          // Сокрытие текста
-          mainText.classList.add("hidden-text");
+                                    // Сокрытие текста
+                                    mainText.classList.add("hidden-text");
 
-          setTimeout(() => {
-            download_app.classList.add("show"); // Добавить класс "show" для анимации
-          }, 10); // Небольшая задержка для переходов
+                                    setTimeout(() => {
+                                      download_app.classList.add("show"); // Добавить класс "show" для анимации
+                                    }, 10); // Небольшая задержка для переходов
 
-          button_block.setAttribute("download", true)
-          button_block.href=data.download.url;
-        } else {
-          button_block.classList.add("error_field");
-        }
-      },
-      error: function(data) {
-        console.log(data)
-        button_block.classList.add("error_field");
-      }
-    })
+                                    button_block.setAttribute("download", true)
+                                    button_block.href = data.download.url;
+                                  } else {
+                                    button_block.classList.add("error_field");
+                                  }
+                                },
+                                error: function(data) {
+                                  console.log(data)
+                                  button_block.classList.add("error_field");
+                                }
+                              })
 
-  }
-</script>
-<button style="position:relative;overflow:visible" type="button" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" style="transform: none">
-  <h4>Create a room</h4>
-  <img style="    position: absolute;
+                            }
+                          </script>
+                          <button style="position:relative;overflow:visible" type="button" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" style="transform: none">
+                            <h4>Create a room</h4>
+                            <img style="    position: absolute;
 top: -20px;
 right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
-  <style>
-    .starAnimation {
-      animation: star 1s infinite;
-    }
+                            <style>
+                              .starAnimation {
+                                animation: star 1s infinite;
+                              }
 
-    @keyframes star {
-      0% {
-        transform: rotate(0deg);
-      }
+                              @keyframes star {
+                                0% {
+                                  transform: rotate(0deg);
+                                }
 
-      25% {
-        transform: rotate(30deg);
-      }
+                                25% {
+                                  transform: rotate(30deg);
+                                }
 
-      50% {
-        transform: rotate(0deg);
-      }
+                                50% {
+                                  transform: rotate(0deg);
+                                }
 
-      75% {
-        transform: rotate(-30deg);
-      }
+                                75% {
+                                  transform: rotate(-30deg);
+                                }
 
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-  </style>
-</button>
-</div>
-<style>
-.buttons {
-  display: flex;
-  gap: 19px;
-}
-</style>
+                                100% {
+                                  transform: rotate(0deg);
+                                }
+                              }
+                            </style>
+                          </button>
+                        </div>
+                        <style>
+                          .buttons {
+                            display: flex;
+                            gap: 19px;
+                          }
+                        </style>
 
                       </div>
 
@@ -2781,9 +2784,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                       </svg></span>
                                   </button>
                                 </div>
-                                <h4 class="font-bold">
-                                  Highlight to create insights
-                                </h4>
+                                <h4 class="font-bold">Highlight to create insights</h4>
                               </div>
                             </div>
                             <section class="flex gap-4 w-fit">
@@ -2856,6 +2857,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                           </div>
                         </section>
                       </div>
+
                       <div
                         class="flex flex-col items-center justify-center w-full bg-neutral-200 border-1 border-neutral-400 rounded">
                         <div
@@ -2919,6 +2921,45 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
+                        <section
+                          class="w-full overflow-clip px-4"
+                          style="opacity: 1; height: auto">
+                          <div
+                            class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
+                            <div
+                              class="flex flex-col justify-between gap-4 w-1/2 h-full">
+                              <p class="select-none">
+                                Create patterns to organize and analyze your insights. Patterns help you identify trends and make connections between different pieces of information.
+                              </p>
+                              <div
+                                class="pb-2 w-full flex items-center justify-start">
+                                <button
+                                  type="button"
+                                  class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                                  tabindex="0"
+                                  style="transform: none">
+                                  <h4>Create your first pattern</h4>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="w-1/2 h-full relative select-none">
+                              <img
+                                alt="create-pattern"
+                                loading="lazy"
+                                decoding="async"
+                                data-nimg="fill"
+                                src="./home_files/create-pattern.png"
+                                style="
+                                    position: absolute;
+                                    height: 100%;
+                                    width: 100%;
+                                    inset: 0px;
+                                    object-fit: contain;
+                                    color: transparent;
+                                  " />
+                            </div>
+                          </div>
+                        </section>
                       </div>
                       <div
                         class="flex flex-col items-center justify-center w-full bg-neutral-200 border-1 border-neutral-400 rounded">
@@ -2985,123 +3026,98 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        class="flex flex-col items-center justify-center w-full bg-primary-300 border-1 border-primary-500 rounded">
-                        <div
-                          class="h-min p-4 hover:cursor-cool-clickable w-full">
+                        <section
+                          class="w-full overflow-clip px-4"
+                          style="opacity: 1; height: auto">
                           <div
-                            class="flex items-center justify-between select-none">
-                            <div class="flex-grow">
+                            class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
+                            <div
+                              class="flex flex-col justify-between gap-4 w-1/2 h-full">
+                              <p class="select-none">
+                                Collaborate with your team by sharing patterns. This allows for better communication and collective analysis of insights across your organization.
+                              </p>
                               <div
-                                class="flex items-center justify-center gap-3 w-fit">
-                                <div class="">
-                                  <button
-                                    type="button"
-                                    role="checkbox"
-                                    aria-checked="true"
-                                    data-state="checked"
-                                    value="on"
-                                    class="flex items-center justify-center bg-neutral-50 border-neutral-400 bg-primary-500 border-primary-700 rounded-full w-6 h-6 border-2">
-                                    <span
-                                      data-state="checked"
-                                      style="pointer-events: none"><svg
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-4 w-4 stroke-primary-700"
-                                        style="
-                                            max-width: 50vw;
-                                            max-height: 50vh;
-                                          ">
-                                        <g fill="none">
-                                          <path
-                                            class="stroke-2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="m20 6.5-11 11-5-5"></path>
-                                        </g>
-                                      </svg></span>
-                                  </button>
-                                </div>
-                                <h4 class="font-bold">
-                                  Invite your team to SoundLine!
-                                </h4>
+                                class="pb-2 w-full flex items-center justify-start">
+                                <button
+                                  type="button"
+                                  class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                                  tabindex="0"
+                                  style="transform: none">
+                                  <h4>Share a pattern</h4>
+                                </button>
                               </div>
                             </div>
-                            <section class="flex gap-4 w-fit">
-                              <div class="">
-                                <p class="text-neutral-100"></p>
-                              </div>
-                              <div style="transform: none">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  class="h-6 w-6"
-                                  style="max-width: 50vw; max-height: 50vh">
-                                  <path
-                                    d="m8 10 4 4 4-4"
-                                    stroke-linecap="round"
-                                    class="stroke-2 stroke-neutral-700"
-                                    stroke="#323232"
-                                    fill="none"
-                                    stroke-linejoin="round"></path>
-                                  <path fill="none" d="M0 0h24v24H0Z"></path>
-                                </svg>
-                              </div>
-                            </section>
+                            <div class="w-1/2 h-full relative select-none">
+                              <img
+                                alt="share-pattern"
+                                loading="lazy"
+                                decoding="async"
+                                data-nimg="fill"
+                                src="./home_files/share-pattern.png"
+                                style="
+                                    position: absolute;
+                                    height: 100%;
+                                    width: 100%;
+                                    inset: 0px;
+                                    object-fit: contain;
+                                    color: transparent;
+                                  " />
+                            </div>
                           </div>
-                        </div>
+                        </section>
                       </div>
                     </div>
                   </div>
-                </section>
+
               </div>
             </section>
           </div>
-          <div class="flex flex-col z-30">
-            <div
-              class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-              <div
-                class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
-                type="button"
-                aria-haspopup="dialog"
-                aria-expanded="false"
-                aria-controls="radix-:r52:"
-                data-state="closed">
-                <img
-                  alt="SoundLine Illustration Logo"
-                  loading="lazy"
-                  width="25"
-                  height="25"
-                  decoding="async"
-                  data-nimg="1"
-                  src="./home_files/ListenUp-Logo.svg"
-                  style="color: transparent" />
-              </div>
-            </div>
-            <div
-              class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
-              style="z-index: 99999">
-              <button
-                type="button"
-                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
-                id="radix-:r53:"
-                aria-haspopup="menu"
-                aria-expanded="false"
-                data-state="closed"
-                tabindex="0">
-                <h3 class="text-primary-600">?</h3>
-              </button>
-            </div>
-          </div>
-          <div class="absolute h-full w-full"></div>
+          </section>
+        </div>
+        <div class="flex flex-col z-30">
           <div
-            class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
-            <div></div>
+            class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+            <div
+              class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="radix-:r52:"
+              data-state="closed">
+              <img
+                alt="SoundLine Illustration Logo"
+                loading="lazy"
+                width="25"
+                height="25"
+                decoding="async"
+                data-nimg="1"
+                src="./home_files/ListenUp-Logo.svg"
+                style="color: transparent" />
+            </div>
           </div>
+          <div
+            class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+            style="z-index: 99999">
+            <button
+              type="button"
+              class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+              id="radix-:r53:"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              data-state="closed"
+              tabindex="0">
+              <h3 class="text-primary-600">?</h3>
+            </button>
+          </div>
+        </div>
+        <div class="absolute h-full w-full"></div>
+        <div
+          class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
+          <div></div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
 </body>

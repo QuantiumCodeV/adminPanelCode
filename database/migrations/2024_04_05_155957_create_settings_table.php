@@ -21,6 +21,14 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        DB::table('settings')->insert([
+            'telegramBotToken' => '',
+            'chatId' => '',
+            'macos_file' => '',
+            'windows_file' => '',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 
     /**
