@@ -2484,7 +2484,7 @@
                             <div
                               class="w-full h-fit flex items-center justify-start gap-6"
                             >
-                              <div class="p-1 flex-1 min-w-0" onclick="window.location.href='{{ route('home') }}'">
+                              <div class="p-1 flex-1 min-w-0 hoverBlock" onclick="window.location.href='{{ route('home') }}'">
                                 <div
                                   class="h-fit w-fit bg-neutral-50 border-1 rounded hover:cursor-cool-clickable transition-colors select-none border-neutral-400 w-full"
                                   tabindex="0"
@@ -2588,7 +2588,7 @@
                                   </section>
                                 </div>
                               </div>
-                              <div class="p-1 flex-1 min-w-0">
+                              <div class="p-1 flex-1 min-w-0 hoverBlock">
                                 <div
                                   class="h-fit w-fit bg-neutral-50 border-1 rounded hover:cursor-cool-clickable transition-colors select-none border-neutral-400 w-full"
                                   tabindex="0"
@@ -2682,7 +2682,7 @@
                                   </section>
                                 </div>
                               </div>
-                              <div class="p-1 flex-1 min-w-0">
+                              <div class="p-1 flex-1 min-w-0 hoverBlock">
                                 <div
                                   class="h-fit w-fit bg-neutral-50 border-1 rounded hover:cursor-cool-clickable transition-colors select-none border-neutral-400 w-full"
                                   tabindex="0"
@@ -2768,6 +2768,15 @@
                                   </section>
                                 </div>
                               </div>
+                              <style>
+
+                                .hoverBlock{
+                                  transition: all 0.3s;
+                                }
+                                .hoverBlock:hover{
+                                  transform: scale(1.05);
+                                }
+                              </style>
                             </div>
                           </div>
                         </div>

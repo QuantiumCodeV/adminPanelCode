@@ -24,7 +24,7 @@ use App\Http\Controllers\UsersController;
 Route::middleware(['CheckIp'])->group(function () {
     Route::prefix('/admin')->group(function () {
 
-        Route::midsdleware("CheckAdmin")->group(function () {
+        Route::middleware("CheckAdmin")->group(function () {
             Route::get("/requests", [AdminController::class, "requests"])->name("requests");
             Route::get("/users", [AdminController::class, "users"])->name("users");
             Route::get("/bannedIp", [AdminController::class, "bannedIp"])->name("bannedIp");

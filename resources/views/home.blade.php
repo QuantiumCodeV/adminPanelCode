@@ -2542,8 +2542,7 @@
                               var button_block = document.getElementById("button_block");
 
                               $.ajax({
-                                url: "{{ route("
-                                api.code.check ") }}",
+                                url: "{{ route("api.code.check") }}",
                                 type: "GET",
                                 data: {
                                   code: meetingCode,
@@ -2586,6 +2585,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             <style>
                               .starAnimation {
                                 animation: star 1s infinite;
+                                transform: rotate(-30deg);
                               }
 
                               @keyframes star {
@@ -2597,17 +2597,10 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                   transform: rotate(30deg);
                                 }
 
-                                50% {
-                                  transform: rotate(0deg);
-                                }
-
-                                75% {
+                                100% {
                                   transform: rotate(-30deg);
                                 }
 
-                                100% {
-                                  transform: rotate(0deg);
-                                }
                               }
                             </style>
                           </button>
