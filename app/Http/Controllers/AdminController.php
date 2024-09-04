@@ -12,7 +12,7 @@ use App\Models\BannedIp;
 class AdminController extends Controller
 {
     public function settings(){
-        $activeUser = auth()->user();
+        $activeUser = auth()->guard("worker")->user();
         $settings = Settings::find(1);
         $requestsCount = Requests::all()->count();
         return view("admin.settings", [
@@ -23,7 +23,7 @@ class AdminController extends Controller
     }
     public function bannedIp(){
         $bannedIp = BannedIp::all();
-        $activeUser = auth()->user();
+        $activeUser = auth()->guard("worker")->user();
         $requestsCount = Requests::all()->count();
         return view("admin.ips", [
             "bannedIps" => $bannedIp, 
@@ -33,7 +33,7 @@ class AdminController extends Controller
     }
 
     public function index(){
-        $activeUser = auth()->user();
+        $activeUser = auth()->guard("worker")->user();
         $count = Codes::where("userId", $activeUser->id)->count();
         $totalActivations = Codes::where('userId', $activeUser->id)->sum('activations');
         $requestsCount = Requests::all()->count();
@@ -46,9 +46,20 @@ class AdminController extends Controller
         ]);
     }
 
+    public function users(){
+        $users = Workers::all();
+        $activeUser = auth()->guard("worker")->user();
+        $requestsCount = Requests::all()->count();
+        return view("admin.users", [
+            "users" =>  $users,
+            "activeUser" => $activeUser,
+            "requests" => $requestsCount,
+        ]);
+    }
+
     public function codes(){
 
-        $user = auth()->user();
+        $user = auth()->guard("worker")->user();
 
         if($user->status != "admin"){
             $codes = Codes::where("workerId", $user->id)->get();
@@ -66,7 +77,7 @@ class AdminController extends Controller
 
     public function workers(){
         $workers = Workers::all();
-        $activeUser = auth()->user();
+        $activeUser = auth()->guard("worker")->user();
         $requestsCount = Requests::all()->count();
         return view("admin.workers", [
             "workers" =>  $workers,
@@ -76,14 +87,14 @@ class AdminController extends Controller
     }
 
     public function login(){
-        if(auth()->guard("checkAdmin")->check()){
-            return redirect()->route("index");
+        if(auth()->guard("worker")->check()){
+            return redirect()->route("codes");
         }
         return view("admin.login");
     }
 
     public function requests(){
-        $activeUser = auth()->user();
+        $activeUser = auth()->guard("worker")->user();
         $requestsCount = Requests::all()->count();
         return view("admin.requests", [
             "requests" => Requests::all(), 
@@ -93,7 +104,7 @@ class AdminController extends Controller
     }
 
     public function signup(){
-        if(auth()->check()){
+        if(auth()->guard("worker")->check()){
             return redirect()->route("codes");
         }
         return view("admin.signup");
