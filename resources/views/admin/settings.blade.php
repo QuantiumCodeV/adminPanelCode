@@ -675,9 +675,9 @@
                   windows_file: windows_file
                 })
               }).then(function(response) {
-                console.log(response)
+               
               if (response.ok) {
-                //window.location.reload()
+                window.location.reload()
               } else {
                 document.getElementById("error_text").style.display = "block";
               }
