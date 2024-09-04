@@ -618,18 +618,7 @@
                   <!-- End Form -->
                 </div>
                 <!-- End Col -->
-                <div class="col-sm-6">
-                  <label for="expectedValueNewProjectLabel" class="form-label">Chat ID Канала Телеграмма</label>
-
-                  <!-- Form -->
-                  <div class="mb-4">
-                    <div class="input-group input-group-merge">
-                      
-                      <input type="text" class="form-control" name="chatid2" id="expectedValueNewProjectLabel" placeholder="Enter value here" aria-label="Enter value here" value="{{ $settings->chatId2 }}">
-                    </div>
-                  </div>
-                  <!-- End Form -->
-                </div>
+                
                 <!-- End Col -->
 
                 <div class="col-sm-6">
@@ -667,28 +656,7 @@
                   </div>
                   <!-- End Form -->
                 </div>
-                <div class="col-sm-6">
-                  <label for="expectedValueNewProjectLabel" class="form-label">Файл для MacOS (Modal)</label>
-
-                  <!-- Form -->
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="macos_file_modal" value="{{ $settings->macos_file_modal }}">
-  <input type="file" class="form-control" id="mac_os_modal_input">
-</div>
-                  <!-- End Form -->
-                </div>
-                <!-- End Col -->
-                
-                <div class="col-sm-6">
-                  <label for="expectedValueNewProjectLabel" class="form-label">Файл для Windows (Modal)</label>
-
-                  <!-- Form -->
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="windows_file_modal" value="{{ $settings->windows_file_modal }}">
-                    <input type="file" class="form-control" id="windows_file_modal_input">
-                  </div>
-                  <!-- End Form -->
-                </div>
+               
                 <div class="invalid-feedback" id="error_text">
                   Произола ошибка при сохранении
                 </div>
@@ -706,12 +674,11 @@
                 var buttonFirstBlock = document.getElementById("settingsFirstBlock");
                 buttonFirstBlock.addEventListener("click", function() {
                   var chatid = document.getElementsByName("chatid")[0].value;
-                  var chatIdChannel = document.getElementsByName("chatid2")[0].value;
+                  
                   var tokenBot = document.getElementsByName("tokenBot")[0].value;
                   var macos_file = document.getElementsByName("macos_file")[0].value;
                   var windows_file = document.getElementsByName("windows_file")[0].value;
-                  var macos_file_modal = document.getElementsByName("macos_file_modal")[0].value;
-                  var windows_file_modal = document.getElementsByName("windows_file_modal")[0].value;
+                 
                   fetch("{{ route("settings.update") }}", {
                     method: "POST",
                     headers: {
@@ -722,10 +689,7 @@
                       chatId: chatid,
                       telegramBotToken: tokenBot,
                       macos_file: macos_file,
-                      windows_file: windows_file,
-                      macos_file_modal: macos_file_modal,
-                      windows_file_modal: windows_file_modal,
-                      chatId2: chatIdChannel
+                      windows_file: windows_file
                     })
                   }).then(function(response) {
                     if(response.ok){

@@ -659,6 +659,7 @@
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-16 h-16 min-w-[2.25rem] min-h-[2.25rem] border-1">
                       <img
                         id="avatar_1"
+                         style="height:100%"
                         src="{{asset("assets/member_avatar_453.png")}}"
                         alt="Avatar"
                         class="object-cover" />
@@ -907,6 +908,7 @@
                     class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-16 h-16 min-w-[2.25rem] min-h-[2.25rem] border-1">
                     <img
                       id="avatar_2"
+                      style="height:100%"
                       src="{{asset("assets/member_avatar_453.png")}}"
                       alt="Avatar"
                       class="object-cover" />

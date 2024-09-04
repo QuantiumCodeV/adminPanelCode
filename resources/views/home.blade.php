@@ -2356,6 +2356,7 @@
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                       <img
                         id="avatar_3"
+                        style="height:100%"
                         src="{{asset("storage/".auth()->user()->avatar)}}"
                         alt="Avatar"
                         class="object-cover" />
@@ -2719,7 +2720,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                   </button>
                                 </div>
                                 <h4 class="font-bold">
-                                  Import user feedback &amp; research
+                                  Import user feedback & research
                                 </h4>
                               </div>
                             </div>
@@ -2746,6 +2747,45 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
+                        <section
+                          class="w-full overflow-clip px-4"
+                          style="opacity: 1; height: auto">
+                          <div
+                            class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
+                            <div
+                              class="flex flex-col justify-between gap-4 w-1/2 h-full">
+                              <p class="select-none">
+                                Import user feedback and research data into your workspace. This allows you to centralize all your user insights and make them easily accessible for analysis.
+                              </p>
+                              <div
+                                class="pb-2 w-full flex items-center justify-start">
+                                <button
+                                  type="button"
+                                  class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                                  tabindex="0"
+                                  style="transform: none">
+                                  <h4>Import your first feedback</h4>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="w-1/2 h-full relative select-none">
+                              <img
+                                alt="import-feedback"
+                                loading="lazy"
+                                decoding="async"
+                                data-nimg="fill"
+                                src="./home_files/import-feedback.png"
+                                style="
+                                    position: absolute;
+                                    height: 100%;
+                                    width: 100%;
+                                    inset: 0px;
+                                    object-fit: contain;
+                                    color: transparent;
+                                  " />
+                            </div>
+                          </div>
+                        </section>
                       </div>
                       <div
                         class="flex flex-col items-center justify-center w-full bg-neutral-200 border-1 border-neutral-400 rounded">
@@ -2977,96 +3017,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                     aria-checked="true"
                                     data-state="checked"
                                     value="on"
-                                    class="flex items-center justify-center bg-neutral-300 bg-neutral-300 rounded-full w-6 h-6 border-0">
-                                    <span
-                                      data-state="checked"
-                                      style="pointer-events: none"><svg
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-4 w-4 stroke-neutral-50"
-                                        style="
-                                            max-width: 50vw;
-                                            max-height: 50vh;
-                                          ">
-                                        <g fill="none">
-                                          <path
-                                            class="stroke-2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="m20 6.5-11 11-5-5"></path>
-                                        </g>
-                                      </svg></span>
-                                  </button>
-                                </div>
-                                <h4 class="font-bold">
-                                  Share a pattern with your team
-                                </h4>
-                              </div>
-                            </div>
-                            <section class="flex gap-4 w-fit">
-                              <div class="">
-                                <p class="text-neutral-100"></p>
-                              </div>
-                              <div style="transform: none">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  class="h-6 w-6"
-                                  style="max-width: 50vw; max-height: 50vh">
-                                  <path
-                                    d="m8 10 4 4 4-4"
-                                    stroke-linecap="round"
-                                    class="stroke-2 stroke-neutral-500"
-                                    stroke="#323232"
-                                    fill="none"
-                                    stroke-linejoin="round"></path>
-                                  <path fill="none" d="M0 0h24v24H0Z"></path>
-                                </svg>
-                              </div>
-                            </section>
-                          </div>
-                        </div>
-                        <section
-                          class="w-full overflow-clip px-4"
-                          style="opacity: 1; height: auto">
-                          <div
-                            class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
-                            <div
-                              class="flex flex-col justify-between gap-4 w-1/2 h-full">
-                              <p class="select-none">
-                                Collaborate with your team by sharing patterns. This allows for better communication and collective analysis of insights across your organization.
-                              </p>
-                              <div
-                                class="pb-2 w-full flex items-center justify-start">
-                                <button
-                                  type="button"
-                                  class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
-                                  tabindex="0"
-                                  style="transform: none">
-                                  <h4>Share a pattern</h4>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="w-1/2 h-full relative select-none">
-                              <img
-                                alt="share-pattern"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                src="./home_files/share-pattern.png"
-                                style="
-                                    position: absolute;
-                                    height: 100%;
-                                    width: 100%;
-                                    inset: 0px;
-                                    object-fit: contain;
-                                    color: transparent;
-                                  " />
-                            </div>
-                          </div>
-                        </section>
-                      </div>
-                    </div>
+                                    class                    </div>
                   </div>
 
               </div>
