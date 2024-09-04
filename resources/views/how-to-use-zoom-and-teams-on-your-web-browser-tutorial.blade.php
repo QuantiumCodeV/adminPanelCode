@@ -165,7 +165,7 @@
         class="navbar-2 w-nav"
       >
         <div class="container-2 w-container">
-          <a href="index" class="brand w-nav-brand"
+          <a href="/" class="brand w-nav-brand"
             ><img
               src="/assets/logo.png"
               loading="lazy"
@@ -878,7 +878,7 @@
               <div class="div-block-7">
                 <div class="div-block-78">
                   <div class="div-block-77">
-                    <a href="index" class="w-inline-block"
+                    <a href="/" class="w-inline-block"
                       ><img
                         src="/assets/logo.png"
                         loading="lazy"

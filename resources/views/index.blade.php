@@ -262,7 +262,7 @@
       class="navbar-2 w-nav">
       <div class="container-2 w-container">
         <a
-          href="index"
+          href="/"
           aria-current="page"
           class="brand w-nav-brand w--current"><img
             src="assets/logo.png"
@@ -3363,7 +3363,7 @@
             <div class="div-block-78">
               <div class="div-block-77">
                 <a
-                  href="index"
+                  href="/"
                   aria-current="page"
                   class="footer-home-link hover-button w-inline-block w--current"><img
                     src="assets/logo.png"

@@ -267,7 +267,7 @@
       <div class="container">
         <div class="design-inspiration-header">
           <a
-            href="index"
+            href="/"
             target="_blank"
             class="madeby hover-button w-nav-brand"
             ><div class="madeby-text">Made by</div>
@@ -5342,7 +5342,7 @@
             <div class="div-block-78">
               <div class="div-block-77">
                 <a
-                  href="index"
+                  href="/"
                   class="footer-home-link hover-button w-inline-block"
                   ><img
                     src="/assets/logo.png"

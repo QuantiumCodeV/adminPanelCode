@@ -180,17 +180,20 @@ Route::get('/listenup', function () {
 // Другие файлы
 Route::prefix("/product")->group(function () {
 
-    Route::get('/introduction', function () {
+    Route::get('/integrations', function () {
 
-        return view('introduction');
+        return view('product.integrations');
     });
 
     Route::get('/meeting-recorder', function () {
 
-        return view('meeting-recorder');
+        return view('product.meeting-recorder');
     });
 
     
+});
+Route::get('/pricing', function () {
+    return view('pricing');
 });
 Route::get('/use-cases/user-interviews', function () {
     return view('use-cases.user-interviews');

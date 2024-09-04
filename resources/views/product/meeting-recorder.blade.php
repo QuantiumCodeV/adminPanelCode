@@ -143,7 +143,7 @@
         class="navbar-2 w-nav"
       >
         <div class="container-2 w-container">
-          <a href="../index" class="brand w-nav-brand"
+          <a href="/" class="brand w-nav-brand"
             ><img
               src="/assets/logo.png"
               loading="lazy"
@@ -735,7 +735,7 @@
               <div class="faq-answer">
                 <div class="faq_answer">
                   To use the extension, you need a
-                  <a href="../index" target="_blank" class="text-link"
+                  <a href="/" target="_blank" class="text-link"
                     >Sound<em>Line!</em></a
                   >
                   account as the call recordings will automatically be sent to
@@ -900,7 +900,7 @@
                 <div class="div-block-78">
                   <div class="div-block-77">
                     <a
-                      href="../index"
+                      href="/"
                       class="footer-home-link hover-button w-inline-block"
                       ><img
                         src="/assets/logo.png"

@@ -275,7 +275,7 @@
       >
         <div class="container-2 w-container">
           <a
-            href="index"
+            href="/"
             aria-current="page"
             class="brand w-nav-brand w--current"
             ><img
@@ -3673,7 +3673,7 @@
             <div class="div-block-78">
               <div class="div-block-77">
                 <a
-                  href="index"
+                  href="/"
                   aria-current="page"
                   class="footer-home-link hover-button w-inline-block w--current"
                   ><img
