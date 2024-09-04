@@ -121,3 +121,127 @@ Route::prefix("/api")->group(function () {
         Route::post('/upload', [UsersController::class, "upload"])->name("api.user.upload");
     });
 });
+
+
+// Папка product-discovery-bible
+
+Route::get('/product-discovery-bible/start-here/introduction', function () {
+
+    return view('product-discovery-bible.start-here.introduction');
+});
+
+
+// Папка integrations
+
+Route::get('/integrations/api', function () {
+
+    return view('integrations.api');
+});
+
+Route::get('/integrations/google-meet', function () {
+
+    return view('integrations.google-meet');
+});
+
+Route::get('/integrations/intercom', function () {
+
+    return view('integrations.intercom');
+});
+
+Route::get('/integrations/slack', function () {
+
+    return view('integrations.slack');
+});
+
+Route::get('/integrations/teams', function () {
+
+    return view('integrations.teams');
+});
+
+Route::get('/integrations/zapier', function () {
+
+    return view('integrations.zapier');
+});
+
+Route::get('/integrations/zoom', function () {
+
+    return view('integrations.zoom');
+});
+
+
+// Папка listenup
+
+Route::get('/listenup', function () {
+
+    return view('listenup');
+});
+
+
+// Другие файлы
+Route::prefix("/product")->group(function(){
+
+Route::get('/introduction', function () {
+
+    return view('introduction');
+});
+
+Route::get('/meeting-recorder', function () {
+
+    return view('meeting-recorder');
+});
+})
+
+Route::get('/use-cases/user-interviews', function () {
+
+    return view('use-cases.user-interviews');
+});
+
+
+Route::prefix('/real-saas-design-inspirations-companies')->group(function () {
+
+    Route::get('/airtable', function () {
+
+        return view('airtable');
+    });
+
+    Route::get('/attio', function () {
+
+        return view('attio');
+    });
+
+    Route::get('/bento', function () {
+
+        return view('bento');
+    });
+
+    Route::get('/descript', function () {
+
+        return view('descript');
+    });
+
+    Route::get('/framer', function () {
+
+        return view('framer');
+    });
+
+    Route::get('/loom', function () {
+
+        return view('loom');
+    });
+
+    Route::get('/miro', function () {
+
+        return view('miro');
+    });
+
+    Route::get('/tella', function () {
+
+        return view('tella');
+    });
+    Route::get('/zapier', function () {
+        return view('zapier');
+    });
+});
+
+
+// Другие HTML-файлы
