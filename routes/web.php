@@ -189,10 +189,8 @@ Route::get('/meeting-recorder', function () {
 
     return view('meeting-recorder');
 });
-})
 
 Route::get('/use-cases/user-interviews', function () {
-
     return view('use-cases.user-interviews');
 });
 
@@ -244,4 +242,3 @@ Route::prefix('/real-saas-design-inspirations-companies')->group(function () {
 });
 
 
-// Другие HTML-файлы
