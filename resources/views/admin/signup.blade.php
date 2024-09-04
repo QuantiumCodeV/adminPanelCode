@@ -150,7 +150,7 @@
               <div class="text-center">
                 <div class="mb-5">
                   <h1 class="display-5">Create your account</h1>
-                  <p>Already have an account? <a class="link" href="{{ route("login") }}">Sign in here</a></p>
+                  <p>Already have an account? <a class="link" href="{{ route("admin.login") }}">Sign in here</a></p>
                 </div>
               </div>
 
@@ -204,8 +204,17 @@
                 <span class="invalid-feedback" >Password does not match the confirm password.</span>
               </div>
               <!-- End Form -->
-
-
+              <div class="mb-4">
+                <span class="success-text hidden" id="success_text" >Password does not match the confirm password.</span>
+              </div>
+                         <style>
+                .success-text{
+                  color: green;
+                }
+                .hidden{
+                  display: none;
+                }
+                         </style>
               <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary btn-lg">Create an account</button>
 
@@ -260,6 +269,8 @@
                 if (response) {
                   data.form.classList.remove('was-validated')
                   data.form.reset()
+                  $("#success_text").removeClass("hidden")
+                  $("#success_text").text("Account has been created")
                 } else {
                   console.log('error')
                   data.form.classList.add('was-validated')

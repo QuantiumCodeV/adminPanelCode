@@ -541,9 +541,7 @@
             </li>
 
           </ul>
-          <div class="link_block_custom">
-            <a href="https://quantiumcode.online/join.html">ZOOM</a>
-          </div>
+          
         </div>
         <!-- End Footer -->
       </div>

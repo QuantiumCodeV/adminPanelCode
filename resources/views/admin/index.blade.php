@@ -366,9 +366,7 @@
             </li>
 
           </ul>
-          <div class="link_block_custom">
-              <a href="https://quantiumcode.online/s85691340970pwd=S2JuYJE9shSun4dnLXF77pcRxSfw11">ZOOM</a> 
-            </div>
+          
           
         </div>
         <!-- End Footer -->

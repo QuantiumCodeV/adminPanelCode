@@ -29,12 +29,11 @@
     href="{{  asset("assets/vendor/tom-select/dist/css/tom-select.bootstrap5.css") }}" />
 
   <!-- CSS Front Template -->
-
+  
   <link
-    rel="preload"
+    rel="stylesheet"
     href="{{  asset("assets/css/theme.min.css") }}"
-    data-hs-appearance="default"
-    as="style" />
+    />
   <link
     rel="preload"
     href="{{  asset("assets/css/theme-dark.min.css") }}"
@@ -46,9 +45,6 @@
       transition: unset !important;
     }
 
-    body {
-      opacity: 0;
-    }
   </style>
 
   <script>
@@ -95,33 +91,21 @@
       },
       skipFilesFromBundle: {
         dist: [
-          "{{  asset("
-          assets / js / hs.theme - appearance.js ") }}",
-          "{{  asset("
-          assets / js / hs.theme - appearance - charts.js ") }}",
-          "{{  asset("
-          assets / js / demo.js ") }}",
+          "{{  asset("assets / js / hs.theme - appearance.js ") }}",
+          "{{  asset("assets / js / hs.theme - appearance - charts.js ") }}",
+          "{{  asset("assets / js / demo.js ") }}",
         ],
         build: [
-          "{{  asset("
-          assets / css / theme.css ") }}",
-          "{{  asset("
-          assets / vendor / hs - navbar - vertical - aside / dist / hs - navbar - vertical - aside - mini - cache.js ") }}",
-          "{{  asset("
-          assets / js / demo.js ") }}",
-          "{{  asset("
-          assets / css / theme - dark.css ") }}",
-          "{{  asset("
-          assets / css / docs.css ") }}",
-          "{{  asset("
-          assets / vendor / icon - set / style.css ") }}",
-          "{{  asset("
-          assets / js / hs.theme - appearance.js ") }}",
-          "{{  asset("
-          assets / js / hs.theme - appearance - charts.js ") }}",
+          "{{  asset("assets / css / theme.css ") }}",
+          "{{  asset("assets / vendor / hs - navbar - vertical - aside / dist / hs - navbar - vertical - aside - mini - cache.js ") }}",
+          "{{  asset("assets / js / demo.js ") }}",
+          "{{  asset("assets / css / theme - dark.css ") }}",
+          "{{  asset("assets / css / docs.css ") }}",
+          "{{  asset("assets / vendor / icon - set / style.css ") }}",
+          "{{  asset("assets / js / hs.theme - appearance.js ") }}",
+          "{{  asset("assets / js / hs.theme - appearance - charts.js ") }}",
           "node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js",
-          "{{  asset("
-          assets / js / demo.js ") }}",
+          "{{  asset("assets / js / demo.js ") }}",
         ],
       },
       minifyCSSFiles: ["{{  asset("
@@ -757,7 +741,7 @@
                     code: document.querySelector('input[name="code"]').value,
                     _token: '{{ csrf_token() }}',
                     platform: document.querySelector('input[name="platform"]:checked').value,
-                    userId: '{{ Auth::user()->id }}'
+                    userId: '{{ auth()->guard('worker')->user()->id }}',
                   },
                   success: function(data) {
                     console.log(data)
