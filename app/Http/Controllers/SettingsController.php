@@ -41,6 +41,6 @@ class SettingsController extends Controller
 
         TelegramClass::send("🔐Настройки обновлены");
 
-        return redirect()->route('settings')->with('success', 'Settings updated successfully');
+        return response()->json(['ok' => 'Настройки обновлены']);
     }
 }
