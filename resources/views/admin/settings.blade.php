@@ -31,24 +31,15 @@
   <!-- CSS Front Template -->
 
   <link
-    rel="preload"
-    href="{{  asset("assets/css/theme.min.css") }}"
-    data-hs-appearance="default"
-    as="style" />
-  <link
-    rel="preload"
-    href="{{  asset("assets/css/theme-dark.min.css") }}"
-    data-hs-appearance="dark"
-    as="style" />
+    rel="stylesheet"
+    href="{{  asset("assets/css/theme.min.css") }}"/>
+ 
 
   <style data-hs-appearance-onload-styles>
     * {
       transition: unset !important;
     }
 
-    body {
-      opacity: 0;
-    }
   </style>
 
   <script>
