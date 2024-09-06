@@ -2355,7 +2355,7 @@
                     <div
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                       <img
-                        src="{{ asset('storage/' . (auth()->user()->avatar ?: 'member_avatar_453.png')) }}" style="height:100%"
+                        src="{{ asset('assets/' . (auth()->user()->avatar ?: 'member_avatar_453.png')) }}" style="height:100%"
                         alt="Avatar"
                         class="object-cover" />
                     </div>
