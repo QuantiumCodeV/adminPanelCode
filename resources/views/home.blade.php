@@ -1481,12 +1481,8 @@
         background-color: rgb(236 235 253 / var(--tw-bg-opacity));
       }
     </style>
-    <div
-      id="plasmo-shadow-container"
-      style="z-index: 2147483647; position: relative">
-      <div
-        id="plasmo-overlay-0"
-        class="plasmo-csui-container"
+    <div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative">
+      <div id="plasmo-overlay-0" class="plasmo-csui-container"
         style="display: flex; position: absolute; top: 0px; left: 0px">
         <div class="listenup-h-fit listenup-w-fit"></div>
       </div>
@@ -1494,22 +1490,16 @@
   </template></plasmo-csui>
 
 <head>
-  <link
-    href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
-    rel="shortcut icon"
-    type="image/x-icon" />
-  <link
-    href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f5e63bfed5fc2509a07_256.png"
+  <link href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
+    rel="shortcut icon" type="image/x-icon" />
+  <link href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f5e63bfed5fc2509a07_256.png"
     rel="apple-touch-icon" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Home | SoundLine!</title>
   <meta name="next-head-count" content="3" />
   <link rel="preload" href="./home_files/b08c6edf6d5dd570.css" as="style" />
-  <link
-    rel="stylesheet"
-    href="./home_files/b08c6edf6d5dd570.css"
-    data-n-g="" />
+  <link rel="stylesheet" href="./home_files/b08c6edf6d5dd570.css" data-n-g="" />
   <noscript data-n-css=""></noscript>
 
   <style type="text/css">
@@ -2126,25 +2116,15 @@
   <div id="__next">
     <div>
       <div>
-        <div
-          class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
-          <section
-            id="app-navbar"
+        <div class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
+          <section id="app-navbar"
             class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1">
-            <section
-              class="flex items-center flex-grow basis-0 justify-start">
+            <section class="flex items-center flex-grow basis-0 justify-start">
               <button data-state="closed">
                 <div
                   class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-                  <img
-                    alt="SoundLine Navbar Logo"
-                    loading="lazy"
-                    width="120"
-                    height="25"
-                    decoding="async"
-                    data-nimg="1"
-                    src="/assets/logo.png"
-                    style="color: transparent" />
+                  <img alt="SoundLine Navbar Logo" loading="lazy" width="120" height="25" decoding="async" data-nimg="1"
+                    src="/assets/logo.png" style="color: transparent" />
                   <section
                     class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
                     <p class="text-xs text-primary-600">
@@ -2159,154 +2139,81 @@
               </button>
             </section>
             <section class="flex items-center justify-center">
-              <div
-                dir="ltr"
-                data-orientation="horizontal"
-                class="relative h-fit select-none w-full">
-                <div
-                  role="tablist"
-                  aria-orientation="horizontal"
-                  class="rounded flex flex-row w-full justify-evenly gap-2"
-                  tabindex="0"
-                  data-orientation="horizontal"
+              <div dir="ltr" data-orientation="horizontal" class="relative h-fit select-none w-full">
+                <div role="tablist" aria-orientation="horizontal"
+                  class="rounded flex flex-row w-full justify-evenly gap-2" tabindex="0" data-orientation="horizontal"
                   style="outline: none">
-                  <a
-                    type="button"
-                    role="tab"
-                    aria-selected="true"
-                    aria-controls="radix-:r4q:-content-home"
-                    data-state="active"
-                    id="radix-:r4q:-trigger-home"
+                  <a type="button" role="tab" aria-selected="true" aria-controls="radix-:r4q:-content-home"
+                    data-state="active" id="radix-:r4q:-trigger-home"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
-                    href="#">
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item="" href="#">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        data-name="Layer 3"
-                        viewBox="0 0 24 24"
-                        class="h-6 w-6"
+                      <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 3" viewBox="0 0 24 24" class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh">
                         <path fill="none" d="M0 0h24v24H0Z"></path>
-                        <path
-                          fill="none"
-                          class="stroke-1.5 stroke-neutral-700 stroke-neutral-700"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z"></path>
+                        <path fill="none" class="stroke-1.5 stroke-neutral-700 stroke-neutral-700"
+                          stroke-linecap="round" stroke-linejoin="round"
+                          d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z">
+                        </path>
                       </svg>
                       <h5 class="font-bold">Home</h5>
                     </div>
-                  </a><a
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r4q:-content-captures"
-                    data-state="inactive"
-                    id="radix-:r4q:-trigger-captures"
+                  </a><a type="button" role="tab" aria-selected="false" aria-controls="radix-:r4q:-content-captures"
+                    data-state="inactive" id="radix-:r4q:-trigger-captures"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{  route("inbox") }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        class="h-6 w-6"
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh">
-                        <path
-                          class="stroke-1.5 stroke-neutral-700"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"></path>
+                        <path class="stroke-1.5 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                          d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z">
+                        </path>
                       </svg>
                       <h5 class="font-bold">Inbox</h5>
                     </div>
-                  </a><a
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r4q:-content-insights"
-                    data-state="inactive"
-                    id="radix-:r4q:-trigger-insights"
+                  </a><a type="button" role="tab" aria-selected="false" aria-controls="radix-:r4q:-content-insights"
+                    data-state="inactive" id="radix-:r4q:-trigger-insights"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{ route("insights")  }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        class="h-6 w-6"
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh">
-                        <path
-                          fill="none"
-                          class="stroke-1.5 stroke-neutral-700"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"></path>
+                        <path fill="none" class="stroke-1.5 stroke-neutral-700" stroke-linecap="round"
+                          stroke-linejoin="round" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"></path>
                         <path fill="none" d="M0 0h24v24H0Z"></path>
                       </svg>
                       <h5 class="font-bold">Meetings</h5>
                     </div>
-                  </a><a
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r4q:-content-analytics"
-                    data-state="inactive"
-                    id="radix-:r4q:-trigger-analytics"
+                  </a><a type="button" role="tab" aria-selected="false" aria-controls="radix-:r4q:-content-analytics"
+                    data-state="inactive" id="radix-:r4q:-trigger-analytics"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{ route("analytics")  }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        class="h-6 w-6"
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh">
-                        <path
-                          fill="none"
-                          class="stroke-1.5 stroke-neutral-700"
-                          stroke-linecap="round"
+                        <path fill="none" class="stroke-1.5 stroke-neutral-700" stroke-linecap="round"
                           stroke-linejoin="round"
-                          d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z"></path>
+                          d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z">
+                        </path>
                         <path fill="none" d="M24 24H0V0h24Z"></path>
                       </svg>
                       <h5 class="font-bold">Analytics</h5>
                     </div>
-                  </a><a
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r4q:-content-users"
-                    data-state="inactive"
-                    id="radix-:r4q:-trigger-users"
+                  </a><a type="button" role="tab" aria-selected="false" aria-controls="radix-:r4q:-content-users"
+                    data-state="inactive" id="radix-:r4q:-trigger-users"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{ route("friends")  }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 stroke-1.5"
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-1.5"
                         style="max-width: 50vw; max-height: 50vh">
-                        <g
-                          stroke-linecap="round"
-                          class="stroke-neutral-700"
-                          fill="none"
-                          stroke-linejoin="round">
+                        <g stroke-linecap="round" class="stroke-neutral-700" fill="none" stroke-linejoin="round">
                           <path
-                            d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                            d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                          </path>
                         </g>
                         <path fill="none" d="M0 0h24v24H0Z"></path>
                       </svg>
@@ -2314,78 +2221,46 @@
                     </div>
                   </a>
                 </div>
-                <div
-                  class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400"
+                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400"
                   style="width: 97px; height: 48px; transform: none"></div>
               </div>
             </section>
-            <div
-              class="flex items-center justify-end gap-2 flex-grow basis-0">
-              <button
-                class="flex items-center font-bold rounded text-base font-bold px-3 py-3"
-                tabindex="0">
+            <div class="flex items-center justify-end gap-2 flex-grow basis-0">
+              <button class="flex items-center font-bold rounded text-base font-bold px-3 py-3" tabindex="0">
                 <div class="flex items-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    class="h-4 w-4"
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4"
                     style="max-width: 50vw; max-height: 50vh">
-                    <path
-                      fill="none"
-                      class="stroke-2 stroke-neutral-600"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                    <path fill="none" class="stroke-2 stroke-neutral-600" stroke-linecap="round" stroke-linejoin="round"
                       d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"></path>
                     <path fill="none" d="M0 0h24v24H0Z"></path>
                   </svg>
                   <p class="text-neutral-600">Send us a feedback</p>
                 </div>
-              </button><button
-                type="button"
+              </button><button type="button"
                 class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
-                id="radix-:r50:"
-                aria-haspopup="menu"
-                aria-expanded="false"
-                data-state="closed"
-                tabindex="0"
+                id="radix-:r50:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0"
                 style="transform: none">
-                <div
-                  class="flex flex-row items-center justify-center gap-2 text-left mr-2">
+                <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
                     <div
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
-                      <img
-                        id="avatar_3"
-                        style="height:100%"
-                        src="{{asset("storage/".auth()->user()->avatar)}}"
-                        alt="Avatar"
-                        class="object-cover" />
+                      <img id="avatar_3" style="height:100%" src="{{ asset('storage/' . (auth()->user()->avatar ?: 'member_avatar_453.png')) }}"
+                        alt="Avatar" class="object-cover" />
                     </div>
                     <div class="absolute -bottom-1 -right-1">
                       <div
                         class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
-                        <img
-                          src="{{asset("assets/organization_avatar_476.png")}}"
-                          alt="Avatar"
-                          class="object-cover" />
+                        <img src="{{asset("assets/organization_avatar_476.png")}}" alt="Avatar" class="object-cover" />
                       </div>
                     </div>
                   </div>
                   <h5 class="font-bold">📦 My Space</h5>
                 </div>
                 <div style="transform: none">
-                  <svg
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6"
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
                     style="max-width: 50vw; max-height: 50vh">
-                    <path
-                      d="m8 10 4 4 4-4"
-                      stroke-linecap="round"
-                      class="stroke-2 stroke-neutral-700"
-                      stroke="#323232"
-                      fill="none"
-                      stroke-linejoin="round"></path>
+                    <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700" stroke="#323232"
+                      fill="none" stroke-linejoin="round"></path>
                     <path fill="none" d="M0 0h24v24H0Z"></path>
                   </svg>
                 </div>
@@ -2400,11 +2275,11 @@
           </style>
           <div class="flex">
             <section class="h-[calc(100vh-4rem)] w-screen">
-              <div
-                class="h-full w-full flex items-center justify-center relative bg-neutral-100">
+              <div class="h-full w-full flex items-center justify-center relative bg-neutral-100">
                 <section style="overflow-y:scroll"
                   class="w-full h-full flex flex-col gap-2 items-center  mx-5 my-10 px-5 pt-5">
-                  <div class="h-fit w-full bg-neutral-100 border-1 border-neutral-400 rounded flex flex-col items-center justify-between overflow-clip">
+                  <div
+                    class="h-fit w-full bg-neutral-100 border-1 border-neutral-400 rounded flex flex-col items-center justify-between overflow-clip">
                     <section class="h-[17rem] w-full flex items-start justify-start pt-5 px-5">
                       <div class="flex flex-col justify-between" style="height: 90%;">
                         <div>
@@ -2412,17 +2287,19 @@
                             Start / Join meeting
                           </h1>
                           <span style="height:100%">
-                            Connect to the meeting room or create your own room with the Pro version of the Soundline. Communicate, create, broadcast.
+                            Connect to the meeting room or create your own room with the Pro version of the Soundline.
+                            Communicate, create, broadcast.
                           </span>
                         </div>
 
                         <div class="buttons">
 
-                          <script
-                            src="https://code.jquery.com/jquery-3.7.1.min.js"
+                          <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
                             crossorigin="anonymous"></script>
-                          <a id="button_block" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" onclick="showInput()">
+                          <a id="button_block"
+                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0" onclick="showInput()">
                             <h4 id="main_text">Join meeting</h4>
                             <div id="inputContainer" class="hidden">
                               <input type="text" id="meetingInput" placeholder="Enter meeting code">
@@ -2548,7 +2425,7 @@
                                   code: meetingCode,
                                   _token: "{{ csrf_token() }}"
                                 },
-                                success: function(data) {
+                                success: function (data) {
                                   console.log(data)
                                   if (data.message == "success") {
                                     var download_app = document.getElementById("download_app")
@@ -2569,7 +2446,7 @@
                                     button_block.classList.add("error_field");
                                   }
                                 },
-                                error: function(data) {
+                                error: function (data) {
                                   console.log(data)
                                   button_block.classList.add("error_field");
                                 }
@@ -2577,7 +2454,9 @@
 
                             }
                           </script>
-                          <button style="position:relative;overflow:visible" type="button" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" style="transform: none">
+                          <button style="position:relative;overflow:visible" type="button"
+                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0" style="transform: none">
                             <h4>Create a room</h4>
                             <img style="    position: absolute;
 top: -20px;
@@ -2614,11 +2493,14 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
 
                       </div>
 
-                      <img alt="SoundLine Navbar Logo" loading="lazy" width="0" height="0" style="width:40%;align-self: center;" decoding="async" data-nimg="1" class="w-auto h-auto" src="{{ asset("/assets/main_image.png") }}" style="color: transparent">
+                      <img alt="SoundLine Navbar Logo" loading="lazy" width="0" height="0"
+                        style="width:40%;align-self: center;" decoding="async" data-nimg="1" class="w-auto h-auto"
+                        src="{{ asset("/assets/main_image.png") }}" style="color: transparent">
                     </section>
 
                   </div>
-                  <div class="h-fit w-full bg-neutral-100 rounded flex flex-col items-center justify-between overflow-clip">
+                  <div
+                    class="h-fit w-full bg-neutral-100 rounded flex flex-col items-center justify-between overflow-clip">
                     <section class=" flex w-full flex items-start justify-start pt-5">
                       <div class="flex w-full flex-row justify-between" style="gap:18px">
                         <div class="flex-grow w-full border-1 border-neutral-400 rounded " style="padding:14px">
@@ -2635,7 +2517,8 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             Click "Sync" in the app
                           </h4>
                           <span>
-                            click "sync" in the application and wait for the web version to sync with the application in order to work in the browser
+                            click "sync" in the application and wait for the web version to sync with the application in
+                            order to work in the browser
                           </span>
                           <img src="{{ asset("/assets/block_2.png") }}" alt="">
                         </div>
@@ -2644,7 +2527,8 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             Enjoy the functionality
                           </h4>
                           <span>
-                            Connect an AI voice translator, record, shoot, show, thanks to an extensive set of functions.
+                            Connect an AI voice translator, record, shoot, show, thanks to an extensive set of
+                            functions.
                           </span>
                           <img src="{{ asset("/assets/block_3.png") }}" alt="">
                         </div>
@@ -2653,67 +2537,42 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                   </div>
                   <div
                     class="h-fit w-full bg-neutral-100 border-1 border-neutral-400 rounded flex flex-col items-center justify-between overflow-clip">
-                    <section
-                      class="h-[17rem] w-full flex items-start justify-start pt-5 px-5">
-                      <img
-                        alt="SoundLine Navbar Logo"
-                        loading="lazy"
-                        width="0"
-                        height="0"
-                        decoding="async"
-                        data-nimg="1"
-                        class="w-auto h-auto"
-
-                        src="{{ asset("/assets/chromebanner.png") }}"
+                    <section class="h-[17rem] w-full flex items-start justify-start pt-5 px-5">
+                      <img alt="SoundLine Navbar Logo" loading="lazy" width="0" height="0" decoding="async"
+                        data-nimg="1" class="w-auto h-auto" src="{{ asset("/assets/chromebanner.png") }}"
                         style="color: transparent" />
                     </section>
 
                   </div>
                 </section>
-                <section
-                  class="w-full h-full flex flex-col gap-2 mx-5 my-10 px-5 pt-5">
+                <section class="w-full h-full flex flex-col gap-2 mx-5 my-10 px-5 pt-5">
                   <h2>Get started</h2>
                   <div class="h-full w-full overflow-y-auto">
                     <div class="flex flex-col gap-4">
                       <div
                         class="flex flex-col items-center justify-center w-full bg-primary-300 border-1 border-primary-500 rounded">
-                        <div
-                          class="h-min p-4 hover:cursor-cool-clickable w-full">
-                          <div
-                            class="flex items-center justify-between select-none">
+                        <div class="h-min p-4 hover:cursor-cool-clickable w-full" onclick="toggleSection(this)">
+                          <div class="flex items-center justify-between select-none">
                             <div class="flex-grow">
-                              <div
-                                class="flex items-center justify-center gap-3 w-fit">
+                              <div class="flex items-center justify-center gap-3 w-fit">
                                 <div class="">
-                                  <button
-                                    type="button"
-                                    role="checkbox"
-                                    aria-checked="true"
-                                    data-state="checked"
+                                  <button type="button" role="checkbox" aria-checked="true" data-state="checked"
                                     value="on"
                                     class="flex items-center justify-center bg-neutral-50 border-neutral-400 bg-primary-500 border-primary-700 rounded-full w-6 h-6 border-2">
-                                    <span
-                                      data-state="checked"
-                                      style="pointer-events: none"><svg
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-4 w-4 stroke-primary-700"
-                                        style="
+                                    <span data-state="checked" style="pointer-events: none"><svg viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-primary-700" style="
                                             max-width: 50vw;
                                             max-height: 50vh;
                                           ">
                                         <g fill="none">
-                                          <path
-                                            class="stroke-2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                          <path class="stroke-2" stroke-linecap="round" stroke-linejoin="round"
                                             d="m20 6.5-11 11-5-5"></path>
                                         </g>
                                       </svg></span>
                                   </button>
                                 </div>
                                 <h4 class="font-bold">
-                                  Import user feedback & research
+                                  Import user feedback &amp; research
                                 </h4>
                               </div>
                             </div>
@@ -2722,96 +2581,63 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                 <p class="text-neutral-100"></p>
                               </div>
                               <div style="transform: none">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  class="h-6 w-6"
-                                  style="max-width: 50vw; max-height: 50vh">
-                                  <path
-                                    d="m8 10 4 4 4-4"
-                                    stroke-linecap="round"
-                                    class="stroke-2 stroke-neutral-700"
-                                    stroke="#323232"
-                                    fill="none"
-                                    stroke-linejoin="round"></path>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 toggle-icon"
+                                  style="max-width: 50vw; max-height: 50vh; transform: rotate(180deg);">
+                                  <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700"
+                                    stroke="#323232" fill="none" stroke-linejoin="round"></path>
                                   <path fill="none" d="M0 0h24v24H0Z"></path>
                                 </svg>
                               </div>
                             </section>
                           </div>
                         </div>
-                        <section
-                          class="w-full overflow-clip px-4"
-                          style="opacity: 1; height: auto">
-                          <div
-                            class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
-                            <div
-                              class="flex flex-col justify-between gap-4 w-1/2 h-full">
+                        <section class="w-full overflow-clip px-4 collapsible-section"
+                          style="opacity: 1; height: auto; display: none;">
+                          <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
+                            <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
-                                Import user feedback and research data into your workspace. This allows you to centralize all your user insights and make them easily accessible for analysis.
+                                Import user feedback and research data into your workspace. This allows you to
+                                centralize all your user insights and make them easily accessible for analysis.
                               </p>
-                              <div
-                                class="pb-2 w-full flex items-center justify-start">
-                                <button
-                                  type="button"
+                              <div class="pb-2 w-full flex items-center justify-start">
+                                <button type="button"
                                   class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
-                                  tabindex="0"
-                                  style="transform: none">
+                                  tabindex="0" style="transform: none">
                                   <h4>Import your first feedback</h4>
                                 </button>
                               </div>
                             </div>
                             <div class="w-1/2 h-full relative select-none">
-                              <img
-                                alt="import-feedback"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                src="./home_files/import-feedback.png"
-                                style="
+                              <img alt="import-feedback" loading="lazy" decoding="async" data-nimg="fill"
+                                src="./home_files/import-feedback.png" style="
                                     position: absolute;
                                     height: 100%;
                                     width: 100%;
                                     inset: 0px;
                                     object-fit: contain;
                                     color: transparent;
-                                  " />
+                                  ">
                             </div>
                           </div>
                         </section>
                       </div>
                       <div
                         class="flex flex-col items-center justify-center w-full bg-neutral-200 border-1 border-neutral-400 rounded">
-                        <div
-                          class="h-min p-4 hover:cursor-cool-clickable w-full">
-                          <div
-                            class="flex items-center justify-between select-none">
+                        <div class="h-min p-4 hover:cursor-cool-clickable w-full" onclick="toggleSection(this)">
+                          <div class="flex items-center justify-between select-none">
                             <div class="flex-grow">
-                              <div
-                                class="flex items-center justify-center gap-3 w-fit">
+                              <div class="flex items-center justify-center gap-3 w-fit">
                                 <div class="">
-                                  <button
-                                    type="button"
-                                    role="checkbox"
-                                    aria-checked="true"
-                                    data-state="checked"
+                                  <button type="button" role="checkbox" aria-checked="true" data-state="checked"
                                     value="on"
                                     class="flex items-center justify-center bg-neutral-300 bg-neutral-300 rounded-full w-6 h-6 border-0">
-                                    <span
-                                      data-state="checked"
-                                      style="pointer-events: none"><svg
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-4 w-4 stroke-neutral-50"
-                                        style="
+                                    <span data-state="checked" style="pointer-events: none"><svg viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-neutral-50" style="
                                             max-width: 50vw;
                                             max-height: 50vh;
                                           ">
                                         <g fill="none">
-                                          <path
-                                            class="stroke-2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                          <path class="stroke-2" stroke-linecap="round" stroke-linejoin="round"
                                             d="m20 6.5-11 11-5-5"></path>
                                         </g>
                                       </svg></span>
@@ -2824,61 +2650,37 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                               <div class="">
                                 <p class="text-neutral-100"></p>
                               </div>
-                              <div
-                                style="
-                                    transform: rotate(180deg) translateZ(0px);
-                                  ">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  class="h-6 w-6"
+                              <div>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 toggle-icon"
                                   style="max-width: 50vw; max-height: 50vh">
-                                  <path
-                                    d="m8 10 4 4 4-4"
-                                    stroke-linecap="round"
-                                    class="stroke-2 stroke-neutral-500"
-                                    stroke="#323232"
-                                    fill="none"
-                                    stroke-linejoin="round"></path>
+                                  <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-500"
+                                    stroke="#323232" fill="none" stroke-linejoin="round"></path>
                                   <path fill="none" d="M0 0h24v24H0Z"></path>
                                 </svg>
                               </div>
                             </section>
                           </div>
                         </div>
-                        <section
-                          class="w-full overflow-clip px-4"
-                          style="opacity: 1; height: auto">
-                          <div
-                            class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
-                            <div
-                              class="flex flex-col justify-between gap-4 w-1/2 h-full">
+                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto">
+                          <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
+                            <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
                                 Go over all captures in your inbox to identify
                                 and highlight valuable parts. This will create
                                 an insight. You will find all your insights in
                                 its tab.
                               </p>
-                              <div
-                                class="pb-2 w-full flex items-center justify-start">
-                                <button
-                                  type="button"
+                              <div class="pb-2 w-full flex items-center justify-start">
+                                <button type="button"
                                   class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
-                                  tabindex="0"
-                                  style="transform: none">
+                                  tabindex="0" style="transform: none">
                                   <h4>Create your first insight</h4>
                                 </button>
                               </div>
                             </div>
                             <div class="w-1/2 h-full relative select-none">
-                              <img
-                                alt="create-insight"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-
-                                src="./home_files/highlight-insight.png"
-                                style="
+                              <img alt="create-insight" loading="lazy" decoding="async" data-nimg="fill"
+                                src="./home_files/highlight-insight.png" style="
                                     position: absolute;
                                     height: 100%;
                                     width: 100%;
@@ -2893,36 +2695,21 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
 
                       <div
                         class="flex flex-col items-center justify-center w-full bg-neutral-200 border-1 border-neutral-400 rounded">
-                        <div
-                          class="h-min p-4 hover:cursor-cool-clickable w-full">
-                          <div
-                            class="flex items-center justify-between select-none">
+                        <div class="h-min p-4 hover:cursor-cool-clickable w-full" onclick="toggleSection(this)">
+                          <div class="flex items-center justify-between select-none">
                             <div class="flex-grow">
-                              <div
-                                class="flex items-center justify-center gap-3 w-fit">
+                              <div class="flex items-center justify-center gap-3 w-fit">
                                 <div class="">
-                                  <button
-                                    type="button"
-                                    role="checkbox"
-                                    aria-checked="true"
-                                    data-state="checked"
+                                  <button type="button" role="checkbox" aria-checked="true" data-state="checked"
                                     value="on"
                                     class="flex items-center justify-center bg-neutral-300 bg-neutral-300 rounded-full w-6 h-6 border-0">
-                                    <span
-                                      data-state="checked"
-                                      style="pointer-events: none"><svg
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="h-4 w-4 stroke-neutral-50"
-                                        style="
+                                    <span data-state="checked" style="pointer-events: none"><svg viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-neutral-50" style="
                                             max-width: 50vw;
                                             max-height: 50vh;
                                           ">
                                         <g fill="none">
-                                          <path
-                                            class="stroke-2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                          <path class="stroke-2" stroke-linecap="round" stroke-linejoin="round"
                                             d="m20 6.5-11 11-5-5"></path>
                                         </g>
                                       </svg></span>
@@ -2935,54 +2722,35 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                               <div class="">
                                 <p class="text-neutral-100"></p>
                               </div>
-                              <div style="transform: none">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  class="h-6 w-6"
+                              <div>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 toggle-icon"
                                   style="max-width: 50vw; max-height: 50vh">
-                                  <path
-                                    d="m8 10 4 4 4-4"
-                                    stroke-linecap="round"
-                                    class="stroke-2 stroke-neutral-500"
-                                    stroke="#323232"
-                                    fill="none"
-                                    stroke-linejoin="round"></path>
+                                  <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-500"
+                                    stroke="#323232" fill="none" stroke-linejoin="round"></path>
                                   <path fill="none" d="M0 0h24v24H0Z"></path>
                                 </svg>
                               </div>
                             </section>
                           </div>
                         </div>
-                        <section
-                          class="w-full overflow-clip px-4"
-                          style="opacity: 1; height: auto">
-                          <div
-                            class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
-                            <div
-                              class="flex flex-col justify-between gap-4 w-1/2 h-full">
+                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto">
+                          <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
+                            <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
-                                Create patterns to organize and analyze your insights. Patterns help you identify trends and make connections between different pieces of information.
+                                Create patterns to organize and analyze your insights. Patterns help you identify trends
+                                and make connections between different pieces of information.
                               </p>
-                              <div
-                                class="pb-2 w-full flex items-center justify-start">
-                                <button
-                                  type="button"
+                              <div class="pb-2 w-full flex items-center justify-start">
+                                <button type="button"
                                   class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
-                                  tabindex="0"
-                                  style="transform: none">
+                                  tabindex="0" style="transform: none">
                                   <h4>Create your first pattern</h4>
                                 </button>
                               </div>
                             </div>
                             <div class="w-1/2 h-full relative select-none">
-                              <img
-                                alt="create-pattern"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="fill"
-                                src="./home_files/create-pattern.png"
-                                style="
+                              <img alt="create-pattern" loading="lazy" decoding="async" data-nimg="fill"
+                                src="./home_files/create-pattern.png" style="
                                     position: absolute;
                                     height: 100%;
                                     width: 100%;
@@ -2994,74 +2762,118 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                           </div>
                         </section>
                       </div>
-                      <div
-                        class="flex flex-col items-center justify-center w-full bg-neutral-200 border-1 border-neutral-400 rounded">
-                        <div
-                          class="h-min p-4 hover:cursor-cool-clickable w-full">
-                          <div
-                            class="flex items-center justify-between select-none">
+                      <div class="flex flex-col items-center justify-center w-full bg-primary-300 border-1 border-primary-500 rounded">
+                        <div class="h-min p-4 hover:cursor-cool-clickable w-full" onclick="toggleSection(this)">
+                          <div class="flex items-center justify-between select-none">
                             <div class="flex-grow">
-                              <div
-                                class="flex items-center justify-center gap-3 w-fit">
+                              <div class="flex items-center justify-center gap-3 w-fit">
                                 <div class="">
-                                  <button
-                                    type="button"
-                                    role="checkbox"
-                                    aria-checked="true"
-                                    data-state="checked"
-                                    value="on"
-                                    class                    </div>
-                  </div>
+                                  <button type="button" role="checkbox" aria-checked="true" data-state="checked" value="on" class="flex items-center justify-center bg-neutral-50 border-neutral-400 bg-primary-500 border-primary-700 rounded-full w-6 h-6 border-2">
+                                    <span data-state="checked" style="pointer-events: none"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-primary-700" style="
+                                            max-width: 50vw;
+                                            max-height: 50vh;
+                                          ">
+                                        <g fill="none">
+                                          <path class="stroke-2" stroke-linecap="round" stroke-linejoin="round" d="m20 6.5-11 11-5-5"></path>
+                                        </g>
+                                      </svg></span>
+                                  </button>
+                                </div>
+                                <h4 class="font-bold">
+                                  Import user feedback &amp; research
+                                </h4>
+                              </div>
+                            </div>
+                            <section class="flex gap-4 w-fit">
+                              <div class="">
+                                <p class="text-neutral-100"></p>
+                              </div>
+                              <div style="transform: none">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 toggle-icon" style="max-width: 50vw; max-height: 50vh; transform: rotate(180deg);">
+                                  <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700" stroke="#323232" fill="none" stroke-linejoin="round"></path>
+                                  <path fill="none" d="M0 0h24v24H0Z"></path>
+                                </svg>
+                              </div>
+                            </section>
+                          </div>
+                        </div>
+                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto; display: none;">
+                          <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
+                            <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
+                              <p class="select-none">
+                                Import user feedback and research data into your workspace. This allows you to
+                                centralize all your user insights and make them easily accessible for analysis.
+                              </p>
+                              <div class="pb-2 w-full flex items-center justify-start">
+                                <button type="button" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" style="transform: none">
+                                  <h4>Import your first feedback</h4>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="w-1/2 h-full relative select-none">
+                              <img alt="import-feedback" loading="lazy" decoding="async" data-nimg="fill" src="./home_files/import-feedback.png" style="
+                                    position: absolute;
+                                    height: 100%;
+                                    width: 100%;
+                                    inset: 0px;
+                                    object-fit: contain;
+                                    color: transparent;
+                                  ">
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                      <script>
+                        function toggleSection(element) {
+                          const section = element.nextElementSibling;
+                          const icon = element.querySelector('.toggle-icon');
 
+                          if (section.style.display === 'none') {
+                            section.style.display = 'block';
+                            icon.style.transform = 'rotate(0deg)';
+                          } else {
+                            section.style.display = 'none';
+                            icon.style.transform = 'rotate(180deg)';
+                          }
+                        }
+
+                        
+                      </script>
+                    </div>
+
+                  </div>
+                </section>
               </div>
             </section>
           </div>
-          </section>
-        </div>
-        <div class="flex flex-col z-30">
-          <div
-            class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+          <div class="flex flex-col z-30">
+            <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+              <div
+                class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+                type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r52:"
+                data-state="closed">
+                <img alt="SoundLine Illustration Logo" loading="lazy" width="25" height="25" decoding="async"
+                  data-nimg="1" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent" />
+              </div>
+            </div>
             <div
-              class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
-              type="button"
-              aria-haspopup="dialog"
-              aria-expanded="false"
-              aria-controls="radix-:r52:"
-              data-state="closed">
-              <img
-                alt="SoundLine Illustration Logo"
-                loading="lazy"
-                width="25"
-                height="25"
-                decoding="async"
-                data-nimg="1"
-                src="./home_files/ListenUp-Logo.svg"
-                style="color: transparent" />
+              class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+              style="z-index: 99999">
+              <button type="button"
+                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+                id="radix-:r53:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
+                <h3 class="text-primary-600">?</h3>
+              </button>
             </div>
           </div>
+          <div class="absolute h-full w-full"></div>
           <div
-            class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
-            style="z-index: 99999">
-            <button
-              type="button"
-              class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
-              id="radix-:r53:"
-              aria-haspopup="menu"
-              aria-expanded="false"
-              data-state="closed"
-              tabindex="0">
-              <h3 class="text-primary-600">?</h3>
-            </button>
+            class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
+            <div></div>
           </div>
-        </div>
-        <div class="absolute h-full w-full"></div>
-        <div
-          class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
-          <div></div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
 </body>

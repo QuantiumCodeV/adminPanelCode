@@ -1478,7 +1478,8 @@
       }
     </style>
     <div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;">
-      <div class="plasmo-csui-container" id="plasmo-overlay-0" style="display: flex; position: absolute; top: 0px; left: 0px;">
+      <div class="plasmo-csui-container" id="plasmo-overlay-0"
+        style="display: flex; position: absolute; top: 0px; left: 0px;">
         <div class="listenup-h-fit listenup-w-fit"></div>
       </div>
     </div>
@@ -1490,7 +1491,8 @@
   <title>Captures | ListenUp!</title>
   <meta content="3" name="next-head-count" />
   <link as="style" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" rel="preload" />
-  <link data-n-g="" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" rel="stylesheet" /><noscript data-n-css=""></noscript>
+  <link data-n-g="" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" rel="stylesheet" /><noscript
+    data-n-css=""></noscript>
   <style type="text/css">
     :where(html[dir="ltr"]),
     :where([data-sonner-toaster][dir="ltr"]) {
@@ -2107,10 +2109,15 @@
     <div>
       <div>
         <div class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
-          <section class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1" id="app-navbar">
+          <section class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1"
+            id="app-navbar">
             <section class="flex items-center flex-grow basis-0 justify-start"><button data-state="closed">
-                <div class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal"><img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{ asset("assets/logo.png") }}" style="color: transparent;" width="120" />
-                  <section class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
+                <div
+                  class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+                  <img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy"
+                    src="{{ asset("assets/logo.png") }}" style="color: transparent;" width="120" />
+                  <section
+                    class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
                     <p class="text-xs text-primary-600"><strong>300 credits left</strong></p>
                     <p class="text-xs text-primary-600">|</p>
                     <p class="text-xs text-primary-600"><strong>14 days left </strong></p>
@@ -2119,65 +2126,120 @@
               </button></section>
             <section class="flex items-center justify-center">
               <div class="relative h-fit select-none w-full" data-orientation="horizontal" dir="ltr">
-                <div aria-orientation="horizontal" class="rounded flex flex-row w-full justify-evenly gap-2" data-orientation="horizontal" role="tablist" style="outline: none;" tabindex="0"><a aria-controls="radix-:r3u:-content-home" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("home") }}" id="radix-:r3u:-trigger-home" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" data-name="Layer 3" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div aria-orientation="horizontal" class="rounded flex flex-row w-full justify-evenly gap-2"
+                  data-orientation="horizontal" role="tablist" style="outline: none;" tabindex="0"><a
+                    aria-controls="radix-:r3u:-content-home" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("home") }}" id="radix-:r3u:-trigger-home" role="tab" tabindex="-1" type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" data-name="Layer 3"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0h24v24H0Z" fill="none"></path>
-                        <path class="stroke-1.5 stroke-neutral-700 stroke-neutral-700" d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path class="stroke-1.5 stroke-neutral-700 stroke-neutral-700"
+                          d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <h5 class="font-bold">Home</h5>
                     </div>
-                  </a><a aria-controls="radix-:r3u:-content-captures" aria-selected="true" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="active" href="{{ route("captures") }}" id="radix-:r3u:-trigger-captures" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </a><a aria-controls="radix-:r3u:-content-captures" aria-selected="true"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="active"
+                    href="{{ route("captures") }}" id="radix-:r3u:-trigger-captures" role="tab" tabindex="-1"
+                    type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" fill="none"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700"
+                          d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                          stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <h5 class="font-bold">Inbox</h5>
                     </div>
-                  </a><a aria-controls="radix-:r3u:-content-insights" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("insights") }}" id="radix-:r3u:-trigger-insights" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </a><a aria-controls="radix-:r3u:-content-insights" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("insights") }}" id="radix-:r3u:-trigger-insights" role="tab" tabindex="-1"
+                    type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
                       <h5 class="font-bold">Meetings</h5>
                     </div>
-                  </a><a aria-controls="radix-:r3u:-content-analytics" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("analytics") }}" id="radix-:r3u:-trigger-analytics" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </a><a aria-controls="radix-:r3u:-content-analytics" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("analytics") }}" id="radix-:r3u:-trigger-analytics" role="tab" tabindex="-1"
+                    type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700"
+                          d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M24 24H0V0h24Z" fill="none"></path>
                       </svg>
                       <h5 class="font-bold">Analytics</h5>
                     </div>
-                  </a><a aria-controls="radix-:r3u:-content-users" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("friends") }}" id="radix-:r3u:-trigger-users" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6 stroke-1.5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  </a><a aria-controls="radix-:r3u:-content-users" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("friends") }}" id="radix-:r3u:-trigger-users" role="tab" tabindex="-1" type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6 stroke-1.5"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <g class="stroke-neutral-700" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                          <path
+                            d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                          </path>
                         </g>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
                       <h5 class="font-bold">Users</h5>
                     </div>
                   </a></div>
-                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400" style="width: 94px; height: 48px; transform: translateX(105px) translateY(0px) translateZ(0px);"></div>
+                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400"
+                  style="width: 94px; height: 48px; transform: translateX(105px) translateY(0px) translateZ(0px);">
+                </div>
               </div>
             </section>
-            <div class="flex items-center justify-end gap-2 flex-grow basis-0"><button class="flex items-center font-bold rounded text-base font-bold px-3 py-3" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0">
-                <div class="flex items-center gap-2"><svg class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path class="stroke-2 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+            <div class="flex items-center justify-end gap-2 flex-grow basis-0"><button
+                class="flex items-center font-bold rounded text-base font-bold px-3 py-3"
+                style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0">
+                <div class="flex items-center gap-2"><svg class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;"
+                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="stroke-2 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M0 0h24v24H0Z" fill="none"></path>
                   </svg>
                   <p class="text-neutral-600">Send us a feedback</p>
                 </div>
-              </button><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r44:" tabindex="0" type="button">
+              </button><button aria-expanded="false" aria-haspopup="menu"
+                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+                data-state="closed" id="radix-:r44:" tabindex="0" type="button">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
-                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="{{ asset("storage/".auth()->user()->avatar) }}" style="height:100%" /></div>
+                    <div
+                      class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                      <img alt="Avatar" class="object-cover" src="{{ asset('storage/' . (auth()->user()->avatar ?: 'member_avatar_453.png')) }}"
+                        style="height:100%" /></div>
                     <div class="absolute -bottom-1 -right-1">
-                      <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1"><img alt="Avatar" class="object-cover" src="{{ asset("assets/organization_avatar_508.png") }}" /></div>
+                      <div
+                        class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
+                        <img alt="Avatar" class="object-cover"
+                          src="{{ asset("assets/organization_avatar_508.png") }}" /></div>
                     </div>
                   </div>
                   <h5 class="font-bold">📦 My Space</h5>
                 </div>
-                <div style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                <div style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;"
+                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M0 0h24v24H0Z" fill="none"></path>
                   </svg></div>
               </button></div>
@@ -2185,13 +2247,20 @@
           <div class="flex">
             <section class="h-[calc(100vh-4rem)] w-screen">
               <div class="h-full w-full flex">
-                <div class="flex-none h-full border-r-1 border-neutral-300 bg-neutral-50 w-96 flex-col flex justify-between">
+                <div
+                  class="flex-none h-full border-r-1 border-neutral-300 bg-neutral-50 w-96 flex-col flex justify-between">
                   <div class="w-full h-full">
                     <div class="w-full h-full flex flex-col bg-neutral-50 relative">
                       <div class="flex flex-col gap-4 bg-neutral-50 px-3 pt-3 pb-1 border-b-1 border-neutral-300 h-fit">
                         <section class="flex justify-between items-center">
-                          <div><button style="position:relative;overflow:visible" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
-                                <path class="stroke-2 stroke-neutral-700" d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <div><button style="position:relative;overflow:visible"
+                              class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                              style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg
+                                class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-2 stroke-neutral-700"
+                                  d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
                               </svg>
                               <h5>Add captures</h5>
                               <img style="    position: absolute;
@@ -2224,27 +2293,46 @@
                                   }
                                 }
                               </style>
-                            </button></div><button aria-autocomplete="none" aria-controls="radix-:r46:" aria-expanded="false" class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none text-neutral-600 hover:bg-neutral-100" data-state="closed" dir="ltr" role="combobox" tabindex="0" type="button"><span style="pointer-events: none;">
-                              <div class="flex items-center gap-2"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            </button></div><button aria-autocomplete="none" aria-controls="radix-:r46:"
+                            aria-expanded="false"
+                            class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none text-neutral-600 hover:bg-neutral-100"
+                            data-state="closed" dir="ltr" role="combobox" tabindex="0" type="button"><span
+                              style="pointer-events: none;">
+                              <div class="flex items-center gap-2"><svg class="h-6 w-6"
+                                  style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg">
                                   <g data-name="Layer 2" fill="none">
                                     <path d="M0 0h24v24H0Z"></path>
-                                    <rect class="stroke-2 stroke-neutral-700" height="15" rx="4" stroke-linecap="round" stroke-linejoin="round" width="18" x="3" y="4.5"></rect>
-                                    <path class="stroke-2 stroke-neutral-700" d="m7 8.984 4.205 1.833a2 2 0 0 0 1.593.002L17 9.002" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <rect class="stroke-2 stroke-neutral-700" height="15" rx="4" stroke-linecap="round"
+                                      stroke-linejoin="round" width="18" x="3" y="4.5"></rect>
+                                    <path class="stroke-2 stroke-neutral-700"
+                                      d="m7 8.984 4.205 1.833a2 2 0 0 0 1.593.002L17 9.002" stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
                                   </g>
                                 </svg>
                                 <h5>All</h5>
                               </div>
                             </span>
-                            <div aria-hidden="true" style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path class="stroke-2 stroke-neutral-600" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <div aria-hidden="true" style="transform: none;"><svg class="h-6"
+                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-2 stroke-neutral-600" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                               </svg></div>
                           </button>
                         </section>
                         <section class="flex justify-between items-center">
-                          <p class="text-neutral-600">0 captures</p><button aria-autocomplete="none" aria-controls="radix-:r47:" aria-expanded="false" class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none text-neutral-600 hover:bg-neutral-100" data-state="closed" dir="ltr" role="combobox" tabindex="0" type="button"><span style="pointer-events: none;">Newest</span>
-                            <div aria-hidden="true" style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path class="stroke-2 stroke-neutral-600" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <p class="text-neutral-600">0 captures</p><button aria-autocomplete="none"
+                            aria-controls="radix-:r47:" aria-expanded="false"
+                            class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none text-neutral-600 hover:bg-neutral-100"
+                            data-state="closed" dir="ltr" role="combobox" tabindex="0" type="button"><span
+                              style="pointer-events: none;">Newest</span>
+                            <div aria-hidden="true" style="transform: none;"><svg class="h-6"
+                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-2 stroke-neutral-600" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                               </svg></div>
                           </button>
@@ -2614,27 +2702,45 @@
                           </div>
                         </div>
                       </div>
-                      <section class="absolute z-30 bottom-4 w-full flex items-center justify-center pointer-events-none">
+                      <section
+                        class="absolute z-30 bottom-4 w-full flex items-center justify-center pointer-events-none">
                         <div class="pointer-events-auto">
-                          <div class="rounded w-fit bg-primary-300 flex items-center gap-2 py-1 px-2 shadow-lg outline-[0.15rem] outline-primary-500 outline-dashed -outline-offset-2 pointer-events-none" style="opacity: 0; transform: scale(0.5) translateZ(0px);"><button class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-primary-200 border-[1.5px] border-primary-500 opacity-100" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button">
-                              <section class="flex items-center justify-center gap-2"><svg class="h-5 stroke-neutral-700" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <div
+                            class="rounded w-fit bg-primary-300 flex items-center gap-2 py-1 px-2 shadow-lg outline-[0.15rem] outline-primary-500 outline-dashed -outline-offset-2 pointer-events-none"
+                            style="opacity: 0; transform: scale(0.5) translateZ(0px);"><button
+                              class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-primary-200 border-[1.5px] border-primary-500 opacity-100"
+                              style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button">
+                              <section class="flex items-center justify-center gap-2"><svg
+                                  class="h-5 stroke-neutral-700" style="max-width: 50vw; max-height: 50vh;"
+                                  viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <g fill="none">
-                                    <path class="stroke-2" d="m20 6.5-11 11-5-5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path class="stroke-2" d="m20 6.5-11 11-5-5" stroke-linecap="round"
+                                      stroke-linejoin="round"></path>
                                   </g>
                                 </svg>
                                 <h5>Mark all as done</h5>
                               </section>
-                            </button><button class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-primary-200 border-[1.5px] border-primary-500 opacity-100" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button">
-                              <section class="flex items-center justify-center gap-2"><svg class="h-5" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                                  <path class="stroke-2 stroke-neutral-700" d="M18.626 5.234a88.992 88.992 0 0 0-8.767-.437c-1.733 0-3.465.087-5.198.262l-1.785.175M7.688 4.35l.193-1.146c.14-.83.245-1.452 1.724-1.452h2.292c1.48 0 1.593.656 1.724 1.461l.193 1.138M16.745 8l-.568 8.811c-.096 1.374-.175 2.442-2.617 2.442H7.943c-2.441 0-2.52-1.068-2.616-2.442L4.757 8M9.29 14.435h2.913M8.563 10.938h4.375" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </button><button
+                              class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-primary-200 border-[1.5px] border-primary-500 opacity-100"
+                              style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button">
+                              <section class="flex items-center justify-center gap-2"><svg class="h-5" fill="none"
+                                  style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 22 21"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path class="stroke-2 stroke-neutral-700"
+                                    d="M18.626 5.234a88.992 88.992 0 0 0-8.767-.437c-1.733 0-3.465.087-5.198.262l-1.785.175M7.688 4.35l.193-1.146c.14-.83.245-1.452 1.724-1.452h2.292c1.48 0 1.593.656 1.724 1.461l.193 1.138M16.745 8l-.568 8.811c-.096 1.374-.175 2.442-2.617 2.442H7.943c-2.441 0-2.52-1.068-2.616-2.442L4.757 8M9.29 14.435h2.913M8.563 10.938h4.375"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                                 <h5>Delete all</h5>
                               </section>
-                            </button><button class="flex items-center font-bold rounded focus:outline-none text-base font-bold" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0">
-                              <div class="p-2"><svg class="h-8 w-8" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            </button><button
+                              class="flex items-center font-bold rounded focus:outline-none text-base font-bold"
+                              style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0">
+                              <div class="p-2"><svg class="h-8 w-8" style="max-width: 50vw; max-height: 50vh;"
+                                  viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <g fill="none">
                                     <path d="M0 0h24v24H0Z"></path>
-                                    <path class="stroke-[2] stroke-neutral-700" d="m8 8 8 8M16 8l-8 8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path class="stroke-[2] stroke-neutral-700" d="m8 8 8 8M16 8l-8 8"
+                                      stroke-linecap="round" stroke-linejoin="round"></path>
                                   </g>
                                 </svg></div>
                             </button></div>
@@ -2643,14 +2749,22 @@
                     </div>
                   </div>
                 </div>
-                <div class="flex-grow h-full flex flex-col gap-4 justify-between bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern overflow-hidden">
+                <div
+                  class="flex-grow h-full flex flex-col gap-4 justify-between bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern overflow-hidden">
                   <div class="flex-grow m-8 flex flex-col gap-4 items-center justify-center h-full rounded">
                     <p class="text-8xl">🧲</p>
                     <h1>Your capture inbox is empty</h1>
-                    <p class="text-center">Upload feedback, user research or connect data sources to<br /> capture them automatically</p>
+                    <p class="text-center">Upload feedback, user research or connect data sources to<br /> capture them
+                      automatically</p>
                     <section class="w-full h-fit flex flex-col items-center justify-center gap-3">
-                      <button style="position:relative;overflow:visible" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
-                          <path class="stroke-2 stroke-neutral-700" d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <button style="position:relative;overflow:visible"
+                        class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                        style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg
+                          class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 19 17"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path class="stroke-2 stroke-neutral-700"
+                            d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                         <h5>Add captures</h5>
                         <img style="    position: absolute;
@@ -2685,7 +2799,9 @@
                         </style>
                       </button>
 
-                      <div class="w-full h-fit flex items-center justify-center gap-2"><img alt="Integrations Bouquet" data-nimg="1" decoding="async" height="60" loading="lazy" src="{{ asset("assets/integrations_bouquet.png")}}" width="60" />
+                      <div class="w-full h-fit flex items-center justify-center gap-2"><img alt="Integrations Bouquet"
+                          data-nimg="1" decoding="async" height="60" loading="lazy"
+                          src="{{ asset("assets/integrations_bouquet.png")}}" width="60" />
                         <p class="text-small"><span class="text-neutral-500">+5 methods</span></p>
                       </div>
                     </section>
@@ -2696,22 +2812,46 @@
           </div>
           <div class="flex flex-col z-30">
             <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-              <div aria-controls="radix-:r48:" aria-expanded="false" aria-haspopup="dialog" class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" data-state="closed" type="button"><img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="./captures_files/ListenUp-Logo.svg" style="color: transparent;" width="25" /></div>
+              <div aria-controls="radix-:r48:" aria-expanded="false" aria-haspopup="dialog"
+                class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+                data-state="closed" type="button"><img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async"
+                  height="25" loading="lazy" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent;"
+                  width="25" /></div>
             </div>
-            <div class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" style="z-index: 99999;"><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r49:" tabindex="0" type="button">
+            <div
+              class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+              style="z-index: 99999;"><button aria-expanded="false" aria-haspopup="menu"
+                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+                data-state="closed" id="radix-:r49:" tabindex="0" type="button">
                 <h3 class="text-primary-600">?</h3>
               </button></div>
           </div>
           <div class="absolute h-full w-full"></div>
-          <div class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
+          <div
+            class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
             <div></div>
           </div>
         </div>
       </div>
     </div>
   </div><next-route-announcer>
-    <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">Captures | ListenUp!</p>
-  </next-route-announcer><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0" name="__privateStripeController3321" role="presentation" scrolling="no" src="./captures_files/controller-with-preconnect-0ac892cc1983a4b6e5727ee594af4fd2.html" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" tabindex="-1"></iframe><iframe aria-hidden="true" id="_hjSafeContext_74628675" src="./captures_files/saved_resource.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" tabindex="-1" title="_hjSafeContext"></iframe><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0" name="__privateStripeMetricsController3320" role="presentation" scrolling="no" src="./captures_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" tabindex="-1"></iframe><iframe aria-hidden="true" id="intercom-frame" src="./captures_files/saved_resource(1).html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" tabindex="-1" title="Intercom"></iframe>
+    <p aria-live="assertive" id="__next-route-announcer__" role="alert"
+      style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+      Captures | ListenUp!</p>
+  </next-route-announcer><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0"
+    name="__privateStripeController3321" role="presentation" scrolling="no"
+    src="./captures_files/controller-with-preconnect-0ac892cc1983a4b6e5727ee594af4fd2.html"
+    style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"
+    tabindex="-1"></iframe><iframe aria-hidden="true" id="_hjSafeContext_74628675"
+    src="./captures_files/saved_resource.html"
+    style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"
+    tabindex="-1" title="_hjSafeContext"></iframe><iframe allow="payment *" allowtransparency="true" aria-hidden="true"
+    frameborder="0" name="__privateStripeMetricsController3320" role="presentation" scrolling="no"
+    src="./captures_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html"
+    style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"
+    tabindex="-1"></iframe><iframe aria-hidden="true" id="intercom-frame" src="./captures_files/saved_resource(1).html"
+    style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;"
+    tabindex="-1" title="Intercom"></iframe>
   <div class="intercom-lightweight-app">
     <style id="intercom-lightweight-app-style" type="text/css">
       @keyframes intercom-lightweight-app-launcher {
@@ -2921,7 +3061,8 @@
         }
       }
     </style>
-  </div><svg aria-hidden="true" style="width: 0px; height: 0px; position: absolute; top: -100%; left: -100%;"><text id="__react_svg_text_measurement_id">40</text></svg>
+  </div><svg aria-hidden="true" style="width: 0px; height: 0px; position: absolute; top: -100%; left: -100%;"><text
+      id="__react_svg_text_measurement_id">40</text></svg>
 </body>
 
 </html>

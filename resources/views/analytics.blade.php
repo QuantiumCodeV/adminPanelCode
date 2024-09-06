@@ -2164,7 +2164,7 @@
               </button><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r4j:" tabindex="0" type="button">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
-                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="{{asset("storage/".auth()->user()->avatar)}}" style="height:100%" /></div>
+                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="{{ asset('storage/' . (auth()->user()->avatar ?: 'member_avatar_453.png')) }}" style="height:100%" /></div>
                     <div class="absolute -bottom-1 -right-1">
                       <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1"><img alt="Avatar" class="object-cover" src="{{asset("assets/organization_avatar_508.png")}}" /></div>
                     </div>
@@ -3420,7 +3420,7 @@
           </div>
           <div class="flex flex-col z-30">
             <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-              <div aria-controls="radix-:r4r:" aria-expanded="false" aria-haspopup="dialog" class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" data-state="closed" type="button"><img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="./analytics_files/ListenUp-Logo.svg" style="color: transparent;" width="25" /></div>
+              <div aria-controls="radix-:r4r:" aria-expanded="false" aria-haspopup="dialog" class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" data-state="closed" type="button"><img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent;" width="25" /></div>
             </div>
             <div class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" style="z-index: 99999;"><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r4s:" tabindex="0" type="button">
                 <h3 class="text-primary-600">?</h3>

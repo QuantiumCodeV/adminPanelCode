@@ -2215,7 +2215,7 @@
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
                     <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
-                      <img alt="Avatar" class="object-cover" src="{{ asset("storage/".auth()->user()->avatar) }}" style="height:100%" />
+                      <img alt="Avatar" class="object-cover" src="{{ asset('storage/' . (auth()->user()->avatar ?: 'member_avatar_453.png')) }}" style="height:100%" />
                     </div>
                     <div class="absolute -bottom-1 -right-1">
                       <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
@@ -2732,7 +2732,7 @@
           <div class="flex flex-col z-30">
             <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
               <div aria-controls="radix-:r19:" aria-expanded="false" aria-haspopup="dialog" class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" data-state="closed" type="button">
-                <img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="./inbox_files/ListenUp-Logo.svg" style="color: transparent" width="25" />
+                <img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent" width="25" />
               </div>
             </div>
             <div class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" style="z-index: 99999">

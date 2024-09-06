@@ -3033,7 +3033,7 @@
           <div class="flex flex-col z-30">
             <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
               <div aria-controls="radix-:r59:" aria-expanded="false" aria-haspopup="dialog" class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" data-state="closed" type="button">
-                <img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="./friends_files/ListenUp-Logo.svg" style="color: transparent" width="25" />
+                <img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent" width="25" />
               </div>
             </div>
             <div class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" style="z-index: 99999">
