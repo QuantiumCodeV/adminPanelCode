@@ -29599,7 +29599,7 @@
 
     clearErrors();
     $.ajax({
-      url: "{{ route("api.user.login"); }}",
+      url: "{{ route("api.user.login") }}",
       type: "POST",
       data: t,
       success: function(data) {
