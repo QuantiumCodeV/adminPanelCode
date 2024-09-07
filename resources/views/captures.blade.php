@@ -2,6 +2,7 @@
 
 <!-- saved from url=(0043){{ route("captures") }} -->
 <html style="">
+  @include('fonts')
 <plasmo-csui><template shadowrootmode="open">
     <style>
       *,
@@ -1486,6 +1487,7 @@
   </template></plasmo-csui>
 
 <head>
+  @include('fonts')
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
   <meta content="width=device-width" name="viewport" />
   <title>Captures | ListenUp!</title>
@@ -2159,7 +2161,7 @@
                   </a><a aria-controls="radix-:r3u:-content-insights" aria-selected="false"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
                     data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
-                    href="{{ route("insights") }}" id="radix-:r3u:-trigger-insights" role="tab" tabindex="-1"
+                    href="{{ route("meetings") }}" id="radix-:r3u:-trigger-insights" role="tab" tabindex="-1"
                     type="button">
                     <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"

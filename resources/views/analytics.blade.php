@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <!-- saved from url=(0044){{ route("analytics") }} -->
-<html style=""><plasmo-csui><template shadowrootmode="open">
+<html style="">
+  @include('fonts')<plasmo-csui><template shadowrootmode="open">
     <style>
       *,
       :before,
@@ -1484,6 +1485,7 @@
   </template></plasmo-csui>
 
 <head>
+  @include('fonts')
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
   <meta content="width=device-width" name="viewport" />
   <title>Analytics | ListenUp!</title>
@@ -2127,7 +2129,7 @@
                       </svg>
                       <h5 class="font-bold">Inbox</h5>
                     </div>
-                  </a><a aria-controls="radix-:r4d:-content-insights" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("insights") }}" id="radix-:r4d:-trigger-insights" role="tab" tabindex="-1" type="button">
+                  </a><a aria-controls="radix-:r4d:-content-insights" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("meetings") }}" id="radix-:r4d:-trigger-insights" role="tab" tabindex="-1" type="button">
                     <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
@@ -2151,7 +2153,7 @@
                       <h5 class="font-bold">Users</h5>
                     </div>
                   </a></div>
-                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400" style="width: 119px; height: 48px; transform: translateX(325px) translateY(0px) translateZ(0px);"></div>
+                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400" style="width: 119px; height: 48px; transform: translateX(335px) translateY(0px) translateZ(0px);"></div>
               </div>
             </section>
             <div class="flex items-center justify-end gap-2 flex-grow basis-0"><button class="flex items-center font-bold rounded text-base font-bold px-3 py-3" tabindex="0">

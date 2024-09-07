@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0039)https://app.listenup.ai/spaces/487/home -->
 <html style="">
+  @include('fonts')
 <plasmo-csui><template shadowrootmode="open">
     <style>
       *,
@@ -1490,6 +1491,7 @@
   </template></plasmo-csui>
 
 <head>
+  @include('fonts')
   <link href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
     rel="shortcut icon" type="image/x-icon" />
   <link href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f5e63bfed5fc2509a07_256.png"

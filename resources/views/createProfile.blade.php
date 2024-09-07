@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html style="">
+  @include('fonts')
 
 <head>
+  @include('fonts')
   <link
     href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
     rel="shortcut icon"

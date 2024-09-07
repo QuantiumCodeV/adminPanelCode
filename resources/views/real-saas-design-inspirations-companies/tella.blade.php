@@ -1,4 +1,5 @@
-<!DOCTYPE html><!-- Last Published: Tue Jul 23 2024 12:43:14 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.listenup.ai" data-wf-page="65a29547d73a8e873235d46f" data-wf-site="635584277e62506ebe08fb74" data-wf-collection="65a29547d73a8e873235d456" data-wf-item-slug="tella"><head><link
+<!DOCTYPE html><!-- Last Published: Tue Jul 23 2024 12:43:14 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.listenup.ai" data-wf-page="65a29547d73a8e873235d46f" data-wf-site="635584277e62506ebe08fb74" data-wf-collection="65a29547d73a8e873235d456" data-wf-item-slug="tella"><head>
+  @include('fonts')<link
       href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
       rel="shortcut icon"
       type="image/x-icon"

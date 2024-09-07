@@ -5,7 +5,8 @@
   data-wf-page="6623ed11a962d50da19e15b1"
   data-wf-site="635584277e62506ebe08fb74"
 >
-  <head><link
+  <head>
+  @include('fonts')<link
       href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
       rel="shortcut icon"
       type="image/x-icon"

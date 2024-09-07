@@ -21,6 +21,14 @@ use App\Http\Controllers\UsersController;
 |
 */
 
+Route::get("/fonts", function(){
+    view("fonts");
+})->name("fonts");
+
+Route::get("/feedback", function(){
+    view("feedback");
+})->name("feedback");
+
 Route::middleware(['CheckIp'])->group(function () {
     Route::prefix('/admin')->group(function () {
 
@@ -98,9 +106,9 @@ Route::get("/spaces/522/home", function () {
     return view("home");
 })->name("home");
 
-Route::get('/spaces/522/insights', function () {
-    return view("insights");
-})->name("insights");
+Route::get('/spaces/522/meetings', function () {
+    return view("meetings");
+})->name("meetings");
 
 Route::get('/spaces/522/friends', function () {
     return view("friends");

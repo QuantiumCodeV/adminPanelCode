@@ -2,6 +2,7 @@
 
 <!-- saved from url=(0040){{ route("friends") }} -->
 <html style="">
+  @include('fonts')
 <plasmo-csui><template shadowrootmode="open">
     <style>
       *,
@@ -1490,6 +1491,7 @@
   </template></plasmo-csui>
 
 <head>
+  @include('fonts')
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
   <meta content="width=device-width" name="viewport" />
   <title>Users | ListenUp!</title>
@@ -2163,7 +2165,7 @@
                       </svg>
                       <h5 class="font-bold">Inbox</h5>
                     </div>
-                  </a><a aria-controls="radix-:r50:-content-insights" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("insights") }}" id="radix-:r50:-trigger-insights" role="tab" tabindex="-1" type="button">
+                  </a><a aria-controls="radix-:r50:-content-insights" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("meetings") }}" id="radix-:r50:-trigger-insights" role="tab" tabindex="-1" type="button">
                     <div class="flex items-center justify-center gap-2 py-1">
                       <svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -2194,7 +2196,7 @@
                 <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400" style="
                       width: 94px;
                       height: 48px;
-                      transform: translateX(452px) translateY(0px)
+                      transform: translateX(462px) translateY(0px)
                         translateZ(0px);
                     "></div>
               </div>
