@@ -24,9 +24,9 @@
     </ol>
 </section>
 
-<div id="overlay" style="display:none"
+<div id="overlay" style="display:none;z-index: 999;"
     class="fixed inset-0 box-content shadow-apple backdrop-blur-[2px] bg-neutral-700/40 " data-state="open"
-    style="pointer-events: auto; z-index: 199; opacity: 1;" data-aria-hidden="true" aria-hidden="true"></div>
+    style="pointer-events: auto; z-index: 199;    z-index: 999; opacity: 1;" data-aria-hidden="true" aria-hidden="true"></div>
 
 <div style="display:none; z-index:999999" id="modalFeedback"
     class="focus:outline-none rounded m-auto fixed inset-x-0 inset-y-0 flex items-center absolute bg-neutral-100 overflow-hidden min-w-[5rem] max-w-[40rem] h-fit max-h-[95%] rounded p-3"
