@@ -971,7 +971,6 @@
                                       setTimeout(() => {
                                         download_app.style.opacity = "1";
                                         download_app.style.maxHeight = "100px";
-                                        download_app.style.padding = "10px";
                                       }, 10);
                                     }, 500);
 
