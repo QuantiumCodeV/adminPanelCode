@@ -934,7 +934,6 @@
                                 setTimeout(() => {
                                   inputContainer.style.opacity = "1";
                                   inputContainer.style.maxHeight = "100px";
-                                  inputContainer.style.padding = "10px";
                                 }, 10);
                               }, 500);
                             }
