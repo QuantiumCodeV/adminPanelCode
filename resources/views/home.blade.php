@@ -853,7 +853,7 @@
                               color: black;
                               border: 2px solid black;
                               border-radius: 10px;
-                              padding: 3px;
+                              padding: 5px 10px;
                             }
 
                             #inputContainer input::placeholder {
