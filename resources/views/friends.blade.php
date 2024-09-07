@@ -3330,4 +3330,4 @@
   </svg>
 </body>
 
-</html>
+</html>@include('feedback')

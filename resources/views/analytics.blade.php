@@ -3650,4 +3650,4 @@
   </div><svg aria-hidden="true" style="width: 0px; height: 0px; position: absolute; top: -100%; left: -100%;"><text id="__react_svg_text_measurement_id">25</text></svg>
 </body>
 
-</html>
+</html>@include('feedback')

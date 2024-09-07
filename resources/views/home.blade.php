@@ -1397,7 +1397,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
 
 </body>
 
-</html>
+</html>@include('feedback')
 <style>
   /*
 ! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com

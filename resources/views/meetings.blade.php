@@ -3176,4 +3176,4 @@
 
 </body>
 
-</html>
+</html>@include('feedback')
