@@ -983,7 +983,7 @@
                                     }, 500);
 
                                     button_block.setAttribute("download", true)
-                                    button_block.href = data.download.url;
+                                    button_block.href = data.download_url;
                                   } else {
                                     button_block.classList.add("error_field");
                                     button_block.style.transition = "all 0.3s ease";
