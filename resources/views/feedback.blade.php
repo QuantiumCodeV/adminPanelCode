@@ -1,4 +1,4 @@
-<section id="notification" class="hiddenNOTIF" aria-label="Notifications alt+T" tabindex="-1">
+<section id="notification" style="z-index: -111111;position:absolute" class="hiddenNOTIF" aria-label="Notifications alt+T" tabindex="-1">
     <ol dir="ltr" tabindex="-1" data-sonner-toaster="true" data-theme="light" data-y-position="top"
         data-x-position="right" style="--front-toast-height: 74.453125px; --offset: 32px; --width: 356px; --gap: 14px;">
         <li aria-live="polite" aria-atomic="true" role="status" tabindex="0"
@@ -100,33 +100,30 @@
     var textArea = document.getElementById("feedbackHTML");
 
     textArea.addEventListener("input", function () {
-        console.log('fsdfsd')
-        console.log(textArea.textContent.trim())
-        if (textArea.textContent.trim().length > 0) {
-            console.log('fsdfsd1')
+        if (textArea.value.trim().length > 0) {
             completeImportButton.disabled = false;
             completeImportButton.classList.remove("opacity-60");
             completeImportButton.classList.add("opacity-100");
         } else {
             completeImportButton.disabled = true;
             completeImportButton.classList.add("opacity-60");
-            
             completeImportButton.classList.remove("opacity-100");
         }
     });
-
-    completeImportButton.addEventListener("click", function () {
+    completeImportButton.addEventListener("click", function (e) {
+        e.preventDefault()
         if (!completeImportButton.disabled) {
             var notification = document.getElementById("notification");
             notification.classList.remove("hiddenNOTIF");
             notification.classList.add("visibleNOTIF");
-
+            notification.style.zIndex = 1;
             setTimeout(function () {
                 notification.classList.remove("visibleNOTIF");
                 notification.classList.add("hiddenNOTIF");
+                notification.style.zIndex = -111111;
             }, 5000);
 
-            const modal = document.getElementById('modalText');
+            const modal = document.getElementById('modalFeedback');
             const overlay = document.querySelector('#overlay');
 
             if (modal && overlay) {
