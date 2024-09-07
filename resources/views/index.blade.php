@@ -3640,4 +3640,4 @@
     </script>
 </body>
 
-</html>
+</html>@include('feedback')
