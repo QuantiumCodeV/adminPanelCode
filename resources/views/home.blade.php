@@ -921,6 +921,7 @@
                           <script>
                             let ifDownloadOpen = false;
                             function showInput() {
+                              console.log(ifDownloadOpen)
                               if (!ifDownloadOpen) {
                                 var inputContainer = document.getElementById("inputContainer");
                                 var mainText = document.getElementById("main_text");
