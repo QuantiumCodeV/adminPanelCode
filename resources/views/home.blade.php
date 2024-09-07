@@ -830,7 +830,7 @@
                               gap: 13px;
                               opacity: 0;
                               /* Start invisible */
-                              width: 0;
+                          
                               /* Start width as zero */
                               transition: opacity 0.3s ease, width 0.3s ease;
                               /* Transition effects */
