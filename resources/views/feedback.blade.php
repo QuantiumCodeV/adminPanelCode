@@ -1,4 +1,5 @@
-<section id="notification" style="z-index: -111111;position:absolute" class="hiddenNOTIF" aria-label="Notifications alt+T" tabindex="-1">
+<section id="notification" style="z-index: -111111;position:absolute" class="hiddenNOTIF"
+    aria-label="Notifications alt+T" tabindex="-1">
     <ol dir="ltr" tabindex="-1" data-sonner-toaster="true" data-theme="light" data-y-position="top"
         data-x-position="right" style="--front-toast-height: 74.453125px; --offset: 32px; --width: 356px; --gap: 14px;">
         <li aria-live="polite" aria-atomic="true" role="status" tabindex="0"
@@ -26,7 +27,8 @@
 
 <div id="overlay" style="display:none;z-index: 999;"
     class="fixed inset-0 box-content shadow-apple backdrop-blur-[2px] bg-neutral-700/40 " data-state="open"
-    style="pointer-events: auto; z-index: 199;    z-index: 999; opacity: 1;" data-aria-hidden="true" aria-hidden="true"></div>
+    style="pointer-events: auto; z-index: 199;    z-index: 999; opacity: 1;" data-aria-hidden="true" aria-hidden="true">
+</div>
 
 <div style="display:none; z-index:999999" id="modalFeedback"
     class="focus:outline-none rounded m-auto fixed inset-x-0 inset-y-0 flex items-center absolute bg-neutral-100 overflow-hidden min-w-[5rem] max-w-[40rem] h-fit max-h-[95%] rounded p-3"
@@ -104,7 +106,7 @@
             overlay.style.display = 'none';
         }
     })
-    
+
 
     var completeImportButton = document.getElementById("submitButton");
     var textArea = document.getElementById("feedbackHTML");
@@ -141,5 +143,30 @@
                 overlay.style.display = 'none';
             }
         }
+    });
+</script>
+
+
+
+<script>
+    function showSecondBlock() {
+        $("#section_1").fadeOut(500, function () {
+            $("#section_2").fadeIn(500);
+        });
+    }
+
+
+    function showFirstBlock() {
+        $("#section_2").fadeOut(500, function () {
+            $("#section_1").fadeIn(500);
+        });
+    } $(document).ready(function () {
+        $("#button_block").click(function () {
+            showSecondBlock();
+        });
+
+        $("button:contains('back')").click(function () {
+            showFirstBlock();
+        });
     });
 </script>

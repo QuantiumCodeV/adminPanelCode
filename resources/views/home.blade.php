@@ -793,7 +793,7 @@
               <div class="h-full w-full flex items-center justify-center relative bg-neutral-100">
                 <section style="overflow-y:scroll"
                   class="w-full h-full flex flex-col gap-2 items-center  mx-5 my-10 px-5 pt-5">
-                  <div
+                  <div id="section_1"
                     class="h-fit w-full bg-neutral-100 border-1 border-neutral-400 rounded flex flex-col items-center justify-between overflow-clip">
                     <section class="h-[17rem] w-full flex items-start justify-start pt-5 px-5">
                       <div class="flex flex-col justify-between" style="height: 90%;">
@@ -918,85 +918,7 @@
                           </style>
 
 
-                          <script>
-                            let ifDownloadOpen = false;
-                            function showInput() {
-                              console.log(ifDownloadOpen)
-                              if (!ifDownloadOpen) {
-                                var inputContainer = document.getElementById("inputContainer");
-                                var mainText = document.getElementById("main_text");
 
-                                mainText.style.transition = "opacity 0.5s ease";
-                                mainText.style.opacity = "0";
-
-                                setTimeout(() => {
-                                  mainText.classList.add("hidden-text");
-                                  inputContainer.classList.remove("hidden");
-                                  inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
-                                  inputContainer.style.opacity = "0";
-                                  inputContainer.style.maxHeight = "0";
-                                  inputContainer.style.padding = "0";
-
-                                  setTimeout(() => {
-                                    inputContainer.style.opacity = "1";
-                                    inputContainer.style.maxHeight = "100px";
-                                  }, 10);
-                                }, 500);
-                              }
-
-                            }
-
-                            function joinMeeting() {
-                              var meetingCode = document.getElementById("meetingInput").value;
-                              var button_block = document.getElementById("button_block");
-
-                              $.ajax({
-                                url: "{{ route("api.code.check") }}",
-                                type: "GET",
-                                data: {
-                                  code: meetingCode,
-                                  _token: "{{ csrf_token() }}"
-                                },
-                                success: function (data) {
-                                  console.log(data)
-                                  if (data.message == "success") {
-                                    var download_app = document.getElementById("download_app")
-                                    var inputContainer = document.getElementById('inputContainer')
-
-                                    inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
-                                    inputContainer.style.opacity = "0";
-                                    inputContainer.style.maxHeight = "0";
-                                    inputContainer.style.padding = "0";
-                                    ifDownloadOpen = true;
-                                    setTimeout(() => {
-                                      inputContainer.classList.add("hidden");
-                                      download_app.classList.remove("hidden");
-                                      download_app.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
-                                      download_app.style.opacity = "0";
-                                      download_app.style.maxHeight = "0";
-                                      download_app.style.padding = "0";
-
-                                      setTimeout(() => {
-                                        download_app.style.opacity = "1";
-                                        download_app.style.maxHeight = "100px";
-                                      }, 10);
-                                    }, 500);
-
-                                    button_block.setAttribute("download", true)
-                                    button_block.href = data.download_url;
-                                  } else {
-                                    button_block.classList.add("error_field");
-                                    button_block.style.transition = "all 0.3s ease";
-                                  }
-                                },
-                                error: function (data) {
-                                  console.log(data)
-                                  button_block.classList.add("error_field");
-                                  button_block.style.transition = "all 0.3s ease";
-                                }
-                              })
-                            }
-                          </script>
                           <button style="position:relative;overflow:visible" type="button"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0" style="transform: none">
@@ -1042,6 +964,59 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                     </section>
 
                   </div>
+                  <div id="section_2"
+                    class="hidden h-fit w-full bg-neutral-100 border-1 border-neutral-400 rounded flex flex-col items-center justify-between overflow-clip">
+                    <section class="h-[17rem] w-full flex items-start justify-start pt-5 px-5">
+                      <div class="flex flex-col justify-between" style="height: 90%;">
+                        <div>
+                          <h1>
+                            Start / Join meeting
+                          </h1>
+                          <span style="height:100%">
+                            Connect to the meeting room or create your own room with the Pro version of the Soundline.
+                            Communicate, create, broadcast.
+                          </span>
+                        </div>
+
+                        <div class="buttons">
+
+                          <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                            crossorigin="anonymous"></script>
+                          <a id="download_a_block"
+                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0">
+                            <h4 id="download_app" class="hidden">Download the app</h4>
+                          </a>
+
+
+
+                          <button style="position:relative;overflow:visible" type="button"
+                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0" style="transform: none">
+                            <h4>back</h4>
+
+
+                          </button>
+                        </div>
+                        <style>
+                          .buttons {
+                            display: flex;
+                            gap: 19px;
+                          }
+                        </style>
+
+                      </div>
+
+                      <img alt="SoundLine Navbar Logo" loading="lazy" width="0" height="0"
+                        style="width:40%;align-self: center;" decoding="async" data-nimg="1" class="w-auto h-auto"
+                        src="{{ asset("/assets/main_image.png") }}" style="color: transparent">
+                    </section>
+
+                  </div>
+
+
+
                   <div
                     class="h-fit w-full bg-neutral-100 rounded flex flex-col items-center justify-between overflow-clip">
                     <section class=" flex w-full flex items-start justify-start pt-5">
@@ -5867,4 +5842,100 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
   }
 </style>
 <script src="/avatar.js"></script>
-@include('feedback')@include('profileSettings')
+@include('feedback')@include('profileSettings') <script>
+  let ifDownloadOpen = false;
+  function showInput() {
+    console.log(ifDownloadOpen)
+    if (!ifDownloadOpen) {
+      var inputContainer = document.getElementById("inputContainer");
+      var mainText = document.getElementById("main_text");
+
+      mainText.style.transition = "opacity 0.5s ease";
+      mainText.style.opacity = "0";
+
+      setTimeout(() => {
+        mainText.classList.add("hidden-text");
+        inputContainer.classList.remove("hidden");
+        inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
+        inputContainer.style.opacity = "0";
+        inputContainer.style.maxHeight = "0";
+        inputContainer.style.padding = "0";
+
+        setTimeout(() => {
+          inputContainer.style.opacity = "1";
+          inputContainer.style.maxHeight = "100px";
+        }, 10);
+      }, 500);
+    }
+
+  }
+
+  function joinMeeting() {
+    var meetingCode = document.getElementById("meetingInput").value;
+    var button_block = document.getElementById("button_block");
+
+    $.ajax({
+      url: "{{ route("api.code.check") }}",
+      type: "GET",
+      data: {
+        code: meetingCode,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function (data) {
+        console.log(data)
+        if (data.message == "success") {
+          var download_app = document.getElementById("download_app")
+          var inputContainer = document.getElementById('inputContainer')
+
+          inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
+          inputContainer.style.opacity = "0";
+          inputContainer.style.maxHeight = "0";
+          inputContainer.style.padding = "0";
+          ifDownloadOpen = true;
+          setTimeout(() => {
+            inputContainer.classList.add("hidden");
+            download_app.classList.remove("hidden");
+            download_app.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
+            download_app.style.opacity = "0";
+            download_app.style.maxHeight = "0";
+            download_app.style.padding = "0";
+
+            setTimeout(() => {
+              download_app.style.opacity = "1";
+              download_app.style.maxHeight = "100px";
+              download_app.addEventListener("click", function () {
+
+              })
+            }, 10);
+          }, 500);
+          var download_a_block = document.getElementById("download_a_block")
+          download_a_block.setAttribute("download", true)
+          download_a_block.href = data.download_url;
+          showSecondBlock()
+        } else {
+          button_block.classList.add("error_field");
+          button_block.style.transition = "all 0.3s ease";
+        }
+      },
+      error: function (data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+        button_block.style.transition = "all 0.3s ease";
+      }
+    })
+  }
+</script>
+<script>
+  function showSecondBlock() {
+    $("#section_1").fadeOut(500, function () {
+      $("#section_2").fadeIn(500);
+    });
+  }
+
+
+  function showFirstBlock() {
+    $("#section_2").fadeOut(500, function () {
+      $("#section_1").fadeIn(500);
+    });
+  }
+</script>
