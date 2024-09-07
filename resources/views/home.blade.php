@@ -866,7 +866,7 @@
                             }
 
                             .error_field {
-                              border-color: red;
+                              border-color: red !important;
                               color: red;
                             }
 

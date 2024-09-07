@@ -2980,7 +2980,7 @@
                             }
 
                             .error_field {
-                              border-color: red;
+                              border-color: red !improtant;
                               color: red;
                             }
 
