@@ -751,14 +751,14 @@
                 </div>
               </button><button type="button"
                 class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
-                id="radix-:r50:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0"
+                id="profile" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0"
                 style="transform: none">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
                     <div
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                       <img id="avatar_3" style="height:100%"
-                        src="{{ asset('storage/' . (auth()->user()->avatar ?: 'assets/member_avatar_453.png')) }}" alt="Avatar"
+                        src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}" alt="Avatar"
                         class="object-cover" />
                     </div>
                     <div class="absolute -bottom-1 -right-1">
@@ -768,7 +768,7 @@
                       </div>
                     </div>
                   </div>
-                  <h5 class="font-bold">📦 My Space</h5>
+                  <h5 class="font-bold">{{ auth()->user()->name}}</h5>
                 </div>
                 <div style="transform: none">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
@@ -1397,7 +1397,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
 
 </body>
 
-</html>@include('feedback')
+</html>
 <style>
   /*
 ! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
@@ -5837,4 +5837,4 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
   }
 </style>
 <script src="/avatar.js"></script>
-@include('feedback')
+@include('feedback')@include('profileSettings')

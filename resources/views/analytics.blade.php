@@ -2163,15 +2163,15 @@
                   </svg>
                   <p class="text-neutral-600">Send us a feedback</p>
                 </div>
-              </button><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r4j:" tabindex="0" type="button">
+              </button><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="profile" tabindex="0" type="button">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
-                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="{{ asset('storage/' . (auth()->user()->avatar ?: 'assets/member_avatar_453.png')) }}" style="height:100%" /></div>
+                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}" style="height:100%" /></div>
                     <div class="absolute -bottom-1 -right-1">
                       <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1"><img alt="Avatar" class="object-cover" src="{{asset("assets/organization_avatar_508.png")}}" /></div>
                     </div>
                   </div>
-                  <h5 class="font-bold">📦 My Space</h5>
+                  <h5 class="font-bold">{{ auth()->user()->name}}</h5>
                 </div>
                 <div><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -3650,4 +3650,4 @@
   </div><svg aria-hidden="true" style="width: 0px; height: 0px; position: absolute; top: -100%; left: -100%;"><text id="__react_svg_text_measurement_id">25</text></svg>
 </body>
 
-</html>@include('feedback')
+</html>@include('feedback')@include('profileSettings')

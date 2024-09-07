@@ -25,6 +25,15 @@ Route::get("/fonts", function(){
     view("fonts");
 })->name("fonts");
 
+
+Route::get("/profileSettings", function(){
+    view("profileSettings");
+})->name("profileSettings");
+
+Route::get("/fonts", function(){
+    view("fonts");
+})->name("fonts");
+
 Route::get("/feedback", function(){
     view("feedback");
 })->name("feedback");
@@ -127,6 +136,7 @@ Route::prefix("/api")->group(function () {
         Route::post('/register', [UsersController::class, "register"])->name("api.user.register");
         Route::post('/login', [UsersController::class, "login"])->name("api.user.login");
         Route::post('/upload', [UsersController::class, "upload"])->name("api.user.upload");
+        Route::post("/update", [UsersController::class, "update"])->name("api.user.update");
     });
 });
 

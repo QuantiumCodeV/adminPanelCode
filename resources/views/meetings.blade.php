@@ -855,7 +855,7 @@
               </button><button
                 type="button"
                 class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
-                id="radix-:r37:"
+                id="profile"
                 aria-haspopup="menu"
                 aria-expanded="false"
                 data-state="closed"
@@ -866,7 +866,7 @@
                     <div
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                       <img
-                        src="{{ asset('storage/' . (auth()->user()->avatar ?: 'assets/member_avatar_453.png')) }}" style="height:100%"
+                        src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}" style="height:100%"
                         alt="Avatar"
                         class="object-cover" />
                     </div>
@@ -880,7 +880,7 @@
                       </div>
                     </div>
                   </div>
-                  <h5 class="font-bold">📦 My Space</h5>
+                  <h5 class="font-bold">{{ auth()->user()->name}}</h5>
                 </div>
                 <div style="transform: none">
                   <svg
@@ -3176,4 +3176,4 @@
 
 </body>
 
-</html>@include('feedback')
+</html>@include('feedback')@include('profileSettings')

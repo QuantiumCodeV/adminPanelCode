@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-
+use Validator;
 use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
@@ -88,5 +88,23 @@ class UsersController extends Controller
         $user->save();
 
         return response()->json(['message' => 'success', 'user' => $user, 'path' => asset("storage/".$path)]);
+    }
+
+    public function update(Request $request){
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'subname' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
+        }
+
+        $user = Auth::user();
+        $user->name = $request->input('name');
+        $user->subname = $request->input('subname');
+        $user->save();
+
+        return response()->json(['message' => 'success', 'user' => $user]);
     }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0039)https://app.listenup.ai/spaces/487/home -->
 <html style="">
-  @include('fonts')
+@include('fonts')
 <plasmo-csui><template shadowrootmode="open">
     <style>
       *,
@@ -7274,7 +7274,7 @@
             </svg>
             <h2>Import CSV</h2>
           </div>
-          <section class="w-fit flex gap-4 items-center justify-end mt-4"><button type="button"
+          <section class="w-fit flex gap-4 items-center justify-end mt-4"><button type="button" id="closeModalButtonCSV"
               class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-neutral-200 border-1 border-neutral-400 opacity-100"
               tabindex="0">
               <div class="flex items-center justify-center gap-1">
@@ -7333,6 +7333,19 @@
 <script>
   var file = document.getElementById("file");
   var continueButton = document.getElementById("continueButton");
+
+  var closeModalButtonCSV = document.getElementById("closeModalButtonCSV")
+
+
+  closeModalButtonCSV.addEventListener("click", function () {
+    const modal = document.getElementById('modalCSV');
+    const overlay = document.querySelector('#overlay');
+
+    if (modal && overlay) {
+      modal.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+  });
 
   file.addEventListener("change", function () {
     if (file.files.length > 0) {
@@ -7408,7 +7421,7 @@
         </svg>
         <h1>Paste text</h1>
       </div>
-      <section class="w-full flex gap-4 items-center justify-end"><button type="button"
+      <section class="w-full flex gap-4 items-center justify-end"><button type="button" id="closeModalButtonText"
           class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-neutral-200 border-1 border-neutral-400 opacity-100"
           tabindex="0" style="transform: none; transform-origin: 50% 50% 0px;">
           <div class="flex items-center justify-center gap-1">
@@ -7449,12 +7462,25 @@
   var textArea = document.getElementById("textArea");
   var completeImportButton = document.getElementById("completeImportButton");
 
+  var closeModalButtonText = document.getElementById("closeModalButtonText")
+
+
+  closeModalButtonText.addEventListener("click", function () {
+    const modal = document.getElementById('modalText');
+    const overlay = document.querySelector('#overlay');
+
+    if (modal && overlay) {
+      modal.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+  });
+
   textArea.addEventListener("input", function () {
     if (textArea.textContent.trim().length > 0) {
       textArea.querySelector("p").classList.remove("is-editor-empty")
       completeImportButton.disabled = false;
-      
-        completeImportButton.classList.remove("opacity-60");
+
+      completeImportButton.classList.remove("opacity-60");
       completeImportButton.classList.add("opacity-100");
     } else {
       textArea.innerHTML = '<p class="p text-base is-empty is-editor-empty" data-placeholder="Paste or write your text here"></p>'

@@ -1302,6 +1302,34 @@
     nameLastNameForm.style.display = "none";
     var workForm = document.getElementById("workForm");
     workForm.style.display = "block";
+
+
+    $.ajax({
+      method: "POST",
+      url: "{{ route('api.user.update') }}",
+      data: {
+        name: name.value,
+        subname: lastName.value,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(xhr, status, error) {
+        console.log(error);
+      }
+    });
+  });
+</script>
+<script>
+  var blocksCustom = document.querySelectorAll(".blockCustomHover");
+      
+    })
+  });
+</script>
+<script>
+  var blocksCustom = document.querySelectorAll(".blockCustomHover");
+    })
   });
 </script>
 <script>
