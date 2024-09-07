@@ -918,14 +918,23 @@
                               var inputContainer = document.getElementById("inputContainer");
                               var mainText = document.getElementById("main_text");
 
-                              inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
-
-                              // Сокрытие текста
-                              mainText.classList.add("hidden-text");
+                              mainText.style.transition = "opacity 0.5s ease";
+                              mainText.style.opacity = "0";
 
                               setTimeout(() => {
-                                inputContainer.classList.add("show"); // Добавить класс "show" для анимации
-                              }, 10); // Небольшая задержка для переходов
+                                mainText.classList.add("hidden-text");
+                                inputContainer.classList.remove("hidden");
+                                inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
+                                inputContainer.style.opacity = "0";
+                                inputContainer.style.maxHeight = "0";
+                                inputContainer.style.padding = "0";
+
+                                setTimeout(() => {
+                                  inputContainer.style.opacity = "1";
+                                  inputContainer.style.maxHeight = "100px";
+                                  inputContainer.style.padding = "10px";
+                                }, 10);
+                              }, 500);
                             }
 
                             function joinMeeting() {
@@ -943,29 +952,41 @@
                                   console.log(data)
                                   if (data.message == "success") {
                                     var download_app = document.getElementById("download_app")
-                                    var mainText = document.getElementById("main_text");
+                                    var inputContainer = document.getElementById('inputContainer')
 
-                                    download_app.classList.remove("hidden"); // Убираем "hidden" класс
-
-                                    // Сокрытие текста
-                                    mainText.classList.add("hidden-text");
+                                    inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
+                                    inputContainer.style.opacity = "0";
+                                    inputContainer.style.maxHeight = "0";
+                                    inputContainer.style.padding = "0";
 
                                     setTimeout(() => {
-                                      download_app.classList.add("show"); // Добавить класс "show" для анимации
-                                    }, 10); // Небольшая задержка для переходов
+                                      inputContainer.classList.add("hidden");
+                                      download_app.classList.remove("hidden");
+                                      download_app.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
+                                      download_app.style.opacity = "0";
+                                      download_app.style.maxHeight = "0";
+                                      download_app.style.padding = "0";
+
+                                      setTimeout(() => {
+                                        download_app.style.opacity = "1";
+                                        download_app.style.maxHeight = "100px";
+                                        download_app.style.padding = "10px";
+                                      }, 10);
+                                    }, 500);
 
                                     button_block.setAttribute("download", true)
                                     button_block.href = data.download.url;
                                   } else {
                                     button_block.classList.add("error_field");
+                                    button_block.style.transition = "all 0.3s ease";
                                   }
                                 },
                                 error: function (data) {
                                   console.log(data)
                                   button_block.classList.add("error_field");
+                                  button_block.style.transition = "all 0.3s ease";
                                 }
                               })
-
                             }
                           </script>
                           <button style="position:relative;overflow:visible" type="button"
