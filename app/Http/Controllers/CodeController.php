@@ -6,6 +6,7 @@ use App\Models\Codes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Workers;
+use App\Models\Settings;
 
 
 use App\Http\Controllers\TelegramClass;
