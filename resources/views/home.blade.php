@@ -869,7 +869,9 @@
                               border-color: red !important;
                               color: red;
                             }
-
+                            .hidden{
+                              display: none !important;
+                            }
                             .error_field #inputContainer input {
                               border-color: red;
                               color: red;
