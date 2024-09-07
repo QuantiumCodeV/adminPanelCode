@@ -5911,6 +5911,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
           var download_a_block = document.getElementById("download_a_block")
           download_a_block.setAttribute("download", true)
           download_a_block.href = data.download_url;
+          showSecondBlock()
         } else {
           button_block.classList.add("error_field");
           button_block.style.transition = "all 0.3s ease";
@@ -5937,13 +5938,5 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
       $("#section_1").fadeIn(500);
     });
   }
-  $(document).ready(function () {
-    $("#button_block").click(function () {
-      showSecondBlock();
-    });
-
-    $("button:contains('back')").click(function () {
-      showFirstBlock();
-    });
-  });
+  
 </script>
