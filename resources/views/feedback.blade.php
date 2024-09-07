@@ -50,7 +50,7 @@
                             style="height: 253px;"></textarea></div>
                 </div>
                 <p role="alert" class="text-danger-500 pt-1 pl-1 text-transparent"> </p>
-                <section class="w-full flex items-center justify-end gap-2 mt-2"><button type="button"
+                <section class="w-full flex items-center justify-end gap-2 mt-2"><button type="button" id="closeButton"
                         class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-neutral-200 border-1 border-neutral-400 opacity-100"
                         tabindex="0" style="transform: none; transform-origin: 50% 50% 0px;">
                         <h5>Cancel</h5>
@@ -90,11 +90,21 @@
 </script>
 <script>
     var openModalButton = document.querySelector("#app-navbar > div > button.flex.items-center.font-bold.rounded.text-base.font-bold.px-3.py-3")
-
+    var closeModalButton = document.querySelector("#closeButton");
     openModalButton.addEventListener("click", function () {
         console.log('fsdfsd')
         openText()
     })
+
+    closeModalButton.addEventListener("click", function () {
+        const modal = document.getElementById('modalFeedback');
+        const overlay = document.querySelector('#overlay');
+        if (modal && overlay) {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    })
+    
 
     var completeImportButton = document.getElementById("submitButton");
     var textArea = document.getElementById("feedbackHTML");
