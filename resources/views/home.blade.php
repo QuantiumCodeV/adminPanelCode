@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0039)https://app.listenup.ai/spaces/487/home -->
 <html style="">
+
 <head>
   @include('fonts')
   <link href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
@@ -758,8 +759,8 @@
                     <div
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                       <img id="avatar_3" style="height:100%"
-                        src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}" alt="Avatar"
-                        class="object-cover" />
+                        src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}"
+                        alt="Avatar" class="object-cover" />
                     </div>
                     <div class="absolute -bottom-1 -right-1">
                       <div
@@ -830,7 +831,7 @@
                               gap: 13px;
                               opacity: 0;
                               /* Start invisible */
-                          
+
                               /* Start width as zero */
                               transition: opacity 0.3s ease, width 0.3s ease;
                               /* Transition effects */
@@ -869,9 +870,11 @@
                               border-color: red !important;
                               color: red;
                             }
-                            .hidden{
+
+                            .hidden {
                               display: none !important;
                             }
+
                             .error_field #inputContainer input {
                               border-color: red;
                               color: red;
@@ -916,26 +919,30 @@
 
 
                           <script>
+                            let ifDownloadOpen = false;
                             function showInput() {
-                              var inputContainer = document.getElementById("inputContainer");
-                              var mainText = document.getElementById("main_text");
+                              if (!ifDownloadOpen) {
+                                var inputContainer = document.getElementById("inputContainer");
+                                var mainText = document.getElementById("main_text");
 
-                              mainText.style.transition = "opacity 0.5s ease";
-                              mainText.style.opacity = "0";
-
-                              setTimeout(() => {
-                                mainText.classList.add("hidden-text");
-                                inputContainer.classList.remove("hidden");
-                                inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
-                                inputContainer.style.opacity = "0";
-                                inputContainer.style.maxHeight = "0";
-                                inputContainer.style.padding = "0";
+                                mainText.style.transition = "opacity 0.5s ease";
+                                mainText.style.opacity = "0";
 
                                 setTimeout(() => {
-                                  inputContainer.style.opacity = "1";
-                                  inputContainer.style.maxHeight = "100px";
-                                }, 10);
-                              }, 500);
+                                  mainText.classList.add("hidden-text");
+                                  inputContainer.classList.remove("hidden");
+                                  inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
+                                  inputContainer.style.opacity = "0";
+                                  inputContainer.style.maxHeight = "0";
+                                  inputContainer.style.padding = "0";
+
+                                  setTimeout(() => {
+                                    inputContainer.style.opacity = "1";
+                                    inputContainer.style.maxHeight = "100px";
+                                  }, 10);
+                                }, 500);
+                              }
+
                             }
 
                             function joinMeeting() {
@@ -959,7 +966,7 @@
                                     inputContainer.style.opacity = "0";
                                     inputContainer.style.maxHeight = "0";
                                     inputContainer.style.padding = "0";
-
+                                    ifDownloadOpen = true;
                                     setTimeout(() => {
                                       inputContainer.classList.add("hidden");
                                       download_app.classList.remove("hidden");
@@ -1339,7 +1346,8 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                           <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
                             <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
-                              Chat, create meetings, add friends and invite to meetings, all in convenient functionality on the website and in the SoundLine app!
+                                Chat, create meetings, add friends and invite to meetings, all in convenient
+                                functionality on the website and in the SoundLine app!
                               </p>
                               <div class="pb-2 w-full flex items-center justify-start">
                                 <button type="button"
