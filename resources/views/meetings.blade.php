@@ -816,7 +816,7 @@
                         </g>
                         <path fill="none" d="M0 0h24v24H0Z"></path>
                       </svg>
-                      <h5 class="font-bold">Users</h5>
+                      <h5 class="font-bold">Friends</h5>
                     </div>
                   </a>
                 </div>
@@ -2980,7 +2980,7 @@
                             }
 
                             .error_field {
-                              border-color: red !improtant;
+                              border-color: red !important;
                               color: red;
                             }
 

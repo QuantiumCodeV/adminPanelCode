@@ -1494,7 +1494,7 @@
   @include('fonts')
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
   <meta content="width=device-width" name="viewport" />
-  <title>Users | ListenUp!</title>
+  <title>Friends | ListenUp!</title>
   <meta content="3" name="next-head-count" />
   <link as="style" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" rel="preload" />
   <link data-n-g="" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" rel="stylesheet" />
@@ -2189,14 +2189,14 @@
                         </g>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
-                      <h5 class="font-bold">Users</h5>
+                      <h5 class="font-bold">Friends</h5>
                     </div>
                   </a>
                 </div>
                 <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400" style="
                       width: 94px;
                       height: 48px;
-                      transform: translateX(462px) translateY(0px)
+                      transform: translateX(467px) translateY(0px)
                         translateZ(0px);
                     "></div>
               </div>

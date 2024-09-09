@@ -2192,7 +2192,7 @@
                         </g>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
-                      <h5 class="font-bold">Users</h5>
+                      <h5 class="font-bold">Friends</h5>
                     </div>
                   </a>
                 </div>
@@ -2717,10 +2717,7 @@
                         <h5>Add captures</h5>
                       </button>
                       <div class="w-full h-fit flex items-center justify-center gap-2">
-                        <img alt="Integrations Bouquet" data-nimg="1" decoding="async" height="60" loading="lazy" src="./inbox_files/integrations_bouquet.png" srcset="
-                              /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintegrations_bouquet.png&amp;w=64&amp;q=75  1x,
-                              /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintegrations_bouquet.png&amp;w=128&amp;q=75 2x
-                            " style="color: transparent" width="60" />
+                        <img alt="Integrations Bouquet" data-nimg="1" decoding="async" height="60" loading="lazy" src="{{asset("assets/integrations_bouquet.png")}}" style="color: transparent" width="60" />
                         <p class="text-small">
                           <span class="text-neutral-500">+5 methods</span>
                         </p>

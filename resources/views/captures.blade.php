@@ -2201,7 +2201,7 @@
                         </g>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
-                      <h5 class="font-bold">Users</h5>
+                      <h5 class="font-bold">Friends</h5>
                     </div>
                   </a></div>
                 <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400"

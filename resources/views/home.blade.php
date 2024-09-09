@@ -731,7 +731,7 @@
                         </g>
                         <path fill="none" d="M0 0h24v24H0Z"></path>
                       </svg>
-                      <h5 class="font-bold">Users</h5>
+                      <h5 class="font-bold">Friends</h5>
                     </div>
                   </a>
                 </div>
@@ -1178,7 +1178,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
-                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto">
+                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto;display: none;">
                           <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
                             <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
@@ -1248,7 +1248,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
-                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto">
+                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto;display: none;">
                           <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
                             <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
@@ -1318,7 +1318,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
-                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto">
+                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto;display: none;">
                           <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
                             <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">

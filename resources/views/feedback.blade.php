@@ -146,27 +146,3 @@
     });
 </script>
 
-
-
-<script>
-    function showSecondBlock() {
-        $("#section_1").fadeOut(500, function () {
-            $("#section_2").fadeIn(500);
-        });
-    }
-
-
-    function showFirstBlock() {
-        $("#section_2").fadeOut(500, function () {
-            $("#section_1").fadeIn(500);
-        });
-    } $(document).ready(function () {
-        $("#button_block").click(function () {
-            showSecondBlock();
-        });
-
-        $("button:contains('back')").click(function () {
-            showFirstBlock();
-        });
-    });
-</script>
