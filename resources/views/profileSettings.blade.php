@@ -22,10 +22,10 @@
                 </div>
             </div>
         </div>
-        <div role="group" onclick="openSettings()">
+        <div role="group" >
             <div role="separator" aria-orientation="horizontal"
                 class="h-[1px] bg-neutral-300 m-1 rounded-full mx-auto w-[87%]"></div>
-            <div role="menuitem"
+            <div role="menuitem" onclick="openSettings()"
                 class="hover:cursor-cool-clickable flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
                 tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
                 <div class="flex gap-2 items-center"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
