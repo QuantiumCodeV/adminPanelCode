@@ -52,7 +52,7 @@
               <div
                 class="flex flex-col items-center justify-center gap-4 w-full">
                 <p role="alert" class="text-danger-500 pt-1 pl-1 false">
-                  Please enter a valid Password.
+                 
                 </p>
                 <div class="flex flex-col gap-1 w-full">
                   <div
@@ -29568,6 +29568,7 @@
     });
   });
   function createErrorLogin(text) {
+      console.log(text);
       waitForElement("#email", (inputEmail) => {
         console.log("4342");
         var parentBlock = inputEmail.parentNode.parentNode.parentNode;
