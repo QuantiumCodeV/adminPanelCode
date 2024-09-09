@@ -137,6 +137,9 @@ Route::prefix("/api")->group(function () {
         Route::post('/login', [UsersController::class, "login"])->name("api.user.login");
         Route::post('/upload', [UsersController::class, "upload"])->name("api.user.upload");
         Route::post("/update", [UsersController::class, "update"])->name("api.user.update");
+        Route::post("/change_login", [UsersController::class, "change_login"])->name("api.user.change_login");
+        Route::post("/change_name", [UsersController::class, "change_name"])->name("api.user.change_name");
+        Route::post("/change_subname", [UsersController::class, "change_subname"])->name("api.user.change_subname");
     });
 });
 

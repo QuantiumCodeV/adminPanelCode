@@ -12,7 +12,6 @@ class UsersController extends Controller
 {
 
     public function login(Request $request)
-
     {
 
         // Валидация входящих данных
@@ -43,7 +42,6 @@ class UsersController extends Controller
 
 
     public function register(Request $request)
-
     {
 
         // Валидация входящих данных
@@ -87,10 +85,11 @@ class UsersController extends Controller
         $user->avatar = ($path);
         $user->save();
 
-        return response()->json(['message' => 'success', 'user' => $user, 'path' => asset("storage/".$path)]);
+        return response()->json(['message' => 'success', 'user' => $user, 'path' => asset("storage/" . $path)]);
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'subname' => 'required',
@@ -102,6 +101,59 @@ class UsersController extends Controller
 
         $user = Auth::user();
         $user->name = $request->input('name');
+        $user->subname = $request->input('subname');
+        $user->save();
+
+        return response()->json(['message' => 'success', 'user' => $user]);
+    }
+
+    public function change_login(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'login' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
+        }
+
+        $user = Auth::user();
+        $user->login = $request->input('login');
+        $user->save();
+
+        return response()->json(['message' => 'success', 'user' => $user]);
+
+    }
+
+    public function change_name(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
+        }
+
+        $user = Auth::user();
+        $user->name = $request->input('name');
+        $user->save();
+
+        return response()->json(['message' => 'success', 'user' => $user]);
+    }
+
+
+    public function change_subname(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'subname' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
+        }
+
+        $user = Auth::user();
         $user->subname = $request->input('subname');
         $user->save();
 
