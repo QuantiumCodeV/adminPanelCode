@@ -2339,7 +2339,7 @@
                         <path class="stroke-2 stroke-neutral-700" d="M6 12h6m0 0h6m-6 0v6m0-6V6" stroke-linecap="round"
                           stroke-linejoin="round"></path>
                       </svg>
-                      <h5>Add user</h5>
+                      <h5>Add friend</h5>
                     </button>
                   </div>
                 </section>
@@ -2949,13 +2949,13 @@
                         <a id="button_block"
                           class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                           tabindex="0" onclick="showInput()">
-                          <svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                          
+                          <h4 id="main_text"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
                             viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
                             <path class="stroke-2 stroke-neutral-700"
                               d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
                               stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
-                          <h4 id="main_text">Add Friends</h4>
+                          </svg>Add Friends</h4>
                           <div id="inputContainer" class="hidden">
                             <input type="text" id="meetingInput" placeholder="">
                             <div class="line"></div>
