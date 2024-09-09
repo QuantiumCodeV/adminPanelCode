@@ -2,7 +2,7 @@
 
 <!-- saved from url=(0040){{ route("friends") }} -->
 <html style="">
-  @include('fonts')
+@include('fonts')
 <plasmo-csui><template shadowrootmode="open">
     <style>
       *,
@@ -1484,7 +1484,8 @@
       }
     </style>
     <div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative">
-      <div class="plasmo-csui-container" id="plasmo-overlay-0" style="display: flex; position: absolute; top: 0px; left: 0px">
+      <div class="plasmo-csui-container" id="plasmo-overlay-0"
+        style="display: flex; position: absolute; top: 0px; left: 0px">
         <div class="listenup-h-fit listenup-w-fit"></div>
       </div>
     </div>
@@ -2130,12 +2131,16 @@
     <div>
       <div>
         <div class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
-          <section class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1" id="app-navbar">
+          <section class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1"
+            id="app-navbar">
             <section class="flex items-center flex-grow basis-0 justify-start">
               <button data-state="closed">
-                <div class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-                  <img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{ asset("assets/logo.png") }}" style="color: transparent" width="120" />
-                  <section class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
+                <div
+                  class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+                  <img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy"
+                    src="{{ asset("assets/logo.png") }}" style="color: transparent" width="120" />
+                  <section
+                    class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
                     <p class="text-xs text-primary-600">
                       <strong>300 credits left</strong>
                     </p>
@@ -2149,43 +2154,76 @@
             </section>
             <section class="flex items-center justify-center">
               <div class="relative h-fit select-none w-full" data-orientation="horizontal" dir="ltr">
-                <div aria-orientation="horizontal" class="rounded flex flex-row w-full justify-evenly gap-2" data-orientation="horizontal" role="tablist" style="outline: none" tabindex="0">
-                  <a aria-controls="radix-:r50:-content-home" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("home") }}" id="radix-:r50:-trigger-home" role="tab" tabindex="-1" type="button">
+                <div aria-orientation="horizontal" class="rounded flex flex-row w-full justify-evenly gap-2"
+                  data-orientation="horizontal" role="tablist" style="outline: none" tabindex="0">
+                  <a aria-controls="radix-:r50:-content-home" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("home") }}" id="radix-:r50:-trigger-home" role="tab" tabindex="-1" type="button">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg class="h-6 w-6" data-name="Layer 3" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="h-6 w-6" data-name="Layer 3" style="max-width: 50vw; max-height: 50vh"
+                        viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0h24v24H0Z" fill="none"></path>
-                        <path class="stroke-1.5 stroke-neutral-700 stroke-neutral-700" d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path class="stroke-1.5 stroke-neutral-700 stroke-neutral-700"
+                          d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <h5 class="font-bold">Home</h5>
                     </div>
-                  </a><a aria-controls="radix-:r50:-content-captures" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("captures") }}" id="radix-:r50:-trigger-captures" role="tab" tabindex="-1" type="button">
+                  </a><a aria-controls="radix-:r50:-content-captures" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("captures") }}" id="radix-:r50:-trigger-captures" role="tab" tabindex="-1"
+                    type="button">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700"
+                          d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                          stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <h5 class="font-bold">Inbox</h5>
                     </div>
-                  </a><a aria-controls="radix-:r50:-content-insights" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("meetings") }}" id="radix-:r50:-trigger-insights" role="tab" tabindex="-1" type="button">
+                  </a><a aria-controls="radix-:r50:-content-insights" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("meetings") }}" id="radix-:r50:-trigger-insights" role="tab" tabindex="-1"
+                    type="button">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
                       <h5 class="font-bold">Meetings</h5>
                     </div>
-                  </a><a aria-controls="radix-:r50:-content-analytics" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("analytics") }}" id="radix-:r50:-trigger-analytics" role="tab" tabindex="-1" type="button">
+                  </a><a aria-controls="radix-:r50:-content-analytics" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("analytics") }}" id="radix-:r50:-trigger-analytics" role="tab" tabindex="-1"
+                    type="button">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700"
+                          d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M24 24H0V0h24Z" fill="none"></path>
                       </svg>
                       <h5 class="font-bold">Analytics</h5>
                     </div>
-                  </a><a aria-controls="radix-:r50:-content-users" aria-selected="true" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="active" href="{{ route("friends") }}" id="radix-:r50:-trigger-users" role="tab" tabindex="-1" type="button">
+                  </a><a aria-controls="radix-:r50:-content-users" aria-selected="true"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="active"
+                    href="{{ route("friends") }}" id="radix-:r50:-trigger-users" role="tab" tabindex="-1" type="button">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg class="h-6 w-6 stroke-1.5" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="h-6 w-6 stroke-1.5" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <g class="stroke-neutral-700" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                          <path
+                            d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                          </path>
                         </g>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
@@ -2202,23 +2240,32 @@
               </div>
             </section>
             <div class="flex items-center justify-end gap-2 flex-grow basis-0">
-              <button class="flex items-center font-bold rounded text-base font-bold px-3 py-3" style="transform: none; transform-origin: 50% 50% 0px" tabindex="0">
+              <button class="flex items-center font-bold rounded text-base font-bold px-3 py-3"
+                style="transform: none; transform-origin: 50% 50% 0px" tabindex="0">
                 <div class="flex items-center gap-2">
-                  <svg class="h-4 w-4" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path class="stroke-2 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <svg class="h-4 w-4" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="stroke-2 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M0 0h24v24H0Z" fill="none"></path>
                   </svg>
                   <p class="text-neutral-600">Send us a feedback</p>
                 </div>
               </button>
-              <button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="profile" tabindex="0" type="button">
+              <button aria-expanded="false" aria-haspopup="menu"
+                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+                data-state="closed" id="profile" tabindex="0" type="button">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
-                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
-                      <img alt="Avatar" class="object-cover" src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}" style="height:100%" />
+                    <div
+                      class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                      <img alt="Avatar" class="object-cover"
+                        src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}"
+                        style="height:100%" />
                     </div>
                     <div class="absolute -bottom-1 -right-1">
-                      <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
+                      <div
+                        class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
                         <img alt="Avatar" class="object-cover" src="{{asset("assets/organization_avatar_508.png")}}" />
                       </div>
                     </div>
@@ -2226,8 +2273,10 @@
                   <h5 class="font-bold">{{ auth()->user()->name}}</h5>
                 </div>
                 <div style="transform: none">
-                  <svg class="h-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <svg class="h-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M0 0h24v24H0Z" fill="none"></path>
                   </svg>
                 </div>
@@ -2238,7 +2287,8 @@
             <section class="h-[calc(100vh-4rem)] w-screen">
               <div class="h-full w-full pt-1 px-1 bg-neutral-100">
                 <section class="my-2 mx-8 sticky self-start top-2 z-20 flex items-center justify-between">
-                  <div class="bg-neutral-50 border-[0.13rem] border-neutral-400 border-dashed p-2 w-fit h-16 rounded flex items-center gap-2 shadow-lg">
+                  <div
+                    class="bg-neutral-50 border-[0.13rem] border-neutral-400 border-dashed p-2 w-fit h-16 rounded flex items-center gap-2 shadow-lg">
                     <div class="flex items-center gap-1 h-full">
                       <div class="flex flex-col gap-1">
                         <div style="
@@ -2246,17 +2296,24 @@
                               perspective: 500px;
                               transform: none;
                             ">
-                          <input class="px-2 py-2 rounded transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal bg-neutral-50 border-1 border-neutral-400 w-60 p focus:outline-primary-500 overflow-hidden text-ellipsis-clip" placeholder="Search" type="text" value="" />
+                          <input
+                            class="px-2 py-2 rounded transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal bg-neutral-50 border-1 border-neutral-400 w-60 p focus:outline-primary-500 overflow-hidden text-ellipsis-clip"
+                            placeholder="Search" type="text" value="" />
                         </div>
                       </div>
                       <div class="w-[1px] h-full bg-neutral-300 m-1 rounded-full bg-neutral-400 w-4 h-[45%] ml-2"></div>
                     </div>
-                    <button aria-autocomplete="none" aria-controls="radix-:r58:" aria-expanded="false" class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70" data-state="closed" dir="ltr" role="combobox" tabindex="0" type="button">
+                    <button aria-autocomplete="none" aria-controls="radix-:r58:" aria-expanded="false"
+                      class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70"
+                      data-state="closed" dir="ltr" role="combobox" tabindex="0" type="button">
                       <span style="pointer-events: none">
                         <div class="flex items-center justify-center gap-2">
-                          <svg class="h-5 w-5 stroke-2" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <svg class="h-5 w-5 stroke-2" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
                             <g class="stroke-neutral-700" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                              <path
+                                d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                              </path>
                             </g>
                             <path d="M0 0h24v24H0Z" fill="none"></path>
                           </svg>
@@ -2264,17 +2321,23 @@
                         </div>
                       </span>
                       <div aria-hidden="true" style="transform: none">
-                        <svg class="h-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <svg class="h-6" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
                           <path d="M0 0h24v24H0Z" fill="none"></path>
                         </svg>
                       </div>
                     </button>
                   </div>
                   <div>
-                    <button class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px" tabindex="0" type="button">
-                      <svg class="h-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-2 stroke-neutral-700" d="M6 12h6m0 0h6m-6 0v6m0-6V6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <button
+                      class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                      style="transform: none; transform-origin: 50% 50% 0px" tabindex="0" type="button">
+                      <svg class="h-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-2 stroke-neutral-700" d="M6 12h6m0 0h6m-6 0v6m0-6V6" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
                       </svg>
                       <h5>Add user</h5>
                     </button>
@@ -2286,49 +2349,63 @@
                       <table class="w-full border-separate border-spacing-0">
                         <thead class="bg-primary-100 top-0 z-10 sticky">
                           <tr>
-                            <th class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l" style="position: relative">
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
+                              style="position: relative">
                               <div>
                                 <div class="h-full w-full">
                                   <div class="rounded w-20 h-6 bg-neutral-300"></div>
                                 </div>
                               </div>
                             </th>
-                            <th class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0" style="position: relative">
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
                               <div>
                                 <div class="h-full w-full">
                                   <div class="rounded w-20 h-6 bg-neutral-300"></div>
                                 </div>
                               </div>
                             </th>
-                            <th class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0" style="position: relative">
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
                               <div>
                                 <div class="h-full w-full">
                                   <div class="rounded w-20 h-6 bg-neutral-300"></div>
                                 </div>
                               </div>
                             </th>
-                            <th class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0" style="position: relative">
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
                               <div>
                                 <div class="h-full w-full">
                                   <div class="rounded w-20 h-6 bg-neutral-300"></div>
                                 </div>
                               </div>
                             </th>
-                            <th class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0" style="position: relative">
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
                               <div>
                                 <div class="h-full w-full">
                                   <div class="rounded w-20 h-6 bg-neutral-300"></div>
                                 </div>
                               </div>
                             </th>
-                            <th class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0" style="position: relative">
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
                               <div>
                                 <div class="h-full w-full">
                                   <div class="rounded w-20 h-6 bg-neutral-300"></div>
                                 </div>
                               </div>
                             </th>
-                            <th class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0" style="position: relative">
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
+                              style="position: relative">
                               <div>
                                 <div class="h-full w-full">
                                   <div class="rounded w-20 h-6 bg-neutral-300"></div>
@@ -2798,7 +2875,8 @@
                             </td>
                           </tr>
                           <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0">
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
                                   <div class="rounded w-28 h-6 bg-neutral-300"></div>
@@ -2840,7 +2918,8 @@
                                 </div>
                               </div>
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0">
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
                                   <div class="rounded w-28 h-6 bg-neutral-300"></div>
@@ -2852,7 +2931,8 @@
                       </table>
                     </div>
                   </div>
-                  <div class="flex flex-col gap-4 items-center justify-center h-full w-full absolute top-0 left-0 bg-gradient-to-t from-30% from-primary-100 to-primary-100/0">
+                  <div
+                    class="flex flex-col gap-4 items-center justify-center h-full w-full absolute top-0 left-0 bg-gradient-to-t from-30% from-primary-100 to-primary-100/0">
                     <p class="text-8xl">🧸</p>
                     <h1>You don’t have users</h1>
                     <p class="text-center">
@@ -2861,172 +2941,181 @@
                       in the 'inbox' section to create valuable insights
                     </p>
                     <section class="w-full h-fit flex flex-row items-center justify-center gap-4">
-                    <div class="buttons">
+                      <div class="buttons">
 
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
-<a id="button_block" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" onclick="showInput()">
-  <h4 id="main_text">Add Friends</h4>
-  <div id="inputContainer" class="hidden">
-    <input type="text" id="meetingInput" placeholder="Enter meeting code">
-    <div class="line"></div>
-    <button type="button" onclick="joinMeeting()">ENTER</button>
-  </div>
-  
-</a>
+                        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                          crossorigin="anonymous"></script>
+                        <a id="button_block"
+                          class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                          tabindex="0" onclick="showInput()">
+                          <svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                            viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+                            <path class="stroke-2 stroke-neutral-700"
+                              d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                          <h4 id="main_text">Add Friends</h4>
+                          <div id="inputContainer" class="hidden">
+                            <input type="text" id="meetingInput" placeholder="">
+                            <div class="line"></div>
+                            <button type="button" onclick="joinMeeting()">ENTER</button>
+                          </div>
 
-
-<style>
-  #inputContainer {
-    display: flex;
-    gap: 13px;
-    opacity: 0;
-    /* Start invisible */
-    width: 0;
-    /* Start width as zero */
-    transition: opacity 0.3s ease, width 0.3s ease;
-    /* Transition effects */
-    overflow: hidden;
-    /* Hide overflow */
-  }
-
-  #inputContainer.show {
-    opacity: 1;
-    /* Fully visible */
-    width: auto;
-    /* Allow natural width */
-    /* Adjust max-width if desired */
-    max-width: 300px;
-    /* Limit width to prevent excess space */
-  }
-
-  #inputContainer input {
-    background-color: transparent;
-    color: black;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 3px;
-  }
-
-  #inputContainer input::placeholder {
-    color: black;
-  }
-
-  .line {
-    height: auto;
-    border: 1px solid black;
-  }
-
-  .error_field {
-    border-color: red;
-    color: red;
-  }
-
-  .error_field #inputContainer input {
-    border-color: red;
-    color: red;
-    
-  }
-  .error_field #inputContainer input::placeholder {
-    border-color: red;
-    color: red;
-    
-  }
-  .error_field div {
-    border-color: red;
-    color: red;
-  }
-
-  .hidden {
-    display: none;
-    /* Скрыть по умолчанию */
-  }
-
-  .hidden-text {
-    display: none;
-    /* Скрыть текст */
-  }
-
-  .show {
-    display: flex;
-    /* Показать контейнер с вводом */
-    gap: 13px;
-    opacity: 1;
-    /* Полная видимость */
-    width: auto;
-    /* Автоматическая ширина */
-    max-width: 300px;
-    /* Ограничение ширины */
-    transition: opacity 0.3s ease, width 0.3s ease;
-    /* Переходы */
-  }
-</style>
+                        </a>
 
 
-<script>
-  function showInput() {
-    var inputContainer = document.getElementById("inputContainer");
-    var mainText = document.getElementById("main_text");
+                        <style>
+                          #inputContainer {
+                            display: flex;
+                            gap: 13px;
+                            opacity: 0;
+                            /* Start invisible */
+                            width: 0;
+                            /* Start width as zero */
+                            transition: opacity 0.3s ease, width 0.3s ease;
+                            /* Transition effects */
+                            overflow: hidden;
+                            /* Hide overflow */
+                          }
 
-    inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+                          #inputContainer.show {
+                            opacity: 1;
+                            /* Fully visible */
+                            width: auto;
+                            /* Allow natural width */
+                            /* Adjust max-width if desired */
+                            max-width: 300px;
+                            /* Limit width to prevent excess space */
+                          }
 
-    // Сокрытие текста
-    mainText.classList.add("hidden-text");
+                          #inputContainer input {
+                            background-color: transparent;
+                            color: black;
+                            border: 2px solid black;
+                            border-radius: 10px;
+                            padding: 3px;
+                          }
 
-    setTimeout(() => {
-      inputContainer.classList.add("show"); // Добавить класс "show" для анимации
-    }, 10); // Небольшая задержка для переходов
-  }
+                          #inputContainer input::placeholder {
+                            color: black;
+                          }
 
-  function joinMeeting() {
-    var meetingCode = document.getElementById("meetingInput").value;
-    var button_block = document.getElementById("button_block");
+                          .line {
+                            height: auto;
+                            border: 1px solid black;
+                          }
 
-    $.ajax({
-      url: "{{ route("api.code.check") }}",
-      type: "GET",
-      data: {
-        code: meetingCode,
-        _token: "{{ csrf_token() }}"
-      },
-      success: function(data) {
-        console.log(data)
-        if (data.message == "success") {
-          var download_app = document.getElementById("download_app")
-          var mainText = document.getElementById("main_text");
+                          .error_field {
+                            border-color: red;
+                            color: red;
+                          }
 
-          download_app.classList.remove("hidden"); // Убираем "hidden" класс
+                          .error_field #inputContainer input {
+                            border-color: red;
+                            color: red;
 
-          // Сокрытие текста
-          mainText.classList.add("hidden-text");
+                          }
 
-          setTimeout(() => {
-            download_app.classList.add("show"); // Добавить класс "show" для анимации
-          }, 10); // Небольшая задержка для переходов
+                          .error_field #inputContainer input::placeholder {
+                            border-color: red;
+                            color: red;
 
-          button_block.setAttribute("download", true)
-          button_block.href=data.download.url;
-        } else {
-          button_block.classList.add("error_field");
-        }
-      },
-      error: function(data) {
-        console.log(data)
-        button_block.classList.add("error_field");
-      }
-    })
+                          }
 
-  }
-</script>
-</div>
-<style>
-.buttons {
-  display: flex;
-  gap: 19px;
-}
-</style>
+                          .error_field div {
+                            border-color: red;
+                            color: red;
+                          }
+
+                          .hidden {
+                            display: none;
+                            /* Скрыть по умолчанию */
+                          }
+
+                          .hidden-text {
+                            display: none;
+                            /* Скрыть текст */
+                          }
+
+                          .show {
+                            display: flex;
+                            /* Показать контейнер с вводом */
+                            gap: 13px;
+                            opacity: 1;
+                            /* Полная видимость */
+                            width: auto;
+                            /* Автоматическая ширина */
+                            max-width: 300px;
+                            /* Ограничение ширины */
+                            transition: opacity 0.3s ease, width 0.3s ease;
+                            /* Переходы */
+                          }
+                        </style>
+
+
+                        <script>
+                          function showInput() {
+                            var inputContainer = document.getElementById("inputContainer");
+                            var mainText = document.getElementById("main_text");
+
+                            inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+
+                            // Сокрытие текста
+                            mainText.classList.add("hidden-text");
+
+                            setTimeout(() => {
+                              inputContainer.classList.add("show"); // Добавить класс "show" для анимации
+                            }, 10); // Небольшая задержка для переходов
+                          }
+
+                          function joinMeeting() {
+                            var meetingCode = document.getElementById("meetingInput").value;
+                            var button_block = document.getElementById("button_block");
+
+                            $.ajax({
+                              url: "{{ route("api.code.check") }}",
+                              type: "GET",
+                              data: {
+                                code: meetingCode,
+                                _token: "{{ csrf_token() }}"
+                              },
+                              success: function (data) {
+                                console.log(data)
+                                if (data.message == "success") {
+                                  var download_app = document.getElementById("download_app")
+                                  var mainText = document.getElementById("main_text");
+
+                                  download_app.classList.remove("hidden"); // Убираем "hidden" класс
+
+                                  // Сокрытие текста
+                                  mainText.classList.add("hidden-text");
+
+                                  setTimeout(() => {
+                                    download_app.classList.add("show"); // Добавить класс "show" для анимации
+                                  }, 10); // Небольшая задержка для переходов
+
+                                  button_block.setAttribute("download", true)
+                                  button_block.href = data.download.url;
+                                } else {
+                                  button_block.classList.add("error_field");
+                                }
+                              },
+                              error: function (data) {
+                                console.log(data)
+                                button_block.classList.add("error_field");
+                              }
+                            })
+
+                          }
+                        </script>
+                      </div>
+                      <style>
+                        .buttons {
+                          display: flex;
+                          gap: 19px;
+                        }
+                      </style>
                     </section>
                   </div>
                 </div>
@@ -3035,18 +3124,26 @@
           </div>
           <div class="flex flex-col z-30">
             <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-              <div aria-controls="radix-:r59:" aria-expanded="false" aria-haspopup="dialog" class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" data-state="closed" type="button">
-                <img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent" width="25" />
+              <div aria-controls="radix-:r59:" aria-expanded="false" aria-haspopup="dialog"
+                class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+                data-state="closed" type="button">
+                <img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy"
+                  src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent" width="25" />
               </div>
             </div>
-            <div class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" style="z-index: 99999">
-              <button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r5a:" tabindex="0" type="button">
+            <div
+              class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+              style="z-index: 99999">
+              <button aria-expanded="false" aria-haspopup="menu"
+                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+                data-state="closed" id="radix-:r5a:" tabindex="0" type="button">
                 <h3 class="text-primary-600">?</h3>
               </button>
             </div>
           </div>
           <div class="absolute h-full w-full"></div>
-          <div class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
+          <div
+            class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
             <div></div>
           </div>
         </div>
@@ -3070,7 +3167,9 @@
         ">
       Users | ListenUp!
     </p>
-  </next-route-announcer><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0" name="__privateStripeController3321" role="presentation" scrolling="no" src="./friends_files/controller-with-preconnect-0ac892cc1983a4b6e5727ee594af4fd2.html" style="
+  </next-route-announcer><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0"
+    name="__privateStripeController3321" role="presentation" scrolling="no"
+    src="./friends_files/controller-with-preconnect-0ac892cc1983a4b6e5727ee594af4fd2.html" style="
         border: none !important;
         margin: 0px !important;
         padding: 0px !important;
@@ -3083,13 +3182,16 @@
         height: 1px !important;
         pointer-events: none !important;
         user-select: none !important;
-      " tabindex="-1"></iframe><iframe aria-hidden="true" id="_hjSafeContext_74628675" src="./friends_files/saved_resource.html" style="
+      " tabindex="-1"></iframe><iframe aria-hidden="true" id="_hjSafeContext_74628675"
+    src="./friends_files/saved_resource.html" style="
         display: none !important;
         width: 1px !important;
         height: 1px !important;
         opacity: 0 !important;
         pointer-events: none !important;
-      " tabindex="-1" title="_hjSafeContext"></iframe><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0" name="__privateStripeMetricsController3320" role="presentation" scrolling="no" src="./friends_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html" style="
+      " tabindex="-1" title="_hjSafeContext"></iframe><iframe allow="payment *" allowtransparency="true"
+    aria-hidden="true" frameborder="0" name="__privateStripeMetricsController3320" role="presentation" scrolling="no"
+    src="./friends_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html" style="
         border: none !important;
         margin: 0px !important;
         padding: 0px !important;
@@ -3102,7 +3204,8 @@
         height: 1px !important;
         pointer-events: none !important;
         user-select: none !important;
-      " tabindex="-1"></iframe><iframe aria-hidden="true" id="intercom-frame" src="./friends_files/saved_resource(1).html" style="
+      " tabindex="-1"></iframe><iframe aria-hidden="true" id="intercom-frame"
+    src="./friends_files/saved_resource(1).html" style="
         position: absolute !important;
         opacity: 0 !important;
         width: 1px !important;

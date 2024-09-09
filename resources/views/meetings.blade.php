@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0043){{ route("meetings") }} -->
 <html style="">
-  @include('fonts')
+@include('fonts')
 
 <head>
   @include('fonts')
@@ -9,14 +9,8 @@
   <meta name="viewport" content="width=device-width" />
   <title>Insights | ListenUp!</title>
   <meta name="next-head-count" content="3" />
-  <link
-    rel="preload"
-    href="{{ asset("/assets/b08c6edf6d5dd570.css") }}"
-    as="style" />
-  <link
-    rel="stylesheet"
-    href="{{ asset("/assets/b08c6edf6d5dd570.css") }}"
-    data-n-g="" />
+  <link rel="preload" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" as="style" />
+  <link rel="stylesheet" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" data-n-g="" />
   <noscript data-n-css=""></noscript>
 
   <style type="text/css">
@@ -632,25 +626,15 @@
   <div id="__next">
     <div>
       <div>
-        <div
-          class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
-          <section
-            id="app-navbar"
+        <div class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
+          <section id="app-navbar"
             class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1">
-            <section
-              class="flex items-center flex-grow basis-0 justify-start">
+            <section class="flex items-center flex-grow basis-0 justify-start">
               <button data-state="closed">
                 <div
                   class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-                  <img
-                    alt="ListenUp Navbar Logo"
-                    loading="lazy"
-                    width="120"
-                    height="25"
-                    decoding="async"
-                    data-nimg="1"
-                    src="{{ asset("assets/logo.png") }}"
-                    style="color: transparent" />
+                  <img alt="ListenUp Navbar Logo" loading="lazy" width="120" height="25" decoding="async" data-nimg="1"
+                    src="{{ asset("assets/logo.png") }}" style="color: transparent" />
                   <section
                     class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
                     <p class="text-xs text-primary-600">
@@ -665,154 +649,82 @@
               </button>
             </section>
             <section class="flex items-center justify-center">
-              <div
-                dir="ltr"
-                data-orientation="horizontal"
-                class="relative h-fit select-none w-full">
-                <div
-                  role="tablist"
-                  aria-orientation="horizontal"
-                  class="rounded flex flex-row w-full justify-evenly gap-2"
-                  tabindex="0"
-                  data-orientation="horizontal"
+              <div dir="ltr" data-orientation="horizontal" class="relative h-fit select-none w-full">
+                <div role="tablist" aria-orientation="horizontal"
+                  class="rounded flex flex-row w-full justify-evenly gap-2" tabindex="0" data-orientation="horizontal"
                   style="outline: none">
-                  <a
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r31:-content-home"
-                    data-state="inactive"
-                    id="radix-:r31:-trigger-home"
+                  <a type="button" role="tab" aria-selected="false" aria-controls="radix-:r31:-content-home"
+                    data-state="inactive" id="radix-:r31:-trigger-home"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{ route("home") }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        data-name="Layer 3"
-                        viewBox="0 0 24 24"
-                        class="h-6 w-6"
+                      <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 3" viewBox="0 0 24 24" class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh">
                         <path fill="none" d="M0 0h24v24H0Z"></path>
-                        <path
-                          fill="none"
-                          class="stroke-1.5 stroke-neutral-700 stroke-neutral-700"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z"></path>
+                        <path fill="none" class="stroke-1.5 stroke-neutral-700 stroke-neutral-700"
+                          stroke-linecap="round" stroke-linejoin="round"
+                          d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z">
+                        </path>
                       </svg>
                       <h5 class="font-bold">Home</h5>
                     </div>
-                  </a><a
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r31:-content-captures"
-                    data-state="inactive"
-                    id="radix-:r31:-trigger-captures"
+                  </a><a type="button" role="tab" aria-selected="false" aria-controls="radix-:r31:-content-captures"
+                    data-state="inactive" id="radix-:r31:-trigger-captures"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{ route("captures") }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        class="h-6 w-6"
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh">
-                        <path
-                          class="stroke-1.5 stroke-neutral-700"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"></path>
+                        <path class="stroke-1.5 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                          d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z">
+                        </path>
                       </svg>
                       <h5 class="font-bold">Inbox</h5>
                     </div>
-                  </a><a
-                    type="button"
-                    role="tab"
-                    aria-selected="true"
-                    aria-controls="radix-:r31:-content-insights"
-                    data-state="active"
-                    id="radix-:r31:-trigger-insights"
+                  </a><a type="button" role="tab" aria-selected="true" aria-controls="radix-:r31:-content-insights"
+                    data-state="active" id="radix-:r31:-trigger-insights"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{ route("meetings") }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        class="h-6 w-6"
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh">
-                        <path
-                          fill="none"
-                          class="stroke-1.5 stroke-neutral-700"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"></path>
+                        <path fill="none" class="stroke-1.5 stroke-neutral-700" stroke-linecap="round"
+                          stroke-linejoin="round" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"></path>
                         <path fill="none" d="M0 0h24v24H0Z"></path>
                       </svg>
                       <h5 class="font-bold">Meetings</h5>
                     </div>
-                  </a><a
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r31:-content-analytics"
-                    data-state="inactive"
-                    id="radix-:r31:-trigger-analytics"
+                  </a><a type="button" role="tab" aria-selected="false" aria-controls="radix-:r31:-content-analytics"
+                    data-state="inactive" id="radix-:r31:-trigger-analytics"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{ route("analytics") }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        class="h-6 w-6"
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
                         style="max-width: 50vw; max-height: 50vh">
-                        <path
-                          fill="none"
-                          class="stroke-1.5 stroke-neutral-700"
-                          stroke-linecap="round"
+                        <path fill="none" class="stroke-1.5 stroke-neutral-700" stroke-linecap="round"
                           stroke-linejoin="round"
-                          d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z"></path>
+                          d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z">
+                        </path>
                         <path fill="none" d="M24 24H0V0h24Z"></path>
                       </svg>
                       <h5 class="font-bold">Analytics</h5>
                     </div>
-                  </a><a
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r31:-content-users"
-                    data-state="inactive"
-                    id="radix-:r31:-trigger-users"
+                  </a><a type="button" role="tab" aria-selected="false" aria-controls="radix-:r31:-content-users"
+                    data-state="inactive" id="radix-:r31:-trigger-users"
                     class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    tabindex="-1" data-orientation="horizontal" data-radix-collection-item=""
                     href="{{ route("friends") }}">
                     <div class="flex items-center justify-center gap-2 py-1">
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 stroke-1.5"
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-1.5"
                         style="max-width: 50vw; max-height: 50vh">
-                        <g
-                          stroke-linecap="round"
-                          class="stroke-neutral-700"
-                          fill="none"
-                          stroke-linejoin="round">
+                        <g stroke-linecap="round" class="stroke-neutral-700" fill="none" stroke-linejoin="round">
                           <path
-                            d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                            d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                          </path>
                         </g>
                         <path fill="none" d="M0 0h24v24H0Z"></path>
                       </svg>
@@ -820,9 +732,7 @@
                     </div>
                   </a>
                 </div>
-                <div
-                  class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400"
-                  style="
+                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400" style="
                       width: 109px;
                       height: 48px;
                       transform: translateX(212px) translateY(0px)
@@ -830,71 +740,43 @@
                     "></div>
               </div>
             </section>
-            <div
-              class="flex items-center justify-end gap-2 flex-grow basis-0">
-              <button
-                class="flex items-center font-bold rounded text-base font-bold px-3 py-3"
-                tabindex="0"
+            <div class="flex items-center justify-end gap-2 flex-grow basis-0">
+              <button class="flex items-center font-bold rounded text-base font-bold px-3 py-3" tabindex="0"
                 style="transform: none; transform-origin: 50% 50% 0px">
                 <div class="flex items-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    class="h-4 w-4"
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4"
                     style="max-width: 50vw; max-height: 50vh">
-                    <path
-                      fill="none"
-                      class="stroke-2 stroke-neutral-600"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                    <path fill="none" class="stroke-2 stroke-neutral-600" stroke-linecap="round" stroke-linejoin="round"
                       d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"></path>
                     <path fill="none" d="M0 0h24v24H0Z"></path>
                   </svg>
                   <p class="text-neutral-600">Send us a feedback</p>
                 </div>
-              </button><button
-                type="button"
+              </button><button type="button"
                 class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
-                id="profile"
-                aria-haspopup="menu"
-                aria-expanded="false"
-                data-state="closed"
-                tabindex="0">
-                <div
-                  class="flex flex-row items-center justify-center gap-2 text-left mr-2">
+                id="profile" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
+                <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
                     <div
                       class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                       <img
-                        src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}" style="height:100%"
-                        alt="Avatar"
-                        class="object-cover" />
+                        src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}"
+                        style="height:100%" alt="Avatar" class="object-cover" />
                     </div>
                     <div class="absolute -bottom-1 -right-1">
                       <div
                         class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
-                        <img
-                          src="{{asset("assets/organization_avatar_508.png")}}"
-                          alt="Avatar"
-                          class="object-cover" />
+                        <img src="{{asset("assets/organization_avatar_508.png")}}" alt="Avatar" class="object-cover" />
                       </div>
                     </div>
                   </div>
                   <h5 class="font-bold">{{ auth()->user()->name}}</h5>
                 </div>
                 <div style="transform: none">
-                  <svg
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6"
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
                     style="max-width: 50vw; max-height: 50vh">
-                    <path
-                      d="m8 10 4 4 4-4"
-                      stroke-linecap="round"
-                      class="stroke-2 stroke-neutral-700"
-                      stroke="#323232"
-                      fill="none"
-                      stroke-linejoin="round"></path>
+                    <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700" stroke="#323232"
+                      fill="none" stroke-linejoin="round"></path>
                     <path fill="none" d="M0 0h24v24H0Z"></path>
                   </svg>
                 </div>
@@ -904,8 +786,7 @@
           <div class="flex">
             <section class="h-[calc(100vh-4rem)] w-screen">
               <div class="h-full w-full overflow-y-auto relative">
-                <div
-                  class="w-full flex justify-start items-center px-14 mt-2">
+                <div class="w-full flex justify-start items-center px-14 mt-2">
                   <div
                     class="w-full max-w-[100rem] rounded-xl bg-primary-300 border-2 border-primary-500 border-dashed shadow-smooth p-3 flex items-center justify-between gap-4">
                     <h4 class="text-primary-700 ml-2">
@@ -915,51 +796,26 @@
                     <div class="flex items-center gap-4">
                       <div class="flex items-center gap-2">
                         <svg width="20" height="20" viewBox="0 0 20 20">
-                          <circle
-                            class="stroke-primary-500 fill-none"
-                            cx="10"
-                            cy="10"
-                            r="8"
-                            stroke-width="4px"></circle>
-                          <circle
-                            class="stroke-primary-600 fill-none"
-                            cx="10"
-                            cy="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            r="8"
-                            stroke-width="4px"
-                            transform="rotate(-90 10 10)"
-                            style="
+                          <circle class="stroke-primary-500 fill-none" cx="10" cy="10" r="8" stroke-width="4px">
+                          </circle>
+                          <circle class="stroke-primary-600 fill-none" cx="10" cy="10" stroke-linecap="round"
+                            stroke-linejoin="round" r="8" stroke-width="4px" transform="rotate(-90 10 10)" style="
                                 stroke-dasharray: 50.2655;
                                 stroke-dashoffset: 50.2655;
                               "></circle>
-                          <text
-                            class="circle-text"
-                            x="50%"
-                            y="50%"
-                            dy=".3em"
-                            text-anchor="middle"></text>
+                          <text class="circle-text" x="50%" y="50%" dy=".3em" text-anchor="middle"></text>
                         </svg>
                         <h5 class="text-primary-600">0 / 50 insights</h5>
                       </div>
-                      <button
-                        type="button"
+                      <button type="button"
                         class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-primary-500 bg-grainy-texture outline-neutral-700 opacity-100"
-                        tabindex="0"
-                        style="transform: none; transform-origin: 50% 50% 0px">
+                        tabindex="0" style="transform: none; transform-origin: 50% 50% 0px">
                         <div class="flex items-center gap-2">
-                          <svg
-                            class="h-5 w-5"
-                            viewBox="0 0 19 17"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <svg class="h-5 w-5" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg"
                             style="max-width: 50vw; max-height: 50vh">
                             <path
                               d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
-                              class="stroke-2 stroke-primary-700"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"></path>
+                              class="stroke-2 stroke-primary-700" stroke-linecap="round" stroke-linejoin="round"></path>
                           </svg>
                           <h4 class="text-primary-700">Add captures</h4>
                         </div>
@@ -968,292 +824,171 @@
                   </div>
                   <div class="w-0 h-0"></div>
                 </div>
-                <section
-                  class="my-2 px-14 sticky self-start top-2 z-20 flex items-center justify-between">
+                <section class="my-2 px-14 sticky self-start top-2 z-20 flex items-center justify-between">
                   <div
                     class="bg-neutral-50 border-[0.13rem] border-neutral-400 border-dashed p-2 w-fit h-16 rounded flex items-center gap-2 shadow-lg">
                     <div class="flex items-center gap-1 h-full">
                       <div class="flex flex-col gap-1">
-                        <div
-                          style="
+                        <div style="
                               transform-origin: center center;
                               perspective: 500px;
                               transform: none;
                             ">
                           <input
                             class="px-2 py-2 rounded transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal bg-neutral-50 border-1 border-neutral-400 w-60 p focus:outline-primary-500 overflow-hidden text-ellipsis-clip"
-                            type="text"
-                            placeholder="Search or ask"
-                            value="" />
+                            type="text" placeholder="Search or ask" value="" />
                         </div>
                       </div>
-                      <div
-                        class="w-[1px] h-full bg-neutral-300 m-1 rounded-full bg-neutral-400 w-4 h-[45%] ml-2"></div>
+                      <div class="w-[1px] h-full bg-neutral-300 m-1 rounded-full bg-neutral-400 w-4 h-[45%] ml-2"></div>
                     </div>
                     <div>
-                      <button
-                        type="button"
+                      <button type="button"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                        id="radix-:r39:"
-                        aria-haspopup="menu"
-                        aria-expanded="false"
-                        data-state="closed"
-                        tabindex="0">
+                        id="radix-:r39:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            class="h-5"
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
                             <g fill="none">
                               <path d="M0 0h24v24H0Z"></path>
-                              <path
-                                class="stroke-2 stroke-neutral-700"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M7.75 9.75H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2v2.75a2 2 0 0 1-2 2ZM19 9.75h-2.75a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2v2.75a2 2 0 0 1-2 2ZM7.75 21H5a2 2 0 0 1-2-2v-2.75a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2ZM19 21h-2.75a2 2 0 0 1-2-2v-2.75a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2Z"></path>
+                              <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                                d="M7.75 9.75H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2v2.75a2 2 0 0 1-2 2ZM19 9.75h-2.75a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2v2.75a2 2 0 0 1-2 2ZM7.75 21H5a2 2 0 0 1-2-2v-2.75a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2ZM19 21h-2.75a2 2 0 0 1-2-2v-2.75a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2Z">
+                              </path>
                             </g>
                           </svg>
                           <h5 class="px-2">Type</h5>
                         </div>
                         <div style="transform: none">
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6"
+                          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
                             style="max-width: 50vw; max-height: 50vh">
-                            <path
-                              d="m8 10 4 4 4-4"
-                              stroke-linecap="round"
-                              class="stroke-2 stroke-neutral-700"
-                              stroke="#323232"
-                              fill="none"
-                              stroke-linejoin="round"></path>
+                            <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700"
+                              stroke="#323232" fill="none" stroke-linejoin="round"></path>
                             <path fill="none" d="M0 0h24v24H0Z"></path>
                           </svg>
                         </div>
                       </button>
                     </div>
                     <div>
-                      <button
-                        type="button"
+                      <button type="button"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                        id="radix-:r3b:"
-                        aria-haspopup="menu"
-                        aria-expanded="false"
-                        data-state="closed"
-                        tabindex="0">
+                        id="radix-:r3b:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 0 24 24"
-                            class="h-5"
-                            style="max-width: 50vw; max-height: 50vh">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 24 24" class="h-5" style="max-width: 50vw; max-height: 50vh">
                             <defs>
                               <path id="a" d="M24 0H0v24h24V0Z"></path>
                             </defs>
                             <g fill="none">
                               <use xlink:href="#a"></use>
                               <use xlink:href="#a"></use>
-                              <path
-                                class="stroke-2 stroke-neutral-700"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                              <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
                                 d="M9.165 10.146a.367.367 0 1 1-.52.519.367.367 0 0 1 .52-.52"></path>
-                              <path
-                                class="stroke-2 stroke-neutral-700"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="m11.71 6.29 7.21 7.21a1.977 1.977 0 0 1 0 2.796l-4.124 4.124a1.977 1.977 0 0 1-2.796 0l-7.21-7.21a.99.99 0 0 1-.29-.699V6.989A.99.99 0 0 1 5.489 6h5.523c.262 0 .513.104.698.29ZM19.5 10l-6.506-6.423A2 2 0 0 0 11.589 3H7.5"></path>
+                              <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                                d="m11.71 6.29 7.21 7.21a1.977 1.977 0 0 1 0 2.796l-4.124 4.124a1.977 1.977 0 0 1-2.796 0l-7.21-7.21a.99.99 0 0 1-.29-.699V6.989A.99.99 0 0 1 5.489 6h5.523c.262 0 .513.104.698.29ZM19.5 10l-6.506-6.423A2 2 0 0 0 11.589 3H7.5">
+                              </path>
                             </g>
                           </svg>
                           <h5 class="px-2">Tags</h5>
                         </div>
                         <div style="transform: none">
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6"
+                          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
                             style="max-width: 50vw; max-height: 50vh">
-                            <path
-                              d="m8 10 4 4 4-4"
-                              stroke-linecap="round"
-                              class="stroke-2 stroke-neutral-700"
-                              stroke="#323232"
-                              fill="none"
-                              stroke-linejoin="round"></path>
+                            <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700"
+                              stroke="#323232" fill="none" stroke-linejoin="round"></path>
                             <path fill="none" d="M0 0h24v24H0Z"></path>
                           </svg>
                         </div>
                       </button>
                     </div>
                     <div>
-                      <button
-                        type="button"
+                      <button type="button"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                        id="radix-:r3d:"
-                        aria-haspopup="menu"
-                        aria-expanded="false"
-                        data-state="closed"
-                        tabindex="0">
+                        id="radix-:r3d:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            class="h-5"
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
-                            <path
-                              fill="none"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round"
                               class="stroke-2 stroke-neutral-700"
-                              d="m7.5 12.995.005.005-.005.005L7.495 13l.005-.005M10.5 12.995l.005.005-.005.005-.005-.005.005-.005M13.5 12.995l.005.005-.005.005-.005-.005.005-.005M16.5 12.995l.005.005-.005.005-.005-.005.005-.005M7.5 15.995l.005.005-.005.005L7.495 16l.005-.005M10.5 15.995l.005.005-.005.005-.005-.005.005-.005M13.5 15.995l.005.005-.005.005-.005-.005.005-.005"></path>
-                            <rect
-                              width="18"
-                              height="18"
-                              x="3"
-                              y="3"
-                              fill="none"
-                              class="stroke-2 stroke-neutral-700"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              rx="5"></rect>
-                            <path
-                              fill="none"
-                              class="stroke-2 stroke-neutral-700"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M3 9h18"></path>
+                              d="m7.5 12.995.005.005-.005.005L7.495 13l.005-.005M10.5 12.995l.005.005-.005.005-.005-.005.005-.005M13.5 12.995l.005.005-.005.005-.005-.005.005-.005M16.5 12.995l.005.005-.005.005-.005-.005.005-.005M7.5 15.995l.005.005-.005.005L7.495 16l.005-.005M10.5 15.995l.005.005-.005.005-.005-.005.005-.005M13.5 15.995l.005.005-.005.005-.005-.005.005-.005">
+                            </path>
+                            <rect width="18" height="18" x="3" y="3" fill="none" class="stroke-2 stroke-neutral-700"
+                              stroke-linecap="round" stroke-linejoin="round" rx="5"></rect>
+                            <path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round"
+                              stroke-linejoin="round" d="M3 9h18"></path>
                             <path fill="none" d="M24 24H0V0h24Z"></path>
                           </svg>
                           <h5 class="px-2">Dates</h5>
                         </div>
                         <div style="transform: none">
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6"
+                          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
                             style="max-width: 50vw; max-height: 50vh">
-                            <path
-                              d="m8 10 4 4 4-4"
-                              stroke-linecap="round"
-                              class="stroke-2 stroke-neutral-700"
-                              stroke="#323232"
-                              fill="none"
-                              stroke-linejoin="round"></path>
+                            <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700"
+                              stroke="#323232" fill="none" stroke-linejoin="round"></path>
                             <path fill="none" d="M0 0h24v24H0Z"></path>
                           </svg>
                         </div>
                       </button>
                     </div>
                     <div>
-                      <button
-                        type="button"
+                      <button type="button"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                        id="radix-:r3f:"
-                        aria-haspopup="menu"
-                        aria-expanded="false"
-                        data-state="closed"
-                        tabindex="0">
+                        id="radix-:r3f:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            class="h-5"
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
-                            <path
-                              class="stroke-2 stroke-neutral-700"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"></path>
+                            <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                              d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z">
+                            </path>
                           </svg>
                           <h5 class="px-2">Sources</h5>
                         </div>
                         <div style="transform: none">
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6"
+                          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
                             style="max-width: 50vw; max-height: 50vh">
-                            <path
-                              d="m8 10 4 4 4-4"
-                              stroke-linecap="round"
-                              class="stroke-2 stroke-neutral-700"
-                              stroke="#323232"
-                              fill="none"
-                              stroke-linejoin="round"></path>
+                            <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700"
+                              stroke="#323232" fill="none" stroke-linejoin="round"></path>
                             <path fill="none" d="M0 0h24v24H0Z"></path>
                           </svg>
                         </div>
                       </button>
                     </div>
                     <div>
-                      <button
-                        type="button"
+                      <button type="button"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                        id="radix-:r3h:"
-                        aria-haspopup="menu"
-                        aria-expanded="false"
-                        data-state="closed"
-                        tabindex="0">
+                        id="radix-:r3h:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            class="h-5"
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
                             <g fill="none">
                               <path d="M0 0h24v24H0Z"></path>
-                              <path
-                                class="stroke-2 stroke-neutral-700"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                              <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
                                 d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636"></path>
-                              <path
-                                class="stroke-2 stroke-neutral-700"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M17 9.24c-.395.485-.935.76-1.5.76s-1.09-.275-1.5-.76M10 9.24c-.395.485-.935.76-1.5.76S7.41 9.725 7 9.24M15.5 14.688S14.187 16 12 16c-2.188 0-3.5-1.312-3.5-1.312"></path>
+                              <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                                d="M17 9.24c-.395.485-.935.76-1.5.76s-1.09-.275-1.5-.76M10 9.24c-.395.485-.935.76-1.5.76S7.41 9.725 7 9.24M15.5 14.688S14.187 16 12 16c-2.188 0-3.5-1.312-3.5-1.312">
+                              </path>
                             </g>
                           </svg>
                           <h5 class="px-2">Feelings</h5>
                         </div>
                         <div style="transform: none">
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6"
+                          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
                             style="max-width: 50vw; max-height: 50vh">
-                            <path
-                              d="m8 10 4 4 4-4"
-                              stroke-linecap="round"
-                              class="stroke-2 stroke-neutral-700"
-                              stroke="#323232"
-                              fill="none"
-                              stroke-linejoin="round"></path>
+                            <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-700"
+                              stroke="#323232" fill="none" stroke-linejoin="round"></path>
                             <path fill="none" d="M0 0h24v24H0Z"></path>
                           </svg>
                         </div>
                       </button>
                     </div>
                     <div>
-                      <button
-                        type="button"
+                      <button type="button"
                         class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-primary-200 border-[1.5px] border-primary-500 opacity-100"
-                        tabindex="0"
-                        style="transform: none; transform-origin: 50% 50% 0px">
+                        tabindex="0" style="transform: none; transform-origin: 50% 50% 0px">
                         <div class="flex items-center gap-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            viewBox="0 0 18 21"
-                            fill="none"
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 18 21" fill="none"
                             style="max-width: 50vw; max-height: 50vh">
-                            <path
-                              class="fill-neutral-700"
-                              d="M9.547 3.963a.577.577 0 0 1 1.018 0l1.906 3.593a.576.576 0 0 0 .239.24L16.303 9.7a.577.577 0 0 1 0 1.019l-3.593 1.905a.576.576 0 0 0-.24.24l-1.905 3.593a.577.577 0 0 1-1.018 0L7.64 12.864a.576.576 0 0 0-.239-.239L3.809 10.72a.577.577 0 0 1 0-1.02l3.593-1.904a.577.577 0 0 0 .24-.24l1.905-3.593ZM3.447 14.275c.1-.23.427-.23.528 0l.655 1.499c.029.066.082.12.149.149l1.499.654c.23.101.23.428 0 .529l-1.5.655a.289.289 0 0 0-.148.149l-.655 1.498c-.1.231-.428.231-.528 0l-.655-1.498a.289.289 0 0 0-.15-.15l-1.498-.654a.288.288 0 0 1 0-.529l1.499-.655a.288.288 0 0 0 .149-.148l.655-1.5ZM3.158 1.59c.101-.231.428-.231.529 0l.655 1.498c.029.067.082.12.149.149l1.499.655c.23.1.23.428 0 .528l-1.5.655a.288.288 0 0 0-.148.149l-.655 1.499c-.1.23-.428.23-.529 0l-.654-1.499a.288.288 0 0 0-.15-.149L.857 4.42a.288.288 0 0 1 0-.528l1.499-.655a.288.288 0 0 0 .149-.149l.654-1.499Z"></path>
+                            <path class="fill-neutral-700"
+                              d="M9.547 3.963a.577.577 0 0 1 1.018 0l1.906 3.593a.576.576 0 0 0 .239.24L16.303 9.7a.577.577 0 0 1 0 1.019l-3.593 1.905a.576.576 0 0 0-.24.24l-1.905 3.593a.577.577 0 0 1-1.018 0L7.64 12.864a.576.576 0 0 0-.239-.239L3.809 10.72a.577.577 0 0 1 0-1.02l3.593-1.904a.577.577 0 0 0 .24-.24l1.905-3.593ZM3.447 14.275c.1-.23.427-.23.528 0l.655 1.499c.029.066.082.12.149.149l1.499.654c.23.101.23.428 0 .529l-1.5.655a.289.289 0 0 0-.148.149l-.655 1.498c-.1.231-.428.231-.528 0l-.655-1.498a.289.289 0 0 0-.15-.15l-1.498-.654a.288.288 0 0 1 0-.529l1.499-.655a.288.288 0 0 0 .149-.148l.655-1.5ZM3.158 1.59c.101-.231.428-.231.529 0l.655 1.498c.029.067.082.12.149.149l1.499.655c.23.1.23.428 0 .528l-1.5.655a.288.288 0 0 0-.148.149l-.655 1.499c-.1.23-.428.23-.529 0l-.654-1.499a.288.288 0 0 0-.15-.149L.857 4.42a.288.288 0 0 1 0-.528l1.499-.655a.288.288 0 0 0 .149-.149l.654-1.499Z">
+                            </path>
                           </svg>
                           <h5>Ask AI</h5>
                         </div>
@@ -1264,30 +999,17 @@
                 <section class="px-14 py-2 h-full w-full">
                   <div class="w-full flex justify-between items-center my-4">
                     <div></div>
-                    <button
-                      type="button"
+                    <button type="button"
                       class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none text-neutral-600 hover:bg-neutral-100"
-                      role="combobox"
-                      aria-controls="radix-:r3j:"
-                      aria-expanded="false"
-                      aria-autocomplete="none"
-                      dir="ltr"
-                      data-state="closed"
-                      tabindex="0">
+                      role="combobox" aria-controls="radix-:r3j:" aria-expanded="false" aria-autocomplete="none"
+                      dir="ltr" data-state="closed" tabindex="0">
                       <span style="pointer-events: none">
                         <div class="flex items-center text-left">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            class="h-5"
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
-                            <g
-                              fill="none"
-                              class="stroke-2 stroke-neutral-600"
-                              stroke-linecap="round"
+                            <g fill="none" class="stroke-2 stroke-neutral-600" stroke-linecap="round"
                               stroke-linejoin="round">
-                              <path
-                                d="M10 8 7 5 4 8M7 19V5M14 16l3 3 3-3M17 5v14"></path>
+                              <path d="M10 8 7 5 4 8M7 19V5M14 16l3 3 3-3M17 5v14"></path>
                             </g>
                             <path fill="none" d="M0 0h24v24H0Z"></path>
                           </svg>
@@ -1295,18 +1017,10 @@
                         </div>
                       </span>
                       <div aria-hidden="true" style="transform: none">
-                        <svg
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-6"
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6"
                           style="max-width: 50vw; max-height: 50vh">
-                          <path
-                            d="m8 10 4 4 4-4"
-                            stroke-linecap="round"
-                            class="stroke-2 stroke-neutral-600"
-                            stroke="#323232"
-                            fill="none"
-                            stroke-linejoin="round"></path>
+                          <path d="m8 10 4 4 4-4" stroke-linecap="round" class="stroke-2 stroke-neutral-600"
+                            stroke="#323232" fill="none" stroke-linejoin="round"></path>
                           <path fill="none" d="M0 0h24v24H0Z"></path>
                         </svg>
                       </div>
@@ -1317,67 +1031,52 @@
                     <div class="w-full h-full overflow-hidden">
                       <div class="w-full flex items-center justify-center">
                         <div class="flex w-full">
-                          <div
-                            class="bg-clip-padding [&amp;&gt;*]:mb-8 flex flex-col items-center"
-                            style="width: 50%">
+                          <div class="bg-clip-padding [&amp;&gt;*]:mb-8 flex flex-col items-center" style="width: 50%">
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-52">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -1386,181 +1085,143 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-[20rem] relative">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
                                 </div>
                                 <div
                                   class="w-full h-fit absolute top-0 left-0 flex items-center justify-around px-2 py-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-6 bg-neutral-200"></div>
                                   </div>
                                   <div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-24 h-8 bg-neutral-200"></div>
+                                      <div class="rounded-md w-24 h-8 bg-neutral-200"></div>
                                     </div>
                                   </div>
                                 </div>
                                 <div
                                   class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-75 w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                        <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                                  <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                        <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-10 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-10 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -1569,228 +1230,179 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-52">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -1799,60 +1411,47 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-52">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -1861,60 +1460,47 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-52">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -1923,191 +1509,150 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-52">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                           </div>
-                          <div
-                            class="bg-clip-padding [&amp;&gt;*]:mb-8 flex flex-col items-center"
-                            style="width: 50%">
+                          <div class="bg-clip-padding [&amp;&gt;*]:mb-8 flex flex-col items-center" style="width: 50%">
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-[20rem] relative">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
                                 </div>
                                 <div
                                   class="w-full h-fit absolute top-0 left-0 flex items-center justify-around px-2 py-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-6 bg-neutral-200"></div>
                                   </div>
                                   <div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-24 h-8 bg-neutral-200"></div>
+                                      <div class="rounded-md w-24 h-8 bg-neutral-200"></div>
                                     </div>
                                   </div>
                                 </div>
                                 <div
                                   class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-75 w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                        <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                                  <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                        <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-10 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-10 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -2116,181 +1661,143 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-[20rem] relative">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
                                 </div>
                                 <div
                                   class="w-full h-fit absolute top-0 left-0 flex items-center justify-around px-2 py-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-6 bg-neutral-200"></div>
                                   </div>
                                   <div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-24 h-8 bg-neutral-200"></div>
+                                      <div class="rounded-md w-24 h-8 bg-neutral-200"></div>
                                     </div>
                                   </div>
                                 </div>
                                 <div
                                   class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-75 w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                        <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                                  <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                        <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-10 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-10 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -2299,237 +1806,187 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-[20rem] relative">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
                                 </div>
                                 <div
                                   class="w-full h-fit absolute top-0 left-0 flex items-center justify-around px-2 py-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-6 bg-neutral-200"></div>
                                   </div>
                                   <div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-24 h-8 bg-neutral-200"></div>
+                                      <div class="rounded-md w-24 h-8 bg-neutral-200"></div>
                                     </div>
                                   </div>
                                 </div>
                                 <div
                                   class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-75 w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                        <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                                  <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                        <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-10 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-10 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -2538,60 +1995,47 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-52">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -2600,125 +2044,99 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-[20rem] relative">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
                                 </div>
                                 <div
                                   class="w-full h-fit absolute top-0 left-0 flex items-center justify-around px-2 py-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-6 bg-neutral-200"></div>
                                   </div>
                                   <div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-24 h-8 bg-neutral-200"></div>
+                                      <div class="rounded-md w-24 h-8 bg-neutral-200"></div>
                                     </div>
                                   </div>
                                 </div>
                                 <div
                                   class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-75 w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                        <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                                  <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                        <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-10 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-10 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -2727,181 +2145,143 @@
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 shadow-smooth overflow-hidden">
                               <section class="w-full h-[20rem] relative">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-full absolute top-0 left-0 bg-neutral-200"></div>
                                 </div>
                                 <div
                                   class="w-full h-fit absolute top-0 left-0 flex items-center justify-around px-2 py-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-6 bg-neutral-200"></div>
                                   </div>
                                   <div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-24 h-8 bg-neutral-200"></div>
+                                      <div class="rounded-md w-24 h-8 bg-neutral-200"></div>
                                     </div>
                                   </div>
                                 </div>
                                 <div
                                   class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-75 w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                        <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                        <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                                  <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                     </div>
                                     <div class="h-full w-full">
-                                      <div
-                                        class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                      <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                     </div>
                                   </section>
-                                  <section
-                                    class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                                  <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                     <div class="flex items-center gap-2">
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                        <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                       </div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                     <div>
                                       <div class="h-full w-full">
-                                        <div
-                                          class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                        <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                       </div>
                                     </div>
                                   </section>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full px-3">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-10 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-10 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between px-3 pb-3">
                                 <div class="flex items-center">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
                             </div>
                             <div
                               class="w-[30rem] rounded bg-neutral-50 flex flex-col gap-4 justify-center items-center border-1 border-neutral-300 p-3 shadow-smooth">
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-20 h-8 bg-neutral-200"></div>
+                                    <div class="rounded-md w-20 h-8 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-10 h-6 bg-neutral-200"></div>
+                                    <div class="rounded-md w-10 h-6 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
-                              <section
-                                class="text-xl font-medium flex flex-col gap-2 items-start w-full">
+                              <section class="text-xl font-medium flex flex-col gap-2 items-start w-full">
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-full h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-full h-5 bg-neutral-200"></div>
                                 </div>
                                 <div class="h-full w-full">
-                                  <div
-                                    class="rounded-md w-56 h-5 bg-neutral-200"></div>
+                                  <div class="rounded-md w-56 h-5 bg-neutral-200"></div>
                                 </div>
                               </section>
-                              <section
-                                class="flex gap-2 w-full items-center font-medium h3 justify-between">
+                              <section class="flex gap-2 w-full items-center font-medium h3 justify-between">
                                 <div class="flex items-center gap-2">
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-full w-7 h-7 bg-neutral-200"></div>
+                                    <div class="rounded-full w-7 h-7 bg-neutral-200"></div>
                                   </div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                                 <div>
                                   <div class="h-full w-full">
-                                    <div
-                                      class="rounded-md w-24 h-5 bg-neutral-200"></div>
+                                    <div class="rounded-md w-24 h-5 bg-neutral-200"></div>
                                   </div>
                                 </div>
                               </section>
@@ -2917,17 +2297,18 @@
                       </p>
                       <h1>You haven't had meetings</h1>
                       <p class="text-center">
-                        There is no insight yet! Start highlighting the important parts of <br> your photos during meetings and keep an eye on them on this page.
+                        There is no insight yet! Start highlighting the important parts of <br> your photos during
+                        meetings and keep an eye on them on this page.
                       </p>
-                      <section
-                        class="w-full h-fit flex flex-col items-center justify-center gap-3">
+                      <section class="w-full h-fit flex flex-col items-center justify-center gap-3">
                         <div class="buttons">
 
-                          <script
-                            src="https://code.jquery.com/jquery-3.7.1.min.js"
+                          <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
                             crossorigin="anonymous"></script>
-                          <a id="button_block" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" onclick="showInput()">
+                          <a id="button_block"
+                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0" onclick="showInput()">
                             <h4 id="main_text">Join meeting</h4>
                             <div id="inputContainer" class="hidden">
                               <input type="text" id="meetingInput" placeholder="Enter meeting code">
@@ -2987,13 +2368,15 @@
                             .error_field #inputContainer input {
                               border-color: red;
                               color: red;
-                              
+
                             }
+
                             .error_field #inputContainer input::placeholder {
                               border-color: red;
                               color: red;
-                              
+
                             }
+
                             .error_field div {
                               border-color: red;
                               color: red;
@@ -3051,7 +2434,7 @@
                                   code: meetingCode,
                                   _token: "{{ csrf_token() }}"
                                 },
-                                success: function(data) {
+                                success: function (data) {
                                   console.log(data)
                                   if (data.message == "success") {
                                     var download_app = document.getElementById("download_app")
@@ -3067,12 +2450,12 @@
                                     }, 10); // Небольшая задержка для переходов
 
                                     button_block.setAttribute("download", true)
-                                    button_block.href=data.download.url;
+                                    button_block.href = data.download.url;
                                   } else {
                                     button_block.classList.add("error_field");
                                   }
                                 },
-                                error: function(data) {
+                                error: function (data) {
                                   console.log(data)
                                   button_block.classList.add("error_field");
                                 }
@@ -3080,15 +2463,25 @@
 
                             }
                           </script>
-                          <button style="position:relative;overflow:visible" type="button" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" tabindex="0" style="transform: none">
+                          <button style="position:relative;overflow:visible" type="button"
+                            class="starAnimationBlock flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0" style="transform: none">
                             <h4>Create a room</h4>
                             <img style="    position: absolute;
     top: -20px;
     right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             <style>
-                              .starAnimation {
-                                animation: star 1s infinite;
+                              .starAnimationBlock {
+                                position: relative;
+                                overflow: visible !important;
                               }
+
+                              .starAnimationBlock:focus .starAnimation {
+                                animation: star 1s infinite;
+                                transform: rotate(-30deg);
+                              }
+
+
 
                               @keyframes star {
                                 0% {
@@ -3129,37 +2522,21 @@
             </section>
           </div>
           <div class="flex flex-col z-30">
-            <div
-              class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+            <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
               <div
                 class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
-                type="button"
-                aria-haspopup="dialog"
-                aria-expanded="false"
-                aria-controls="radix-:r3p:"
+                type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r3p:"
                 data-state="closed">
-                <img
-                  alt="ListenUp Illustration Logo"
-                  loading="lazy"
-                  width="25"
-                  height="25"
-                  decoding="async"
-                  data-nimg="1"
-                  src="{{  asset("assets/ListenUp-Logo.svg") }} "
-                  style="color: transparent" />
+                <img alt="ListenUp Illustration Logo" loading="lazy" width="25" height="25" decoding="async"
+                  data-nimg="1" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent" />
               </div>
             </div>
             <div
               class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
               style="z-index: 99999">
-              <button
-                type="button"
+              <button type="button"
                 class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
-                id="radix-:r3q:"
-                aria-haspopup="menu"
-                aria-expanded="false"
-                data-state="closed"
-                tabindex="0">
+                id="radix-:r3q:" aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                 <h3 class="text-primary-600">?</h3>
               </button>
             </div>

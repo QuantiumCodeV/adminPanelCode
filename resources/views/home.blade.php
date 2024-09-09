@@ -919,18 +919,24 @@
 
 
 
-                          <button style="position:relative;overflow:visible" type="button"
-                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                          <button style="" type="button"
+                            class="starAnimationBlock flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0" style="transform: none">
                             <h4>Create a room</h4>
                             <img style="    position: absolute;
 top: -20px;
 right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             <style>
-                              .starAnimation {
+                              .starAnimationBlock {
+                                position: relative;
+                                overflow: visible !important;
+                              }
+
+                              .starAnimationBlock:focus .starAnimation {
                                 animation: star 1s infinite;
                                 transform: rotate(-30deg);
                               }
+
 
                               @keyframes star {
                                 0% {
@@ -1178,7 +1184,8 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
-                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto;display: none;">
+                        <section class="w-full overflow-clip px-4 collapsible-section"
+                          style="opacity: 1; height: auto;display: none;">
                           <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
                             <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
@@ -1248,7 +1255,8 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
-                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto;display: none;">
+                        <section class="w-full overflow-clip px-4 collapsible-section"
+                          style="opacity: 1; height: auto;display: none;">
                           <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
                             <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
@@ -1318,7 +1326,8 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                             </section>
                           </div>
                         </div>
-                        <section class="w-full overflow-clip px-4 collapsible-section" style="opacity: 1; height: auto;display: none;">
+                        <section class="w-full overflow-clip px-4 collapsible-section"
+                          style="opacity: 1; height: auto;display: none;">
                           <div class="flex items-center justify-center gap-4 w-full pl-9 pb-5 h-[20rem]">
                             <div class="flex flex-col justify-between gap-4 w-1/2 h-full">
                               <p class="select-none">
@@ -5938,5 +5947,5 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
       $("#section_1").fadeIn(500);
     });
   }
-  
+
 </script>

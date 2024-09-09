@@ -2245,7 +2245,7 @@
                       <div class="flex flex-col gap-4 bg-neutral-50 px-3 pt-3 pb-1 border-b-1 border-neutral-300 h-fit">
                         <section class="flex justify-between items-center">
                           <div>
-                            <button class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="
+                            <button class="starAnimationBlock flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="
                                   transform: none;
                                   transform-origin: 50% 50% 0px;
                                 " tabindex="0" type="button">
@@ -2253,6 +2253,43 @@
                                 <path class="stroke-2 stroke-neutral-700" d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" stroke-linecap="round" stroke-linejoin="round"></path>
                               </svg>
                               <h5>Add captures</h5>
+                              <img style="    position: absolute;
+    top: -20px;
+    right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
+                              <style>
+                               .starAnimationBlock {
+                                position: relative;
+                                overflow: visible !important;
+                              }
+
+                              .starAnimationBlock:focus .starAnimation {
+                                animation: star 1s infinite;
+                                transform: rotate(-30deg);
+                              }
+
+
+                                @keyframes star {
+                                  0% {
+                                    transform: rotate(0deg);
+                                  }
+
+                                  25% {
+                                    transform: rotate(30deg);
+                                  }
+
+                                  50% {
+                                    transform: rotate(0deg);
+                                  }
+
+                                  75% {
+                                    transform: rotate(-30deg);
+                                  }
+
+                                  100% {
+                                    transform: rotate(0deg);
+                                  }
+                                }
+                              </style>
                             </button>
                           </div>
                           <button aria-autocomplete="none" aria-controls="radix-:r17:" aria-expanded="false" class="flex items-center justify-center w-fit rounded px-3 py-2 font-medium transition-colors select-none text-neutral-600 hover:bg-neutral-100" data-state="closed" dir="ltr" role="combobox" tabindex="0" type="button">
@@ -2710,11 +2747,48 @@
                       capture them automatically
                     </p>
                     <section class="w-full h-fit flex flex-col items-center justify-center gap-3">
-                      <button class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px" tabindex="0" type="button">
+                      <button class="starAnimationBlock flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100" style="transform: none; transform-origin: 50% 50% 0px" tabindex="0" type="button">
                         <svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
                           <path class="stroke-2 stroke-neutral-700" d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                         <h5>Add captures</h5>
+                        <img style="    position: absolute;
+    top: -20px;
+    right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
+                              <style>
+                               .starAnimationBlock {
+                                position: relative;
+                                overflow: visible !important;
+                              }
+
+                              .starAnimationBlock:focus .starAnimation {
+                                animation: star 1s infinite;
+                                transform: rotate(-30deg);
+                              }
+
+
+                                @keyframes star {
+                                  0% {
+                                    transform: rotate(0deg);
+                                  }
+
+                                  25% {
+                                    transform: rotate(30deg);
+                                  }
+
+                                  50% {
+                                    transform: rotate(0deg);
+                                  }
+
+                                  75% {
+                                    transform: rotate(-30deg);
+                                  }
+
+                                  100% {
+                                    transform: rotate(0deg);
+                                  }
+                                }
+                              </style>
                       </button>
                       <div class="w-full h-fit flex items-center justify-center gap-2">
                         <img alt="Integrations Bouquet" data-nimg="1" decoding="async" height="60" loading="lazy" src="{{asset("assets/integrations_bouquet.png")}}" style="color: transparent" width="60" />

@@ -2256,7 +2256,7 @@
                       <div class="flex flex-col gap-4 bg-neutral-50 px-3 pt-3 pb-1 border-b-1 border-neutral-300 h-fit">
                         <section class="flex justify-between items-center">
                           <div><button style="position:relative;overflow:visible"
-                              class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                              class="starAnimationBlock flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                               style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg
                                 class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
                                 viewbox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
@@ -2269,9 +2269,16 @@
     top: -20px;
     right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                               <style>
-                                .starAnimation {
-                                  animation: star 1s infinite;
-                                }
+                               .starAnimationBlock {
+                                position: relative;
+                                overflow: visible !important;
+                              }
+
+                              .starAnimationBlock:focus .starAnimation {
+                                animation: star 1s infinite;
+                                transform: rotate(-30deg);
+                              }
+
 
                                 @keyframes star {
                                   0% {
@@ -2760,7 +2767,7 @@
                       automatically</p>
                     <section class="w-full h-fit flex flex-col items-center justify-center gap-3">
                       <button style="position:relative;overflow:visible"
-                        class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                        class="starAnimationBlock flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                         style="transform: none; transform-origin: 50% 50% 0px;" tabindex="0" type="button"><svg
                           class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 19 17"
                           xmlns="http://www.w3.org/2000/svg">
@@ -2773,9 +2780,16 @@
     top: -20px;
     right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                         <style>
-                          .starAnimation {
-                            animation: star 1s infinite;
-                          }
+                        .starAnimationBlock {
+                                position: relative;
+                                overflow: visible !important;
+                              }
+
+                              .starAnimationBlock:focus .starAnimation {
+                                animation: star 1s infinite;
+                                transform: rotate(-30deg);
+                              }
+
 
                           @keyframes star {
                             0% {
