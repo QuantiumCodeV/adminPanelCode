@@ -2950,7 +2950,7 @@
                           class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                           tabindex="0" onclick="showInput()">
                           
-                          <h4 id="main_text"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                          <h4 id="main_text" class="flex" style="gap:5px"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
                             viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
                             <path class="stroke-2 stroke-neutral-700"
                               d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
