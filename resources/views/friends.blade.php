@@ -3185,6 +3185,8 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            width: max-content;
+                            padding: 6px 19px;
                           }
                         </style>
                         <tbody class="divide-neutral-200">
