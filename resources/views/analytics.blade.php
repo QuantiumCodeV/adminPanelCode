@@ -2,7 +2,7 @@
 
 <!-- saved from url=(0044){{ route("analytics") }} -->
 <html style="">
-  @include('fonts')<plasmo-csui><template shadowrootmode="open">
+@include('fonts')<plasmo-csui><template shadowrootmode="open">
     <style>
       *,
       :before,
@@ -1478,7 +1478,8 @@
       }
     </style>
     <div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;">
-      <div class="plasmo-csui-container" id="plasmo-overlay-0" style="display: flex; position: absolute; top: 0px; left: 0px;">
+      <div class="plasmo-csui-container" id="plasmo-overlay-0"
+        style="display: flex; position: absolute; top: 0px; left: 0px;">
         <div class="listenup-h-fit listenup-w-fit"></div>
       </div>
     </div>
@@ -1491,7 +1492,8 @@
   <title>Analytics | ListenUp!</title>
   <meta content="3" name="next-head-count" />
   <link as="style" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" rel="preload" />
-  <link data-n-g="" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" rel="stylesheet" /><noscript data-n-css=""></noscript>
+  <link data-n-g="" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" rel="stylesheet" /><noscript
+    data-n-css=""></noscript>
   <style type="text/css">
     :where(html[dir="ltr"]),
     :where([data-sonner-toaster][dir="ltr"]) {
@@ -2104,10 +2106,15 @@
     <div>
       <div>
         <div class="bg-primary-100 bg-dot-grid-pattern bg-repeat bg-pattern w-screen h-screen">
-          <section class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1" id="app-navbar">
+          <section class="flex justify-between pr-4 bg-neutral-50 border-neutral-400 items-center h-[4rem] border-b-1"
+            id="app-navbar">
             <section class="flex items-center flex-grow basis-0 justify-start"><button data-state="closed">
-                <div class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal"><img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{ asset("assets/logo.png") }}" style="color: transparent;" width="120" />
-                  <section class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
+                <div
+                  class="w-52 flex flex-col justify-start items-start pl-4 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+                  <img alt="ListenUp Navbar Logo" data-nimg="1" decoding="async" height="25" loading="lazy"
+                    src="{{ asset("assets/logo.png") }}" style="color: transparent;" width="120" />
+                  <section
+                    class="rounded-full bg-primary-400 border-1 border-primary-600 px-1.5 py-1 flex items-center justify-center gap-1">
                     <p class="text-xs text-primary-600"><strong>300 credits left</strong></p>
                     <p class="text-xs text-primary-600">|</p>
                     <p class="text-xs text-primary-600"><strong>14 days left </strong></p>
@@ -2116,65 +2123,120 @@
               </button></section>
             <section class="flex items-center justify-center">
               <div class="relative h-fit select-none w-full" data-orientation="horizontal" dir="ltr">
-                <div aria-orientation="horizontal" class="rounded flex flex-row w-full justify-evenly gap-2" data-orientation="horizontal" role="tablist" style="outline: none;" tabindex="0"><a aria-controls="radix-:r4d:-content-home" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("home") }}" id="radix-:r4d:-trigger-home" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" data-name="Layer 3" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div aria-orientation="horizontal" class="rounded flex flex-row w-full justify-evenly gap-2"
+                  data-orientation="horizontal" role="tablist" style="outline: none;" tabindex="0"><a
+                    aria-controls="radix-:r4d:-content-home" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("home") }}" id="radix-:r4d:-trigger-home" role="tab" tabindex="-1" type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" data-name="Layer 3"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0h24v24H0Z" fill="none"></path>
-                        <path class="stroke-1.5 stroke-neutral-700 stroke-neutral-700" d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path class="stroke-1.5 stroke-neutral-700 stroke-neutral-700"
+                          d="M15.3 15.918H8.564M16 21H8a5 5 0 0 1-5-5v-4.8a5 5 0 0 1 1.877-3.904l4-3.2a5 5 0 0 1 6.247 0l4 3.2A5 5 0 0 1 21 11.2V16a5 5 0 0 1-5 5Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <h5 class="font-bold">Home</h5>
                     </div>
-                  </a><a aria-controls="radix-:r4d:-content-captures" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("captures") }}" id="radix-:r4d:-trigger-captures" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </a><a aria-controls="radix-:r4d:-content-captures" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("captures") }}" id="radix-:r4d:-trigger-captures" role="tab" tabindex="-1"
+                    type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" fill="none"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700"
+                          d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                          stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <h5 class="font-bold">Inbox</h5>
                     </div>
-                  </a><a aria-controls="radix-:r4d:-content-insights" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("meetings") }}" id="radix-:r4d:-trigger-insights" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </a><a aria-controls="radix-:r4d:-content-insights" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("meetings") }}" id="radix-:r4d:-trigger-insights" role="tab" tabindex="-1"
+                    type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
                       <h5 class="font-bold">Meetings</h5>
                     </div>
-                  </a><a aria-controls="radix-:r4d:-content-analytics" aria-selected="true" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="active" href="{{ route("analytics") }}" id="radix-:r4d:-trigger-analytics" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-1.5 stroke-neutral-700" d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </a><a aria-controls="radix-:r4d:-content-analytics" aria-selected="true"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="active"
+                    href="{{ route("analytics") }}" id="radix-:r4d:-trigger-analytics" role="tab" tabindex="-1"
+                    type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-1.5 stroke-neutral-700"
+                          d="M16.5 3.5h3A1.5 1.5 0 0 1 21 5v14a1.5 1.5 0 0 1-1.5 1.5H15h0V5a1.5 1.5 0 0 1 1.5-1.5ZM15 20.5H9v-10A1.5 1.5 0 0 1 10.5 9H15M4.5 15H9v5.5h0-4.5A1.5 1.5 0 0 1 3 19v-2.5A1.5 1.5 0 0 1 4.5 15Z"
+                          fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M24 24H0V0h24Z" fill="none"></path>
                       </svg>
                       <h5 class="font-bold">Analytics</h5>
                     </div>
-                  </a><a aria-controls="radix-:r4d:-content-users" aria-selected="false" class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center" data-orientation="horizontal" data-radix-collection-item="" data-state="inactive" href="{{ route("friends") }}" id="radix-:r4d:-trigger-users" role="tab" tabindex="-1" type="button">
-                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6 stroke-1.5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  </a><a aria-controls="radix-:r4d:-content-users" aria-selected="false"
+                    class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:bg-neutral-100 hover:transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal w-fit justify-center"
+                    data-orientation="horizontal" data-radix-collection-item="" data-state="inactive"
+                    href="{{ route("friends") }}" id="radix-:r4d:-trigger-users" role="tab" tabindex="-1" type="button">
+                    <div class="flex items-center justify-center gap-2 py-1"><svg class="h-6 w-6 stroke-1.5"
+                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <g class="stroke-neutral-700" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                          <path
+                            d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                          </path>
                         </g>
                         <path d="M0 0h24v24H0Z" fill="none"></path>
                       </svg>
                       <h5 class="font-bold">Friends</h5>
                     </div>
                   </a></div>
-                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400" style="width: 119px; height: 48px; transform: translateX(335px) translateY(0px) translateZ(0px);"></div>
+                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400"
+                  style="width: 119px; height: 48px; transform: translateX(335px) translateY(0px) translateZ(0px);">
+                </div>
               </div>
             </section>
-            <div class="flex items-center justify-end gap-2 flex-grow basis-0"><button class="flex items-center font-bold rounded text-base font-bold px-3 py-3" tabindex="0">
-                <div class="flex items-center gap-2"><svg class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path class="stroke-2 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+            <div class="flex items-center justify-end gap-2 flex-grow basis-0"><button
+                class="flex items-center font-bold rounded text-base font-bold px-3 py-3" tabindex="0">
+                <div class="flex items-center gap-2"><svg class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;"
+                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="stroke-2 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M0 0h24v24H0Z" fill="none"></path>
                   </svg>
                   <p class="text-neutral-600">Send us a feedback</p>
                 </div>
-              </button><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="profile" tabindex="0" type="button">
+              </button><button aria-expanded="false" aria-haspopup="menu"
+                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+                data-state="closed" id="profile" tabindex="0" type="button">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
-                    <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1"><img alt="Avatar" class="object-cover" src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}" style="height:100%" /></div>
+                    <div
+                      class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                      <img alt="Avatar" class="object-cover"
+                        src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('assets/member_avatar_453.png') }}"
+                        style="height:100%" /></div>
                     <div class="absolute -bottom-1 -right-1">
-                      <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1"><img alt="Avatar" class="object-cover" src="{{asset("assets/organization_avatar_508.png")}}" /></div>
+                      <div
+                        class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-5 h-5 min-w-[1rem] min-h-[1rem] border-1">
+                        <img alt="Avatar" class="object-cover" src="{{asset("assets/organization_avatar_508.png")}}" />
+                      </div>
                     </div>
                   </div>
                   <h5 class="font-bold">{{ auth()->user()->name}}</h5>
                 </div>
-                <div><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                <div><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M0 0h24v24H0Z" fill="none"></path>
                   </svg></div>
               </button></div>
@@ -2183,48 +2245,77 @@
             <section class="h-[calc(100vh-4rem)] w-screen">
               <div class="h-full w-full flex flex-row flex-wrap justify-start bg-neutral-100 overflow-y-auto">
                 <section class="my-2 px-14 sticky self-start top-2 z-20 flex items-center justify-between">
-                  <div class="bg-neutral-50 border-[0.13rem] border-neutral-400 border-dashed p-2 w-fit h-16 rounded flex items-center gap-2 shadow-lg">
-                    <div><button id="tagsButton" aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2" data-state="closed" id="radix-:r4l:" tabindex="0" type="button">
-                        <div class="flex items-center text-left"><svg class="h-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <div
+                    class="bg-neutral-50 border-[0.13rem] border-neutral-400 border-dashed p-2 w-fit h-16 rounded flex items-center gap-2 shadow-lg">
+                    <div><button id="tagsButton" aria-expanded="false" aria-haspopup="menu"
+                        class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
+                        data-state="closed" id="radix-:r4l:" tabindex="0" type="button">
+                        <div class="flex items-center text-left"><svg class="h-5"
+                            style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs>
                               <path d="M24 0H0v24h24V0Z" id="a"></path>
                             </defs>
                             <g fill="none">
                               <use xlink:href="#a"></use>
                               <use xlink:href="#a"></use>
-                              <path class="stroke-2 stroke-neutral-700" d="M9.165 10.146a.367.367 0 1 1-.52.519.367.367 0 0 1 .52-.52" stroke-linecap="round" stroke-linejoin="round"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="m11.71 6.29 7.21 7.21a1.977 1.977 0 0 1 0 2.796l-4.124 4.124a1.977 1.977 0 0 1-2.796 0l-7.21-7.21a.99.99 0 0 1-.29-.699V6.989A.99.99 0 0 1 5.489 6h5.523c.262 0 .513.104.698.29ZM19.5 10l-6.506-6.423A2 2 0 0 0 11.589 3H7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700"
+                                d="M9.165 10.146a.367.367 0 1 1-.52.519.367.367 0 0 1 .52-.52" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700"
+                                d="m11.71 6.29 7.21 7.21a1.977 1.977 0 0 1 0 2.796l-4.124 4.124a1.977 1.977 0 0 1-2.796 0l-7.21-7.21a.99.99 0 0 1-.29-.699V6.989A.99.99 0 0 1 5.489 6h5.523c.262 0 .513.104.698.29ZM19.5 10l-6.506-6.423A2 2 0 0 0 11.589 3H7.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
                             </g>
                           </svg>
                           <h5 class="px-2">Tags</h5>
                         </div>
-                        <div style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <div style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;"
+                            viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
                             <path d="M0 0h24v24H0Z" fill="none"></path>
                           </svg></div>
                       </button></div>
-                    <div><button id="dateButton" aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2" data-state="closed" id="radix-:r4n:" tabindex="0" type="button">
-                        <div class="flex items-center text-left"><svg class="h-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path class="stroke-2 stroke-neutral-700" d="m7.5 12.995.005.005-.005.005L7.495 13l.005-.005M10.5 12.995l.005.005-.005.005-.005-.005.005-.005M13.5 12.995l.005.005-.005.005-.005-.005.005-.005M16.5 12.995l.005.005-.005.005-.005-.005.005-.005M7.5 15.995l.005.005-.005.005L7.495 16l.005-.005M10.5 15.995l.005.005-.005.005-.005-.005.005-.005M13.5 15.995l.005.005-.005.005-.005-.005.005-.005" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <rect class="stroke-2 stroke-neutral-700" fill="none" height="18" rx="5" stroke-linecap="round" stroke-linejoin="round" width="18" x="3" y="3"></rect>
-                            <path class="stroke-2 stroke-neutral-700" d="M3 9h18" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <div><button id="dateButton" aria-expanded="false" aria-haspopup="menu"
+                        class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
+                        data-state="closed" id="radix-:r4n:" tabindex="0" type="button">
+                        <div class="flex items-center text-left"><svg class="h-5"
+                            style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="stroke-2 stroke-neutral-700"
+                              d="m7.5 12.995.005.005-.005.005L7.495 13l.005-.005M10.5 12.995l.005.005-.005.005-.005-.005.005-.005M13.5 12.995l.005.005-.005.005-.005-.005.005-.005M16.5 12.995l.005.005-.005.005-.005-.005.005-.005M7.5 15.995l.005.005-.005.005L7.495 16l.005-.005M10.5 15.995l.005.005-.005.005-.005-.005.005-.005M13.5 15.995l.005.005-.005.005-.005-.005.005-.005"
+                              fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <rect class="stroke-2 stroke-neutral-700" fill="none" height="18" rx="5"
+                              stroke-linecap="round" stroke-linejoin="round" width="18" x="3" y="3"></rect>
+                            <path class="stroke-2 stroke-neutral-700" d="M3 9h18" fill="none" stroke-linecap="round"
+                              stroke-linejoin="round"></path>
                             <path d="M24 24H0V0h24Z" fill="none"></path>
                           </svg>
                           <h5 class="px-2">Dates</h5>
                         </div>
-                        <div style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <div style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;"
+                            viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
                             <path d="M0 0h24v24H0Z" fill="none"></path>
                           </svg></div>
                       </button></div>
-                    <div><button id="sourcesButton" aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2" data-state="closed" id="radix-:r4p:" tabindex="0" type="button">
-                        <div class="flex items-center text-left"><svg class="h-5" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path class="stroke-2 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <div><button id="sourcesButton" aria-expanded="false" aria-haspopup="menu"
+                        class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
+                        data-state="closed" id="radix-:r4p:" tabindex="0" type="button">
+                        <div class="flex items-center text-left"><svg class="h-5" fill="none"
+                            style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="stroke-2 stroke-neutral-700"
+                              d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
                           </svg>
                           <h5 class="px-2">Sources</h5>
                         </div>
-                        <div style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <div style="transform: none;"><svg class="h-6" style="max-width: 50vw; max-height: 50vh;"
+                            viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path class="stroke-2 stroke-neutral-700" d="m8 10 4 4 4-4" fill="none" stroke="#323232"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
                             <path d="M0 0h24v24H0Z" fill="none"></path>
                           </svg></div>
                       </button></div>
@@ -2234,12 +2325,17 @@
                   <div class="">
                     <div class="w-full flex flex-row mb-6">
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <g fill="none">
                                 <path d="M0 0h24v24H0Z"></path>
-                                <path class="stroke-2 stroke-neutral-700" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path class="stroke-2 stroke-neutral-700" d="M21 10a7 7 0 0 0-7-7v7h7Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path class="stroke-2 stroke-neutral-700" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path class="stroke-2 stroke-neutral-700" d="M21 10a7 7 0 0 0-7-7v7h7Z"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
                               </g>
                             </svg>
                             <h4>Capture sources</h4>
@@ -2251,61 +2347,94 @@
                                   <div class="h-full w-full"><svg class="h-full w-full">
                                       <g class="visx-group" transform="translate(207.5, 112.5)">
                                         <g>
-                                          <path d="M0.8788448841694905,-94.42036095231025A3,3,0,0,1,4.001982817000268,-97.41783272857407A97.5,97.5,0,1,1,-39.98817201228357,88.92241617902665A3,3,0,0,1,-41.44103207277273,84.84466860939706L-29.575685821581136,61.114693314113154A3,3,0,0,1,-25.7059901536237,59.70093860419449A65,65,0,1,0,3.7077193745737764,-64.89416627894538A3,3,0,0,1,0.8788448841694869,-67.88928164566592Z" fill="#7357F6"></path>
+                                          <path
+                                            d="M0.8788448841694905,-94.42036095231025A3,3,0,0,1,4.001982817000268,-97.41783272857407A97.5,97.5,0,1,1,-39.98817201228357,88.92241617902665A3,3,0,0,1,-41.44103207277273,84.84466860939706L-29.575685821581136,61.114693314113154A3,3,0,0,1,-25.7059901536237,59.70093860419449A65,65,0,1,0,3.7077193745737764,-64.89416627894538A3,3,0,0,1,0.8788448841694869,-67.88928164566592Z"
+                                            fill="#7357F6"></path>
                                         </g>
                                         <g>
-                                          <path d="M-43.01314809177737,84.05858684233165A3,3,0,0,1,-47.14709323685541,85.34284738228074A97.5,97.5,0,0,1,-95.29350780836947,-20.625163504230116A3,3,0,0,1,-91.60696304453786,-22.894131397623607L-65.92851914537442,-16.222123596896335A3,3,0,0,1,-63.741060860024305,-12.730952848812127A65,65,0,0,0,-32.33852011168288,56.38457339544462A3,3,0,0,1,-31.147801840585746,60.32861154704778Z" fill="#EE7D60"></path>
+                                          <path
+                                            d="M-43.01314809177737,84.05858684233165A3,3,0,0,1,-47.14709323685541,85.34284738228074A97.5,97.5,0,0,1,-95.29350780836947,-20.625163504230116A3,3,0,0,1,-91.60696304453786,-22.894131397623607L-65.92851914537442,-16.222123596896335A3,3,0,0,1,-63.741060860024305,-12.730952848812127A65,65,0,0,0,-32.33852011168288,56.38457339544462A3,3,0,0,1,-31.147801840585746,60.32861154704778Z"
+                                            fill="#EE7D60"></path>
                                         </g>
                                         <g>
-                                          <path d="M-91.16494107814621,-24.595333884969207A3,3,0,0,1,-93.280678984876,-28.37190385082596A97.5,97.5,0,0,1,-70.22067865737417,-67.64101040713243A3,3,0,0,1,-65.89184906970941,-67.63313652988168L-47.55544208011958,-48.458300210174265A3,3,0,0,1,-47.52994560428284,-44.338519042181765A65,65,0,0,0,-61.87623415590536,-19.90807993462883A3,3,0,0,1,-65.48649717898277,-17.923326084241893Z" fill="#97DFD8"></path>
+                                          <path
+                                            d="M-91.16494107814621,-24.595333884969207A3,3,0,0,1,-93.280678984876,-28.37190385082596A97.5,97.5,0,0,1,-70.22067865737417,-67.64101040713243A3,3,0,0,1,-65.89184906970941,-67.63313652988168L-47.55544208011958,-48.458300210174265A3,3,0,0,1,-47.52994560428284,-44.338519042181765A65,65,0,0,0,-61.87623415590536,-19.90807993462883A3,3,0,0,1,-65.48649717898277,-17.923326084241893Z"
+                                            fill="#97DFD8"></path>
                                         </g>
                                         <g>
-                                          <path d="M-64.62151199750878,-68.8479274768007A3,3,0,0,1,-64.43596371356526,-73.1727857902383A97.5,97.5,0,0,1,-48.43219494864411,-84.6201659916626A3,3,0,0,1,-44.27930280016069,-83.39856278274024L-32.05648580212819,-59.85071970087692A3,3,0,0,1,-33.18742907194804,-55.889127311082774A65,65,0,0,0,-42.17057734751874,-49.46354623535336A3,3,0,0,1,-46.28510500791898,-49.67309115709326Z" fill="#EFBE56"></path>
+                                          <path
+                                            d="M-64.62151199750878,-68.8479274768007A3,3,0,0,1,-64.43596371356526,-73.1727857902383A97.5,97.5,0,0,1,-48.43219494864411,-84.6201659916626A3,3,0,0,1,-44.27930280016069,-83.39856278274024L-32.05648580212819,-59.85071970087692A3,3,0,0,1,-33.18742907194804,-55.889127311082774A65,65,0,0,0,-42.17057734751874,-49.46354623535336A3,3,0,0,1,-46.28510500791898,-49.67309115709326Z"
+                                            fill="#EFBE56"></path>
                                         </g>
                                         <g>
-                                          <path d="M-42.719253079866114,-84.20832706444972A3,3,0,0,1,-41.32821984820894,-88.30757750146988A97.5,97.5,0,0,1,-26.98667852787863,-93.69081695680177A3,3,0,0,1,-23.241871359523326,-91.5193550370759L-16.951065494210074,-65.74487287466592A3,3,0,0,1,-18.98909361780869,-62.16441364296856A65,65,0,0,0,-26.60580508183902,-59.305405621639494A3,3,0,0,1,-30.496436081833654,-60.66048398258637Z" fill="#A75E6E"></path>
+                                          <path
+                                            d="M-42.719253079866114,-84.20832706444972A3,3,0,0,1,-41.32821984820894,-88.30757750146988A97.5,97.5,0,0,1,-26.98667852787863,-93.69081695680177A3,3,0,0,1,-23.241871359523326,-91.5193550370759L-16.951065494210074,-65.74487287466592A3,3,0,0,1,-18.98909361780869,-62.16441364296856A65,65,0,0,0,-26.60580508183902,-59.305405621639494A3,3,0,0,1,-30.496436081833654,-60.66048398258637Z"
+                                            fill="#A75E6E"></path>
                                         </g>
                                         <g>
-                                          <path d="M-21.534306316371882,-91.93612229242459A3,3,0,0,1,-19.210965105981526,-95.58864377998445A97.5,97.5,0,0,1,-4.001982817000391,-97.41783272857406A3,3,0,0,1,-0.878844884169605,-94.42036095231023L-0.8788448841695571,-67.88928164566592A3,3,0,0,1,-3.7077193745738417,-64.89416627894536A65,65,0,0,0,-11.785123829874674,-63.92269437621133A3,3,0,0,1,-15.24350045105867,-66.1616401300146Z" fill="#84BCEF"></path>
+                                          <path
+                                            d="M-21.534306316371882,-91.93612229242459A3,3,0,0,1,-19.210965105981526,-95.58864377998445A97.5,97.5,0,0,1,-4.001982817000391,-97.41783272857406A3,3,0,0,1,-0.878844884169605,-94.42036095231023L-0.8788448841695571,-67.88928164566592A3,3,0,0,1,-3.7077193745738417,-64.89416627894536A65,65,0,0,0,-11.785123829874674,-63.92269437621133A3,3,0,0,1,-15.24350045105867,-66.1616401300146Z"
+                                            fill="#84BCEF"></path>
                                         </g><text style="font-size: 1.5rem; font-weight: bold;" text-anchor="middle">
                                           <tspan dy="0em" x="0">54K</tspan>
-                                          <tspan class="p" dy="1.4em" style="color: rgb(163, 163, 163);" x="0">captures</tspan>
+                                          <tspan class="p" dy="1.4em" style="color: rgb(163, 163, 163);" x="0">captures
+                                          </tspan>
                                         </text>
                                       </g>
                                     </svg></div>
                                   <div class="w-full h-fit pb-2 pl-2">
-                                    <div class="w-full flex items-center gap-4 overflow-x-auto no-scrollbar justify-start">
+                                    <div
+                                      class="w-full flex items-center gap-4 overflow-x-auto no-scrollbar justify-start">
                                       <div class="inline-flex items-center gap-4 false">
                                         <div class="flex gap-2 items-center h-fit">
-                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(115, 87, 246);"></div>
-                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Intercom</span></p>
+                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                            style="background-color: rgb(115, 87, 246);"></div>
+                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                              class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Intercom</span>
+                                          </p>
                                         </div>
                                         <div class="flex gap-2 items-center h-fit">
-                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(238, 125, 96);"></div>
-                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Slack</span></p>
+                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                            style="background-color: rgb(238, 125, 96);"></div>
+                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                              class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Slack</span>
+                                          </p>
                                         </div>
                                         <div class="flex gap-2 items-center h-fit">
-                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(151, 223, 216);"></div>
-                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Chrome Extension</span></p>
+                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                            style="background-color: rgb(151, 223, 216);"></div>
+                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                              class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Chrome
+                                              Extension</span></p>
                                         </div>
                                         <div class="flex gap-2 items-center h-fit">
-                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(239, 190, 86);"></div>
-                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">In-app feedback</span></p>
+                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                            style="background-color: rgb(239, 190, 86);"></div>
+                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                              class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">In-app
+                                              feedback</span></p>
                                         </div>
                                         <div class="flex gap-2 items-center h-fit">
-                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(167, 94, 110);"></div>
-                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">G2</span></p>
+                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                            style="background-color: rgb(167, 94, 110);"></div>
+                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                              class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">G2</span>
+                                          </p>
                                         </div>
                                         <div class="flex gap-2 items-center h-fit">
-                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(132, 188, 239);"></div>
-                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Trustpilot</span></p>
+                                          <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                            style="background-color: rgb(132, 188, 239);"></div>
+                                          <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                              class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Trustpilot</span>
+                                          </p>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                                 <section class="absolute h-full w-full flex items-center justify-center">
-                                  <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                  <div
+                                    class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                     <h5 class="text-neutral-600">Not enough data</h5>
                                   </div>
                                   <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -2316,73 +2445,151 @@
                         </div>
                       </div>
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <path d="M0 0h24v24H0z" fill="none"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="M14.75 15v4a2 2 0 0 1-2 2h-1.5a2 2 0 0 1-2-2v-4L3.508 8.57A2 2 0 0 1 3 7.236V6c0-1.657 4.03-3 9-3s9 1.343 9 3v1.237a2 2 0 0 1-.508 1.332Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="M21 6c0 1.657-4.03 3-9 3S3 7.657 3 6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700"
+                                d="M14.75 15v4a2 2 0 0 1-2 2h-1.5a2 2 0 0 1-2-2v-4L3.508 8.57A2 2 0 0 1 3 7.236V6c0-1.657 4.03-3 9-3s9 1.343 9 3v1.237a2 2 0 0 1-.508 1.332Z"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700" d="M21 6c0 1.657-4.03 3-9 3S3 7.657 3 6"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                             <h4>Captures over time</h4>
                           </section>
                           <section class="h-full w-full">
                             <div class="h-full w-full flex flex-col relative">
                               <div class="h-full w-full">
-                                <div style="width: 100%; height: 100%;"><svg aria-label="XYChart" height="249" width="415">
+                                <div style="width: 100%; height: 100%;"><svg aria-label="XYChart" height="249"
+                                    width="415">
                                     <g class="visx-group visx-axis" transform="translate(0, 219)">
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="51.14285714285714" x2="51.14285714285714" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="51.14285714285714" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="51.14285714285714" x2="51.14285714285714" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="51.14285714285714" y="16">
                                             <tspan dy="0em" x="51.14285714285714">Jun</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="156.85714285714286" x2="156.85714285714286" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="156.85714285714286" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="156.85714285714286" x2="156.85714285714286" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="156.85714285714286" y="16">
                                             <tspan dy="0em" x="156.85714285714286">Jul</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="266.0952380952381" x2="266.0952380952381" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="266.0952380952381" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="266.0952380952381" x2="266.0952380952381" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="266.0952380952381" y="16">
                                             <tspan dy="0em" x="266.0952380952381">Aug</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="375.3333333333333" x2="375.3333333333333" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="375.3333333333333" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="375.3333333333333" x2="375.3333333333333" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="375.3333333333333" y="16">
                                             <tspan dy="0em" x="375.3333333333333">Sep</tspan>
                                           </text></svg>
                                       </g>
-                                      <line class="visx-line visx-axis-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-dasharray="#EAEAEA" stroke-width="1" x1="30.5" x2="400.5" y1="0" y2="0"></line>
+                                      <line class="visx-line visx-axis-line" fill="transparent"
+                                        shape-rendering="crispEdges" stroke="#EAEAEA" stroke-dasharray="#EAEAEA"
+                                        stroke-width="1" x1="30.5" x2="400.5" y1="0" y2="0"></line>
                                     </g>
                                     <g class="visx-group visx-axis" transform="translate(30, 0)">
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="219">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="219">
                                             <tspan dy="0em" x="-4">0</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="176.5">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="176.5">
                                             <tspan dy="0em" x="-4">5</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="134">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="134">
                                             <tspan dy="0em" x="-4">10</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="91.5">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="91.5">
                                             <tspan dy="0em" x="-4">15</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="48.99999999999999">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="48.99999999999999">
                                             <tspan dy="0em" x="-4">20</tspan>
                                           </text></svg></g>
                                     </g>
                                     <g class="visx-group visx-rows" transform="translate(30, 0)">
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="219" y2="219"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="176.5" y2="176.5"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="134" y2="134"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="91.5" y2="91.5"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="48.99999999999999" y2="48.99999999999999"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="219"
+                                        y2="219"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370"
+                                        y1="176.5" y2="176.5"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="134"
+                                        y2="134"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="91.5"
+                                        y2="91.5"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370"
+                                        y1="48.99999999999999" y2="48.99999999999999"></line>
                                     </g>
-                                    <path class="visx-area" d="M52.007971141975304,15L101.34130447530865,125.50000000000001L150.67463780864196,125.50000000000001L200.0079711419753,57.50000000000001L249.34130447530865,74.5L298.674637808642,83.00000000000001L348.0079711419753,23.499999999999993L348.0079711419753,219L298.674637808642,219L249.34130447530865,219L200.0079711419753,219L150.67463780864196,219L101.34130447530865,219L52.007971141975304,219Z" fill="#7357F6" fill-opacity="0.3" stroke="transparent" stroke-linecap="round"></path>
-                                    <path class="visx-line" d="M52.007971141975304,15L101.34130447530865,125.50000000000001L150.67463780864196,125.50000000000001L200.0079711419753,57.50000000000001L249.34130447530865,74.5L298.674637808642,83.00000000000001L348.0079711419753,23.499999999999993" fill="transparent" pointer-events="none" stroke="#0b7285" stroke-linecap="round" stroke-width="2"></path>
-                                    <path d="M52.007971141975304,15L101.34130447530865,125.50000000000001L150.67463780864196,125.50000000000001L200.0079711419753,57.50000000000001L249.34130447530865,74.5L298.674637808642,83.00000000000001L348.0079711419753,23.499999999999993" fill="transparent" stroke="#7357F6" stroke-linecap="round" stroke-width="2"></path>
+                                    <path class="visx-area"
+                                      d="M52.007971141975304,15L101.34130447530865,125.50000000000001L150.67463780864196,125.50000000000001L200.0079711419753,57.50000000000001L249.34130447530865,74.5L298.674637808642,83.00000000000001L348.0079711419753,23.499999999999993L348.0079711419753,219L298.674637808642,219L249.34130447530865,219L200.0079711419753,219L150.67463780864196,219L101.34130447530865,219L52.007971141975304,219Z"
+                                      fill="#7357F6" fill-opacity="0.3" stroke="transparent" stroke-linecap="round">
+                                    </path>
+                                    <path class="visx-line"
+                                      d="M52.007971141975304,15L101.34130447530865,125.50000000000001L150.67463780864196,125.50000000000001L200.0079711419753,57.50000000000001L249.34130447530865,74.5L298.674637808642,83.00000000000001L348.0079711419753,23.499999999999993"
+                                      fill="transparent" pointer-events="none" stroke="#0b7285" stroke-linecap="round"
+                                      stroke-width="2"></path>
+                                    <path
+                                      d="M52.007971141975304,15L101.34130447530865,125.50000000000001L150.67463780864196,125.50000000000001L200.0079711419753,57.50000000000001L249.34130447530865,74.5L298.674637808642,83.00000000000001L348.0079711419753,23.499999999999993"
+                                      fill="transparent" stroke="#7357F6" stroke-linecap="round" stroke-width="2">
+                                    </path>
                                     <rect fill="transparent" height="204" width="370" x="30" y="15"></rect>
                                   </svg></div>
                               </div>
                               <section class="absolute h-full w-full flex items-center justify-center">
-                                <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                <div
+                                  class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                   <h5 class="text-neutral-600">Not enough data</h5>
                                 </div>
                                 <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -2392,11 +2599,16 @@
                         </div>
                       </div>
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <g fill="none">
                                 <path d="M24 0v24H0V0Z"></path>
-                                <path class="stroke-2 stroke-neutral-700" d="M3 21v-4h18v4ZM3 14v-4h12.316v4ZM3 7V3h6.632v4Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path class="stroke-2 stroke-neutral-700"
+                                  d="M3 21v-4h18v4ZM3 14v-4h12.316v4ZM3 7V3h6.632v4Z" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
                               </g>
                             </svg>
                             <h4>Top patterns</h4>
@@ -2408,54 +2620,78 @@
                                   <div class="w-full">
                                     <table class="w-full border-separate border-spacing-0">
                                       <tbody class="divide-neutral-200">
-                                        <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                          <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 50px; max-width: 50px;">
+                                        <tr
+                                          class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                          <td
+                                            class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                            style="width: 50px; max-width: 50px;">
                                             <div class="text-small">
                                               <div class="wrapper flex items-center gap-2 w-full overflow-hidden">
-                                                <h5 class="overflow-hidden text-ellipsis whitespace-nowrap">Missing collaboration features</h5>
+                                                <h5 class="overflow-hidden text-ellipsis whitespace-nowrap">Missing
+                                                  collaboration features</h5>
                                               </div>
                                             </div>
                                           </td>
-                                          <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 50px; max-width: 50px;">
+                                          <td
+                                            class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                            style="width: 50px; max-width: 50px;">
                                             <div class="text-small">
                                               <div class="wrapper flex items-center gap-2 w-full">
-                                                <div class="h-full bg-[#A69BE9] border-1 border-[#b2add4] rounded-sm flex items-center justify-start px-2" style="width: 100%;">
+                                                <div
+                                                  class="h-full bg-[#A69BE9] border-1 border-[#b2add4] rounded-sm flex items-center justify-start px-2"
+                                                  style="width: 100%;">
                                                   <h5 class="text-neutral-50">2.3K</h5>
                                                 </div>
                                               </div>
                                             </div>
                                           </td>
                                         </tr>
-                                        <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                          <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 50px; max-width: 50px;">
+                                        <tr
+                                          class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                          <td
+                                            class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                            style="width: 50px; max-width: 50px;">
                                             <div class="text-small">
                                               <div class="wrapper flex items-center gap-2 w-full overflow-hidden">
-                                                <h5 class="overflow-hidden text-ellipsis whitespace-nowrap">Analytics is underwhelming</h5>
+                                                <h5 class="overflow-hidden text-ellipsis whitespace-nowrap">Analytics is
+                                                  underwhelming</h5>
                                               </div>
                                             </div>
                                           </td>
-                                          <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 50px; max-width: 50px;">
+                                          <td
+                                            class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                            style="width: 50px; max-width: 50px;">
                                             <div class="text-small">
                                               <div class="wrapper flex items-center gap-2 w-full">
-                                                <div class="h-full bg-[#A69BE9] border-1 border-[#b2add4] rounded-sm flex items-center justify-start px-2" style="width: 78.2609%;">
+                                                <div
+                                                  class="h-full bg-[#A69BE9] border-1 border-[#b2add4] rounded-sm flex items-center justify-start px-2"
+                                                  style="width: 78.2609%;">
                                                   <h5 class="text-neutral-50">1.8K</h5>
                                                 </div>
                                               </div>
                                             </div>
                                           </td>
                                         </tr>
-                                        <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                          <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0" style="width: 50px; max-width: 50px;">
+                                        <tr
+                                          class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                          <td
+                                            class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0"
+                                            style="width: 50px; max-width: 50px;">
                                             <div class="text-small">
                                               <div class="wrapper flex items-center gap-2 w-full overflow-hidden">
-                                                <h5 class="overflow-hidden text-ellipsis whitespace-nowrap">Settings are unclear</h5>
+                                                <h5 class="overflow-hidden text-ellipsis whitespace-nowrap">Settings are
+                                                  unclear</h5>
                                               </div>
                                             </div>
                                           </td>
-                                          <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0" style="width: 50px; max-width: 50px;">
+                                          <td
+                                            class="px-3 py-3 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0"
+                                            style="width: 50px; max-width: 50px;">
                                             <div class="text-small">
                                               <div class="wrapper flex items-center gap-2 w-full">
-                                                <div class="h-full bg-[#A69BE9] border-1 border-[#b2add4] rounded-sm flex items-center justify-start px-2" style="width: 56.5217%;">
+                                                <div
+                                                  class="h-full bg-[#A69BE9] border-1 border-[#b2add4] rounded-sm flex items-center justify-start px-2"
+                                                  style="width: 56.5217%;">
                                                   <h5 class="text-neutral-50">1.3K</h5>
                                                 </div>
                                               </div>
@@ -2468,7 +2704,8 @@
                                 </div>
                               </div>
                               <section class="absolute h-full w-full flex items-center justify-center">
-                                <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                <div
+                                  class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                   <h5 class="text-neutral-600">Not enough data</h5>
                                 </div>
                                 <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -2480,64 +2717,134 @@
                     </div>
                     <div class="w-full flex flex-row mb-6">
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <path d="M0 0h24v24H0z" fill="none"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="M14.75 15v4a2 2 0 0 1-2 2h-1.5a2 2 0 0 1-2-2v-4L3.508 8.57A2 2 0 0 1 3 7.236V6c0-1.657 4.03-3 9-3s9 1.343 9 3v1.237a2 2 0 0 1-.508 1.332Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="M21 6c0 1.657-4.03 3-9 3S3 7.657 3 6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700"
+                                d="M14.75 15v4a2 2 0 0 1-2 2h-1.5a2 2 0 0 1-2-2v-4L3.508 8.57A2 2 0 0 1 3 7.236V6c0-1.657 4.03-3 9-3s9 1.343 9 3v1.237a2 2 0 0 1-.508 1.332Z"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700" d="M21 6c0 1.657-4.03 3-9 3S3 7.657 3 6"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                             <h4>Tags over time</h4>
                           </section>
                           <section class="h-full w-full">
                             <div class="h-full w-full flex flex-col relative">
                               <div class="h-full w-full">
-                                <div style="width: 100%; height: 100%;"><svg aria-label="XYChart" height="225" width="415">
+                                <div style="width: 100%; height: 100%;"><svg aria-label="XYChart" height="225"
+                                    width="415">
                                     <g class="visx-group visx-axis" transform="translate(0, 195)">
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="51.14285714285714" x2="51.14285714285714" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="51.14285714285714" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="51.14285714285714" x2="51.14285714285714" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="51.14285714285714" y="16">
                                             <tspan dy="0em" x="51.14285714285714">Jun</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="156.85714285714286" x2="156.85714285714286" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="156.85714285714286" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="156.85714285714286" x2="156.85714285714286" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="156.85714285714286" y="16">
                                             <tspan dy="0em" x="156.85714285714286">Jul</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="266.0952380952381" x2="266.0952380952381" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="266.0952380952381" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="266.0952380952381" x2="266.0952380952381" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="266.0952380952381" y="16">
                                             <tspan dy="0em" x="266.0952380952381">Aug</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="375.3333333333333" x2="375.3333333333333" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="375.3333333333333" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="375.3333333333333" x2="375.3333333333333" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="375.3333333333333" y="16">
                                             <tspan dy="0em" x="375.3333333333333">Sep</tspan>
                                           </text></svg>
                                       </g>
-                                      <line class="visx-line visx-axis-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-dasharray="#EAEAEA" stroke-width="1" x1="30.5" x2="400.5" y1="0" y2="0"></line>
+                                      <line class="visx-line visx-axis-line" fill="transparent"
+                                        shape-rendering="crispEdges" stroke="#EAEAEA" stroke-dasharray="#EAEAEA"
+                                        stroke-width="1" x1="30.5" x2="400.5" y1="0" y2="0"></line>
                                     </g>
                                     <g class="visx-group visx-axis" transform="translate(30, 0)">
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="195">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="195">
                                             <tspan dy="0em" x="-4">0</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="148.84615384615384">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="148.84615384615384">
                                             <tspan dy="0em" x="-4">10</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="102.69230769230771">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="102.69230769230771">
                                             <tspan dy="0em" x="-4">20</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="56.53846153846153">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="56.53846153846153">
                                             <tspan dy="0em" x="-4">30</tspan>
                                           </text></svg></g>
                                     </g>
                                     <g class="visx-group visx-rows" transform="translate(30, 0)">
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="195" y2="195"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="148.84615384615384" y2="148.84615384615384"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="102.69230769230771" y2="102.69230769230771"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="56.53846153846153" y2="56.53846153846153"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="195"
+                                        y2="195"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370"
+                                        y1="148.84615384615384" y2="148.84615384615384"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370"
+                                        y1="102.69230769230771" y2="102.69230769230771"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370"
+                                        y1="56.53846153846153" y2="56.53846153846153"></line>
                                     </g>
-                                    <path d="M52.00797171296296,130.38461538461536L101.34130504629628,93.46153846153847L150.6746383796296,98.07692307692308L200.00797171296296,65.76923076923077L249.3413050462963,84.23076923076923L298.67463837962964,139.6153846153846L348.00797171296296,88.84615384615384" fill="transparent" stroke="#7357F6" stroke-linecap="round" stroke-width="2"></path>
-                                    <path d="M52.00797171296296,148.84615384615384L101.34130504629628,125.76923076923077L150.6746383796296,135.00000000000003L200.00797171296296,93.46153846153847L249.3413050462963,116.53846153846153L298.67463837962964,93.46153846153847L348.00797171296296,88.84615384615384" fill="transparent" stroke="#EE7D60" stroke-linecap="round" stroke-width="2"></path>
-                                    <path d="M52.00797171296296,93.46153846153847L101.34130504629628,107.30769230769229L150.6746383796296,51.92307692307693L200.00797171296296,88.84615384615384L249.3413050462963,15L298.67463837962964,70.38461538461539L348.00797171296296,61.153846153846146" fill="transparent" stroke="#97DFD8" stroke-linecap="round" stroke-width="2"></path>
+                                    <path
+                                      d="M52.00797171296296,130.38461538461536L101.34130504629628,93.46153846153847L150.6746383796296,98.07692307692308L200.00797171296296,65.76923076923077L249.3413050462963,84.23076923076923L298.67463837962964,139.6153846153846L348.00797171296296,88.84615384615384"
+                                      fill="transparent" stroke="#7357F6" stroke-linecap="round" stroke-width="2">
+                                    </path>
+                                    <path
+                                      d="M52.00797171296296,148.84615384615384L101.34130504629628,125.76923076923077L150.6746383796296,135.00000000000003L200.00797171296296,93.46153846153847L249.3413050462963,116.53846153846153L298.67463837962964,93.46153846153847L348.00797171296296,88.84615384615384"
+                                      fill="transparent" stroke="#EE7D60" stroke-linecap="round" stroke-width="2">
+                                    </path>
+                                    <path
+                                      d="M52.00797171296296,93.46153846153847L101.34130504629628,107.30769230769229L150.6746383796296,51.92307692307693L200.00797171296296,88.84615384615384L249.3413050462963,15L298.67463837962964,70.38461538461539L348.00797171296296,61.153846153846146"
+                                      fill="transparent" stroke="#97DFD8" stroke-linecap="round" stroke-width="2">
+                                    </path>
                                     <rect fill="transparent" height="180" width="370" x="30" y="15"></rect>
                                   </svg></div>
                               </div>
@@ -2545,22 +2852,32 @@
                                 <div class="w-full flex items-center gap-4 overflow-x-auto no-scrollbar justify-start">
                                   <div class="inline-flex items-center gap-4 false">
                                     <div class="flex gap-2 items-center h-fit">
-                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(115, 87, 246);"></div>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Limited collaboration feature</span></p>
+                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                        style="background-color: rgb(115, 87, 246);"></div>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Limited
+                                          collaboration feature</span></p>
                                     </div>
                                     <div class="flex gap-2 items-center h-fit">
-                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(238, 125, 96);"></div>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Difficulty managing component</span></p>
+                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                        style="background-color: rgb(238, 125, 96);"></div>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Difficulty
+                                          managing component</span></p>
                                     </div>
                                     <div class="flex gap-2 items-center h-fit">
-                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(151, 223, 216);"></div>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Steep learning curve for beginners</span></p>
+                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                        style="background-color: rgb(151, 223, 216);"></div>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Steep
+                                          learning curve for beginners</span></p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                               <section class="absolute h-full w-full flex items-center justify-center">
-                                <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                <div
+                                  class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                   <h5 class="text-neutral-600">Not enough data</h5>
                                 </div>
                                 <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -2570,10 +2887,14 @@
                         </div>
                       </div>
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <path d="M0 24V0h24v24z" fill="none"></path>
-                              <g class="stroke-2 stroke-neutral-700" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <g class="stroke-2 stroke-neutral-700" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <rect height="18" rx="1.105" ry="0" width="18" x="3" y="3"></rect>
                                 <path d="M3 15h18M3 9h18"></path>
                               </g>
@@ -2587,11 +2908,18 @@
                                   <table class="w-full border-separate border-spacing-0">
                                     <thead class="bg-primary-100 top-0 z-10 sticky">
                                       <tr>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6 stroke-1.5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <g class="stroke-neutral-600" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                  <path d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6 stroke-1.5"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g class="stroke-neutral-600" fill="none" stroke-linecap="round"
+                                                  stroke-linejoin="round">
+                                                  <path
+                                                    d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                                                  </path>
                                                 </g>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
@@ -2600,10 +2928,16 @@
                                           </div>
                                           <div class="resizer"></div>
                                         </th>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-600"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p class="text-neutral-600">Insights</p>
@@ -2611,10 +2945,16 @@
                                           </div>
                                           <div class="resizer"></div>
                                         </th>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-600" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" fill="none"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-600"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p class="text-neutral-600">Captures</p>
                                             </div>
@@ -2624,11 +2964,15 @@
                                       </tr>
                                     </thead>
                                     <tbody class="divide-neutral-200">
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -2638,31 +2982,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">2.4K </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">1.9K </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -2672,31 +3034,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">2K </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">304 </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -2706,31 +3086,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">1.8K </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">1K </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -2740,20 +3138,34 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">852 </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">498 </span>captures</p>
                                             </div>
@@ -2765,7 +3177,8 @@
                                 </div>
                               </div>
                               <section class="absolute h-full w-full flex items-center justify-center">
-                                <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                <div
+                                  class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                   <h5 class="text-neutral-600">Not enough data</h5>
                                 </div>
                                 <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -2775,96 +3188,220 @@
                         </div>
                       </div>
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <path d="M0 0h24v24H0z" fill="none"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="M14.75 15v4a2 2 0 0 1-2 2h-1.5a2 2 0 0 1-2-2v-4L3.508 8.57A2 2 0 0 1 3 7.236V6c0-1.657 4.03-3 9-3s9 1.343 9 3v1.237a2 2 0 0 1-.508 1.332Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="M21 6c0 1.657-4.03 3-9 3S3 7.657 3 6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700"
+                                d="M14.75 15v4a2 2 0 0 1-2 2h-1.5a2 2 0 0 1-2-2v-4L3.508 8.57A2 2 0 0 1 3 7.236V6c0-1.657 4.03-3 9-3s9 1.343 9 3v1.237a2 2 0 0 1-.508 1.332Z"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700" d="M21 6c0 1.657-4.03 3-9 3S3 7.657 3 6"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                             <h4>Sentiment over time</h4>
                           </section>
                           <section class="h-full w-full">
                             <div class="h-full w-full flex flex-col relative">
                               <div class="h-full w-full">
-                                <div style="width: 100%; height: 100%;"><svg aria-label="XYChart" height="221" width="415">
+                                <div style="width: 100%; height: 100%;"><svg aria-label="XYChart" height="221"
+                                    width="415">
                                     <g class="visx-group visx-axis" transform="translate(0, 191)">
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="60.57142857142857" x2="60.57142857142857" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="60.57142857142857" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="60.57142857142857" x2="60.57142857142857" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="60.57142857142857" y="16">
                                             <tspan dy="0em" x="60.57142857142857">Jun</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="163.42857142857142" x2="163.42857142857142" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="163.42857142857142" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="163.42857142857142" x2="163.42857142857142" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="163.42857142857142" y="16">
                                             <tspan dy="0em" x="163.42857142857142">Jul</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="269.71428571428567" x2="269.71428571428567" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="269.71428571428567" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="269.71428571428567" x2="269.71428571428567" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="269.71428571428567" y="16">
                                             <tspan dy="0em" x="269.71428571428567">Aug</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="376" x2="376" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="376" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="376" x2="376"
+                                          y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0"
+                                          y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12"
+                                            font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="376" y="16">
                                             <tspan dy="0em" x="376">Sep</tspan>
                                           </text></svg>
                                       </g>
-                                      <line class="visx-line visx-axis-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-dasharray="#EAEAEA" stroke-width="1" x1="40.5" x2="400.5" y1="0" y2="0"></line>
+                                      <line class="visx-line visx-axis-line" fill="transparent"
+                                        shape-rendering="crispEdges" stroke="#EAEAEA" stroke-dasharray="#EAEAEA"
+                                        stroke-width="1" x1="40.5" x2="400.5" y1="0" y2="0"></line>
                                     </g>
                                     <g class="visx-group visx-axis" transform="translate(40, 0)">
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="191">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="191">
                                             <tspan dy="0em" x="-4">0%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="173.4">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="173.4">
                                             <tspan dy="0em" x="-4">10%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="155.8">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="155.8">
                                             <tspan dy="0em" x="-4">20%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="138.2">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="138.2">
                                             <tspan dy="0em" x="-4">30%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="120.6">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="120.6">
                                             <tspan dy="0em" x="-4">40%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="103">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="103">
                                             <tspan dy="0em" x="-4">50%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="85.4">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="85.4">
                                             <tspan dy="0em" x="-4">60%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="67.80000000000001">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="67.80000000000001">
                                             <tspan dy="0em" x="-4">70%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="50.19999999999999">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="50.19999999999999">
                                             <tspan dy="0em" x="-4">80%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="32.599999999999994">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="32.599999999999994">
                                             <tspan dy="0em" x="-4">90%</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="15">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="15">
                                             <tspan dy="0em" x="-4">100%</tspan>
                                           </text></svg></g>
                                     </g>
                                     <g class="visx-group visx-rows" transform="translate(40, 0)">
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="191" y2="191"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="173.4" y2="173.4"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="155.8" y2="155.8"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="138.2" y2="138.2"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="120.6" y2="120.6"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="103" y2="103"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="85.4" y2="85.4"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="67.80000000000001" y2="67.80000000000001"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="50.19999999999999" y2="50.19999999999999"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="32.599999999999994" y2="32.599999999999994"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="15" y2="15"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="191"
+                                        y2="191"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360"
+                                        y1="173.4" y2="173.4"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360"
+                                        y1="155.8" y2="155.8"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360"
+                                        y1="138.2" y2="138.2"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360"
+                                        y1="120.6" y2="120.6"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="103"
+                                        y2="103"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="85.4"
+                                        y2="85.4"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360"
+                                        y1="67.80000000000001" y2="67.80000000000001"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360"
+                                        y1="50.19999999999999" y2="50.19999999999999"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360"
+                                        y1="32.599999999999994" y2="32.599999999999994"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="360" y1="15"
+                                        y2="15"></line>
                                     </g>
                                     <g class="visx-area-stack">
-                                      <path class="visx-area" d="M64.84173936507936,15L167.69888222222224,15L273.98459650793654,15L380.27031079365076,15L380.27031079365076,85.4L273.98459650793654,71.32000000000001L167.69888222222224,59L64.84173936507936,64.28Z" fill="#477544" fill-opacity="0.3" stroke="transparent"></path>
-                                      <path class="visx-area" d="M64.84173936507936,64.28L167.69888222222224,59L273.98459650793654,71.32000000000001L380.27031079365076,85.4L380.27031079365076,164.6L273.98459650793654,155.8L167.69888222222224,155.8L64.84173936507936,147Z" fill="#f29d41" fill-opacity="0.3" stroke="transparent"></path>
-                                      <path class="visx-area" d="M64.84173936507936,147L167.69888222222224,155.8L273.98459650793654,155.8L380.27031079365076,164.6L380.27031079365076,191L273.98459650793654,191L167.69888222222224,191L64.84173936507936,191Z" fill="#FF6767" fill-opacity="0.3" stroke="transparent"></path>
-                                      <path class="visx-line" d="M64.84173936507936,15L167.69888222222224,15L273.98459650793654,15L380.27031079365076,15" fill="transparent" pointer-events="none" stroke="#477544" stroke-width="2"></path>
-                                      <path class="visx-line" d="M64.84173936507936,64.28L167.69888222222224,59L273.98459650793654,71.32000000000001L380.27031079365076,85.4" fill="transparent" pointer-events="none" stroke="#f29d41" stroke-width="2"></path>
-                                      <path class="visx-line" d="M64.84173936507936,147L167.69888222222224,155.8L273.98459650793654,155.8L380.27031079365076,164.6" fill="transparent" pointer-events="none" stroke="#FF6767" stroke-width="2"></path>
+                                      <path class="visx-area"
+                                        d="M64.84173936507936,15L167.69888222222224,15L273.98459650793654,15L380.27031079365076,15L380.27031079365076,85.4L273.98459650793654,71.32000000000001L167.69888222222224,59L64.84173936507936,64.28Z"
+                                        fill="#477544" fill-opacity="0.3" stroke="transparent"></path>
+                                      <path class="visx-area"
+                                        d="M64.84173936507936,64.28L167.69888222222224,59L273.98459650793654,71.32000000000001L380.27031079365076,85.4L380.27031079365076,164.6L273.98459650793654,155.8L167.69888222222224,155.8L64.84173936507936,147Z"
+                                        fill="#f29d41" fill-opacity="0.3" stroke="transparent"></path>
+                                      <path class="visx-area"
+                                        d="M64.84173936507936,147L167.69888222222224,155.8L273.98459650793654,155.8L380.27031079365076,164.6L380.27031079365076,191L273.98459650793654,191L167.69888222222224,191L64.84173936507936,191Z"
+                                        fill="#FF6767" fill-opacity="0.3" stroke="transparent"></path>
+                                      <path class="visx-line"
+                                        d="M64.84173936507936,15L167.69888222222224,15L273.98459650793654,15L380.27031079365076,15"
+                                        fill="transparent" pointer-events="none" stroke="#477544" stroke-width="2">
+                                      </path>
+                                      <path class="visx-line"
+                                        d="M64.84173936507936,64.28L167.69888222222224,59L273.98459650793654,71.32000000000001L380.27031079365076,85.4"
+                                        fill="transparent" pointer-events="none" stroke="#f29d41" stroke-width="2">
+                                      </path>
+                                      <path class="visx-line"
+                                        d="M64.84173936507936,147L167.69888222222224,155.8L273.98459650793654,155.8L380.27031079365076,164.6"
+                                        fill="transparent" pointer-events="none" stroke="#FF6767" stroke-width="2">
+                                      </path>
                                     </g>
                                     <rect fill="transparent" height="176" width="360" x="40" y="15"></rect>
                                   </svg></div>
@@ -2872,38 +3409,63 @@
                               <div class="w-full h-fit pb-2 pl-2">
                                 <div class="w-full flex items-center gap-4 overflow-x-auto no-scrollbar justify-center">
                                   <div class="inline-flex items-center gap-4 justify-center">
-                                    <div class="flex gap-2 items-center h-fit"><svg class="h-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="flex gap-2 items-center h-fit"><svg class="h-5"
+                                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none">
                                           <path d="M0 0h24v24H0Z"></path>
-                                          <path class="stroke-2 stroke-success-500" d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path class="stroke-2 stroke-success-500" d="M12 17c1.667 0 3-1.333 3-3H9c0 1.667 1.333 3 3 3v0ZM8.5 9v1M15.5 9v1" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path class="stroke-2 stroke-success-500"
+                                            d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path class="stroke-2 stroke-success-500"
+                                            d="M12 17c1.667 0 3-1.333 3-3H9c0 1.667 1.333 3 3 3v0ZM8.5 9v1M15.5 9v1"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
                                         </g>
                                       </svg>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Positive</span></p>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Positive</span>
+                                      </p>
                                     </div>
-                                    <div class="flex gap-2 items-center h-fit"><svg class="h-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="flex gap-2 items-center h-fit"><svg class="h-5"
+                                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none">
                                           <path d="M0 0h24v24H0Z"></path>
-                                          <path class="stroke-2 stroke-warning-500" d="M12 3c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.038 9-9-4.038-9-9-9ZM9 9v1M15.5 9v1" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path class="stroke-2 stroke-warning-500"
+                                            d="M12 3c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.038 9-9-4.038-9-9-9ZM9 9v1M15.5 9v1"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
                                         </g>
                                       </svg>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Neutral</span></p>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Neutral</span>
+                                      </p>
                                     </div>
-                                    <div class="flex gap-2 items-center h-fit"><svg class="h-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <div class="flex gap-2 items-center h-fit"><svg class="h-5"
+                                        style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none">
                                           <path d="M0 0h24v24H0Z"></path>
-                                          <path class="stroke-2 stroke-danger-500" d="M8.5 16s1.313-1.312 3.5-1.312c2.188 0 3.5 1.312 3.5 1.312" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path class="stroke-2 stroke-danger-500" d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path class="stroke-2 stroke-danger-500" d="M7 10c.395-.485.935-.76 1.5-.76s1.09.275 1.5.76M14 10c.395-.485.935-.76 1.5-.76s1.09.275 1.5.76" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path class="stroke-2 stroke-danger-500"
+                                            d="M8.5 16s1.313-1.312 3.5-1.312c2.188 0 3.5 1.312 3.5 1.312"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path class="stroke-2 stroke-danger-500"
+                                            d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                          <path class="stroke-2 stroke-danger-500"
+                                            d="M7 10c.395-.485.935-.76 1.5-.76s1.09.275 1.5.76M14 10c.395-.485.935-.76 1.5-.76s1.09.275 1.5.76"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
                                         </g>
                                       </svg>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Negative</span></p>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Negative</span>
+                                      </p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                               <section class="absolute h-full w-full flex items-center justify-center">
-                                <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                <div
+                                  class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                   <h5 class="text-neutral-600">Not enough data</h5>
                                 </div>
                                 <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -2915,64 +3477,134 @@
                     </div>
                     <div class="w-full flex flex-row mb-6">
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <path d="M0 0h24v24H0z" fill="none"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="M14.75 15v4a2 2 0 0 1-2 2h-1.5a2 2 0 0 1-2-2v-4L3.508 8.57A2 2 0 0 1 3 7.236V6c0-1.657 4.03-3 9-3s9 1.343 9 3v1.237a2 2 0 0 1-.508 1.332Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                              <path class="stroke-2 stroke-neutral-700" d="M21 6c0 1.657-4.03 3-9 3S3 7.657 3 6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700"
+                                d="M14.75 15v4a2 2 0 0 1-2 2h-1.5a2 2 0 0 1-2-2v-4L3.508 8.57A2 2 0 0 1 3 7.236V6c0-1.657 4.03-3 9-3s9 1.343 9 3v1.237a2 2 0 0 1-.508 1.332Z"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path class="stroke-2 stroke-neutral-700" d="M21 6c0 1.657-4.03 3-9 3S3 7.657 3 6"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                             <h4>Patterns over time</h4>
                           </section>
                           <section class="h-full w-full">
                             <div class="h-full w-full flex flex-col relative">
                               <div class="h-full w-full">
-                                <div style="width: 100%; height: 100%;"><svg aria-label="XYChart" height="225" width="415">
+                                <div style="width: 100%; height: 100%;"><svg aria-label="XYChart" height="225"
+                                    width="415">
                                     <g class="visx-group visx-axis" transform="translate(0, 195)">
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="51.14285714285714" x2="51.14285714285714" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="51.14285714285714" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="51.14285714285714" x2="51.14285714285714" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="51.14285714285714" y="16">
                                             <tspan dy="0em" x="51.14285714285714">Jun</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="156.85714285714286" x2="156.85714285714286" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="156.85714285714286" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="156.85714285714286" x2="156.85714285714286" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="156.85714285714286" y="16">
                                             <tspan dy="0em" x="156.85714285714286">Jul</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="266.0952380952381" x2="266.0952380952381" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="266.0952380952381" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="266.0952380952381" x2="266.0952380952381" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="266.0952380952381" y="16">
                                             <tspan dy="0em" x="266.0952380952381">Aug</tspan>
                                           </text></svg>
                                       </g>
                                       <g class="visx-group visx-axis-tick" transform="translate(0, 0)">
-                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-linecap="square" stroke-width="1" x1="375.3333333333333" x2="375.3333333333333" y1="0" y2="4"></line><svg font-size="12" style="overflow: visible;" x="0" y="0.125em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="375.3333333333333" y="16">
+                                        <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                          stroke="#EAEAEA" stroke-linecap="square" stroke-width="1"
+                                          x1="375.3333333333333" x2="375.3333333333333" y1="0" y2="4"></line><svg
+                                          font-size="12" style="overflow: visible;" x="0" y="0.125em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="375.3333333333333" y="16">
                                             <tspan dy="0em" x="375.3333333333333">Sep</tspan>
                                           </text></svg>
                                       </g>
-                                      <line class="visx-line visx-axis-line" fill="transparent" shape-rendering="crispEdges" stroke="#EAEAEA" stroke-dasharray="#EAEAEA" stroke-width="1" x1="30.5" x2="400.5" y1="0" y2="0"></line>
+                                      <line class="visx-line visx-axis-line" fill="transparent"
+                                        shape-rendering="crispEdges" stroke="#EAEAEA" stroke-dasharray="#EAEAEA"
+                                        stroke-width="1" x1="30.5" x2="400.5" y1="0" y2="0"></line>
                                     </g>
                                     <g class="visx-group visx-axis" transform="translate(30, 0)">
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="195">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="195">
                                             <tspan dy="0em" x="-4">0</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="148.84615384615384">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="148.84615384615384">
                                             <tspan dy="0em" x="-4">10</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="102.69230769230771">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="102.69230769230771">
                                             <tspan dy="0em" x="-4">20</tspan>
                                           </text></svg></g>
-                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text fill="#616162" font-family="jakarta" font-size="12" font-weight="200" letter-spacing="0.4" pointer-events="none" stroke="none" text-anchor="middle" transform="" x="-4" y="56.53846153846153">
+                                      <g class="visx-group visx-axis-tick" transform="translate(0, 0)"><svg
+                                          font-size="12" style="overflow: visible;" x="-1em" y="0.25em"><text
+                                            fill="#616162" font-family="jakarta" font-size="12" font-weight="200"
+                                            letter-spacing="0.4" pointer-events="none" stroke="none"
+                                            text-anchor="middle" transform="" x="-4" y="56.53846153846153">
                                             <tspan dy="0em" x="-4">30</tspan>
                                           </text></svg></g>
                                     </g>
                                     <g class="visx-group visx-rows" transform="translate(30, 0)">
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="195" y2="195"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="148.84615384615384" y2="148.84615384615384"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="102.69230769230771" y2="102.69230769230771"></line>
-                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges" stroke="#eaf0f6" stroke-width="1" style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="56.53846153846153" y2="56.53846153846153"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370" y1="195"
+                                        y2="195"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370"
+                                        y1="148.84615384615384" y2="148.84615384615384"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370"
+                                        y1="102.69230769230771" y2="102.69230769230771"></line>
+                                      <line class="visx-line" fill="transparent" shape-rendering="crispEdges"
+                                        stroke="#eaf0f6" stroke-width="1"
+                                        style="stroke: rgb(234, 234, 234); stroke-width: 0.5;" x1="0" x2="370"
+                                        y1="56.53846153846153" y2="56.53846153846153"></line>
                                     </g>
-                                    <path d="M52.00797746362434,139.6153846153846L101.34131079695767,56.53846153846153L150.67464413029097,84.23076923076923L200.00797746362434,61.153846153846146L249.34131079695769,84.23076923076923L298.674644130291,93.46153846153847L348.00797746362434,56.53846153846153" fill="transparent" stroke="#7357F6" stroke-linecap="round" stroke-width="2"></path>
-                                    <path d="M52.00797746362434,111.92307692307692L101.34131079695767,153.46153846153845L150.67464413029097,158.07692307692307L200.00797746362434,153.46153846153845L249.34131079695769,88.84615384615384L298.674644130291,148.84615384615384L348.00797746362434,84.23076923076923" fill="transparent" stroke="#EE7D60" stroke-linecap="round" stroke-width="2"></path>
-                                    <path d="M52.00797746362434,28.846153846153836L101.34131079695767,15L150.67464413029097,42.69230769230769L200.00797746362434,28.846153846153836L249.34131079695769,42.69230769230769L298.674644130291,116.53846153846153L348.00797746362434,84.23076923076923" fill="transparent" stroke="#97DFD8" stroke-linecap="round" stroke-width="2"></path>
+                                    <path
+                                      d="M52.00797746362434,139.6153846153846L101.34131079695767,56.53846153846153L150.67464413029097,84.23076923076923L200.00797746362434,61.153846153846146L249.34131079695769,84.23076923076923L298.674644130291,93.46153846153847L348.00797746362434,56.53846153846153"
+                                      fill="transparent" stroke="#7357F6" stroke-linecap="round" stroke-width="2">
+                                    </path>
+                                    <path
+                                      d="M52.00797746362434,111.92307692307692L101.34131079695767,153.46153846153845L150.67464413029097,158.07692307692307L200.00797746362434,153.46153846153845L249.34131079695769,88.84615384615384L298.674644130291,148.84615384615384L348.00797746362434,84.23076923076923"
+                                      fill="transparent" stroke="#EE7D60" stroke-linecap="round" stroke-width="2">
+                                    </path>
+                                    <path
+                                      d="M52.00797746362434,28.846153846153836L101.34131079695767,15L150.67464413029097,42.69230769230769L200.00797746362434,28.846153846153836L249.34131079695769,42.69230769230769L298.674644130291,116.53846153846153L348.00797746362434,84.23076923076923"
+                                      fill="transparent" stroke="#97DFD8" stroke-linecap="round" stroke-width="2">
+                                    </path>
                                     <rect fill="transparent" height="180" width="370" x="30" y="15"></rect>
                                   </svg></div>
                               </div>
@@ -2980,22 +3612,32 @@
                                 <div class="w-full flex items-center gap-4 overflow-x-auto no-scrollbar justify-center">
                                   <div class="inline-flex items-center gap-4 justify-center">
                                     <div class="flex gap-2 items-center h-fit">
-                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(115, 87, 246);"></div>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">UX</span></p>
+                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                        style="background-color: rgb(115, 87, 246);"></div>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">UX</span>
+                                      </p>
                                     </div>
                                     <div class="flex gap-2 items-center h-fit">
-                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(238, 125, 96);"></div>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Analytics</span></p>
+                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                        style="background-color: rgb(238, 125, 96);"></div>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Analytics</span>
+                                      </p>
                                     </div>
                                     <div class="flex gap-2 items-center h-fit">
-                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md" style="background-color: rgb(151, 223, 216);"></div>
-                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Settings</span></p>
+                                      <div class="w-4 h-4 min-h-4 min-w-4 rounded-md"
+                                        style="background-color: rgb(151, 223, 216);"></div>
+                                      <p class="text-small whitespace-nowrap max-w-[250px] overflow-hidden"><span
+                                          class="text-neutral-500 block overflow-hidden text-ellipsis whitespace-nowrap">Settings</span>
+                                      </p>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                               <section class="absolute h-full w-full flex items-center justify-center">
-                                <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                <div
+                                  class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                   <h5 class="text-neutral-600">Not enough data</h5>
                                 </div>
                                 <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -3005,10 +3647,14 @@
                         </div>
                       </div>
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <path d="M0 24V0h24v24z" fill="none"></path>
-                              <g class="stroke-2 stroke-neutral-700" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <g class="stroke-2 stroke-neutral-700" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <rect height="18" rx="1.105" ry="0" width="18" x="3" y="3"></rect>
                                 <path d="M3 15h18M3 9h18"></path>
                               </g>
@@ -3022,11 +3668,18 @@
                                   <table class="w-full border-separate border-spacing-0">
                                     <thead class="bg-primary-100 top-0 z-10 sticky">
                                       <tr>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6 stroke-1.5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <g class="stroke-neutral-600" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                  <path d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6 stroke-1.5"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g class="stroke-neutral-600" fill="none" stroke-linecap="round"
+                                                  stroke-linejoin="round">
+                                                  <path
+                                                    d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                                                  </path>
                                                 </g>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
@@ -3035,10 +3688,16 @@
                                           </div>
                                           <div class="resizer"></div>
                                         </th>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-600"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p class="text-neutral-600">Insights</p>
@@ -3046,10 +3705,16 @@
                                           </div>
                                           <div class="resizer"></div>
                                         </th>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-600" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" fill="none"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-600"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p class="text-neutral-600">Captures</p>
                                             </div>
@@ -3059,11 +3724,15 @@
                                       </tr>
                                     </thead>
                                     <tbody class="divide-neutral-200">
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -3073,31 +3742,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">0 </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">0 </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -3107,31 +3794,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">2 </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">1 </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -3141,31 +3846,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">10 </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">3 </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -3175,20 +3898,34 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">34 </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">10 </span>captures</p>
                                             </div>
@@ -3200,7 +3937,8 @@
                                 </div>
                               </div>
                               <section class="absolute h-full w-full flex items-center justify-center">
-                                <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                <div
+                                  class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                   <h5 class="text-neutral-600">Not enough data</h5>
                                 </div>
                                 <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -3210,10 +3948,14 @@
                         </div>
                       </div>
                       <div class="flex-1 mr-6" style="height: 300px; width: 20%; min-width: 100px; min-height: 100px;">
-                        <div class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
-                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                          class="h-full w-full bg-neutral-50 border-1 border-neutral-400 rounded flex flex-col overflow-hidden">
+                          <section class="w-full h-fit flex items-center gap-2 p-3 border-b-1 border-neutral-400"><svg
+                              class="h-5 w-5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg">
                               <path d="M0 24V0h24v24z" fill="none"></path>
-                              <g class="stroke-2 stroke-neutral-700" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <g class="stroke-2 stroke-neutral-700" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <rect height="18" rx="1.105" ry="0" width="18" x="3" y="3"></rect>
                                 <path d="M3 15h18M3 9h18"></path>
                               </g>
@@ -3227,11 +3969,18 @@
                                   <table class="w-full border-separate border-spacing-0">
                                     <thead class="bg-primary-100 top-0 z-10 sticky">
                                       <tr>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6 stroke-1.5" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <g class="stroke-neutral-600" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                  <path d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6 stroke-1.5"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g class="stroke-neutral-600" fill="none" stroke-linecap="round"
+                                                  stroke-linejoin="round">
+                                                  <path
+                                                    d="M20.793 9.524a2.023 2.023 0 1 1-2.861 2.86 2.023 2.023 0 0 1 2.86-2.86M14.203 5.912a3.115 3.115 0 1 1-4.406 4.406 3.115 3.115 0 0 1 4.406-4.406M6.068 9.524a2.023 2.023 0 1 1-2.86 2.86 2.023 2.023 0 0 1 2.86-2.86M23 19v-1.096a2.5 2.5 0 0 0-2.5-2.5h-.801M1 19v-1.096a2.5 2.5 0 0 1 2.5-2.5h.801M17.339 19v-1.601a3.5 3.5 0 0 0-3.5-3.5H10.16a3.5 3.5 0 0 0-3.5 3.5V19">
+                                                  </path>
                                                 </g>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
@@ -3240,10 +3989,16 @@
                                           </div>
                                           <div class="resizer"></div>
                                         </th>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-600" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-600"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p class="text-neutral-600">Insights</p>
@@ -3251,10 +4006,16 @@
                                           </div>
                                           <div class="resizer"></div>
                                         </th>
-                                        <th class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0" colspan="1" style="position: relative; width: 1px; max-width: 1px;">
+                                        <th
+                                          class="px-3 py-2 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
+                                          colspan="1" style="position: relative; width: 1px; max-width: 1px;">
                                           <div>
-                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-600" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div class="flex items-center gap-2"><svg class="h-6 w-6" fill="none"
+                                                style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-600"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p class="text-neutral-600">Captures</p>
                                             </div>
@@ -3264,11 +4025,15 @@
                                       </tr>
                                     </thead>
                                     <tbody class="divide-neutral-200">
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -3278,31 +4043,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">3.9K </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">2.9K </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -3312,31 +4095,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">3.2K </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">2K </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -3346,31 +4147,49 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">798 </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">409 </span>captures</p>
                                             </div>
                                           </div>
                                         </td>
                                       </tr>
-                                      <tr class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0" style="width: 1px; max-width: 1px;">
+                                      <tr
+                                        class="bg-neutral-50 transition-colors min-h-[content-height] disabled:cursor-cool-normal">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
                                             <div class="wrapper flex items-center gap-2 overflow-hidden">
-                                              <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
+                                              <div
+                                                class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
                                                 <h4 class="text-neutral-50 text-md">?</h4>
                                               </div>
                                               <section>
@@ -3380,20 +4199,34 @@
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-fit p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                                 <path d="M0 0h24v24H0Z" fill="none"></path>
                                               </svg>
                                               <p><span class="font-bold">239 </span>insights</p>
                                             </div>
                                           </div>
                                         </td>
-                                        <td class="px-3 py-3 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0" style="width: 1px; max-width: 1px;">
+                                        <td
+                                          class="px-3 py-3 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0"
+                                          style="width: 1px; max-width: 1px;">
                                           <div class="text-small">
-                                            <div class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded"><svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="stroke-1.5 stroke-neutral-700" d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <div
+                                              class="wrapper w-min p-2 flex gap-2 items-center bg-neutral-200 rounded">
+                                              <svg class="h-4" fill="none" style="max-width: 50vw; max-height: 50vh;"
+                                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-1.5 stroke-neutral-700"
+                                                  d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v2m-4 12h2a2 2 0 0 0 2-2v-2M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
                                               </svg>
                                               <p><span class="font-bold">102 </span>captures</p>
                                             </div>
@@ -3405,7 +4238,8 @@
                                 </div>
                               </div>
                               <section class="absolute h-full w-full flex items-center justify-center">
-                                <div class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
+                                <div
+                                  class="bg-neutral-100 p-2 flex items-center justify-center border-1 border-neutral-400 rounded shadow-smooth z-10 translate-y-3">
                                   <h5 class="text-neutral-600">Not enough data</h5>
                                 </div>
                                 <div class="h-full w-full bg-neutral-100 opacity-70 absolute"></div>
@@ -3422,22 +4256,46 @@
           </div>
           <div class="flex flex-col z-30">
             <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-              <div aria-controls="radix-:r4r:" aria-expanded="false" aria-haspopup="dialog" class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" data-state="closed" type="button"><img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent;" width="25" /></div>
+              <div aria-controls="radix-:r4r:" aria-expanded="false" aria-haspopup="dialog"
+                class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+                data-state="closed" type="button"><img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async"
+                  height="25" loading="lazy" src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent;"
+                  width="25" /></div>
             </div>
-            <div class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal" style="z-index: 99999;"><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r4s:" tabindex="0" type="button">
+            <div
+              class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+              style="z-index: 99999;"><button aria-expanded="false" aria-haspopup="menu"
+                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+                data-state="closed" id="radix-:r4s:" tabindex="0" type="button">
                 <h3 class="text-primary-600">?</h3>
               </button></div>
           </div>
           <div class="absolute h-full w-full"></div>
-          <div class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
+          <div
+            class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
             <div></div>
           </div>
         </div>
       </div>
     </div>
   </div><next-route-announcer>
-    <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">Analytics | ListenUp!</p>
-  </next-route-announcer><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0" name="__privateStripeController3321" role="presentation" scrolling="no" src="./analytics_files/controller-with-preconnect-0ac892cc1983a4b6e5727ee594af4fd2.html" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" tabindex="-1"></iframe><iframe aria-hidden="true" id="_hjSafeContext_74628675" src="./analytics_files/saved_resource.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" tabindex="-1" title="_hjSafeContext"></iframe><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0" name="__privateStripeMetricsController3320" role="presentation" scrolling="no" src="./analytics_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" tabindex="-1"></iframe><iframe aria-hidden="true" id="intercom-frame" src="./analytics_files/saved_resource(1).html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" tabindex="-1" title="Intercom"></iframe>
+    <p aria-live="assertive" id="__next-route-announcer__" role="alert"
+      style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+      Analytics | ListenUp!</p>
+  </next-route-announcer><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0"
+    name="__privateStripeController3321" role="presentation" scrolling="no"
+    src="./analytics_files/controller-with-preconnect-0ac892cc1983a4b6e5727ee594af4fd2.html"
+    style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"
+    tabindex="-1"></iframe><iframe aria-hidden="true" id="_hjSafeContext_74628675"
+    src="./analytics_files/saved_resource.html"
+    style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"
+    tabindex="-1" title="_hjSafeContext"></iframe><iframe allow="payment *" allowtransparency="true" aria-hidden="true"
+    frameborder="0" name="__privateStripeMetricsController3320" role="presentation" scrolling="no"
+    src="./analytics_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html"
+    style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"
+    tabindex="-1"></iframe><iframe aria-hidden="true" id="intercom-frame" src="./analytics_files/saved_resource(1).html"
+    style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;"
+    tabindex="-1" title="Intercom"></iframe>
   <div class="intercom-lightweight-app">
     <style id="intercom-lightweight-app-style" type="text/css">
       @keyframes intercom-lightweight-app-launcher {
@@ -3647,37 +4505,282 @@
         }
       }
     </style>
-  </div><svg aria-hidden="true" style="width: 0px; height: 0px; position: absolute; top: -100%; left: -100%;"><text id="__react_svg_text_measurement_id">25</text></svg>
+  </div><svg aria-hidden="true" style="width: 0px; height: 0px; position: absolute; top: -100%; left: -100%;"><text
+      id="__react_svg_text_measurement_id">25</text></svg>
 
 
-  <div id="tagsBlock" data-radix-popper-content-wrapper="" dir="ltr" class="hidden" style="position: fixed; left: 0px; top: 0px; transform: translate(65px, 130px); min-width: max-content; z-index: 300; --radix-popper-available-width: 2324.765625px; --radix-popper-available-height: 644.8046875px; --radix-popper-anchor-width: 117.5px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:rq:" aria-labelledby="radix-:rp:" class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-60 h-fit" tabindex="-1" data-orientation="vertical" style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;"><div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground" cmdk-root=""><label cmdk-label="" for=":r1d:" id=":r1c:" style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label><div class="flex items-center px-3 bg-neutral-50 rounded mb-2 border-1 border-neutral-400" cmdk-input-wrapper=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path class="stroke-2 stroke-neutral-600/50" stroke-linecap="round" stroke-linejoin="round" d="M14.193 5.582a5.971 5.971 0 1 1-8.444 8.444 5.971 5.971 0 0 1 8.444-8.444M14.15 14.06 20 19.99"></path></g></svg><input class="flex h-11 w-full rounded-md bg-transparent py-3 p outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 bg-neutral-50/0" placeholder="Search tags" cmdk-input="" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls=":r1b:" aria-labelledby=":r1c:" id=":r1d:" type="text" value=""></div><div class="w-full flex items-center justify-center gap-2 py-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M8.313 7.759a.389.389 0 1 1-.55.55.389.389 0 0 1 .55-.55"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M7.244 3.025 10.093 3a1.983 1.983 0 0 1 1.418.58l8.904 8.908a2 2 0 0 1 0 2.829l-5.094 5.097a2 2 0 0 1-2.83 0L3.58 11.5A1.982 1.982 0 0 1 3 10.099V7.287c0-.526.209-1.03.58-1.401l2.28-2.281a1.979 1.979 0 0 1 1.384-.58Z"></path></g></svg><h4>No tags</h4></div></div></div></div>
-    <div id="dateBlock" data-radix-popper-content-wrapper="" dir="ltr" class="hidden" style="position: fixed; left: 0px; top: 0px; transform: translate(191.25px, 130px); min-width: max-content; z-index: 300; --radix-popper-available-width: 2199.27734375px; --radix-popper-available-height: 644.8046875px; --radix-popper-anchor-width: 125.99609375px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:rs:" aria-labelledby="radix-:rr:" class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-40 h-fit" tabindex="-1" data-orientation="vertical" style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;"><div role="group" class="flex flex-col select-none items-center justify-between rounded"><div role="menuitemradio" aria-checked="false" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>Today</h5><div class="h-5 w-5"></div></div><div role="menuitemradio" aria-checked="false" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>Last Week</h5><div class="h-5 w-5"></div></div><div role="menuitemradio" aria-checked="false" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>Last Month</h5><div class="h-5 w-5"></div></div><div role="menuitemradio" aria-checked="false" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>Last Year</h5><div class="h-5 w-5"></div></div><div role="menuitemradio" aria-checked="true" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="checked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>All</h5><div class="h-5 w-5"><span data-state="checked"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-primary-600" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path class="stroke-[3]" stroke-linecap="round" stroke-linejoin="round" d="m20 6.5-11 11-5-5"></path></g></svg></span></div></div></div></div></div>
-    <div id="sourcesBlock" data-radix-popper-content-wrapper="" dir="ltr" class="hidden" style="position: fixed; left: 0px; top: 0px; transform: translate(325px, 130px); min-width: max-content; z-index: 300; --radix-popper-available-width: 2065.29296875px; --radix-popper-available-height: 644.8046875px; --radix-popper-anchor-width: 142.16796875px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:ru:" aria-labelledby="radix-:rt:" class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-fit h-fit" tabindex="-1" data-orientation="vertical" style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;"><div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground" cmdk-root=""><label cmdk-label="" for=":r2l:" id=":r2k:" style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label><div class="max-h-[300px] overflow-y-scroll overflow-x-hidden" cmdk-list="" role="listbox" aria-label="Suggestions" id=":r2j:" aria-labelledby=":r2l:" style="--cmdk-list-height: 384.0px;"><div cmdk-list-sizer=""><div class="overflow-hidden text-foreground [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-muted-foreground" cmdk-group="" role="presentation" data-value="undefined"><div cmdk-group-items="" role="group"><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10" id=":r2o:" cmdk-item="" role="option" data-value="extension"><div class="w-full flex items-center gap-2"><div class=""><img alt="ListenUp! Chrome Extension" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Extension</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10" id=":r2r:" cmdk-item="" role="option" data-value="manual"><div class="w-full flex items-center gap-2"><div class=""><div class="rounded-md  p-[2px] flex items-center justify-center"><svg class="h-4 w-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 50vw; max-height: 50vh;"><path d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><h5>Manual</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r2u:" cmdk-item="" role="option" data-value="slack"><div class="w-full flex items-center gap-2"><div class=""><img alt="Slack" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Slack</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r31:" cmdk-item="" role="option" data-value="intercom"><div class="w-full flex items-center gap-2"><div class=""><img alt="Intercom" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Intercom</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r34:" cmdk-item="" role="option" data-value="zendesk"><div class="w-full flex items-center gap-2"><div class=""><img alt="Zendesk" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Zendesk</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r37:" cmdk-item="" role="option" data-value="hubspot"><div class="w-full flex items-center gap-2"><div class=""><img alt="Hubspot" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Hubspot</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r3a:" cmdk-item="" role="option" data-value="email" aria-selected="true" data-selected="true"><div class="w-full flex items-center gap-2"><div class=""><img alt="Email" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Email</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r3d:" cmdk-item="" role="option" data-value="api"><div class="w-full flex items-center gap-2"><div class=""><img alt="ListenUp! API" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>API</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div></div></div></div></div></div></div></div>
-    <script>
-      var tagsButton = document.getElementById("tagsButton")
+  <div id="tagsBlock" data-radix-popper-content-wrapper="" dir="ltr" class="hidden"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(65px, 130px); min-width: max-content; z-index: 300; --radix-popper-available-width: 2324.765625px; --radix-popper-available-height: 644.8046875px; --radix-popper-anchor-width: 117.5px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;">
+    <div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open"
+      data-radix-menu-content="" dir="ltr" id="radix-:rq:" aria-labelledby="radix-:rp:"
+      class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-60 h-fit"
+      tabindex="-1" data-orientation="vertical"
+      style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+      <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground"
+        cmdk-root=""><label cmdk-label="" for=":r1d:" id=":r1c:"
+          style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label>
+        <div class="flex items-center px-3 bg-neutral-50 rounded mb-2 border-1 border-neutral-400"
+          cmdk-input-wrapper=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
+            style="max-width: 50vw; max-height: 50vh;">
+            <g fill="none">
+              <path class="stroke-2 stroke-neutral-600/50" stroke-linecap="round" stroke-linejoin="round"
+                d="M14.193 5.582a5.971 5.971 0 1 1-8.444 8.444 5.971 5.971 0 0 1 8.444-8.444M14.15 14.06 20 19.99">
+              </path>
+            </g>
+          </svg><input
+            class="flex h-11 w-full rounded-md bg-transparent py-3 p outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 bg-neutral-50/0"
+            placeholder="Search tags" cmdk-input="" autocomplete="off" autocorrect="off" spellcheck="false"
+            aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls=":r1b:" aria-labelledby=":r1c:"
+            id=":r1d:" type="text" value=""></div>
+        <div class="w-full flex items-center justify-center gap-2 py-3"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;">
+            <g fill="none">
+              <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                d="M8.313 7.759a.389.389 0 1 1-.55.55.389.389 0 0 1 .55-.55"></path>
+              <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                d="M7.244 3.025 10.093 3a1.983 1.983 0 0 1 1.418.58l8.904 8.908a2 2 0 0 1 0 2.829l-5.094 5.097a2 2 0 0 1-2.83 0L3.58 11.5A1.982 1.982 0 0 1 3 10.099V7.287c0-.526.209-1.03.58-1.401l2.28-2.281a1.979 1.979 0 0 1 1.384-.58Z">
+              </path>
+            </g>
+          </svg>
+          <h4>No tags</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="dateBlock" data-radix-popper-content-wrapper="" dir="ltr" class="hidden"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(191.25px, 130px); min-width: max-content; z-index: 300; --radix-popper-available-width: 2199.27734375px; --radix-popper-available-height: 644.8046875px; --radix-popper-anchor-width: 125.99609375px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;">
+    <div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open"
+      data-radix-menu-content="" dir="ltr" id="radix-:rs:" aria-labelledby="radix-:rr:"
+      class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-40 h-fit"
+      tabindex="-1" data-orientation="vertical"
+      style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+      <div role="group" class="flex flex-col select-none items-center justify-between rounded">
+        <div role="menuitemradio" aria-checked="false"
+          class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+          data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+          <h5>Today</h5>
+          <div class="h-5 w-5"></div>
+        </div>
+        <div role="menuitemradio" aria-checked="false"
+          class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+          data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+          <h5>Last Week</h5>
+          <div class="h-5 w-5"></div>
+        </div>
+        <div role="menuitemradio" aria-checked="false"
+          class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+          data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+          <h5>Last Month</h5>
+          <div class="h-5 w-5"></div>
+        </div>
+        <div role="menuitemradio" aria-checked="false"
+          class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+          data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+          <h5>Last Year</h5>
+          <div class="h-5 w-5"></div>
+        </div>
+        <div role="menuitemradio" aria-checked="true"
+          class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+          data-state="checked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+          <h5>All</h5>
+          <div class="h-5 w-5"><span data-state="checked"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 stroke-primary-600" style="max-width: 50vw; max-height: 50vh;">
+                <g fill="none">
+                  <path class="stroke-[3]" stroke-linecap="round" stroke-linejoin="round" d="m20 6.5-11 11-5-5"></path>
+                </g>
+              </svg></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sourcesBlock" data-radix-popper-content-wrapper="" dir="ltr" class="hidden"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(325px, 130px); min-width: max-content; z-index: 300; --radix-popper-available-width: 2065.29296875px; --radix-popper-available-height: 644.8046875px; --radix-popper-anchor-width: 142.16796875px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;">
+    <div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open"
+      data-radix-menu-content="" dir="ltr" id="radix-:ru:" aria-labelledby="radix-:rt:"
+      class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-fit h-fit"
+      tabindex="-1" data-orientation="vertical"
+      style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+      <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground"
+        cmdk-root=""><label cmdk-label="" for=":r2l:" id=":r2k:"
+          style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label>
+        <div class="max-h-[300px] overflow-y-scroll overflow-x-hidden" cmdk-list="" role="listbox"
+          aria-label="Suggestions" id=":r2j:" aria-labelledby=":r2l:" style="--cmdk-list-height: 384.0px;">
+          <div cmdk-list-sizer="">
+            <div
+              class="overflow-hidden text-foreground [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-muted-foreground"
+              cmdk-group="" role="presentation" data-value="undefined">
+              <div cmdk-group-items="" role="group">
+                <div
+                  class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10"
+                  id=":r2o:" cmdk-item="" role="option" data-value="extension">
+                  <div class="w-full flex items-center gap-2">
+                    <div class=""><img alt="ListenUp! Chrome Extension" loading="lazy" width="20" height="20"
+                        decoding="async" data-nimg="1"
+                        src="{{ asset("assets/listenup_chrome_extension.png") }}"
+                        style="color: transparent;"></div>
+                    <h5>Extension</h5>
+                  </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                    class="w-11 h-[24px] flex rounded-full">
+                    <div
+                      class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                      <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10"
+                  id=":r2r:" cmdk-item="" role="option" data-value="manual">
+                  <div class="w-full flex items-center gap-2">
+                    <div class="">
+                      <div class="rounded-md  p-[2px] flex items-center justify-center"><svg class="h-4 w-4"
+                          viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                          style="max-width: 50vw; max-height: 50vh;">
+                          <path
+                            d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
+                            class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                    <h5>Manual</h5>
+                  </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                    class="w-11 h-[24px] flex rounded-full">
+                    <div
+                      class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                      <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                  id=":r2u:" cmdk-item="" role="option" data-value="slack">
+                  <div class="w-full flex items-center gap-2">
+                    <div class=""><img alt="Slack" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
+                        src="{{ asset("assets/slack_logo.png") }}"
+                        style="color: transparent;"></div>
+                    <h5>Slack</h5>
+                  </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                    class="w-11 h-[24px] flex rounded-full">
+                    <div
+                      class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                      <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                  id=":r31:" cmdk-item="" role="option" data-value="intercom">
+                  <div class="w-full flex items-center gap-2">
+                    <div class=""><img alt="Intercom" loading="lazy" width="20" height="20" decoding="async"
+                        data-nimg="1"
+                        src="{{ asset("assets/intercom_logo.png") }}"
+                        style="color: transparent;"></div>
+                    <h5>Intercom</h5>
+                  </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                    class="w-11 h-[24px] flex rounded-full">
+                    <div
+                      class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                      <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                  id=":r34:" cmdk-item="" role="option" data-value="zendesk">
+                  <div class="w-full flex items-center gap-2">
+                    <div class=""><img alt="Zendesk" loading="lazy" width="20" height="20" decoding="async"
+                        data-nimg="1"
+                        src="{{ asset("assets/zendesk_logo.png") }}"
+                        style="color: transparent;"></div>
+                    <h5>Zendesk</h5>
+                  </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                    class="w-11 h-[24px] flex rounded-full">
+                    <div
+                      class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                      <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                  id=":r37:" cmdk-item="" role="option" data-value="hubspot">
+                  <div class="w-full flex items-center gap-2">
+                    <div class=""><img alt="Hubspot" loading="lazy" width="20" height="20" decoding="async"
+                        data-nimg="1"
+                        src="{{ asset("assets/hubspot_logo.png") }}"
+                        style="color: transparent;"></div>
+                    <h5>Hubspot</h5>
+                  </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                    class="w-11 h-[24px] flex rounded-full">
+                    <div
+                      class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                      <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                  id=":r3a:" cmdk-item="" role="option" data-value="email" aria-selected="true" data-selected="true">
+                  <div class="w-full flex items-center gap-2">
+                    <div class=""><img alt="Email" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
+                        
+                    src="{{ asset("assets/gmail_logo.png") }}"style="color: transparent;"></div>
+                    <h5>Email</h5>
+                  </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                    class="w-11 h-[24px] flex rounded-full">
+                    <div
+                      class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                      <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                  id=":r3d:" cmdk-item="" role="option" data-value="api">
+                  <div class="w-full flex items-center gap-2">
+                    <div class=""><img alt="ListenUp! API" loading="lazy" width="20" height="20" decoding="async"
+                        data-nimg="1"
+                        
+                        src="{{ asset("assets/listenup_api_logo.png") }}"style="color: transparent;"></div>
+                    <h5>API</h5>
+                  </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                    class="w-11 h-[24px] flex rounded-full">
+                    <div
+                      class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                      <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var tagsButton = document.getElementById("tagsButton")
 
-      tagsButton.addEventListener("click", function() {
-        var tagsBlock = document.getElementById("tagsBlock")
-        
-        tagsBlock.classList.toggle("hidden")
-      })
-      var dateButton = document.getElementById("dateButton")
+    tagsButton.addEventListener("click", function () {
+      var tagsBlock = document.getElementById("tagsBlock")
 
-      dateButton.addEventListener("click", function() {
-        var dateBlock = document.getElementById("dateBlock")
-        
-        dateBlock.classList.toggle("hidden")
-      })
+      tagsBlock.classList.toggle("hidden")
+    })
+    var dateButton = document.getElementById("dateButton")
 
-      var sourcesButton = document.getElementById("sourcesButton")
+    dateButton.addEventListener("click", function () {
+      var dateBlock = document.getElementById("dateBlock")
 
-      sourcesButton.addEventListener("click", function() {
-        var sourcesBlock = document.getElementById("sourcesBlock")
-        
-        sourcesBlock.classList.toggle("hidden")
-      })
+      dateBlock.classList.toggle("hidden")
+    })
 
-    </script>
-  </body>
+    var sourcesButton = document.getElementById("sourcesButton")
+
+    sourcesButton.addEventListener("click", function () {
+      var sourcesBlock = document.getElementById("sourcesBlock")
+
+      sourcesBlock.classList.toggle("hidden")
+    })
+
+  </script>
+</body>
 
 </html>@include('feedback')@include('profileSettings')
