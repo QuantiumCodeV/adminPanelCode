@@ -976,11 +976,10 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                       <div class="flex flex-col justify-between" style="height: 90%;">
                         <div>
                           <h1>
-                            Start / Join meeting
+                          Synchronize the app with the site
                           </h1>
                           <span style="height:100%">
-                            Connect to the meeting room or create your own room with the Pro version of the Soundline.
-                            Communicate, create, broadcast.
+                          Please launch the application and click the "sync" button to connect to the site and connect to the room
                           </span>
                         </div>
 
@@ -1016,7 +1015,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
 
                       <img alt="SoundLine Navbar Logo" loading="lazy" width="0" height="0"
                         style="width:40%;align-self: center;" decoding="async" data-nimg="1" class="w-auto h-auto"
-                        src="{{ asset("/assets/main_image.png") }}" style="color: transparent">
+                        src="{{ asset("/assets/synchronize.gif") }}" style="color: transparent">
                     </section>
 
                   </div>
