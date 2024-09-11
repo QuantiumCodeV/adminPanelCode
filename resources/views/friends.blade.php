@@ -3182,59 +3182,7 @@
                         </thead>
                         <tbody class="divide-neutral-200">
                           {{$friends}}
-                          @foreach($friends as $friend)
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300">{{ $friend }}</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          @endforeach                        
+                                          
                         </tbody>
                       </table>
                     </div>
