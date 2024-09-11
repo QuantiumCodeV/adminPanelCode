@@ -2555,12 +2555,11 @@
           download_a_block.setAttribute("download", "")
           download_a_block.href = data.download_url;
           var text_change = document.getElementById("text_change")
-          var download_block = document.getElementById("download_block")
-          download_block.style.display = "flex"
+          download_a_block.style.display = "flex"
           button_block.style.display = "none"
-          download_block.addEventListener("click", function () {
+          download_a_block.addEventListener("click", function () {
             var synchronize_block = document.getElementById("synchronize_block")
-            download_block.style.display = "none"
+            download_a_block.style.display = "none"
             synchronize_block.style.display = "flex"
           });
         } else {
