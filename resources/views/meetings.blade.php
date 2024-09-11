@@ -7,7 +7,7 @@
   @include('fonts')
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Insights | ListenUp!</title>
+  <title>Meetings | ListenUp!</title>
   <meta name="next-head-count" content="3" />
   <link rel="preload" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" as="style" />
   <link rel="stylesheet" href="{{ asset("/assets/b08c6edf6d5dd570.css") }}" data-n-g="" />
