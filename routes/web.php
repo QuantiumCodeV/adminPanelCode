@@ -22,20 +22,20 @@ use App\Http\Controllers\FriendsController;
 |
 */
 
-Route::get("/fonts", function(){
+Route::get("/fonts", function () {
     view("fonts");
 })->name("fonts");
 
 
-Route::get("/profileSettings", function(){
+Route::get("/profileSettings", function () {
     view("profileSettings");
 })->name("profileSettings");
 
-Route::get("/fonts", function(){
+Route::get("/fonts", function () {
     view("fonts");
 })->name("fonts");
 
-Route::get("/feedback", function(){
+Route::get("/feedback", function () {
     view("feedback");
 })->name("feedback");
 
@@ -112,26 +112,29 @@ Route::get("/spaces/521/home", function () {
     return view("successCreateProfile");
 })->name("successCreateProfile");
 
-Route::get("/spaces/522/home", function () {
-    return view("home");
-})->name("home");
+Route::middleware("auth")->group(function () {
 
-Route::get('/spaces/522/meetings', function () {
-    return view("meetings");
-})->name("meetings");
+    Route::get("/spaces/522/home", function () {
+        return view("home");
+    })->name("home");
 
-Route::get('/spaces/522/friends', function () {
-    return view("friends");
-})->name("friends");
+    Route::get('/spaces/522/meetings', function () {
+        return view("meetings");
+    })->name("meetings");
 
-Route::get('/spaces/522/analytics', function () {
-    return view("analytics");
-})->name("analytics");
+    Route::get('/spaces/522/friends', function () {
+        return view("friends");
+    })->name("friends");
 
-Route::get('/spaces/522/captures', function () {
-    return view("captures");
-})->name("captures");
+    Route::get('/spaces/522/analytics', function () {
+        return view("analytics");
+    })->name("analytics");
 
+    Route::get('/spaces/522/captures', function () {
+        return view("captures");
+    })->name("captures");
+
+});
 Route::prefix("/api")->group(function () {
     Route::prefix('/user')->group(function () {
         Route::post('/register', [UsersController::class, "register"])->name("api.user.register");
@@ -221,7 +224,7 @@ Route::prefix("/product")->group(function () {
         return view('product.meeting-recorder');
     });
 
-    
+
 });
 Route::get('/pricing', function () {
     return view('pricing');
