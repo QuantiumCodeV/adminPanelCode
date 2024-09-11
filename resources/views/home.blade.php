@@ -1016,6 +1016,9 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
     border-color: red !important;
     color:red !important;
   }
+  .errorBlock h4{
+    color:red !important;
+  }
 </style>
                           <button onclick="showFirstBlock()" style="position:relative;overflow:visible" type="button"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
