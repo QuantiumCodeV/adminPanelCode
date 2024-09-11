@@ -123,7 +123,9 @@ Route::middleware("auth")->group(function () {
     })->name("meetings");
 
     Route::get('/spaces/522/friends', function () {
-        return view("friends");
+        return view("friends",[
+            'friends' => FriendsController::getFriends()
+        ]);
     })->name("friends");
 
     Route::get('/spaces/522/analytics', function () {

@@ -2127,6 +2127,7 @@
 </head>
 
 <body>
+
   <div id="__next">
     <div>
       <div>
@@ -2343,6 +2344,8 @@
                     </button>
                   </div>
                 </section>
+               
+                @if($friends->count() < 1)
                 <div class="h-4/5 w-full relative">
                   <div class="w-full h-full overflow-hidden">
                     <div class="h-full w-full overflow-auto relative">
@@ -3105,6 +3108,139 @@
                     </section>
                   </div>
                 </div>
+                @else
+                <div class="h-4/5 w-full relative">
+                  <div class="w-full h-full overflow-hidden">
+                    <div class="h-full w-full overflow-auto relative">
+                      <table class="w-full border-separate border-spacing-0">
+                        <thead class="bg-primary-100 top-0 z-10 sticky">
+                          <tr>
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
+                              style="position: relative">
+                              <div>
+                                <div class="h-full w-full">
+                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
+                              <div>
+                                <div class="h-full w-full">
+                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
+                              <div>
+                                <div class="h-full w-full">
+                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
+                              <div>
+                                <div class="h-full w-full">
+                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
+                              <div>
+                                <div class="h-full w-full">
+                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                              style="position: relative">
+                              <div>
+                                <div class="h-full w-full">
+                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
+                              style="position: relative">
+                              <div>
+                                <div class="h-full w-full">
+                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-neutral-200">
+                          @foreach($friend as $friends)
+                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                              <div class="text-small">
+                                <div class="h-full w-full">
+                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                              <div class="text-small">
+                                <div class="h-full w-full">
+                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                              <div class="text-small">
+                                <div class="h-full w-full">
+                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                              <div class="text-small">
+                                <div class="h-full w-full">
+                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                              <div class="text-small">
+                                <div class="h-full w-full">
+                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                              <div class="text-small">
+                                <div class="h-full w-full">
+                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                              <div class="text-small">
+                                <div class="h-full w-full">
+                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          @endforeach
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              
+                </div>
+                @endif
               </div>
             </section>
           </div>
@@ -3136,73 +3272,6 @@
       </div>
     </div>
   </div>
-
-  <next-route-announcer>
-    <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="
-          border: 0px;
-          clip: rect(0px, 0px, 0px, 0px);
-          height: 1px;
-          margin: -1px;
-          overflow: hidden;
-          padding: 0px;
-          position: absolute;
-          top: 0px;
-          width: 1px;
-          white-space: nowrap;
-          overflow-wrap: normal;
-        ">
-      Users | ListenUp!
-    </p>
-  </next-route-announcer><iframe allow="payment *" allowtransparency="true" aria-hidden="true" frameborder="0"
-    name="__privateStripeController3321" role="presentation" scrolling="no"
-    src="./friends_files/controller-with-preconnect-0ac892cc1983a4b6e5727ee594af4fd2.html" style="
-        border: none !important;
-        margin: 0px !important;
-        padding: 0px !important;
-        width: 1px !important;
-        min-width: 100% !important;
-        overflow: hidden !important;
-        display: block !important;
-        visibility: hidden !important;
-        position: fixed !important;
-        height: 1px !important;
-        pointer-events: none !important;
-        user-select: none !important;
-      " tabindex="-1"></iframe><iframe aria-hidden="true" id="_hjSafeContext_74628675"
-    src="./friends_files/saved_resource.html" style="
-        display: none !important;
-        width: 1px !important;
-        height: 1px !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-      " tabindex="-1" title="_hjSafeContext"></iframe><iframe allow="payment *" allowtransparency="true"
-    aria-hidden="true" frameborder="0" name="__privateStripeMetricsController3320" role="presentation" scrolling="no"
-    src="./friends_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html" style="
-        border: none !important;
-        margin: 0px !important;
-        padding: 0px !important;
-        width: 1px !important;
-        min-width: 100% !important;
-        overflow: hidden !important;
-        display: block !important;
-        visibility: hidden !important;
-        position: fixed !important;
-        height: 1px !important;
-        pointer-events: none !important;
-        user-select: none !important;
-      " tabindex="-1"></iframe><iframe aria-hidden="true" id="intercom-frame"
-    src="./friends_files/saved_resource(1).html" style="
-        position: absolute !important;
-        opacity: 0 !important;
-        width: 1px !important;
-        height: 1px !important;
-        top: 0 !important;
-        left: 0 !important;
-        border: none !important;
-        display: block !important;
-        z-index: -1 !important;
-        pointer-events: none;
-      " tabindex="-1" title="Intercom"></iframe>
 
 
 

@@ -48,6 +48,17 @@ class FriendsController extends Controller
         return response()->json(['message' => 'success']);
     }
 
+
+    public static function getFriends()
+    {
+        $friends = Friends::where(function ($query) {
+            $query->where('user_id_first', auth()->id())
+                ->orWhere('user_id_second', auth()->id());
+        })->get();
+
+        return response()->json(['friends' => $friends]);
+    }
+
     public function remove(Request $request)
     {
         $data = $request->validate([
