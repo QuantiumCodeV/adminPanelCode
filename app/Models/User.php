@@ -26,4 +26,19 @@ class User extends Authenticatable
     protected $casts = [
         'password' => 'hashed',
     ];
+
+    public function friendsAsFirst()
+    {
+        return $this->hasMany(Friends::class, 'user_id_first');
+    }
+
+    public function friendsAsSecond()
+    {
+        return $this->hasMany(Friends::class, 'user_id_second');
+    }
+
+    public function friends()
+    {
+        return $this->friendsAsFirst()->orWhere('user_id_second', $this->id);
+    }
 }

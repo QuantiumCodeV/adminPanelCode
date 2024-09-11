@@ -14,4 +14,20 @@ class Friends extends Model
         'user_id_second',
         'status',
     ];
+
+    public function userFirst()
+    {
+        return $this->belongsTo(User::class, 'user_id_first');
+    }
+
+    public function userSecond()
+    {
+        return $this->belongsTo(User::class, 'user_id_second');
+    }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'user_id_first')
+            ->orWhere('user_id_second', $this->user_id_second);
+    }
 }
