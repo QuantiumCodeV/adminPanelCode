@@ -93,7 +93,7 @@ class UsersController extends Controller
     {
 
         Auth::logout();
-        return redirect("index");
+        return redirect(route('index'));
     }
 
     public function update(Request $request)
