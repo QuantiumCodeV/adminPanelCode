@@ -5977,7 +5977,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
         console.log(data)
         if (data.message == "success") {
           ifDownloadOpen = true;
-          var download_a_block = document.getElementById("download_a_block")
+          var download_a_block = document.getElementById("download_block_a_href")
           download_a_block.setAttribute("download", "")
           download_a_block.href = data.download_url;
           showSecondBlock()
