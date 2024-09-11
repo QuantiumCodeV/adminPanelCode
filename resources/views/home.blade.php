@@ -992,7 +992,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                           <a id="download_a_block"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0">
-                            <h4 id="download_app" class="hidden">Download the app</h4>
+                            <h4 id="download_app">Download the app</h4>
                           </a>
 
 
