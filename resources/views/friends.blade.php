@@ -3203,35 +3203,35 @@
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full"> 
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">Online</div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">-</div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">-</div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">No</div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friend->status }}</div>
                                 </div>
                               </div>
                             </td>
