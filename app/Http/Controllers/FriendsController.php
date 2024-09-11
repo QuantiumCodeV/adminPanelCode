@@ -23,6 +23,21 @@ class FriendsController extends Controller
         if (!$user) {
             return response()->json(['message' => 'User not found'], 404);
         }
+        if ($user->id == auth()->id()) {
+            return response()->json(['message' => 'You cannot add yourself as a friend'], 400);
+        }
+
+        $existingFriend = Friends::where(function ($query) use ($user) {
+            $query->where('user_id_first', auth()->id())
+                ->where('user_id_second', $user->id);
+        })->orWhere(function ($query) use ($user) {
+            $query->where('user_id_first', $user->id)
+                ->where('user_id_second', auth()->id());
+        })->first();
+
+        if ($existingFriend) {
+            return response()->json(['message' => 'Friend request already sent or you are already friends'], 400);
+        }
 
         $friend = Friends::create([
             'user_id_first' => auth()->id(),
@@ -45,7 +60,7 @@ class FriendsController extends Controller
             ->where('user_id_second', $data['user_id_second'])
             ->orWhere(function ($query) use ($data) {
                 $query->where('user_id_first', $data['user_id_second'])
-                      ->where('user_id_second', $data['user_id_first']);
+                    ->where('user_id_second', $data['user_id_first']);
             })
             ->delete();
 
