@@ -3120,7 +3120,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Name</div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Name</div>
                                 </div>
                               </div>
                             </th>
@@ -3129,7 +3129,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Online</div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Online</div>
                                 </div>
                               </div>
                             </th>
@@ -3138,7 +3138,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Mutual Group</div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Mutual Group</div>
                                 </div>
                               </div>
                             </th>
@@ -3147,7 +3147,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Mutual Friends</div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Mutual Friends</div>
                                 </div>
                               </div>
                             </th>
@@ -3156,7 +3156,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Pro</div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Pro</div>
                                 </div>
                               </div>
                             </th>
@@ -3165,7 +3165,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)"> Status</div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)"> Status</div>
                                 </div>
                               </div>
                             </th>
@@ -3174,12 +3174,19 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Interactions</div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Interactions</div>
                                 </div>
                               </div>
                             </th>
                           </tr>
                         </thead>
+                        <style>
+                          .centerContent{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                          }
+                        </style>
                         <tbody class="divide-neutral-200">
                          
                           @foreach($friends as $friend)
@@ -3187,49 +3194,49 @@
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300">{{ $friend->userFirst->name }}</div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friend->userFirst->name }}</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                              <div class="text-small">
+                                <div class="h-full w-full"> 
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
                                 </div>
                               </div>
                             </td>
