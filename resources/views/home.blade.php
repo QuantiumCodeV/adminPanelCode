@@ -970,8 +970,8 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                     </section>
 
                   </div>
-                  <div id="section_2"
-                    class="hidden h-fit w-full bg-neutral-100 border-1 border-neutral-400 rounded flex flex-col items-center justify-between overflow-clip">
+                  <div id="section_2" style="display:none"
+                    class="h-fit w-full bg-neutral-100 border-1 border-neutral-400 rounded flex flex-col items-center justify-between overflow-clip">
                     <section class="h-[17rem] w-full flex items-start justify-start pt-5 px-5">
                       <div class="flex flex-col justify-between" style="height: 90%;">
                         <div>
