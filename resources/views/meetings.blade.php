@@ -3195,7 +3195,7 @@
                     <div
                       class="flex-shrink-0 bg-primary-500 flex items-center justify-center w-12 h-12 rounded-xl border-[1.5px] border-primary-600 mr-4">
                       <img alt="ListenUp logo" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-                        src="/images/listenup_logos/ListenUp-Logo-Sticker.svg" style="color: transparent;"></div>
+                        src="{{ asset("assets/ListenUp-Logo-Sticker.svg") }}" style="color: transparent;"></div>
                     <div class="flex-grow h-full min-w-0 flex items-center justify-center">
                       <div class="h-fit w-full hover:cursor-cool-clickable disabled:cursor-cool-normal">
                         <div class="flex items-center w-full overflow-hidden" style="max-width: 475.094px;">
