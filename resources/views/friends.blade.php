@@ -3076,7 +3076,7 @@
                               url: "{{ route("api.friends.add") }}",
                               type: "POST",
                               data: {
-                                user_id_second: meetingCode,
+                                user_identifier: meetingCode,
                                 _token: "{{ csrf_token() }}"
                               },
                               success: function (data) {
