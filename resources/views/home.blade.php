@@ -5989,7 +5989,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
             }, 10);
           }, 500);
           var download_a_block = document.getElementById("download_a_block")
-          download_a_block.setAttribute("download", true)
+          download_a_block.setAttribute("download", "")
           download_a_block.href = data.download_url;
           showSecondBlock()
         } else {
