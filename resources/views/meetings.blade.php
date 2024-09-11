@@ -2750,7 +2750,8 @@
           class="flex h-11 w-full rounded-md bg-transparent py-3 p outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 bg-neutral-50/0"
           placeholder="Search tags" cmdk-input="" autocomplete="off" autocorrect="off" spellcheck="false"
           aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls=":r4e:" aria-labelledby=":r4f:"
-          id=":r4g:" type="text" value=""></div>
+          id=":r4g:" type="text" value="">
+      </div>
       <div class="w-full flex items-center justify-center gap-2 py-3"><svg xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24" class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;">
           <g fill="none">
@@ -3093,7 +3094,7 @@
                         d="M.833 15.5a.807.807 0 0 1-.594-.24.803.803 0 0 1-.239-.593v-5c0-.236.08-.434.24-.595.16-.16.358-.24.593-.239.236 0 .435.08.595.24.16.16.24.358.239.594v3l10.5-10.5h-3a.807.807 0 0 1-.595-.24.803.803 0 0 1-.239-.594c0-.236.08-.434.24-.594.16-.16.358-.24.594-.239h5c.236 0 .434.08.594.24.16.16.24.358.239.593v5c0 .236-.08.434-.24.595a.803.803 0 0 1-.593.239.807.807 0 0 1-.595-.24.803.803 0 0 1-.239-.594v-3l-10.5 10.5h3c.236 0 .434.08.595.24.16.16.24.358.239.594 0 .236-.08.434-.24.594a.803.803 0 0 1-.594.239h-5Z">
                       </path>
                     </svg></div>
-                  <div class="hover:cursor-cool-clickable disabled:cursor-cool-normal"><svg
+                  <div class="hover:cursor-cool-clickable disabled:cursor-cool-normal" onclick="closeChat()"><svg
                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7"
                       style="max-width: 50vw; max-height: 50vh;">
                       <g fill="none">
@@ -3195,7 +3196,8 @@
                     <div
                       class="flex-shrink-0 bg-primary-500 flex items-center justify-center w-12 h-12 rounded-xl border-[1.5px] border-primary-600 mr-4">
                       <img alt="ListenUp logo" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-                        src="{{ asset("assets/ListenUp-Logo-Sticker.svg") }}" style="color: transparent;"></div>
+                        src="{{ asset("assets/ListenUp-Logo-Sticker.svg") }}" style="color: transparent;">
+                    </div>
                     <div class="flex-grow h-full min-w-0 flex items-center justify-center">
                       <div class="h-fit w-full hover:cursor-cool-clickable disabled:cursor-cool-normal">
                         <div class="flex items-center w-full overflow-hidden" style="max-width: 475.094px;">
@@ -3224,34 +3226,35 @@
                         <img style="    position: absolute;
 top: -20px;
 right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
-                            <style>
-                              .starAnimationBlock {
-                                position: relative;
-                                overflow: visible !important;
-                              }
+                        <style>
+                          .starAnimationBlock {
+                            position: relative;
+                            overflow: visible !important;
+                          }
 
-                              .starAnimationBlock:focus .starAnimation {
-                                animation: star 1s infinite;
-                                transform: rotate(-30deg);
-                              }
+                          .starAnimationBlock:focus .starAnimation {
+                            animation: star 1s infinite;
+                            transform: rotate(-30deg);
+                          }
 
 
-                              @keyframes star {
-                                0% {
-                                  transform: rotate(0deg);
-                                }
+                          @keyframes star {
+                            0% {
+                              transform: rotate(0deg);
+                            }
 
-                                25% {
-                                  transform: rotate(30deg);
-                                }
+                            25% {
+                              transform: rotate(30deg);
+                            }
 
-                                100% {
-                                  transform: rotate(-30deg);
-                                }
+                            100% {
+                              transform: rotate(-30deg);
+                            }
 
-                              }
-                            </style></button></section>
-                        
+                          }
+                        </style>
+                      </button></section>
+
                   </div>
                 </div>
               </section>
@@ -3311,4 +3314,10 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
 
     chatAi.classList.toggle("hidden")
   })
+
+  function closeChat() {
+    var chatAi = document.getElementById("chatAi")
+
+    chatAi.classList.add("hidden")
+  }
 </script>
