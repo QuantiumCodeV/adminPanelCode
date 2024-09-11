@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Friend;
 
 class FriendsController extends Controller
 {
@@ -11,16 +13,21 @@ class FriendsController extends Controller
     public function add(Request $request)
     {
         $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
+            'user_identifier' => 'required|string',
         ]);
 
-        $friend = \DB::table('friends')->insert([
-            'user_id_first' => $data['user_id_first'],
-            'user_id_second' => $data['user_id_second'],
+        $user = User::where('id', $data['user_identifier'])
+            ->orWhere('login', $data['user_identifier'])
+            ->first();
+
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+
+        $friend = Friend::create([
+            'user_id_first' => auth()->id(),
+            'user_id_second' => $user->id,
             'status' => 'pending',
-            'created_at' => now(),
-            'updated_at' => now(),
         ]);
 
         return response()->json(['message' => 'Friend request sent successfully']);
