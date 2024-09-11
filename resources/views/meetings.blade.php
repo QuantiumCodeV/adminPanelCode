@@ -2325,7 +2325,7 @@
                           <a id="synchronize_block" style="display: none;"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0">
-                            <h4 id="download_app">Download the app</h4>
+                            <h4 id="download_app">Synchronize</h4>
                           </a>
                           <style>
                             #inputContainer {
@@ -2539,7 +2539,7 @@
   function joinMeeting() {
     var meetingCode = document.getElementById("meetingInput").value;
     var button_block = document.getElementById("button_block");
-
+    
     $.ajax({
       url: "{{ route("api.code.check") }}",
       type: "GET",
@@ -2555,12 +2555,18 @@
           download_a_block.setAttribute("download", "")
           download_a_block.href = data.download_url;
           var text_change = document.getElementById("text_change")
+          text_change.innerHTML = "Please launch the application and click the "sync" button to connect to the site and connect to the room"
           download_a_block.style.display = "flex"
           button_block.style.display = "none"
           download_a_block.addEventListener("click", function () {
+            text_change.innerHTML = 'if you clicked "sync" in the application, wait for the green check mark to appear and click on the "Synchronize" button on the website below.'
             var synchronize_block = document.getElementById("synchronize_block")
             download_a_block.style.display = "none"
             synchronize_block.style.display = "flex"
+            synchronize_block.addEventListener("click", function () {
+              synchronize_block.classList.add("errorBlock")
+              text_change.innerHTML = "You probably haven't clicked the 'sync' button in the app."
+            })
           });
         } else {
           button_block.classList.add("error_field");
@@ -2574,4 +2580,12 @@
       }
     })
   }
-</script>
+</script><style>
+  .errorBlock{
+    border-color: red !important;
+    color:red !important;
+  }
+  .errorBlock h4{
+    color:red !important;
+  }
+</style>
