@@ -3120,7 +3120,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Name</div>
                                 </div>
                               </div>
                             </th>
@@ -3129,7 +3129,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Online</div>
                                 </div>
                               </div>
                             </th>
@@ -3138,7 +3138,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Mutual Group</div>
                                 </div>
                               </div>
                             </th>
@@ -3147,7 +3147,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Mutual Friends</div>
                                 </div>
                               </div>
                             </th>
@@ -3156,7 +3156,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Pro</div>
                                 </div>
                               </div>
                             </th>
@@ -3165,7 +3165,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)"> Status</div>
                                 </div>
                               </div>
                             </th>
@@ -3174,7 +3174,7 @@
                               style="position: relative">
                               <div>
                                 <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                                  <div class="rounded w-20 h-6 bg-neutral-300" style="background-color: rgba(234, 234, 234, 1)">Interactions</div>
                                 </div>
                               </div>
                             </th>
