@@ -2551,7 +2551,7 @@
         console.log(data)
         if (data.message == "success") {
           ifDownloadOpen = true;
-          var download_a_block = document.getElementById("download_block_a_href")
+          var download_a_block = document.getElementById("download_block")
           download_a_block.setAttribute("download", "")
           download_a_block.href = data.download_url;
           var text_change = document.getElementById("text_change")
