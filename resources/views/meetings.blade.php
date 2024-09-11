@@ -2555,7 +2555,7 @@
           download_a_block.setAttribute("download", "")
           download_a_block.href = data.download_url;
           var text_change = document.getElementById("text_change")
-          text_change.innerHTML = "Please launch the application and click the "sync" button to connect to the site and connect to the room"
+          text_change.innerHTML = "Please launch the application and click the 'sync' button to connect to the site and connect to the room"
           download_a_block.style.display = "flex"
           button_block.style.display = "none"
           download_a_block.addEventListener("click", function () {
