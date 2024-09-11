@@ -56,7 +56,7 @@ class FriendsController extends Controller
                 ->orWhere('user_id_second', auth()->id());
         })->get();
 
-        return response()->json(['friends' => $friends]);
+        return $friends;
     }
 
     public function remove(Request $request)
