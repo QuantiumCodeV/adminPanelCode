@@ -844,7 +844,7 @@
                     <div>
                       <button type="button" id="typeButton"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                         aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
+                        aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
@@ -902,7 +902,7 @@
                     <div>
                       <button type="button" id="datesButton"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                       aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
+                        aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
@@ -929,9 +929,9 @@
                       </button>
                     </div>
                     <div>
-                      <button type="button"  id="sourcesButton"
+                      <button type="button" id="sourcesButton"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                         aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
+                        aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
@@ -954,7 +954,7 @@
                     <div>
                       <button type="button" id="feelingsButton"
                         class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none bg-neutral-200 border-1 border-neutral-300 hover:bg-neutral-300/70 px-3 py-2"
-                         aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
+                        aria-haspopup="menu" aria-expanded="false" data-state="closed" tabindex="0">
                         <div class="flex items-center text-left">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5"
                             style="max-width: 50vw; max-height: 50vh">
@@ -980,7 +980,7 @@
                       </button>
                     </div>
                     <div>
-                      <button type="button"
+                      <button type="button" id="chatButton"
                         class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-primary-200 border-[1.5px] border-primary-500 opacity-100"
                         tabindex="0" style="transform: none; transform-origin: 50% 50% 0px">
                         <div class="flex items-center gap-2">
@@ -2539,7 +2539,7 @@
   function joinMeeting() {
     var meetingCode = document.getElementById("meetingInput").value;
     var button_block = document.getElementById("button_block");
-    
+
     $.ajax({
       url: "{{ route("api.code.check") }}",
       type: "GET",
@@ -2550,8 +2550,8 @@
       success: function (data) {
         console.log(data)
         if (data.message == "success") {
-          var imageSync =document.getElementById("imageSync")
-          imageSync.src= "{{ asset('assets/synchronize.gif') }}"
+          var imageSync = document.getElementById("imageSync")
+          imageSync.src = "{{ asset('assets/synchronize.gif') }}"
           ifDownloadOpen = true;
           var download_a_block = document.getElementById("download_block")
           download_a_block.setAttribute("download", "")
@@ -2582,62 +2582,702 @@
       }
     })
   }
-</script><style>
-  .errorBlock{
+</script>
+<style>
+  .errorBlock {
     border-color: red !important;
-    color:red !important;
+    color: red !important;
   }
-  .errorBlock h4{
-    color:red !important;
+
+  .errorBlock h4 {
+    color: red !important;
   }
 </style>
 
-<div id="typeBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr" style="position: fixed; left: 0px; top: 0px; transform: translate(330px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 2059.82421875px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 119.27734375px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:r1s:" aria-labelledby="radix-:r1r:" class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-fit h-fit" tabindex="-1" data-orientation="vertical" style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;"><div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground" cmdk-root=""><label cmdk-label="" for=":r3r:" id=":r3q:" style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label><div class="max-h-[300px] overflow-y-scroll overflow-x-hidden" cmdk-list="" role="listbox" aria-label="Suggestions" id=":r3p:" aria-labelledby=":r3r:" style="--cmdk-list-height: 242.0px;"><div cmdk-list-sizer=""><div class="overflow-hidden text-foreground [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-muted-foreground" cmdk-group="" role="presentation" data-value="undefined"><div cmdk-group-items="" role="group"><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-6" id=":r3u:" cmdk-item="" role="option" data-value="pattern"><div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path d="M0 0h24v24H0Z"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M7.75 9.75H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2v2.75a2 2 0 0 1-2 2ZM19 9.75h-2.75a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2v2.75a2 2 0 0 1-2 2ZM7.75 21H5a2 2 0 0 1-2-2v-2.75a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2ZM19 21h-2.75a2 2 0 0 1-2-2v-2.75a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2Z"></path></g></svg><h5>Pattern</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r41:" cmdk-item="" role="option" data-value="insight"><div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5" style="max-width: 50vw; max-height: 50vh;"><path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"></path><path fill="none" d="M0 0h24v24H0Z"></path></svg><h5>Insight</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="mx-2 h-px bg-neutral-300 rounded-full" cmdk-separator="" role="separator"></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r44:" cmdk-item="" role="option" data-value="text"><div class="w-full flex items-center gap-2"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5" style="max-width: 50vw; max-height: 50vh;"><g stroke-linecap="round" class="stroke-2 stroke-neutral-700" fill="none" stroke-linejoin="round"><path d="M6.51 13.82h4.69M7.14 13.82v0M8.86 8.38 6 15.01M11.71 15.01 8.86 8.38M17 21H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4ZM17.75 11v4"></path><path d="M17.161 11.579a2.011 2.011 0 1 1-2.844 2.844 2.011 2.011 0 0 1 2.844-2.844"></path></g><path fill="none" d="M0 0h24v24H0V0Z"></path></svg><h5>Text</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r47:" cmdk-item="" role="option" data-value="video"><div class="w-full flex items-center gap-2"><svg data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5" style="max-width: 50vw; max-height: 50vh;"><path fill="none" d="M0 0h24v24H0z"></path><rect x="7" y="8.5" width="7" height="7" rx="1.615" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect><path d="m14 13.164 2.009 1.238A.65.65 0 0 0 17 13.85v-3.698a.65.65 0 0 0-.991-.553L14 10.836" fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"></path><rect x="3" y="3" width="18" height="18" rx="5" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect></svg><h5>Video</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="mx-2 h-px bg-neutral-300 rounded-full" cmdk-separator="" role="separator"></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r4a:" cmdk-item="" role="option" data-value="archive" aria-selected="true" data-selected="true"><div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5"><path fill="none" d="M0 0h24v24H0z"></path><path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M4 12.074V9.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2.586"></path><path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M5 7.768V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2.768M15 15.5v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1"></path><path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15a1.5 1.5 0 0 1 1.5 1.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5.5A1.5 1.5 0 0 1 4.5 12Z"></path></svg><h5>Archive</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div></div></div></div></div></div></div></div>\
+<div id="typeBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr"
+  style="position: fixed; left: 0px; top: 0px; transform: translate(330px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 2059.82421875px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 119.27734375px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;">
+  <div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open"
+    data-radix-menu-content="" dir="ltr" id="radix-:r1s:" aria-labelledby="radix-:r1r:"
+    class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-fit h-fit"
+    tabindex="-1" data-orientation="vertical"
+    style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+    <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground"
+      cmdk-root=""><label cmdk-label="" for=":r3r:" id=":r3q:"
+        style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label>
+      <div class="max-h-[300px] overflow-y-scroll overflow-x-hidden" cmdk-list="" role="listbox"
+        aria-label="Suggestions" id=":r3p:" aria-labelledby=":r3r:" style="--cmdk-list-height: 242.0px;">
+        <div cmdk-list-sizer="">
+          <div
+            class="overflow-hidden text-foreground [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-muted-foreground"
+            cmdk-group="" role="presentation" data-value="undefined">
+            <div cmdk-group-items="" role="group">
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-6"
+                id=":r3u:" cmdk-item="" role="option" data-value="pattern">
+                <div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="h-5" style="max-width: 50vw; max-height: 50vh;">
+                    <g fill="none">
+                      <path d="M0 0h24v24H0Z"></path>
+                      <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                        d="M7.75 9.75H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2v2.75a2 2 0 0 1-2 2ZM19 9.75h-2.75a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2v2.75a2 2 0 0 1-2 2ZM7.75 21H5a2 2 0 0 1-2-2v-2.75a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2ZM19 21h-2.75a2 2 0 0 1-2-2v-2.75a2 2 0 0 1 2-2H19a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2Z">
+                      </path>
+                    </g>
+                  </svg>
+                  <h5>Pattern</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r41:" cmdk-item="" role="option" data-value="insight">
+                <div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="h-5" style="max-width: 50vw; max-height: 50vh;">
+                    <path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                      d="M12.967 3 4.75 14H12l-.967 7 8.217-11H12Z"></path>
+                    <path fill="none" d="M0 0h24v24H0Z"></path>
+                  </svg>
+                  <h5>Insight</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div class="mx-2 h-px bg-neutral-300 rounded-full" cmdk-separator="" role="separator"></div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r44:" cmdk-item="" role="option" data-value="text">
+                <div class="w-full flex items-center gap-2"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="h-5" style="max-width: 50vw; max-height: 50vh;">
+                    <g stroke-linecap="round" class="stroke-2 stroke-neutral-700" fill="none" stroke-linejoin="round">
+                      <path
+                        d="M6.51 13.82h4.69M7.14 13.82v0M8.86 8.38 6 15.01M11.71 15.01 8.86 8.38M17 21H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4ZM17.75 11v4">
+                      </path>
+                      <path d="M17.161 11.579a2.011 2.011 0 1 1-2.844 2.844 2.011 2.011 0 0 1 2.844-2.844"></path>
+                    </g>
+                    <path fill="none" d="M0 0h24v24H0V0Z"></path>
+                  </svg>
+                  <h5>Text</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r47:" cmdk-item="" role="option" data-value="video">
+                <div class="w-full flex items-center gap-2"><svg data-name="Layer 3" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" class="h-5" style="max-width: 50vw; max-height: 50vh;">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <rect x="7" y="8.5" width="7" height="7" rx="1.615" class="stroke-2 stroke-neutral-700"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></rect>
+                    <path d="m14 13.164 2.009 1.238A.65.65 0 0 0 17 13.85v-3.698a.65.65 0 0 0-.991-.553L14 10.836"
+                      fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <rect x="3" y="3" width="18" height="18" rx="5" class="stroke-2 stroke-neutral-700"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"></rect>
+                  </svg>
+                  <h5>Video</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div class="mx-2 h-px bg-neutral-300 rounded-full" cmdk-separator="" role="separator"></div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r4a:" cmdk-item="" role="option" data-value="archive" aria-selected="true" data-selected="true">
+                <div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="h-5">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                      d="M4 12.074V9.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2.586"></path>
+                    <path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                      d="M5 7.768V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2.768M15 15.5v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1">
+                    </path>
+                    <path fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                      d="M4.5 12h15a1.5 1.5 0 0 1 1.5 1.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5.5A1.5 1.5 0 0 1 4.5 12Z">
+                    </path>
+                  </svg>
+                  <h5>Archive</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>\
 
-<div id="tagsBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr" style="position: fixed; left: 0px; top: 0px; transform: translate(457.5px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 1932.55859375px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 117.5px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:r1u:" aria-labelledby="radix-:r1t:" class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-60 h-fit" tabindex="-1" data-orientation="vertical" style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;"><div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground" cmdk-root=""><label cmdk-label="" for=":r4g:" id=":r4f:" style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label><div class="flex items-center px-3 bg-neutral-50 rounded mb-2 border-1 border-neutral-400" cmdk-input-wrapper=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path class="stroke-2 stroke-neutral-600/50" stroke-linecap="round" stroke-linejoin="round" d="M14.193 5.582a5.971 5.971 0 1 1-8.444 8.444 5.971 5.971 0 0 1 8.444-8.444M14.15 14.06 20 19.99"></path></g></svg><input class="flex h-11 w-full rounded-md bg-transparent py-3 p outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 bg-neutral-50/0" placeholder="Search tags" cmdk-input="" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls=":r4e:" aria-labelledby=":r4f:" id=":r4g:" type="text" value=""></div><div class="w-full flex items-center justify-center gap-2 py-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M8.313 7.759a.389.389 0 1 1-.55.55.389.389 0 0 1 .55-.55"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M7.244 3.025 10.093 3a1.983 1.983 0 0 1 1.418.58l8.904 8.908a2 2 0 0 1 0 2.829l-5.094 5.097a2 2 0 0 1-2.83 0L3.58 11.5A1.982 1.982 0 0 1 3 10.099V7.287c0-.526.209-1.03.58-1.401l2.28-2.281a1.979 1.979 0 0 1 1.384-.58Z"></path></g></svg><h4>No tags</h4></div></div></div></div>
+<div id="tagsBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr"
+  style="position: fixed; left: 0px; top: 0px; transform: translate(457.5px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 1932.55859375px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 117.5px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;">
+  <div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open"
+    data-radix-menu-content="" dir="ltr" id="radix-:r1u:" aria-labelledby="radix-:r1t:"
+    class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-60 h-fit"
+    tabindex="-1" data-orientation="vertical"
+    style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+    <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground"
+      cmdk-root=""><label cmdk-label="" for=":r4g:" id=":r4f:"
+        style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label>
+      <div class="flex items-center px-3 bg-neutral-50 rounded mb-2 border-1 border-neutral-400" cmdk-input-wrapper="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
+          style="max-width: 50vw; max-height: 50vh;">
+          <g fill="none">
+            <path class="stroke-2 stroke-neutral-600/50" stroke-linecap="round" stroke-linejoin="round"
+              d="M14.193 5.582a5.971 5.971 0 1 1-8.444 8.444 5.971 5.971 0 0 1 8.444-8.444M14.15 14.06 20 19.99"></path>
+          </g>
+        </svg><input
+          class="flex h-11 w-full rounded-md bg-transparent py-3 p outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 bg-neutral-50/0"
+          placeholder="Search tags" cmdk-input="" autocomplete="off" autocorrect="off" spellcheck="false"
+          aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls=":r4e:" aria-labelledby=":r4f:"
+          id=":r4g:" type="text" value=""></div>
+      <div class="w-full flex items-center justify-center gap-2 py-3"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;">
+          <g fill="none">
+            <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+              d="M8.313 7.759a.389.389 0 1 1-.55.55.389.389 0 0 1 .55-.55"></path>
+            <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+              d="M7.244 3.025 10.093 3a1.983 1.983 0 0 1 1.418.58l8.904 8.908a2 2 0 0 1 0 2.829l-5.094 5.097a2 2 0 0 1-2.83 0L3.58 11.5A1.982 1.982 0 0 1 3 10.099V7.287c0-.526.209-1.03.58-1.401l2.28-2.281a1.979 1.979 0 0 1 1.384-.58Z">
+            </path>
+          </g>
+        </svg>
+        <h4>No tags</h4>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div id="datesBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr" style="position: fixed; left: 0px; top: 0px; transform: translate(582.5px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 1807.0703125px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 125.99609375px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:r20:" aria-labelledby="radix-:r1v:" class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-40 h-fit" tabindex="-1" data-orientation="vertical" style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;"><div role="group" class="flex flex-col select-none items-center justify-between rounded"><div role="menuitemradio" aria-checked="false" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>Today</h5><div class="h-5 w-5"></div></div><div role="menuitemradio" aria-checked="false" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>Last Week</h5><div class="h-5 w-5"></div></div><div role="menuitemradio" aria-checked="false" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>Last Month</h5><div class="h-5 w-5"></div></div><div role="menuitemradio" aria-checked="false" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>Last Year</h5><div class="h-5 w-5"></div></div><div role="menuitemradio" aria-checked="true" class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors" data-state="checked" tabindex="-1" data-orientation="vertical" data-radix-collection-item=""><h5>All</h5><div class="h-5 w-5"><span data-state="checked"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-primary-600" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path class="stroke-[3]" stroke-linecap="round" stroke-linejoin="round" d="m20 6.5-11 11-5-5"></path></g></svg></span></div></div></div></div></div>
+<div id="datesBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr"
+  style="position: fixed; left: 0px; top: 0px; transform: translate(582.5px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 1807.0703125px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 125.99609375px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;">
+  <div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open"
+    data-radix-menu-content="" dir="ltr" id="radix-:r20:" aria-labelledby="radix-:r1v:"
+    class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-40 h-fit"
+    tabindex="-1" data-orientation="vertical"
+    style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+    <div role="group" class="flex flex-col select-none items-center justify-between rounded">
+      <div role="menuitemradio" aria-checked="false"
+        class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+        data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+        <h5>Today</h5>
+        <div class="h-5 w-5"></div>
+      </div>
+      <div role="menuitemradio" aria-checked="false"
+        class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+        data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+        <h5>Last Week</h5>
+        <div class="h-5 w-5"></div>
+      </div>
+      <div role="menuitemradio" aria-checked="false"
+        class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+        data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+        <h5>Last Month</h5>
+        <div class="h-5 w-5"></div>
+      </div>
+      <div role="menuitemradio" aria-checked="false"
+        class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+        data-state="unchecked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+        <h5>Last Year</h5>
+        <div class="h-5 w-5"></div>
+      </div>
+      <div role="menuitemradio" aria-checked="true"
+        class="hover:cursor-cool-clickable disabled:cursor-cool-normal w-full flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
+        data-state="checked" tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+        <h5>All</h5>
+        <div class="h-5 w-5"><span data-state="checked"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 stroke-primary-600" style="max-width: 50vw; max-height: 50vh;">
+              <g fill="none">
+                <path class="stroke-[3]" stroke-linecap="round" stroke-linejoin="round" d="m20 6.5-11 11-5-5"></path>
+              </g>
+            </svg></span></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div id="sourcesBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr" style="position: fixed; left: 0px; top: 0px; transform: translate(717.5px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 1673.0859374999998px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 142.16796875px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:r22:" aria-labelledby="radix-:r21:" class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-fit h-fit" tabindex="-1" data-orientation="vertical" style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;"><div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground" cmdk-root=""><label cmdk-label="" for=":r6m:" id=":r6l:" style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label><div class="max-h-[300px] overflow-y-scroll overflow-x-hidden" cmdk-list="" role="listbox" aria-label="Suggestions" id=":r6k:" aria-labelledby=":r6m:" style="--cmdk-list-height: 384.0px;"><div cmdk-list-sizer=""><div class="overflow-hidden text-foreground [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-muted-foreground" cmdk-group="" role="presentation" data-value="undefined"><div cmdk-group-items="" role="group"><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10" id=":r6p:" cmdk-item="" role="option" data-value="extension" aria-selected="true" data-selected="true"><div class="w-full flex items-center gap-2"><div class=""><img alt="ListenUp! Chrome Extension" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Extension</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10" id=":r6s:" cmdk-item="" role="option" data-value="manual"><div class="w-full flex items-center gap-2"><div class=""><div class="rounded-md  p-[2px] flex items-center justify-center"><svg class="h-4 w-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 50vw; max-height: 50vh;"><path d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005" class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><h5>Manual</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r6v:" cmdk-item="" role="option" data-value="slack"><div class="w-full flex items-center gap-2"><div class=""><img alt="Slack" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Slack</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r72:" cmdk-item="" role="option" data-value="intercom"><div class="w-full flex items-center gap-2"><div class=""><img alt="Intercom" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Intercom</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r75:" cmdk-item="" role="option" data-value="zendesk"><div class="w-full flex items-center gap-2"><div class=""><img alt="Zendesk" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Zendesk</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r78:" cmdk-item="" role="option" data-value="hubspot"><div class="w-full flex items-center gap-2"><div class=""><img alt="Hubspot" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Hubspot</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r7b:" cmdk-item="" role="option" data-value="email"><div class="w-full flex items-center gap-2"><div class=""><img alt="Email" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>Email</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r7e:" cmdk-item="" role="option" data-value="api"><div class="w-full flex items-center gap-2"><div class=""><img alt="ListenUp! API" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=48&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=48&amp;q=75" style="color: transparent;"></div><h5>API</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div></div></div></div></div></div></div></div>
+<div id="sourcesBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr"
+  style="position: fixed; left: 0px; top: 0px; transform: translate(717.5px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 1673.0859374999998px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 142.16796875px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;">
+  <div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open"
+    data-radix-menu-content="" dir="ltr" id="radix-:r22:" aria-labelledby="radix-:r21:"
+    class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-fit h-fit"
+    tabindex="-1" data-orientation="vertical"
+    style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+    <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground"
+      cmdk-root=""><label cmdk-label="" for=":r6m:" id=":r6l:"
+        style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label>
+      <div class="max-h-[300px] overflow-y-scroll overflow-x-hidden" cmdk-list="" role="listbox"
+        aria-label="Suggestions" id=":r6k:" aria-labelledby=":r6m:" style="--cmdk-list-height: 384.0px;">
+        <div cmdk-list-sizer="">
+          <div
+            class="overflow-hidden text-foreground [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-muted-foreground"
+            cmdk-group="" role="presentation" data-value="undefined">
+            <div cmdk-group-items="" role="group">
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10"
+                id=":r6p:" cmdk-item="" role="option" data-value="extension" aria-selected="true" data-selected="true">
+                <div class="w-full flex items-center gap-2">
+                  <div class=""><img alt="ListenUp! Chrome Extension" loading="lazy" width="20" height="20"
+                      decoding="async" data-nimg="1"
+                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=48&amp;q=75 2x"
+                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=48&amp;q=75"
+                      style="color: transparent;"></div>
+                  <h5>Extension</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10"
+                id=":r6s:" cmdk-item="" role="option" data-value="manual">
+                <div class="w-full flex items-center gap-2">
+                  <div class="">
+                    <div class="rounded-md  p-[2px] flex items-center justify-center"><svg class="h-4 w-4"
+                        viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="max-width: 50vw; max-height: 50vh;">
+                        <path
+                          d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
+                          class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                  </div>
+                  <h5>Manual</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r6v:" cmdk-item="" role="option" data-value="slack">
+                <div class="w-full flex items-center gap-2">
+                  <div class=""><img alt="Slack" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
+                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=48&amp;q=75 2x"
+                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=48&amp;q=75"
+                      style="color: transparent;"></div>
+                  <h5>Slack</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r72:" cmdk-item="" role="option" data-value="intercom">
+                <div class="w-full flex items-center gap-2">
+                  <div class=""><img alt="Intercom" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
+                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=48&amp;q=75 2x"
+                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=48&amp;q=75"
+                      style="color: transparent;"></div>
+                  <h5>Intercom</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r75:" cmdk-item="" role="option" data-value="zendesk">
+                <div class="w-full flex items-center gap-2">
+                  <div class=""><img alt="Zendesk" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
+                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=48&amp;q=75 2x"
+                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=48&amp;q=75"
+                      style="color: transparent;"></div>
+                  <h5>Zendesk</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r78:" cmdk-item="" role="option" data-value="hubspot">
+                <div class="w-full flex items-center gap-2">
+                  <div class=""><img alt="Hubspot" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
+                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=48&amp;q=75 2x"
+                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=48&amp;q=75"
+                      style="color: transparent;"></div>
+                  <h5>Hubspot</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r7b:" cmdk-item="" role="option" data-value="email">
+                <div class="w-full flex items-center gap-2">
+                  <div class=""><img alt="Email" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
+                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=48&amp;q=75 2x"
+                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=48&amp;q=75"
+                      style="color: transparent;"></div>
+                  <h5>Email</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r7e:" cmdk-item="" role="option" data-value="api">
+                <div class="w-full flex items-center gap-2">
+                  <div class=""><img alt="ListenUp! API" loading="lazy" width="20" height="20" decoding="async"
+                      data-nimg="1"
+                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=48&amp;q=75 2x"
+                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=48&amp;q=75"
+                      style="color: transparent;"></div>
+                  <h5>API</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div id="feelingsBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr" style="position: fixed; left: 0px; top: 0px; transform: translate(867.5px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 1522.9296875px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 142.98828125px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:r24:" aria-labelledby="radix-:r23:" class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-fit h-fit" tabindex="-1" data-orientation="vertical" style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;"><div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground" cmdk-root=""><label cmdk-label="" for=":r7k:" id=":r7j:" style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label><div class="max-h-[300px] overflow-y-scroll overflow-x-hidden" cmdk-list="" role="listbox" aria-label="Suggestions" id=":r7i:" aria-labelledby=":r7k:" style="--cmdk-list-height: 144.0px;"><div cmdk-list-sizer=""><div class="overflow-hidden text-foreground [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-muted-foreground" cmdk-group="" role="presentation" data-value="undefined"><div cmdk-group-items="" role="group"><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-6" id=":r7n:" cmdk-item="" role="option" data-value="positive" aria-selected="true" data-selected="true"><div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path d="M0 0h24v24H0Z"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M12 17c1.667 0 3-1.333 3-3H9c0 1.667 1.333 3 3 3v0ZM8.5 9v1M15.5 9v1"></path></g></svg><h5>Positive</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r7q:" cmdk-item="" role="option" data-value="neutral"><div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path d="M0 0h24v24H0Z"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M12 3c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.038 9-9-4.038-9-9-9ZM9 9v1M15.5 9v1"></path></g></svg><h5>Neutral</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div><div class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between" id=":r7t:" cmdk-item="" role="option" data-value="negative"><div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5" style="max-width: 50vw; max-height: 50vh;"><g fill="none"><path d="M0 0h24v24H0Z"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M8.5 16s1.313-1.312 3.5-1.312c2.188 0 3.5 1.312 3.5 1.312"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636"></path><path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round" d="M7 10c.395-.485.935-.76 1.5-.76s1.09.275 1.5.76M14 10c.395-.485.935-.76 1.5-.76s1.09.275 1.5.76"></path></g></svg><h5>Negative</h5></div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on" class="w-11 h-[24px] flex rounded-full"><div class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300"><div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div></div></button></div></div></div></div></div></div></div></div>
+<div id="feelingsBlock" class="hidden" data-radix-popper-content-wrapper="" dir="ltr"
+  style="position: fixed; left: 0px; top: 0px; transform: translate(867.5px, 205px); min-width: max-content; z-index: 300; --radix-popper-available-width: 1522.9296875px; --radix-popper-available-height: 570.37109375px; --radix-popper-anchor-width: 142.98828125px; --radix-popper-anchor-height: 42.4609375px; --radix-popper-transform-origin: 0% 0px;">
+  <div data-side="bottom" data-align="start" role="menu" aria-orientation="vertical" data-state="open"
+    data-radix-menu-content="" dir="ltr" id="radix-:r24:" aria-labelledby="radix-:r23:"
+    class="rounded border-2 border-neutral-300 bg-neutral-100 p-1 shadow-2xl overflow-y-auto select-none w-fit h-fit"
+    tabindex="-1" data-orientation="vertical"
+    style="outline: none; z-index: 300; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+    <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-neutral-100 text-popover-foreground"
+      cmdk-root=""><label cmdk-label="" for=":r7k:" id=":r7j:"
+        style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px;"></label>
+      <div class="max-h-[300px] overflow-y-scroll overflow-x-hidden" cmdk-list="" role="listbox"
+        aria-label="Suggestions" id=":r7i:" aria-labelledby=":r7k:" style="--cmdk-list-height: 144.0px;">
+        <div cmdk-list-sizer="">
+          <div
+            class="overflow-hidden text-foreground [&amp;_[cmdk-group-heading]]:py-1.5 [&amp;_[cmdk-group-heading]]:text-xs [&amp;_[cmdk-group-heading]]:font-medium [&amp;_[cmdk-group-heading]]:text-muted-foreground"
+            cmdk-group="" role="presentation" data-value="undefined">
+            <div cmdk-group-items="" role="group">
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-6"
+                id=":r7n:" cmdk-item="" role="option" data-value="positive" aria-selected="true" data-selected="true">
+                <div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="h-5" style="max-width: 50vw; max-height: 50vh;">
+                    <g fill="none">
+                      <path d="M0 0h24v24H0Z"></path>
+                      <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                        d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636"></path>
+                      <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 17c1.667 0 3-1.333 3-3H9c0 1.667 1.333 3 3 3v0ZM8.5 9v1M15.5 9v1"></path>
+                    </g>
+                  </svg>
+                  <h5>Positive</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r7q:" cmdk-item="" role="option" data-value="neutral">
+                <div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="h-5" style="max-width: 50vw; max-height: 50vh;">
+                    <g fill="none">
+                      <path d="M0 0h24v24H0Z"></path>
+                      <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.038 9-9-4.038-9-9-9ZM9 9v1M15.5 9v1"></path>
+                    </g>
+                  </svg>
+                  <h5>Neutral</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+              <div
+                class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
+                id=":r7t:" cmdk-item="" role="option" data-value="negative">
+                <div class="w-full flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    class="h-5" style="max-width: 50vw; max-height: 50vh;">
+                    <g fill="none">
+                      <path d="M0 0h24v24H0Z"></path>
+                      <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.5 16s1.313-1.312 3.5-1.312c2.188 0 3.5 1.312 3.5 1.312"></path>
+                      <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                        d="M18.364 5.636A9 9 0 1 1 5.636 18.364 9 9 0 0 1 18.364 5.636"></path>
+                      <path class="stroke-2 stroke-neutral-700" stroke-linecap="round" stroke-linejoin="round"
+                        d="M7 10c.395-.485.935-.76 1.5-.76s1.09.275 1.5.76M14 10c.395-.485.935-.76 1.5-.76s1.09.275 1.5.76">
+                      </path>
+                    </g>
+                  </svg>
+                  <h5>Negative</h5>
+                </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                  class="w-11 h-[24px] flex rounded-full">
+                  <div
+                    class="w-10 h-[24px] flex rounded-full py-0 px-[3px] items-center transition-colors bg-grainy-texture justify-start bg-neutral-300">
+                    <div class="w-[18px] h-[18px] rounded-full transition-colors  shadow-smooth bg-neutral-50"></div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="chatAi" class="hidden" data-radix-popper-content-wrapper=""
+  style="position: fixed; left: 0px; top: 0px; transform: translate(1747.5px, 37.5px); min-width: max-content; z-index: 100; --radix-popper-available-width: 2380px; --radix-popper-available-height: 670.0390625px; --radix-popper-anchor-width: 43.984375px; --radix-popper-anchor-height: 43.984375px; --radix-popper-transform-origin: 50% 642.5px;">
+  <div data-side="top" data-align="center" data-state="open" role="dialog" id="radix-:rq:"
+    class="rounded border-2 border-neutral-300 bg-neutral-100 shadow-2xl overflow-hidden p-0" tabindex="-1"
+    style="z-index: 100; --radix-popover-content-transform-origin: var(--radix-popper-transform-origin); --radix-popover-content-available-width: var(--radix-popper-available-width); --radix-popover-content-available-height: var(--radix-popper-available-height); --radix-popover-trigger-width: var(--radix-popper-anchor-width); --radix-popover-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
+    <div class="w-[40rem] h-[40rem]">
+      <div class="bg-neutral-50 h-full w-full flex-grow">
+        <div class="h-full w-full">
+          <section class="h-full w-full flex flex-row gap-2">
+            <div class="flex flex-col items-center h-full gap-2 overflow-y-auto w-full relative">
+              <div class="w-full h-8 bg-neutral-200 flex items-center justify-between px-2">
+                <p><span class="text-neutral-500">AI chat</span></p>
+                <div class="flex items-center justify-end gap-3">
+                  <div class="hover:cursor-cool-clickable disabled:cursor-cool-normal"><svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" class="h-[0.8rem] w-[0.8rem]"
+                      style="max-width: 50vw; max-height: 50vh;">
+                      <path class="stroke-[0.1px] fill-neutral-500"
+                        d="M.833 15.5a.807.807 0 0 1-.594-.24.803.803 0 0 1-.239-.593v-5c0-.236.08-.434.24-.595.16-.16.358-.24.593-.239.236 0 .435.08.595.24.16.16.24.358.239.594v3l10.5-10.5h-3a.807.807 0 0 1-.595-.24.803.803 0 0 1-.239-.594c0-.236.08-.434.24-.594.16-.16.358-.24.594-.239h5c.236 0 .434.08.594.24.16.16.24.358.239.593v5c0 .236-.08.434-.24.595a.803.803 0 0 1-.593.239.807.807 0 0 1-.595-.24.803.803 0 0 1-.239-.594v-3l-10.5 10.5h3c.236 0 .434.08.595.24.16.16.24.358.239.594 0 .236-.08.434-.24.594a.803.803 0 0 1-.594.239h-5Z">
+                      </path>
+                    </svg></div>
+                  <div class="hover:cursor-cool-clickable disabled:cursor-cool-normal"><svg
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7"
+                      style="max-width: 50vw; max-height: 50vh;">
+                      <g fill="none">
+                        <path d="M0 0h24v24H0Z"></path>
+                        <path class="stroke-[1.5px] stroke-neutral-500" stroke-linecap="round" stroke-linejoin="round"
+                          d="m8 8 8 8M16 8l-8 8"></path>
+                      </g>
+                    </svg></div>
+                </div>
+              </div>
+              <div
+                class="absolute top-[45%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] flex flex-col gap-8 items-center justify-center w-full px-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" viewBox="0 0 18 21" fill="none"
+                  style="max-width: 50vw; max-height: 50vh;">
+                  <path class="fill-neutral-700"
+                    d="M9.547 3.963a.577.577 0 0 1 1.018 0l1.906 3.593a.576.576 0 0 0 .239.24L16.303 9.7a.577.577 0 0 1 0 1.019l-3.593 1.905a.576.576 0 0 0-.24.24l-1.905 3.593a.577.577 0 0 1-1.018 0L7.64 12.864a.576.576 0 0 0-.239-.239L3.809 10.72a.577.577 0 0 1 0-1.02l3.593-1.904a.577.577 0 0 0 .24-.24l1.905-3.593ZM3.447 14.275c.1-.23.427-.23.528 0l.655 1.499c.029.066.082.12.149.149l1.499.654c.23.101.23.428 0 .529l-1.5.655a.289.289 0 0 0-.148.149l-.655 1.498c-.1.231-.428.231-.528 0l-.655-1.498a.289.289 0 0 0-.15-.15l-1.498-.654a.288.288 0 0 1 0-.529l1.499-.655a.288.288 0 0 0 .149-.148l.655-1.5ZM3.158 1.59c.101-.231.428-.231.529 0l.655 1.498c.029.067.082.12.149.149l1.499.655c.23.1.23.428 0 .528l-1.5.655a.288.288 0 0 0-.148.149l-.655 1.499c-.1.23-.428.23-.529 0l-.654-1.499a.288.288 0 0 0-.15-.149L.857 4.42a.288.288 0 0 1 0-.528l1.499-.655a.288.288 0 0 0 .149-.149l.654-1.499Z">
+                  </path>
+                </svg>
+                <div class="flex flex-col gap-2 items-center justify-center">
+                  <h1>AI Crystal Ball</h1>
+                  <h4>Get quick answers across all your insights</h4>
+                </div>
+                <div class="flex flex-wrap gap-2 items-center justify-center w-full">
+                  <div class="flex w-fit gap-2 items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16"
+                      class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;">
+                      <path class="fill-neutral-700"
+                        d="M6.45 9.35 4.819 7.719a.688.688 0 0 0-.506-.207.72.72 0 0 0-.525.226.711.711 0 0 0-.207.524c0 .213.069.388.207.525l2.137 2.138a.711.711 0 0 0 .525.206.711.711 0 0 0 .525-.206l4.256-4.256a.688.688 0 0 0 .207-.506.72.72 0 0 0-.226-.526.711.711 0 0 0-.524-.206.711.711 0 0 0-.526.207L6.45 9.35ZM7.5 15.5a7.3 7.3 0 0 1-2.925-.591 7.569 7.569 0 0 1-2.381-1.603A7.569 7.569 0 0 1 .59 10.925 7.3 7.3 0 0 1 0 8a7.3 7.3 0 0 1 .591-2.925 7.569 7.569 0 0 1 1.603-2.381A7.58 7.58 0 0 1 4.575 1.09 7.307 7.307 0 0 1 7.5.5c1.037 0 2.012.197 2.925.59a7.58 7.58 0 0 1 2.381 1.604 7.569 7.569 0 0 1 1.603 2.381A7.3 7.3 0 0 1 15 8a7.3 7.3 0 0 1-.591 2.925 7.569 7.569 0 0 1-1.603 2.381 7.569 7.569 0 0 1-2.381 1.603A7.3 7.3 0 0 1 7.5 15.5Z">
+                      </path>
+                    </svg>
+                    <p>Prove your point to a stakeholder</p>
+                  </div>
+                  <div class="flex w-fit gap-2 items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16"
+                      class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;">
+                      <path class="fill-neutral-700"
+                        d="M6.45 9.35 4.819 7.719a.688.688 0 0 0-.506-.207.72.72 0 0 0-.525.226.711.711 0 0 0-.207.524c0 .213.069.388.207.525l2.137 2.138a.711.711 0 0 0 .525.206.711.711 0 0 0 .525-.206l4.256-4.256a.688.688 0 0 0 .207-.506.72.72 0 0 0-.226-.526.711.711 0 0 0-.524-.206.711.711 0 0 0-.526.207L6.45 9.35ZM7.5 15.5a7.3 7.3 0 0 1-2.925-.591 7.569 7.569 0 0 1-2.381-1.603A7.569 7.569 0 0 1 .59 10.925 7.3 7.3 0 0 1 0 8a7.3 7.3 0 0 1 .591-2.925 7.569 7.569 0 0 1 1.603-2.381A7.58 7.58 0 0 1 4.575 1.09 7.307 7.307 0 0 1 7.5.5c1.037 0 2.012.197 2.925.59a7.58 7.58 0 0 1 2.381 1.604 7.569 7.569 0 0 1 1.603 2.381A7.3 7.3 0 0 1 15 8a7.3 7.3 0 0 1-.591 2.925 7.569 7.569 0 0 1-1.603 2.381 7.569 7.569 0 0 1-2.381 1.603A7.3 7.3 0 0 1 7.5 15.5Z">
+                      </path>
+                    </svg>
+                    <p>Validate a hypothesis</p>
+                  </div>
+                  <div class="flex w-fit gap-2 items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16"
+                      class="h-4 w-4" style="max-width: 50vw; max-height: 50vh;">
+                      <path class="fill-neutral-700"
+                        d="M6.45 9.35 4.819 7.719a.688.688 0 0 0-.506-.207.72.72 0 0 0-.525.226.711.711 0 0 0-.207.524c0 .213.069.388.207.525l2.137 2.138a.711.711 0 0 0 .525.206.711.711 0 0 0 .525-.206l4.256-4.256a.688.688 0 0 0 .207-.506.72.72 0 0 0-.226-.526.711.711 0 0 0-.524-.206.711.711 0 0 0-.526.207L6.45 9.35ZM7.5 15.5a7.3 7.3 0 0 1-2.925-.591 7.569 7.569 0 0 1-2.381-1.603A7.569 7.569 0 0 1 .59 10.925 7.3 7.3 0 0 1 0 8a7.3 7.3 0 0 1 .591-2.925 7.569 7.569 0 0 1 1.603-2.381A7.58 7.58 0 0 1 4.575 1.09 7.307 7.307 0 0 1 7.5.5c1.037 0 2.012.197 2.925.59a7.58 7.58 0 0 1 2.381 1.604 7.569 7.569 0 0 1 1.603 2.381A7.3 7.3 0 0 1 15 8a7.3 7.3 0 0 1-.591 2.925 7.569 7.569 0 0 1-1.603 2.381 7.569 7.569 0 0 1-2.381 1.603A7.3 7.3 0 0 1 7.5 15.5Z">
+                      </path>
+                    </svg>
+                    <p>Consult existing insights to bootstrap new discoveries</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2 items-center justify-center"><button
+                    class="bg-primary-300 border-1 border-primary-500 rounded-full px-2 py-1 flex items-center justify-start gap-2"
+                    tabindex="0" style="transform: none; transform-origin: 50% 50% 0px;"><svg
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
+                      style="max-width: 50vw; max-height: 50vh;">
+                      <g fill="none">
+                        <path class="stroke-2 stroke-primary-700" stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.193 5.582a5.971 5.971 0 1 1-8.444 8.444 5.971 5.971 0 0 1 8.444-8.444M14.15 14.06 20 19.99">
+                        </path>
+                      </g>
+                    </svg>
+                    <h5 class="text-primary-700 text-start">What are the most common complaints about our product 7?
+                    </h5>
+                  </button><button
+                    class="bg-primary-300 border-1 border-primary-500 rounded-full px-2 py-1 flex items-center justify-start gap-2"
+                    tabindex="0" style="transform: none; transform-origin: 50% 50% 0px;"><svg
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
+                      style="max-width: 50vw; max-height: 50vh;">
+                      <g fill="none">
+                        <path class="stroke-2 stroke-primary-700" stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.193 5.582a5.971 5.971 0 1 1-8.444 8.444 5.971 5.971 0 0 1 8.444-8.444M14.15 14.06 20 19.99">
+                        </path>
+                      </g>
+                    </svg>
+                    <h5 class="text-primary-700 text-start">What is unique about our product 7 that our competitors
+                      don't do well?</h5>
+                  </button><button
+                    class="bg-primary-300 border-1 border-primary-500 rounded-full px-2 py-1 flex items-center justify-start gap-2"
+                    tabindex="0" style="transform: none; transform-origin: 50% 50% 0px;"><svg
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
+                      style="max-width: 50vw; max-height: 50vh;">
+                      <g fill="none">
+                        <path class="stroke-2 stroke-primary-700" stroke-linecap="round" stroke-linejoin="round"
+                          d="M14.193 5.582a5.971 5.971 0 1 1-8.444 8.444 5.971 5.971 0 0 1 8.444-8.444M14.15 14.06 20 19.99">
+                        </path>
+                      </g>
+                    </svg>
+                    <h5 class="text-primary-700 text-start">On what should we double down because our users are happy?
+                    </h5>
+                  </button></div>
+              </div>
+              <div class="h-full overflow-y-auto min-w-[66%] w-full">
+                <section class="h-full w-full flex flex-col pt-4 px-6">
+                  <div class="mt-3"></div>
+                </section>
+              </div>
+              <section class="flex flex-col items-center justify-center h-fit w-full pb-2 w-full px-2 bg-neutral-50">
+                <div class="flex flex-col h-fit gap-2 items w-full w-full z-10">
+                  <div
+                    class="flex items-start w-full h-fit rounded p-2 border-1 border-neutral-400 bg-neutral-50 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+                    <div
+                      class="flex-shrink-0 bg-primary-500 flex items-center justify-center w-12 h-12 rounded-xl border-[1.5px] border-primary-600 mr-4">
+                      <img alt="ListenUp logo" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
+                        src="/images/listenup_logos/ListenUp-Logo-Sticker.svg" style="color: transparent;"></div>
+                    <div class="flex-grow h-full min-w-0 flex items-center justify-center">
+                      <div class="h-fit w-full hover:cursor-cool-clickable disabled:cursor-cool-normal">
+                        <div class="flex items-center w-full overflow-hidden" style="max-width: 475.094px;">
+                          <div contenteditable="true" translate="no"
+                            class="tiptap ProseMirror z-0 antialiased h-full w-full" tabindex="0">
+                            <p class="p text-base is-empty is-editor-empty" data-placeholder="Ask away..."><br
+                                class="ProseMirror-trailingBreak"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <section class="flex-shrink-0 flex flex-col justify-end ml-2"><button type="button"
+                        class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-4 py-2.5 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                        tabindex="0" style="transform: none; transform-origin: 50% 50% 0px;"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
+                          style="max-width: 50vw; max-height: 50vh;">
+                          <g fill="none" class="stroke-2 stroke-neutral-700" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path
+                              d="m10.481 18.71 10.987-5.832a.998.998 0 0 0 0-1.765L10.497 5.29c-.828-.44-1.756.39-1.405 1.256l2.189 5.4-2.207 5.51c-.346.867.581 1.692 1.407 1.254Z">
+                            </path>
+                            <path stroke-width="1.5" d="M11.28 11.95 22 12M4 15h1.6M3 12h2.6M2 9h3.6"></path>
+                          </g>
+                          <path fill="none" d="M0 0h24v24H0Z"></path>
+                        </svg></button></section>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script> var typeButton = document.getElementById("typeButton")
 
-typeButton.addEventListener("click", function () {
-  var typeBlock = document.getElementById("typeBlock")
+  typeButton.addEventListener("click", function () {
+    var typeBlock = document.getElementById("typeBlock")
 
-  typeBlock.classList.toggle("hidden")
-})
+    typeBlock.classList.toggle("hidden")
+  })
 
-var tagsButton = document.getElementById("tagsButton")
+  var tagsButton = document.getElementById("tagsButton")
 
-tagsButton.addEventListener("click", function () {
-  var tagsBlock = document.getElementById("tagsBlock")
+  tagsButton.addEventListener("click", function () {
+    var tagsBlock = document.getElementById("tagsBlock")
 
-  tagsBlock.classList.toggle("hidden")
-})
+    tagsBlock.classList.toggle("hidden")
+  })
 
-var datesButton = document.getElementById("datesButton")
+  var datesButton = document.getElementById("datesButton")
 
-datesButton.addEventListener("click", function () {
-  var datesBlock = document.getElementById("datesBlock")
+  datesButton.addEventListener("click", function () {
+    var datesBlock = document.getElementById("datesBlock")
 
-  datesBlock.classList.toggle("hidden")
-})
+    datesBlock.classList.toggle("hidden")
+  })
 
-var sourcesButton = document.getElementById("sourcesButton")
+  var sourcesButton = document.getElementById("sourcesButton")
 
-sourcesButton.addEventListener("click", function () {
-  var sourcesBlock = document.getElementById("sourcesBlock")
+  sourcesButton.addEventListener("click", function () {
+    var sourcesBlock = document.getElementById("sourcesBlock")
 
-  sourcesBlock.classList.toggle("hidden")
-})
+    sourcesBlock.classList.toggle("hidden")
+  })
 
-var feelingsButton = document.getElementById("feelingsButton")
+  var feelingsButton = document.getElementById("feelingsButton")
 
-feelingsButton.addEventListener("click", function () {
-  var feelingsBlock = document.getElementById("feelingsBlock")
+  feelingsButton.addEventListener("click", function () {
+    var feelingsBlock = document.getElementById("feelingsBlock")
 
-  feelingsBlock.classList.toggle("hidden")
-})
+    feelingsBlock.classList.toggle("hidden")
+  })
+
+
+  var chatButton = document.getElementById("chatButton")
+
+  chatButton.addEventListener("click", function () {
+    var chatAi = document.getElementById("chatAi")
+
+    chatAi.classList.toggle("hidden")
+  })
 </script>
