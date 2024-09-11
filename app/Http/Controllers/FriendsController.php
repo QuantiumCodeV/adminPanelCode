@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Friend;
+use App\Models\Friends;
 
 class FriendsController extends Controller
 {
@@ -24,7 +24,7 @@ class FriendsController extends Controller
             return response()->json(['message' => 'User not found'], 404);
         }
 
-        $friend = Friend::create([
+        $friend = Friends::create([
             'user_id_first' => auth()->id(),
             'user_id_second' => $user->id,
             'status' => 'pending',
