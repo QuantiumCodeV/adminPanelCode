@@ -3181,7 +3181,7 @@
                           </tr>
                         </thead>
                         <tbody class="divide-neutral-200">
-                          @foreach($friend as $friends)
+                          @foreach($friends as $friend)
                           <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
