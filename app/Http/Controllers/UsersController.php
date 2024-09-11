@@ -93,7 +93,7 @@ class UsersController extends Controller
     {
 
         Auth::logout();
-        return response()->json(['message' => 'success', 'url' => route('home')]);
+        return redirect("index");
     }
 
     public function update(Request $request)
