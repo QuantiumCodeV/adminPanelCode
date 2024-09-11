@@ -2293,7 +2293,7 @@
                     <div
                       class="flex flex-col gap-4 items-center justify-center h-full w-full absolute top-0 left-0 bg-gradient-to-t from-30% from-primary-100 to-primary-100/0">
                       <p class="text-8xl">
-                        <img src="{{ asset("/assets/phone.png")}}" alt="">
+                        <img id="imageSync" src="{{ asset("/assets/phone.png")}}" alt="">
                       </p>
                       <h1>You haven't had meetings</h1>
                       <p class="text-center" id="text_change">
@@ -2550,6 +2550,8 @@
       success: function (data) {
         console.log(data)
         if (data.message == "success") {
+          var imageSync =document.getElementById("imageSync")
+          imageSync.src= "{{ asset('assets/synchronize.gif') }}"
           ifDownloadOpen = true;
           var download_a_block = document.getElementById("download_block")
           download_a_block.setAttribute("download", "")
