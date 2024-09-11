@@ -3073,7 +3073,7 @@
                             var button_block = document.getElementById("button_block");
 
                             $.ajax({
-                              url: "{{ route("api.friend.add") }}",
+                              url: "{{ route("api.friends.add") }}",
                               type: "POST",
                               data: {
                                 user_id_second: meetingCode,
