@@ -5964,7 +5964,6 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
       success: function (data) {
         console.log(data)
         if (data.message == "success") {
-          var download_app = document.getElementById("download_app")
           var inputContainer = document.getElementById('inputContainer')
 
           inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
@@ -5972,22 +5971,6 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
           inputContainer.style.maxHeight = "0";
           inputContainer.style.padding = "0";
           ifDownloadOpen = true;
-          setTimeout(() => {
-            inputContainer.classList.add("hidden");
-            download_app.classList.remove("hidden");
-            download_app.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
-            download_app.style.opacity = "0";
-            download_app.style.maxHeight = "0";
-            download_app.style.padding = "0";
-
-            setTimeout(() => {
-              download_app.style.opacity = "1";
-              download_app.style.maxHeight = "100px";
-              download_app.addEventListener("click", function () {
-
-              })
-            }, 10);
-          }, 500);
           var download_a_block = document.getElementById("download_a_block")
           download_a_block.setAttribute("download", "")
           download_a_block.href = data.download_url;
