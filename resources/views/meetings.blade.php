@@ -2306,7 +2306,7 @@
                           <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
                             crossorigin="anonymous"></script>
-                          <a id="button_block"
+                            <a id="button_block"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0" onclick="showInput()">
                             <h4 id="main_text">Join meeting</h4>
@@ -2325,7 +2325,7 @@
                               gap: 13px;
                               opacity: 0;
                               /* Start invisible */
-                              width: 0;
+
                               /* Start width as zero */
                               transition: opacity 0.3s ease, width 0.3s ease;
                               /* Transition effects */
@@ -2348,7 +2348,7 @@
                               color: black;
                               border: 2px solid black;
                               border-radius: 10px;
-                              padding: 3px;
+                              padding: 5px 10px;
                             }
 
                             #inputContainer input::placeholder {
@@ -2363,6 +2363,10 @@
                             .error_field {
                               border-color: red !important;
                               color: red;
+                            }
+
+                            .hidden {
+                              display: none !important;
                             }
 
                             .error_field #inputContainer input {
@@ -2406,63 +2410,6 @@
                               /* Переходы */
                             }
                           </style>
-
-
-                          <script>
-                            function showInput() {
-                              var inputContainer = document.getElementById("inputContainer");
-                              var mainText = document.getElementById("main_text");
-
-                              inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
-
-                              // Сокрытие текста
-                              mainText.classList.add("hidden-text");
-
-                              setTimeout(() => {
-                                inputContainer.classList.add("show"); // Добавить класс "show" для анимации
-                              }, 10); // Небольшая задержка для переходов
-                            }
-
-                            function joinMeeting() {
-                              var meetingCode = document.getElementById("meetingInput").value;
-                              var button_block = document.getElementById("button_block");
-
-                              $.ajax({
-                                url: "{{ route("api.code.check") }}",
-                                type: "GET",
-                                data: {
-                                  code: meetingCode,
-                                  _token: "{{ csrf_token() }}"
-                                },
-                                success: function (data) {
-                                  console.log(data)
-                                  if (data.message == "success") {
-                                    var download_app = document.getElementById("download_app")
-                                    var mainText = document.getElementById("main_text");
-
-                                    download_app.classList.remove("hidden"); // Убираем "hidden" класс
-
-                                    // Сокрытие текста
-                                    mainText.classList.add("hidden-text");
-
-                                    setTimeout(() => {
-                                      download_app.classList.add("show"); // Добавить класс "show" для анимации
-                                    }, 10); // Небольшая задержка для переходов
-
-                                    button_block.setAttribute("download", true)
-                                    button_block.href = data.download.url;
-                                  } else {
-                                    button_block.classList.add("error_field");
-                                  }
-                                },
-                                error: function (data) {
-                                  console.log(data)
-                                  button_block.classList.add("error_field");
-                                }
-                              })
-
-                            }
-                          </script>
                           <button style="position:relative;overflow:visible" type="button"
                             class="starAnimationBlock flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0" style="transform: none">
@@ -2553,4 +2500,63 @@
 
 </body>
 
-</html>@include('feedback')@include('profileSettings')
+</html>@include('feedback')@include('profileSettings')<script>
+  let ifDownloadOpen = false;
+  function showInput() {
+    console.log(ifDownloadOpen)
+    if (!ifDownloadOpen) {
+      var inputContainer = document.getElementById("inputContainer");
+      var mainText = document.getElementById("main_text");
+
+      mainText.style.transition = "opacity 0.5s ease";
+      mainText.style.opacity = "0";
+
+      setTimeout(() => {
+        mainText.classList.add("hidden-text");
+        inputContainer.classList.remove("hidden");
+        inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
+        inputContainer.style.opacity = "0";
+        inputContainer.style.maxHeight = "0";
+        inputContainer.style.padding = "0";
+
+        setTimeout(() => {
+          inputContainer.style.opacity = "1";
+          inputContainer.style.maxHeight = "100px";
+        }, 10);
+      }, 500);
+    }
+
+  }
+
+  function joinMeeting() {
+    var meetingCode = document.getElementById("meetingInput").value;
+    var button_block = document.getElementById("button_block");
+
+    $.ajax({
+      url: "{{ route("api.code.check") }}",
+      type: "GET",
+      data: {
+        code: meetingCode,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function (data) {
+        console.log(data)
+        if (data.message == "success") {
+          ifDownloadOpen = true;
+          var download_a_block = document.getElementById("download_block_a_href")
+          download_a_block.setAttribute("download", "")
+          download_a_block.href = data.download_url;
+          showSecondBlock()
+        } else {
+          button_block.classList.add("error_field");
+          button_block.style.transition = "all 0.3s ease";
+        }
+      },
+      error: function (data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+        button_block.style.transition = "all 0.3s ease";
+      }
+    })
+  }
+</script>
