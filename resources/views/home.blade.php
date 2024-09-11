@@ -988,13 +988,26 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                           <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
                             crossorigin="anonymous"></script>
-                          <a id="download_a_block"
+                          <a id="download_block_a_href"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0">
-                            <h4 id="download_app">Download the app</h4>
+                            <h4 id="text_download">Download the app</h4>
                           </a>
+                          <a id="sync_a_block" style="display: none"
+                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0">
+                            <h4 id="text_download">Synchronize</h4>
+                          </a>
+                          <script>
+                            var download_block_a_href =document.getElementById("download_block_a_href")
 
+                            download_block_a_href.addEventListener('click', function(){
+                              download_block_a_href.style.display = 'none';
+                              var sync_a_block =document.getElementById('sync_a_block')
 
+                              sync_a_block.style.display = 'flex';
+                            })
+                          </script>
 
                           <button onclick="showFirstBlock()" style="position:relative;overflow:visible" type="button"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
