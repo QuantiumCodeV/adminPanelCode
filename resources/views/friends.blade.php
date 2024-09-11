@@ -3190,9 +3190,19 @@
                           }
                         </style>
                         <tbody class="divide-neutral-200">
-                         
-                          @foreach($friends as $friend)
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                          <style>
+                            tr.yellow > td > div> div> div{
+                              background-color: #FBD570;
+                            }
+                            tr.gray > td > div> div> div{
+                              background-color: #D3CCB8;
+                            }
+                            tr.red > td > div> div> div{
+                              background-color: #FB9A70;
+                            }
+                          </style>
+                            @foreach($friends as $friend)
+                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{if($friend->status == "friend") echo "yellow" else if($friend->status == "pending") echo "gray" else echo "red"}}">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
