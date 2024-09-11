@@ -3208,7 +3208,7 @@
                       </div>
                     </div>
                     <section class="flex-shrink-0 flex flex-col justify-end ml-2"><button type="button"
-                        class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-4 py-2.5 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                        class="starAnimationBlock flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-4 py-2.5 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                         tabindex="0" style="transform: none; transform-origin: 50% 50% 0px;"><svg
                           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"
                           style="max-width: 50vw; max-height: 50vh;">
@@ -3220,7 +3220,38 @@
                             <path stroke-width="1.5" d="M11.28 11.95 22 12M4 15h1.6M3 12h2.6M2 9h3.6"></path>
                           </g>
                           <path fill="none" d="M0 0h24v24H0Z"></path>
-                        </svg></button></section>
+                        </svg>
+                        <img style="    position: absolute;
+top: -20px;
+right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
+                            <style>
+                              .starAnimationBlock {
+                                position: relative;
+                                overflow: visible !important;
+                              }
+
+                              .starAnimationBlock:focus .starAnimation {
+                                animation: star 1s infinite;
+                                transform: rotate(-30deg);
+                              }
+
+
+                              @keyframes star {
+                                0% {
+                                  transform: rotate(0deg);
+                                }
+
+                                25% {
+                                  transform: rotate(30deg);
+                                }
+
+                                100% {
+                                  transform: rotate(-30deg);
+                                }
+
+                              }
+                            </style></button></section>
+                        
                   </div>
                 </div>
               </section>
