@@ -2296,7 +2296,7 @@
                         <img src="{{ asset("/assets/phone.png")}}" alt="">
                       </p>
                       <h1>You haven't had meetings</h1>
-                      <p class="text-center">
+                      <p class="text-center" id="text_change">
                         There is no insight yet! Start highlighting the important parts of <br> your photos during
                         meetings and keep an eye on them on this page.
                       </p>
@@ -2306,7 +2306,18 @@
                           <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
                             crossorigin="anonymous"></script>
-                            <a id="button_block"
+                          <a id="button_block"
+                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0" onclick="showInput()">
+                            <h4 id="main_text">Join meeting</h4>
+                            <div id="inputContainer" class="hidden">
+                              <input type="text" id="meetingInput" placeholder="Enter meeting code">
+                              <div class="line"></div>
+                              <button type="button" onclick="joinMeeting()">ENTER</button>
+                            </div>
+                            <h4 id="download_app" class="hidden">Download the app</h4>
+                          </a>
+                          <a id="download_block" style="display: none;"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0" onclick="showInput()">
                             <h4 id="main_text">Join meeting</h4>
@@ -2318,7 +2329,17 @@
                             <h4 id="download_app" class="hidden">Download the app</h4>
                           </a>
 
-
+                          <a id="synchronize_block" style="display: none;"
+                            class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                            tabindex="0" onclick="showInput()">
+                            <h4 id="main_text">Join meeting</h4>
+                            <div id="inputContainer" class="hidden">
+                              <input type="text" id="meetingInput" placeholder="Enter meeting code">
+                              <div class="line"></div>
+                              <button type="button" onclick="joinMeeting()">ENTER</button>
+                            </div>
+                            <h4 id="download_app" class="hidden">Download the app</h4>
+                          </a>
                           <style>
                             #inputContainer {
                               display: flex;
@@ -2546,7 +2567,15 @@
           var download_a_block = document.getElementById("download_block_a_href")
           download_a_block.setAttribute("download", "")
           download_a_block.href = data.download_url;
-          showSecondBlock()
+          var text_change = document.getElementById("text_change")
+          var download_block = document.getElementById("download_block")
+          download_block.style.display = "flex"
+          button_block.style.display = "none"
+          download_block.addEventListener("click", function () {
+            var synchronize_block = document.getElementById("synchronize_block")
+            download_block.style.display = "none"
+            synchronize_block.style.display = "flex"
+          });
         } else {
           button_block.classList.add("error_field");
           button_block.style.transition = "all 0.3s ease";
