@@ -2345,7 +2345,7 @@
                   </div>
                 </section>
                
-                @if($friends->count() < 1)
+                @if($friends->isEmpty())
                 <div class="h-4/5 w-full relative">
                   <div class="w-full h-full overflow-hidden">
                     <div class="h-full w-full overflow-auto relative">
