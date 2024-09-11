@@ -2936,9 +2936,8 @@
                     <p class="text-8xl">🧸</p>
                     <h1>You don’t have users</h1>
                     <p class="text-center">
-                      No insights yet! Start highlighting important parts in
-                      your captures<br />
-                      in the 'inbox' section to create valuable insights
+                    Enter a friend's name or ID
+                    to search for and add to friends.
                     </p>
                     <section class="w-full h-fit flex flex-row items-center justify-center gap-4">
                       <div class="buttons">
@@ -2959,7 +2958,7 @@
                           <div id="inputContainer" class="hidden">
                             <input type="text" id="meetingInput" placeholder="">
                             <div class="line"></div>
-                            <button type="button" onclick="joinMeeting()">ENTER</button>
+                            <button type="button" onclick="addFriend()">ADD</button>
                           </div>
 
                         </a>
@@ -3069,34 +3068,21 @@
                             }, 10); // Небольшая задержка для переходов
                           }
 
-                          function joinMeeting() {
+                          function addFriend() {
                             var meetingCode = document.getElementById("meetingInput").value;
                             var button_block = document.getElementById("button_block");
 
                             $.ajax({
-                              url: "{{ route("api.code.check") }}",
-                              type: "GET",
+                              url: "{{ route("api.friend.add") }}",
+                              type: "POST",
                               data: {
-                                code: meetingCode,
+                                input: meetingCode,
                                 _token: "{{ csrf_token() }}"
                               },
                               success: function (data) {
                                 console.log(data)
                                 if (data.message == "success") {
-                                  var download_app = document.getElementById("download_app")
-                                  var mainText = document.getElementById("main_text");
-
-                                  download_app.classList.remove("hidden"); // Убираем "hidden" класс
-
-                                  // Сокрытие текста
-                                  mainText.classList.add("hidden-text");
-
-                                  setTimeout(() => {
-                                    download_app.classList.add("show"); // Добавить класс "show" для анимации
-                                  }, 10); // Небольшая задержка для переходов
-
-                                  button_block.setAttribute("download", true)
-                                  button_block.href = data.download.url;
+                                  window.location.reload()
                                 } else {
                                   button_block.classList.add("error_field");
                                 }

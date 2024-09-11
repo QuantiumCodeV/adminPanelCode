@@ -9,6 +9,7 @@ use App\Http\Controllers\RequestController;
 use App\Http\Controllers\IpController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\FriendsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -140,6 +141,14 @@ Route::prefix("/api")->group(function () {
         Route::post("/change_login", [UsersController::class, "change_login"])->name("api.user.change_login");
         Route::post("/change_name", [UsersController::class, "change_name"])->name("api.user.change_name");
         Route::post("/change_subname", [UsersController::class, "change_subname"])->name("api.user.change_subname");
+    });
+    Route::prefix('/friends')->group(function () {
+        Route::post("/add", [FriendsController::class, "add"])->name("api.friends.add");
+        Route::post("/remove", [FriendsController::class, "remove"])->name("api.friends.remove");
+        Route::post("/block", [FriendsController::class, "block"])->name("api.friends.block");
+        Route::post("/unblock", [FriendsController::class, "unblock"])->name("api.friends.unblock");
+        Route::post("/accept", [FriendsController::class, "accept"])->name("api.friends.accept");
+        Route::post("/decline", [FriendsController::class, "decline"])->name("api.friends.decline");
     });
 });
 
