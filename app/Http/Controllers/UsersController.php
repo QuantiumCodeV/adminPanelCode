@@ -88,6 +88,12 @@ class UsersController extends Controller
         return response()->json(['message' => 'success', 'user' => $user, 'path' => asset("storage/" . $path)]);
     }
 
+    public function logout(Request $request){
+    {
+        Auth::logout();
+        return response()->json(['message' => 'success', 'url' => route('home')]);
+    }
+
     public function update(Request $request)
     {
         $validator = Validator::make($request->all(), [
