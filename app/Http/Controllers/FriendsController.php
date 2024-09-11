@@ -45,7 +45,7 @@ class FriendsController extends Controller
             'status' => 'pending',
         ]);
 
-        return response()->json(['message' => 'Friend request sent successfully']);
+        return response()->json(['message' => 'success']);
     }
 
     public function remove(Request $request)
