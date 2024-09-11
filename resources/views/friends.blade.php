@@ -3202,7 +3202,7 @@
                             }
                           </style>
                             @foreach($friends as $friend)
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{if($friend->status == "friend") echo "yellow" else if($friend->status == "pending") echo "gray" else echo "red"}}">
+                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
