@@ -3074,7 +3074,7 @@
   </div>
 </div>
 <div id="chatAi" class="hidden" data-radix-popper-content-wrapper=""
-  style="position: fixed; left: 0px; top: 0px; transform: translate(1747.5px, 37.5px); min-width: max-content; z-index: 100; --radix-popper-available-width: 2380px; --radix-popper-available-height: 670.0390625px; --radix-popper-anchor-width: 43.984375px; --radix-popper-anchor-height: 43.984375px; --radix-popper-transform-origin: 50% 642.5px;">
+  style="position: fixed; right: 0px; top: 0px; min-width: max-content; z-index: 100; --radix-popper-available-width: 2380px; --radix-popper-available-height: 670.0390625px; --radix-popper-anchor-width: 43.984375px; --radix-popper-anchor-height: 43.984375px; --radix-popper-transform-origin: 50% 642.5px;">
   <div data-side="top" data-align="center" data-state="open" role="dialog" id="radix-:rq:"
     class="rounded border-2 border-neutral-300 bg-neutral-100 shadow-2xl overflow-hidden p-0" tabindex="-1"
     style="z-index: 100; --radix-popover-content-transform-origin: var(--radix-popper-transform-origin); --radix-popover-content-available-width: var(--radix-popper-available-width); --radix-popover-content-available-height: var(--radix-popper-available-height); --radix-popover-trigger-width: var(--radix-popper-anchor-width); --radix-popover-trigger-height: var(--radix-popper-anchor-height); opacity: 1; transform: none;">
