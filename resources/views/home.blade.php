@@ -5964,12 +5964,6 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
       success: function (data) {
         console.log(data)
         if (data.message == "success") {
-          var inputContainer = document.getElementById('inputContainer')
-
-          inputContainer.style.transition = "opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease";
-          inputContainer.style.opacity = "0";
-          inputContainer.style.maxHeight = "0";
-          inputContainer.style.padding = "0";
           ifDownloadOpen = true;
           var download_a_block = document.getElementById("download_a_block")
           download_a_block.setAttribute("download", "")
