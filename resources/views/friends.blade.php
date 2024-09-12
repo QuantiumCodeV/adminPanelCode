@@ -2416,20 +2416,7 @@
   </div>
   <div class="chat__list" id="chatList">
     {{$chats}}
-    @if(count($chats) > 0)
-    @foreach($chats as $chat)
     
-    <div class="chat__item" onclick="openChat({{ $chat->id }}, '{{ $user->name }}')">
-      <h4>{{ $user->name }}</h4>
-      <p>{{ $chat->last_message }}</p>
-    </div>
-  @endforeach
-  @else
-  <img src="{{asset("assets/chat.png")}}" alt="">
-  <h2>
-    There are no messages yet
-  </h2>
-@endif
   </div>
   <div class="user_chat" style="display: none;">
     <div class="user_chat__header">
