@@ -68,7 +68,7 @@ class FriendsController extends Controller
         $friend_request = Friends::where('user_id_second', $data['friend_id']);
 
         $friend_request->status = 'blocked';
-        $friend_request->save();
+        
 
         return response()->json(['message' => 'Friend removed successfully']);
     }
@@ -95,7 +95,7 @@ class FriendsController extends Controller
         $friend_request = Friends::where('user_id_second', $data['friend_id']);
 
         $friend_request->status = 'friend';
-        $friend_request->save();
+        
         return response()->json(['message' => 'Friend request accepted']);
     }
 
