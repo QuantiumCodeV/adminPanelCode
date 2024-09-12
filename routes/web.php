@@ -152,6 +152,7 @@ Route::prefix("/api")->group(function () {
         Route::post("/add", [FriendsController::class, "add"])->name("api.friends.add");
         Route::post("/remove", [FriendsController::class, "remove"])->name("api.friends.delete");
         Route::post("/block", [FriendsController::class, "block"])->name("api.friends.block");
+        Route::post("/accept", [FriendsController::class, "accept"])->name("api.friends.accept");
     });
 });
 
