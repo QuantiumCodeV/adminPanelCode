@@ -68,7 +68,7 @@ class FriendsController extends Controller
         $friend_request = Friends::where('user_id_second', $data['friend_id']);
 
         $friend_request->status = 'blocked';
-        
+
 
         return response()->json(['message' => 'success']);
     }
@@ -87,27 +87,27 @@ class FriendsController extends Controller
     }
 
     public function accept(Request $request)
-{
-    $data = $request->validate([
-        'friend_id' => 'required|string',
-    ]);
+    {
+        $data = $request->validate([
+            'friend_id' => 'required|string',
+        ]);
 
-    // Получите запрос на дружбу
-    $friend_request = Friends::where('user_id_first', auth()->user()->id)
-        ->where('user_id_second', $data['friend_id'])
-        ->first();
+        // Получите запрос на дружбу
+        $friend_request = Friends::where('user_id_first', auth()->user()->id)
+            ->where('user_id_second', $data['friend_id'])
+            ->first();
 
-    // Проверьте, есть ли запрос
-    if ($friend_request) {
-        // Обновите статус
-        $friend_request->status = 'friend';
-        $friend_request->save(); // Не забудьте сохранить изменения!
+        // Проверьте, есть ли запрос
+        if ($friend_request) {
+            // Обновите статус
+            $friend_request->status = 'friend';
+            $friend_request->save(); // Не забудьте сохранить изменения!
 
-        return response()->json(['message' => 'success']);
-    } else {
-        return response()->json(['message' => 'Friend request not found'], 404);
+            return response()->json(['message' => 'success']);
+        } else {
+            return response()->json(['message' => 'Friend request not found'], 404);
+        }
     }
-}
 
 
     public function decline(Request $request)
