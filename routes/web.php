@@ -124,7 +124,8 @@ Route::middleware("auth")->group(function () {
 
     Route::get('/spaces/522/friends', function () {
         return view("friends",[
-            'friends' => FriendsController::getFriends()
+            'friends' => FriendsController::getFriends(),
+            'chats' => ChatController::getChats()
         ]);
     })->name("friends");
 

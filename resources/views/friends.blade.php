@@ -2305,7 +2305,7 @@
   }
 </style>
 <script>
-  function openChat(element, id){
+  function openChat(element, id) {
     toggleChat();
   }
 
@@ -2407,22 +2407,26 @@
 <div class="chat" id="chatContainer" style="display: none;">
   <div class="chat__header">
     <h3>All conversations</h3>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none" onclick="toggleChat()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none"
+      onclick="toggleChat()">
       <path d="M1 1L12 12L23 1" stroke="black" stroke-width="2.5" />
       <path d="M1 7L12 18L23 7" stroke="black" stroke-width="2.5" />
     </svg>
   </div>
   <div class="chat__list" id="chatList">
     @if(count($chats) > 0)
-      @foreach($chats as $chat)
-        <div class="chat__item" onclick="openChat({{ $chat->id }})">
-          <h4>{{ $chat->name }}</h4>
-          <p>{{ $chat->last_message }}</p>
-        </div>
-      @endforeach
-    @else
-      <p>No chats available</p>
-    @endif
+    @foreach($chats as $chat)
+    <div class="chat__item" onclick="openChat({{ $chat->id }})">
+      <h4>{{ $chat->name }}</h4>
+      <p>{{ $chat->last_message }}</p>
+    </div>
+  @endforeach
+  @else
+  <img src="{{asset("assets/chat.png")}}" alt="">
+  <h2>
+    There are no messages yet
+  </h2>
+@endif
   </div>
   <div class="chat__messages" id="chatMessages" style="display: none;">
     <div class="chat__body" id="chatBody"></div>
@@ -2450,12 +2454,12 @@
     flex-direction: column;
     display: flex;
   }
-  
+
   .chat.show {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   .chat__header {
     display: flex;
     justify-content: space-between;
@@ -2531,63 +2535,63 @@
 </style>
 
 <script>
-function toggleChat() {
-  const chatContainer = document.getElementById('chatContainer');
-  if (chatContainer.style.display === 'none') {
-    chatContainer.style.display = 'flex';
-    setTimeout(() => {
-      chatContainer.classList.add('show');
-    }, 10);
-  } else {
-    chatContainer.classList.remove('show');
-    setTimeout(() => {
-      chatContainer.style.display = 'none';
-    }, 300);
+  function toggleChat() {
+    const chatContainer = document.getElementById('chatContainer');
+    if (chatContainer.style.display === 'none') {
+      chatContainer.style.display = 'flex';
+      setTimeout(() => {
+        chatContainer.classList.add('show');
+      }, 10);
+    } else {
+      chatContainer.classList.remove('show');
+      setTimeout(() => {
+        chatContainer.style.display = 'none';
+      }, 300);
+    }
   }
-}
 
-function openChat(chatId) {
-  const chatList = document.getElementById('chatList');
-  const chatMessages = document.getElementById('chatMessages');
-  const chatBody = document.getElementById('chatBody');
+  function openChat(chatId) {
+    const chatList = document.getElementById('chatList');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatBody = document.getElementById('chatBody');
 
-  chatList.style.display = 'none';
-  chatMessages.style.display = 'flex';
-  chatBody.innerHTML = '';
+    chatList.style.display = 'none';
+    chatMessages.style.display = 'flex';
+    chatBody.innerHTML = '';
 
-  // Здесь вы можете добавить код для загрузки сообщений чата с сервера
-  // Например:
-  // fetchChatMessages(chatId);
-}
-
-function sendMessage() {
-  const messageInput = document.getElementById('messageInput');
-  const message = messageInput.value.trim();
-  if (message) {
-    appendMessage(message, 'sent');
-    messageInput.value = '';
-    // Здесь вы можете добавить код для отправки сообщения на сервер
-
-    // Имитация ответа от сервера
-    setTimeout(() => {
-      appendMessage('This is a response from the server', 'received');
-    }, 1000);
+    // Здесь вы можете добавить код для загрузки сообщений чата с сервера
+    // Например:
+    // fetchChatMessages(chatId);
   }
-}
 
-function appendMessage(message, type) {
-  const chatBody = document.getElementById('chatBody');
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', type);
-  messageElement.textContent = message;
-  chatBody.appendChild(messageElement);
-  chatBody.scrollTop = chatBody.scrollHeight;
-}
+  function sendMessage() {
+    const messageInput = document.getElementById('messageInput');
+    const message = messageInput.value.trim();
+    if (message) {
+      appendMessage(message, 'sent');
+      messageInput.value = '';
+      // Здесь вы можете добавить код для отправки сообщения на сервер
 
-// Обработчик события нажатия клавиши Enter в поле ввода
-document.getElementById('messageInput').addEventListener('keypress', function(event) {
-  if (event.key === 'Enter') {
-    sendMessage();
+      // Имитация ответа от сервера
+      setTimeout(() => {
+        appendMessage('This is a response from the server', 'received');
+      }, 1000);
+    }
   }
-});
+
+  function appendMessage(message, type) {
+    const chatBody = document.getElementById('chatBody');
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', type);
+    messageElement.textContent = message;
+    chatBody.appendChild(messageElement);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  // Обработчик события нажатия клавиши Enter в поле ввода
+  document.getElementById('messageInput').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      sendMessage();
+    }
+  });
 </script>
