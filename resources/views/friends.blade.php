@@ -2659,7 +2659,6 @@
         },
         success: function (response) {
           if (response.length > 0) {
-            clearInterval(waitMessageInterval);
             response.forEach(function (message) {
               var messageElement = document.createElement('div');
               messageElement.classList.add('user_chat__message', message.user_id === {{ auth()->user()->id }} ? 'sent' : 'received');
