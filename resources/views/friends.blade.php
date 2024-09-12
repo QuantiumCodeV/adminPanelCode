@@ -2416,6 +2416,27 @@
   </div>
   <div class="chat__list" id="chatList">
     {{$chats}}
+    @if(count($chats) > 0)
+    @foreach($chats as $chat)
+    <div class="chat__item" onclick="openChat({{ $chat['recipient']['id'] }}, '{{ $chat['recipient']['name'] }}')">
+      <div class="avatar">
+      <img
+      src="{{ $chat['recipient']['avatar'] ? asset('storage/' . $chat['recipient']['avatar']) : asset('assets/member_avatar_453.png') }}"
+      alt="">
+      </div>
+      <div style="display: flex; flex-direction:column">s
+      <h4>{{ $chat['recipient']['name'] }}</h4>
+      <p>{{ $chat['last_message']['message'] }}</p>
+      </div>
+
+    </div>
+  @endforeach
+  @else
+  <img src="{{asset("assets/chat.png")}}" alt="">
+  <h2>
+    There are no messages yet
+  </h2>
+@endif
   </div>
   <div class="user_chat" style="display: none;">
     <div class="user_chat__header">
