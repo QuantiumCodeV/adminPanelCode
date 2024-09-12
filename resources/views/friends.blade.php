@@ -1895,14 +1895,14 @@
                     </style>
                   </button>
                   @if($friend->status == "friend")
-                  <button class="action" onclick="deleteFriend('{{ $friend->id }}')">
-                    <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
-                  </button>
-                  @elseif($friend->status == "pending")
-                  <button class="action" onclick="addFriend('{{ $friend->id }}')">
-                    <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
-                  </button>
-                  @endif
+            <button class="action" onclick="deleteFriend('{{ $friend->id }}')">
+            <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
+            </button>
+          @elseif($friend->status == "pending")
+        <button class="action" onclick="addFriend('{{ $friend->id }}')">
+        <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
+        </button>
+      @endif
                   <button class="action" onclick="blockFriend('{{ $friend->id }}')">
                     <img src="{{ asset("assets/block.png") }}" class="" alt="">
                   </button>
@@ -2322,7 +2322,7 @@
     })
   }
 
-  function addFriend(friendId) {
+  function addFriend(element,friendId) {
     $.ajax({
       url: "{{ route("api.friends.accept") }}",
       type: "POST",
@@ -2369,7 +2369,23 @@
   }
 
   function copyId(element, friendId) {
-    navigator.clipboard.writeText(friendId);
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(friendId).then(() => {
+            console.log('Friend ID copied to clipboard');
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    } else {
+        console.warn('Clipboard API not available');
+        // Fallback method if clipboard API is not available
+        const textArea = document.createElement('textarea');
+        textArea.value = friendId;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        console.log('Friend ID copied to clipboard (fallback method)');
+    }
     element.innerHTML = "Copied!";
     setTimeout(() => {
       element.innerHTML = "ID";
