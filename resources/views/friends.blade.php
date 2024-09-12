@@ -1837,7 +1837,7 @@
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                   <div class="text-small">
                   <div class="h-full w-full">
-                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{$friend}}</div>
+                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">No</div>
                   </div>
                   </div>
                   </td>
@@ -1851,7 +1851,7 @@
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
                   <div class="flex gap-2">
-                  <button class="action" onclick="openChat(this,'{{ $friend->id }}')">
+                  <button class="action" onclick="openChat(this,'{{ $friendNotMe->id }}')">
                     <img src="{{ asset("assets/message.png") }}" class="" alt="">
                   </button>
                   <button class="action starAnimationBlock ">
@@ -1895,18 +1895,18 @@
                     </style>
                   </button>
                   @if($friend->status == "friend")
-            <button class="action" onclick="deleteFriend(this,'{{ $friend->id }}')">
+            <button class="action" onclick="deleteFriend(this,'{{ $friendNotMe->id }}')">
             <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
             </button>
           @elseif($friend->status == "pending")
-        <button class="action" onclick="addFriend(this,'{{ $friend->id }}')">
+        <button class="action" onclick="addFriend(this,'{{ $friendNotMe->id }}')">
         <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
         </button>
       @endif
-                  <button class="action" onclick="blockFriend(this,'{{ $friend->id }}')">
+                  <button class="action" onclick="blockFriend(this,'{{ $friendNotMe->id }}')">
                     <img src="{{ asset("assets/block.png") }}" class="" alt="">
                   </button>
-                  <button class="action" onclick="copyId(this, '{{ $friend->id }}')">
+                  <button class="action" onclick="copyId(this, '{{ $friendNotMe->id }}')">
                     ID
                   </button>
 
