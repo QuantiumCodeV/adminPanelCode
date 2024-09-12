@@ -2334,7 +2334,7 @@
                   <div>
                     <a id="button_block1"
                       class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
-                      tabindex="0" onclick="showInput()">
+                      tabindex="0" onclick="showInput1()">
 
                       <h4 id="main_text1" class="flex" style="gap:5px"><svg class="h-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -3570,6 +3570,20 @@
                           function showInput() {
                             var inputContainer = document.getElementById("inputContainer");
                             var mainText = document.getElementById("main_text");
+
+                            inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+
+                            // Сокрытие текста
+                            mainText.classList.add("hidden-text");
+
+                            setTimeout(() => {
+                              inputContainer.classList.add("show"); // Добавить класс "show" для анимации
+                            }, 10); // Небольшая задержка для переходов
+                          }
+
+                          function showInput1() {
+                            var inputContainer = document.getElementById("inputContainer1");
+                            var mainText = document.getElementById("main_text1");
 
                             inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
 
