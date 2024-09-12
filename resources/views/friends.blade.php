@@ -1772,23 +1772,7 @@
                             }
                           </style>
                           @foreach($friends as $friend)
-                          @php
-                          $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
-                          $mutualFriends = $friend->commonFriends($friendNotMe->id);
-                          @endphp
-                          {{-- Пример вывода имён общих друзей --}}
-                          @if($mutualFriends->count())
-                          <ul>
-                            <li>-------</li>
-                            @foreach($mutualFriends as $mutualFriend)
 
-                            <li>{{ $mutualFriend->login }}</li>
-                            @endforeach
-                            <li>-------</li>
-                          </ul>
-                          @else
-                          <p>Нет общих друзей.</p>
-                          @endif
                           <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
@@ -1812,11 +1796,39 @@
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                              @php
+                              $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
+                              $mutualFriends = $friend->commonFriends($friendNotMe->id);
+                              @endphp
+                              {{-- Пример вывода имён общих друзей --}}
+                              @if($mutualFriends->count())
+                                <div class="avatars">
+                                  
+                                @foreach($mutualFriends as $mutualFriend)
+
+                                <li class="avatar"><img src="{{ $mutualFriend->avatar ? asset('storage/' . $mutualFriend->avatar) : asset('assets/member_avatar_453.png') }}" alt=""></li>
+                                @endforeach
+
+                                </div>
+                              </ul>
+                              <style>
+                                .avatars{
+                                  display: flex;
+                                  gap: -10px;
+                                }
+                                .avatar{
+                                  border-radius: 100%;
+                                  width: 30px;
+                                }
+                              </style>
+                              @else
+
                               <div class="text-small">
                                 <div class="h-full w-full">
                                   <div class="rounded w-28 h-6 bg-neutral-300 centerContent">-</div>
                                 </div>
                               </div>
+                              @endif
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
@@ -2130,7 +2142,8 @@
     var button_block = document.getElementById("button_block");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("
+      api.friends.add ") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2158,7 +2171,8 @@
     var button_block = document.getElementById("button_block1");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("
+      api.friends.add ") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
