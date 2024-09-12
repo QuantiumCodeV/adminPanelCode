@@ -2430,6 +2430,7 @@
   </div>
   <div class="user_chat" style="display: none;">
     <div class="user_chat__header">
+      <div style="display: flex; align-items: center;gap:10px">
       <svg onclick="backToChats()" xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16"
         fill="none">
         <path
@@ -2440,6 +2441,8 @@
         <span id="chatName"></span>
         <span id="chatId"></span>
       </div>
+      </div>
+      
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none"
         onclick="toggleChat()">
         <path d="M1 1L12 12L23 1" stroke="black" stroke-width="2.5" />
