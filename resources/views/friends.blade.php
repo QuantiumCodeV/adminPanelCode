@@ -1853,7 +1853,9 @@
                                 <div class="action">
                                   ID
                                 </div>
-                                <style>
+                                
+                              </div>
+                              <style>
                                   .action {
                                     width: 31px;
                                     height: 31px;
@@ -1870,7 +1872,6 @@
                                     padding: 15px 4px;
                                   }
                                 </style>
-                              </div>
                             </td>
                           </tr>
                           @endforeach
