@@ -2643,6 +2643,8 @@
       chatContainer.style.display = 'flex';
       setTimeout(() => {
         chatContainer.classList.add('show');
+        const chat__header = document.querySelector(".chat__header")
+    chat__header.classList.remove('hidden')
       }, 10);
     } else {
       chatContainer.classList.remove('show');
@@ -2700,7 +2702,8 @@
   function backToChats() {
     const chatList = document.getElementById('chatList');
     const userChat = document.querySelector('.user_chat');
-
+   const chat__header = document.querySelector(".chat__header")
+    chat__header.classList.remove('hidden')
     userChat.style.display = 'none';
     chatList.style.display = 'block';
     currentChatId = null;
