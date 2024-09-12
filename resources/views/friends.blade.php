@@ -2458,7 +2458,7 @@
 
 <style>
   .hidden {
-    display: none;
+    display: none !important;
   }
   .chat {
     width: 420px;
