@@ -92,16 +92,20 @@ class FriendsController extends Controller
             'friend_id' => 'required|string',
         ]);
 
-        // Получите запрос на дружбу
-        $friend_request = Friends::where('user_id_first', auth()->user()->id)
-            ->where('user_id_second', $data['friend_id'])
-            ->first();
-        dd($friend_request);
-        // Проверьте, есть ли запрос
+        // Get the friend request
+        $friend_request = Friends::where(function ($query) use ($data) {
+            $query->where('user_id_first', $data['friend_id'])
+                  ->where('user_id_second', auth()->id());
+        })->orWhere(function ($query) use ($data) {
+            $query->where('user_id_first', auth()->id())
+                  ->where('user_id_second', $data['friend_id']);
+        })->first();
+
+        // Check if the request exists
         if ($friend_request) {
-            // Обновите статус
+            // Update the status
             $friend_request->status = 'friend';
-            $friend_request->save(); // Не забудьте сохранить изменения!
+            $friend_request->save();
 
             return response()->json(['message' => 'success']);
         } else {
