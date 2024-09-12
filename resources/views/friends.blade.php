@@ -1811,28 +1811,7 @@
                                   @endif
                                 </div>
                              
-                              <style>
-                                .avatars {
-                                  display: flex;
-                                  align-items: center;
-                                }
-                                .avatar {
-                                  border-radius: 100%;
-                                  width: 30px;
-                                  margin-right: -15px;
-                                }
-                                .avatar-count {
-                                  background-color: #e0e0e0;
-                                  border-radius: 100%;
-                                  width: 30px;
-                                  height: 30px;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-size: 12px;
-                                  font-weight: bold;
-                                }
-                              </style>
+                           
                               @else
 
                               <div class="text-small">
@@ -2203,4 +2182,24 @@
     })
 
   }
-</script>
+</script>   <style>
+                                .avatars {
+                                  display: flex;
+                                  align-items: center;
+                                }
+                                .avatar {
+                                  border-radius: 100%;
+                                  width: 30px;
+                                  margin-right: -15px;
+                                }
+                                .avatar-count {
+                                  margin-left: 10px;
+                                  width: 30px;
+                                  height: 30px;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-size: 12px;
+                                  font-weight: bold;
+                                }
+                              </style>
