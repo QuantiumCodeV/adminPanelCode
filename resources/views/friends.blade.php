@@ -831,7 +831,7 @@
                             </g>
                             <path d="M0 0h24v24H0Z" fill="none"></path>
                           </svg>
-                          <h5>Users</h5>
+                          <h5>Friends</h5>
                         </div>
                       </span>
                       <div aria-hidden="true" style="transform: none">
@@ -1548,9 +1548,9 @@
             class="flex flex-col gap-4 items-center justify-center h-full w-full absolute top-0 left-0 bg-gradient-to-t from-30% from-primary-100 to-primary-100/0">
             <p class="text-8xl">🧸</p>
             <h1>You don’t have users</h1>
-            <p class="text-center">
-              Enter a friend's name or ID
-              to search for and add to friends.
+            <p class="text-center" id="change_text_friends">
+              
+            No insights yet! Start adding friends and getting to know them, invite them to calls, chat and much more!
             </p>
             <section class="w-full h-fit flex flex-row items-center justify-center gap-4">
               <div class="buttons">
@@ -1900,7 +1900,7 @@
             <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
             </button>
           @elseif($friend->status == "pending")
-        <button class="action" onclick="addFriend(this,'{{ $friendNotMe->id }}')">
+        <button class="action" onclick="addFriendRequest(this,'{{ $friendNotMe->id }}')">
         <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
         </button>
       @endif
@@ -1909,7 +1909,7 @@
             <img src="{{ asset("assets/block.png") }}" class="" alt="">
             </button>
           @else
-        <button class="action" onclick="addFriend(this,'{{ $friendNotMe->id }}')">
+        <button class="action" onclick="addFriendRequest(this,'{{ $friendNotMe->id }}')">
         <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
         </button>
       @endif
@@ -2181,7 +2181,9 @@
   function showInput() {
     var inputContainer = document.getElementById("inputContainer");
     var mainText = document.getElementById("main_text");
+    var change_text_friends =document.getElementById("change_text_friends")
 
+    change_text_friends.innerHTML = "Enter a friend's name or ID to search for and add to friends."
     inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
 
     // Сокрытие текста
@@ -2333,7 +2335,7 @@
     })
   }
 
-  function addFriend(element, friendId) {
+  function addFriendRequest(element, friendId) {
     $.ajax({
       url: "{{ route("api.friends.accept") }}",
       type: "POST",
