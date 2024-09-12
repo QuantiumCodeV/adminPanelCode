@@ -1850,7 +1850,7 @@
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
-                  <button class="flex gap-2">
+                  <div class="flex gap-2">
                   <button class="action">
                     <img src="{{ asset("assets/message.png") }}" class="" alt="">
                   </button>
@@ -1904,48 +1904,48 @@
                     ID
                   </button>
 
-                </div>
+                  </div>
 
-                </td>
-                </tr>
+                  </td>
+                  </tr>
           @endforeach
-              </tbody>
-              </table>
+                </tbody>
+                </table>
+              </div>
+              </div>
+
+            </div>
+    @endif
+              </div>
+            </section>
+          </div>
+          <div class="flex flex-col z-30">
+            <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
+              <div aria-controls="radix-:r59:" aria-expanded="false" aria-haspopup="dialog"
+                class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+                data-state="closed" type="button">
+                <img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy"
+                  src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent" width="25" />
               </div>
             </div>
-
-            </div>
-      @endif
-          </div>
-          </section>
-        </div>
-        <div class="flex flex-col z-30">
-          <div class="fixed bottom-2 right-2 mb-12 hover:cursor-cool-clickable disabled:cursor-cool-normal">
-            <div aria-controls="radix-:r59:" aria-expanded="false" aria-haspopup="dialog"
-              class="w-11 h-11 rounded-full bg-[#FFF9DE] border-2 border-secondary-300 p-1 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
-              data-state="closed" type="button">
-              <img alt="ListenUp Illustration Logo" data-nimg="1" decoding="async" height="25" loading="lazy"
-                src="{{  asset("assets/ListenUp-Logo.svg") }} " style="color: transparent" width="25" />
+            <div
+              class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
+              style="z-index: 99999">
+              <button aria-expanded="false" aria-haspopup="menu"
+                class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
+                data-state="closed" id="radix-:r5a:" tabindex="0" type="button">
+                <h3 class="text-primary-600">?</h3>
+              </button>
             </div>
           </div>
+          <div class="absolute h-full w-full"></div>
           <div
-            class="fixed bottom-2 right-2 w-11 h-11 rounded-full bg-primary-300 border-2 border-primary-600 p-4 shadow-lg flex items-center justify-center hover:cursor-cool-clickable disabled:cursor-cool-normal"
-            style="z-index: 99999">
-            <button aria-expanded="false" aria-haspopup="menu"
-              class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2"
-              data-state="closed" id="radix-:r5a:" tabindex="0" type="button">
-              <h3 class="text-primary-600">?</h3>
-            </button>
+            class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
+            <div></div>
           </div>
-        </div>
-        <div class="absolute h-full w-full"></div>
-        <div
-          class="absolute left-1/2 z-30 w-full translate-x-[-50%] bottom-10 flex flex-col justify-center items-center">
-          <div></div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
 
