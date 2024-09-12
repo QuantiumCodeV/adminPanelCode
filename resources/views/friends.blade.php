@@ -2405,7 +2405,7 @@
   }
 </script>
 <div class="chat" id="chatContainer" style="display: none;">
-  <div class="chat__header hidden">
+  <div class="chat__header">
     <h3>All conversations</h3>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none"
       onclick="toggleChat()">
@@ -2413,23 +2413,22 @@
       <path d="M1 7L12 18L23 7" stroke="black" stroke-width="2.5" />
     </svg>
   </div>
-  <div class="chat__list hidden" id="chatList">
+  <div class="chat__list" id="chatList">
     @if(count($chats) > 0)
     @foreach($chats as $chat)
-    <div class="chat__item" onclick="openChat({{ $chat->id }})">
+    <div class="chat__item" onclick="openChat({{ $chat->id }}, '{{ $chat->name }}')">
       <h4>{{ $chat->name }}</h4>
       <p>{{ $chat->last_message }}</p>
     </div>
-  @endforeach
-  @else
-  <img src="{{asset("assets/chat.png")}}" alt="">
-  <h2>
-    There are no messages yet
-  </h2>
-@endif
-
+    @endforeach
+    @else
+    <img src="{{asset("assets/chat.png")}}" alt="">
+    <h2>
+      There are no messages yet
+    </h2>
+    @endif
   </div>
-  <div class="user_chat">
+  <div class="user_chat" style="display: none;">
     <div class="user_chat__header">
       <svg onclick="backToChats()" xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16"
         fill="none">
@@ -2438,8 +2437,8 @@
           fill="black" />
       </svg>
       <div class="header__content">
-        <span>Clore</span>
-        <span>ID 32143324</span>
+        <span id="chatName"></span>
+        <span id="chatId"></span>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none"
         onclick="toggleChat()">
@@ -2447,233 +2446,239 @@
         <path d="M1 7L12 18L23 7" stroke="black" stroke-width="2.5" />
       </svg>
     </div>
-    <div class="user_chat__body">
-      <div class="user_chat__message received">
-        <div class="message__content">
-          fsdfsd
-        </div>
-        <div class="message_time">
-          12:00
-        </div>
+    <div class="user_chat__body" id="chatBody">
+      <!-- Messages will be dynamically added here -->
+    </div>
+    <div class="user_chat__footer">
+      <div class="user_chat__footer__input">
+        <input type="text" placeholder="Type your message" id="messageInput">
+        <svg id="sendMessageButton" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none" onclick="sendMessage()">
+          <path
+            d="M12.5303 6.53033C12.8232 6.23744 12.8232 5.76256 12.5303 5.46967L7.75736 0.696698C7.46447 0.403805 6.98959 0.403805 6.6967 0.696699C6.40381 0.989592 6.40381 1.46447 6.6967 1.75736L10.9393 6L6.6967 10.2426C6.40381 10.5355 6.40381 11.0104 6.6967 11.3033C6.98959 11.5962 7.46447 11.5962 7.75736 11.3033L12.5303 6.53033ZM6.55671e-08 6.75L12 6.75L12 5.25L-6.55671e-08 5.25L6.55671e-08 6.75Z"
+            fill="black" />
+        </svg>
       </div>
-      <div class="user_chat__message sent">
-        <div class="message__content">
-          fsdfsd
-        </div>
-        <div class="message_time">
-          12:00
-        </div>
-      </div>
-      <style>
-        .user_chat__message{
-          display: flex;
-          flex-direction: column;
-        }
-        .user_chat__body{
-          display: flex;
-          flex-direction: column;
-          padding: 35px 0px;
-        }
-        .user_chat__message.received{
-          width: max-content;
-        }
-        .user_chat__message.sent{
-          width: max-content;
-          align-self: end;
-        }
-        .user_chat__message.received .message__content {
-          padding: 10px 26px;
-          background: #EAEAEA;
-          border-radius: 35px 35px 35px 10px;
-        }
+    </div>
+  </div>
+</div>
 
-        .user_chat__message.sent .message__content {
-          padding: 10px 26px;
-          background: #FBD570;
-          border-radius: 35px 35px 10px 35px;
-        }
-        .user_chat__message.sent .message_time{
-          text-align: right;
-        }
-      </style>
-      <style>
-        .hidden {
-          display: none !important;
-        }
+<style>
+  .user_chat__message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 
-        .chat {
-          width: 420px;
-          height: 580px;
-          padding: 25px 21px;
-          position: fixed;
-          bottom: 30px;
-          right: 100px;
-          z-index: 999999;
-          background: white;
-          border-radius: 14px;
-          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-          opacity: 0;
-          transform: translateY(20px);
-          flex-direction: column;
-          display: flex;
-        }
+  .user_chat__body {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 0px;
+    overflow-y: auto;
+    max-height: 400px;
+  }
 
-        .user_chat {
-          display: flex;
-          flex-direction: column;
+  .user_chat__message.received {
+    width: max-content;
+    align-self: flex-start;
+  }
 
-        }
+  .user_chat__message.sent {
+    width: max-content;
+    align-self: flex-end;
+  }
 
-        .user_chat__header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
+  .user_chat__message.received .message__content {
+    padding: 10px 26px;
+    background: #EAEAEA;
+    border-radius: 35px 35px 35px 10px;
+  }
 
-        .header__content {
-          display: flex;
-          flex-direction: column;
-        }
+  .user_chat__message.sent .message__content {
+    padding: 10px 26px;
+    background: #FBD570;
+    border-radius: 35px 35px 10px 35px;
+  }
 
-        .chat.show {
-          opacity: 1;
-          transform: translateY(0);
-        }
+  .user_chat__message.sent .message_time {
+    text-align: right;
+  }
 
-        .chat__header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 15px;
-        }
+  .chat {
+    width: 420px;
+    height: 580px;
+    padding: 25px 21px;
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+    z-index: 999999;
+    background: white;
+    border-radius: 14px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    flex-direction: column;
+    display: flex;
+  }
 
-        .chat__list {
-          flex-grow: 1;
-          overflow-y: auto;
-          margin-bottom: 15px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          text-align: center;
-        }
+  .user_chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-        .chat__item {
-          padding: 10px;
-          border-bottom: 1px solid #ccc;
-          cursor: pointer;
-        }
+  .user_chat__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-        .chat__item:hover {
-          background-color: #f1f1f1;
-        }
+  .header__content {
+    display: flex;
+    flex-direction: column;
+  }
 
-        .chat__messages {
-          display: none;
-          flex-direction: column;
-          height: 100%;
-        }
+  .chat.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-        .chat__body {
-          flex-grow: 1;
-          overflow-y: auto;
-          margin-bottom: 15px;
-        }
+  .chat__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
 
-        .chat__input {
-          display: flex;
-        }
+  .chat__list {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+  }
 
-        .chat__input input {
-          flex-grow: 1;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px 0 0 5px;
-        }
+  .chat__item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
 
-        .chat__input button {
-          padding: 10px 15px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 0 5px 5px 0;
-          cursor: pointer;
-        }
+  .chat__item:hover {
+    background-color: #f1f1f1;
+  }
 
-        .message {
-          margin-bottom: 10px;
-          padding: 10px;
-          border-radius: 5px;
-          max-width: 70%;
-        }
+  .chat__input {
+    display: flex;
+  }
 
-        .message.sent {
-          background-color: #007bff;
-          color: white;
-          align-self: flex-end;
-        }
+  .chat__input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
 
-        .message.received {
-          background-color: #f1f1f1;
-          align-self: flex-start;
-        }
-      </style>
+  .chat__input button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+</style>
 
-      <script>
-        function toggleChat() {
-          const chatContainer = document.getElementById('chatContainer');
-          if (chatContainer.style.display === 'none') {
-            chatContainer.style.display = 'flex';
-            setTimeout(() => {
-              chatContainer.classList.add('show');
-            }, 10);
-          } else {
-            chatContainer.classList.remove('show');
-            setTimeout(() => {
-              chatContainer.style.display = 'none';
-            }, 300);
-          }
-        }
+<script>
+  let currentChatId = null;
 
-        function openChat(chatId) {
-          const chatList = document.getElementById('chatList');
-          const chatMessages = document.getElementById('chatMessages');
-          const chatBody = document.getElementById('chatBody');
+  function toggleChat() {
+    const chatContainer = document.getElementById('chatContainer');
+    if (chatContainer.style.display === 'none') {
+      chatContainer.style.display = 'flex';
+      setTimeout(() => {
+        chatContainer.classList.add('show');
+      }, 10);
+    } else {
+      chatContainer.classList.remove('show');
+      setTimeout(() => {
+        chatContainer.style.display = 'none';
+      }, 300);
+    }
+  }
 
-          chatList.style.display = 'none';
-          chatMessages.style.display = 'flex';
-          chatBody.innerHTML = '';
+  function openChat(chatId, chatName) {
+    currentChatId = chatId;
+    const chatList = document.getElementById('chatList');
+    const userChat = document.querySelector('.user_chat');
+    const chatBody = document.getElementById('chatBody');
+    const chatNameElement = document.getElementById('chatName');
+    const chatIdElement = document.getElementById('chatId');
 
-        }
+    chatList.style.display = 'none';
+    userChat.style.display = 'flex';
+    chatBody.innerHTML = '';
+    chatNameElement.textContent = chatName;
+    chatIdElement.textContent = `ID ${chatId}`;
 
-        function sendMessage() {
-          const messageInput = document.getElementById('messageInput');
-          const message = messageInput.value.trim();
-          if (message) {
-            appendMessage(message, 'sent');
-            messageInput.value = '';
-            // Здесь вы можете добавить код для отправки сообщения на сервер
+    // Here you can load messages for the selected chat
+    // For example:
+    // loadMessages(chatId);
+  }
 
-            // Имитация ответа от сервера
-            setTimeout(() => {
-              appendMessage('This is a response from the server', 'received');
-            }, 1000);
-          }
-        }
+  function backToChats() {
+    const chatList = document.getElementById('chatList');
+    const userChat = document.querySelector('.user_chat');
 
-        function appendMessage(message, type) {
-          const chatBody = document.getElementById('chatBody');
-          const messageElement = document.createElement('div');
-          messageElement.classList.add('message', type);
-          messageElement.textContent = message;
-          chatBody.appendChild(messageElement);
-          chatBody.scrollTop = chatBody.scrollHeight;
-        }
+    userChat.style.display = 'none';
+    chatList.style.display = 'block';
+    currentChatId = null;
+  }
 
-        // Обработчик события нажатия клавиши Enter в поле ввода
-        document.getElementById('messageInput').addEventListener('keypress', function (event) {
-          if (event.key === 'Enter') {
-            sendMessage();
-          }
-        });
-      </script>
+  function sendMessage() {
+    const messageInput = document.getElementById('messageInput');
+    const message = messageInput.value.trim();
+    if (message && currentChatId) {
+      appendMessage(message, 'sent');
+      messageInput.value = '';
+      // Here you can add code to send the message to the server
+      // For example:
+      // sendMessageToServer(currentChatId, message);
+
+      // Simulating a response from the server
+      setTimeout(() => {
+        appendMessage('This is a response from the server', 'received');
+      }, 1000);
+    }
+  }
+
+  function appendMessage(message, type) {
+    const chatBody = document.getElementById('chatBody');
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('user_chat__message', type);
+    
+    const contentElement = document.createElement('div');
+    contentElement.classList.add('message__content');
+    contentElement.textContent = message;
+    
+    const timeElement = document.createElement('div');
+    timeElement.classList.add('message_time');
+    timeElement.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    
+    messageElement.appendChild(contentElement);
+    messageElement.appendChild(timeElement);
+    
+    chatBody.appendChild(messageElement);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  // Event listener for Enter key in the input field
+  document.getElementById('messageInput').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      sendMessage();
+    }
+  });
+
+  // Function to open chat from another button
+  function openChatFromButton(chatId, chatName) {
+    toggleChat();
+    openChat(chatId, chatName);
+  }
+</script>
