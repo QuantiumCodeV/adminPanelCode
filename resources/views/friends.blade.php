@@ -2464,7 +2464,14 @@
     </div>
   </div>
 </div>
-
+<style>
+  .user_chat__footer__input{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #F3F3F3;
+  }
+</style>
 <style>
   .user_chat__message {
     display: flex;
