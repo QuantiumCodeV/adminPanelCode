@@ -2416,7 +2416,6 @@
   </div>
   <div class="chat__list" id="chatList">
     {{$chats}}
-    {{$chats->recipient}}
   </div>
   <div class="user_chat" style="display: none;">
     <div class="user_chat__header">
