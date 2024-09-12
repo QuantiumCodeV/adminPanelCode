@@ -2659,15 +2659,16 @@
         },
         success: function (response) {
           if (response.messages.length > 0) {
+            var messagesHTML = '';
             response.messages.forEach(function (message) {
-              var messageElement = document.createElement('div');
-              messageElement.classList.add('user_chat__message', message.user_id === {{ auth()->user()->id }} ? 'sent' : 'received');
-              messageElement.innerHTML = `
-                <div class="message__content">${message.message}</div>
-                <div class="message_time">${new Date(message.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })}</div>
+              messagesHTML += `
+                <div class="user_chat__message ${message.user_id === {{ auth()->user()->id }} ? 'sent' : 'received'}">
+                  <div class="message__content">${message.message}</div>
+                  <div class="message_time">${new Date(message.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })}</div>
+                </div>
               `;
-              chatBody.appendChild(messageElement);
             });
+            chatBody.innerHTML = messagesHTML;
           }
         }
       });
