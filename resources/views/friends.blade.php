@@ -2651,7 +2651,7 @@
     var waitMessageInterval = setInterval(function () {
       $.ajax({
         url: "{{ route('messages.index') }}",
-        type: "GET",
+        type: "POST",
         data: {
           user_id: {{ auth()->user()->id }},
           friendId: chatId
