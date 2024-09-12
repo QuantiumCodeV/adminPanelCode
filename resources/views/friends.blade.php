@@ -2437,6 +2437,15 @@
   </h2>
 @endif
   </div>
+  <style>
+    .chat__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-bottom: 1px solid #242425;
+    }
+  </style>
   <div class="user_chat" style="display: none;">
     <div class="user_chat__header">
       <div style="display: flex; align-items: center;gap:10px">
