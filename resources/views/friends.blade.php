@@ -2457,12 +2457,12 @@
         </div>
       </div>
       <div class="user_chat__message sent">
-        <span class="message__content">
+        <div class="message__content">
           fsdfsd
-        </span>
-        <span class="message_time">
+        </div>
+        <div class="message_time">
           12:00
-        </span>
+        </div>
       </div>
       <style>
         .user_chat__body{
