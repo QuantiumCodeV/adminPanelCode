@@ -2490,7 +2490,7 @@
   .user_chat__body {
     display: flex;
     flex-direction: column;
-    padding: 35px 0px;
+    padding-top: 35px 0px;
     overflow-y: auto;
     height: 100%;
 
