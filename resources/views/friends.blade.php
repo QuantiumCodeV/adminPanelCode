@@ -2472,6 +2472,7 @@
     justify-content: space-between;
     padding: 5px;
     background-color: #F3F3F3;
+    border-radius: 16px;
   }
 
   .user_chat__footer__input input {
