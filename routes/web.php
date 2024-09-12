@@ -150,11 +150,8 @@ Route::prefix("/api")->group(function () {
     });
     Route::prefix('/friends')->group(function () {
         Route::post("/add", [FriendsController::class, "add"])->name("api.friends.add");
-        Route::post("/remove", [FriendsController::class, "remove"])->name("api.friends.remove");
+        Route::post("/remove", [FriendsController::class, "remove"])->name("api.friends.delete");
         Route::post("/block", [FriendsController::class, "block"])->name("api.friends.block");
-        Route::post("/unblock", [FriendsController::class, "unblock"])->name("api.friends.unblock");
-        Route::post("/accept", [FriendsController::class, "accept"])->name("api.friends.accept");
-        Route::post("/decline", [FriendsController::class, "decline"])->name("api.friends.decline");
     });
 });
 

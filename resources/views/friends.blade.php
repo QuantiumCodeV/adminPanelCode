@@ -2324,7 +2324,7 @@
 
   function addFriend(friendId) {
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("api.friends.accept") }}",
       type: "POST",
       data: {
         friend_id: friendId,

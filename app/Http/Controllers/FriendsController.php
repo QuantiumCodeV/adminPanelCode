@@ -99,22 +99,6 @@ class FriendsController extends Controller
         return response()->json(['message' => 'User blocked successfully']);
     }
 
-    public function unblock(Request $request)
-    {
-        $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
-        ]);
-
-        \DB::table('friends')
-            ->where('user_id_first', $data['user_id_first'])
-            ->where('user_id_second', $data['user_id_second'])
-            ->where('status', 'friend')
-            ->delete();
-
-        return response()->json(['message' => 'User unblocked successfully']);
-    }
-
     public function accept(Request $request)
     {
         $data = $request->validate([
