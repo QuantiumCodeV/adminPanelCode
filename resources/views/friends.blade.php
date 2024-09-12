@@ -2156,8 +2156,7 @@
     var button_block = document.getElementById("button_block");
 
     $.ajax({
-      url: "{{ route("
-      api.friends.add ") }}",
+      url: "{{ route("api.friends.add") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2185,8 +2184,7 @@
     var button_block = document.getElementById("button_block1");
 
     $.ajax({
-      url: "{{ route("
-      api.friends.add ") }}",
+      url: "{{ route("api.friends.add") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
