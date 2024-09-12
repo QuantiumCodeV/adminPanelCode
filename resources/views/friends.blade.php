@@ -2328,6 +2328,7 @@
       type: "POST",
       data: {
         friend_id: friendId,
+        myUserId: "{{ Auth::user()->id }}",
         _token: "{{ csrf_token() }}"
       },
       success: function (data) {
