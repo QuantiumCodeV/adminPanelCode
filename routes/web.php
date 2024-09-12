@@ -10,6 +10,7 @@ use App\Http\Controllers\IpController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\FriendsController;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
