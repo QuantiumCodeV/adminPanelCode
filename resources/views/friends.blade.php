@@ -2447,187 +2447,201 @@
         <path d="M1 7L12 18L23 7" stroke="black" stroke-width="2.5" />
       </svg>
     </div>
-  </div>
-</div>
+    <div class="user_chat__body">
+      <div class="user_chat__message received">
+        <div class="message__content">
+          fsdfsd
+        </div>
+        <div class="message_time">
+          12:00
+        </div>
+      </div>
+      <div class="user_chat__message sent">
+        <div class="message__content">
+          fsdfsd
+        </div>
+        <div class="message_time">
+          12:00
+        </div>
+      </div>
+      <style>
+        .hidden {
+          display: none !important;
+        }
 
-<style>
-  .hidden {
-    display: none !important;
-  }
+        .chat {
+          width: 420px;
+          height: 580px;
+          padding: 25px 21px;
+          position: fixed;
+          bottom: 30px;
+          right: 100px;
+          z-index: 999999;
+          background: white;
+          border-radius: 14px;
+          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+          opacity: 0;
+          transform: translateY(20px);
+          flex-direction: column;
+          display: flex;
+        }
 
-  .chat {
-    width: 420px;
-    height: 580px;
-    padding: 25px 21px;
-    position: fixed;
-    bottom: 30px;
-    right: 100px;
-    z-index: 999999;
-    background: white;
-    border-radius: 14px;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px);
-    flex-direction: column;
-    display: flex;
-  }
+        .user_chat {
+          display: flex;
+          flex-direction: column;
 
-  .user_chat {
-    display: flex;
-    flex-direction: column;
+        }
 
-  }
+        .user_chat__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
 
-  .user_chat__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+        .header__content {
+          display: flex;
+          flex-direction: column;
+        }
 
-  .header__content {
-    display: flex;
-    flex-direction: column;
-  }
+        .chat.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
 
-  .chat.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
+        .chat__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+        }
 
-  .chat__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-  }
+        .chat__list {
+          flex-grow: 1;
+          overflow-y: auto;
+          margin-bottom: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+        }
 
-  .chat__list {
-    flex-grow: 1;
-    overflow-y: auto;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
+        .chat__item {
+          padding: 10px;
+          border-bottom: 1px solid #ccc;
+          cursor: pointer;
+        }
 
-  .chat__item {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-  }
+        .chat__item:hover {
+          background-color: #f1f1f1;
+        }
 
-  .chat__item:hover {
-    background-color: #f1f1f1;
-  }
+        .chat__messages {
+          display: none;
+          flex-direction: column;
+          height: 100%;
+        }
 
-  .chat__messages {
-    display: none;
-    flex-direction: column;
-    height: 100%;
-  }
+        .chat__body {
+          flex-grow: 1;
+          overflow-y: auto;
+          margin-bottom: 15px;
+        }
 
-  .chat__body {
-    flex-grow: 1;
-    overflow-y: auto;
-    margin-bottom: 15px;
-  }
+        .chat__input {
+          display: flex;
+        }
 
-  .chat__input {
-    display: flex;
-  }
+        .chat__input input {
+          flex-grow: 1;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px 0 0 5px;
+        }
 
-  .chat__input input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-  }
+        .chat__input button {
+          padding: 10px 15px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 0 5px 5px 0;
+          cursor: pointer;
+        }
 
-  .chat__input button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-  }
+        .message {
+          margin-bottom: 10px;
+          padding: 10px;
+          border-radius: 5px;
+          max-width: 70%;
+        }
 
-  .message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 70%;
-  }
+        .message.sent {
+          background-color: #007bff;
+          color: white;
+          align-self: flex-end;
+        }
 
-  .message.sent {
-    background-color: #007bff;
-    color: white;
-    align-self: flex-end;
-  }
+        .message.received {
+          background-color: #f1f1f1;
+          align-self: flex-start;
+        }
+      </style>
 
-  .message.received {
-    background-color: #f1f1f1;
-    align-self: flex-start;
-  }
-</style>
+      <script>
+        function toggleChat() {
+          const chatContainer = document.getElementById('chatContainer');
+          if (chatContainer.style.display === 'none') {
+            chatContainer.style.display = 'flex';
+            setTimeout(() => {
+              chatContainer.classList.add('show');
+            }, 10);
+          } else {
+            chatContainer.classList.remove('show');
+            setTimeout(() => {
+              chatContainer.style.display = 'none';
+            }, 300);
+          }
+        }
 
-<script>
-  function toggleChat() {
-    const chatContainer = document.getElementById('chatContainer');
-    if (chatContainer.style.display === 'none') {
-      chatContainer.style.display = 'flex';
-      setTimeout(() => {
-        chatContainer.classList.add('show');
-      }, 10);
-    } else {
-      chatContainer.classList.remove('show');
-      setTimeout(() => {
-        chatContainer.style.display = 'none';
-      }, 300);
-    }
-  }
+        function openChat(chatId) {
+          const chatList = document.getElementById('chatList');
+          const chatMessages = document.getElementById('chatMessages');
+          const chatBody = document.getElementById('chatBody');
 
-  function openChat(chatId) {
-    const chatList = document.getElementById('chatList');
-    const chatMessages = document.getElementById('chatMessages');
-    const chatBody = document.getElementById('chatBody');
+          chatList.style.display = 'none';
+          chatMessages.style.display = 'flex';
+          chatBody.innerHTML = '';
 
-    chatList.style.display = 'none';
-    chatMessages.style.display = 'flex';
-    chatBody.innerHTML = '';
+        }
 
-  }
+        function sendMessage() {
+          const messageInput = document.getElementById('messageInput');
+          const message = messageInput.value.trim();
+          if (message) {
+            appendMessage(message, 'sent');
+            messageInput.value = '';
+            // Здесь вы можете добавить код для отправки сообщения на сервер
 
-  function sendMessage() {
-    const messageInput = document.getElementById('messageInput');
-    const message = messageInput.value.trim();
-    if (message) {
-      appendMessage(message, 'sent');
-      messageInput.value = '';
-      // Здесь вы можете добавить код для отправки сообщения на сервер
+            // Имитация ответа от сервера
+            setTimeout(() => {
+              appendMessage('This is a response from the server', 'received');
+            }, 1000);
+          }
+        }
 
-      // Имитация ответа от сервера
-      setTimeout(() => {
-        appendMessage('This is a response from the server', 'received');
-      }, 1000);
-    }
-  }
+        function appendMessage(message, type) {
+          const chatBody = document.getElementById('chatBody');
+          const messageElement = document.createElement('div');
+          messageElement.classList.add('message', type);
+          messageElement.textContent = message;
+          chatBody.appendChild(messageElement);
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }
 
-  function appendMessage(message, type) {
-    const chatBody = document.getElementById('chatBody');
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('message', type);
-    messageElement.textContent = message;
-    chatBody.appendChild(messageElement);
-    chatBody.scrollTop = chatBody.scrollHeight;
-  }
-
-  // Обработчик события нажатия клавиши Enter в поле ввода
-  document.getElementById('messageInput').addEventListener('keypress', function (event) {
-    if (event.key === 'Enter') {
-      sendMessage();
-    }
-  });
-</script>
+        // Обработчик события нажатия клавиши Enter в поле ввода
+        document.getElementById('messageInput').addEventListener('keypress', function (event) {
+          if (event.key === 'Enter') {
+            sendMessage();
+          }
+        });
+      </script>
