@@ -2193,7 +2193,7 @@
                                   margin-right: -15px;
                                 }
                                 .avatar-count {
-                                  margin-left: 10px;
+                                  margin-left: 20px;
                                   width: 30px;
                                   height: 30px;
                                   display: flex;
