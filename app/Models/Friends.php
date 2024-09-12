@@ -32,11 +32,13 @@ class Friends extends Model
     }
 
 
-    public function commonFriends($userId1, $userId2)
+    public function commonFriends($userId2)
     {
-        $friends1 = $this->where(function ($query) use ($userId1) {
-            $query->where('user_id_first', $userId1)
-                ->orWhere('user_id_second', $userId1);
+        $userId = auth()->id();
+
+        $friends1 = $this->where(function ($query) use (userId) {
+            $query->where('user_id_first', $userId)
+                ->orWhere('user_id_second', $userId);
         })->where('status', 'pending')->pluck('user_id_first', 'user_id_second')->flatten()->unique();
 
         $friends2 = $this->where(function ($query) use ($userId2) {
