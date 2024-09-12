@@ -2484,7 +2484,7 @@
     flex-direction: column;
     padding: 35px 0px;
     overflow-y: auto;
-    max-height: 400px;
+    height: 100%;
   }
 
   .user_chat__message.received {
