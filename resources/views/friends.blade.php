@@ -2305,6 +2305,10 @@
   }
 </style>
 <script>
+  function openChat(element, id){
+    toggleChat();
+  }
+
   function deleteFriend(element, friendId) {
     $.ajax({
       url: "{{ route("api.friends.delete") }}",
@@ -2400,17 +2404,16 @@
     }, 1000);
   }
 </script>
-<div class="chat">
+<div class="chat" id="chatContainer" style="display: none;">
   <div class="chat__header">
     <h3>All conversations</h3>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none" onclick="toggleChat()">
       <path d="M1 1L12 12L23 1" stroke="black" stroke-width="2.5" />
       <path d="M1 7L12 18L23 7" stroke="black" stroke-width="2.5" />
     </svg>
   </div>
-
-
 </div>
+
 <style>
   .chat {
     width: 420px;
@@ -2422,10 +2425,35 @@
     z-index: 999999;
     background: white;
     border-radius: 14px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
   }
-
+  
+  .chat.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
   .chat__header {
     display: flex;
     justify-content: space-between;
   }
 </style>
+
+<script>
+function toggleChat() {
+  const chatContainer = document.getElementById('chatContainer');
+  if (chatContainer.style.display === 'none') {
+    chatContainer.style.display = 'block';
+    setTimeout(() => {
+      chatContainer.classList.add('show');
+    }, 10);
+  } else {
+    chatContainer.classList.remove('show');
+    setTimeout(() => {
+      chatContainer.style.display = 'none';
+    }, 300);
+  }
+}
+</script>
