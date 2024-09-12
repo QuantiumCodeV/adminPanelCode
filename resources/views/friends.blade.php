@@ -1894,9 +1894,15 @@
                     }
                     </style>
                   </button>
+                  @if($friend->status == "friend")
                   <button class="action">
                     <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
                   </button>
+                  @elseif($friend->status == "pending")
+                  <button class="action">
+                    <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
+                  </button>
+                  @endif
                   <button class="action">
                     <img src="{{ asset("assets/block.png") }}" class="" alt="">
                   </button>
