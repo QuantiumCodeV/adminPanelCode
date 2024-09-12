@@ -41,13 +41,13 @@ class Friends extends Model
         $friends1 = $this->where(function ($query) use ($userId) {
             $query->where('user_id_first', $userId)
                 ->orWhere('user_id_second', $userId);
-        })->where('status', 'pending')->pluck('user_id_first', 'user_id_second');
+        })->where('status', 'friends')->pluck('user_id_first', 'user_id_second');
 
         // Получаем друзей второго пользователя
         $friends2 = $this->where(function ($query) use ($userId2) {
             $query->where('user_id_first', $userId2)
                 ->orWhere('user_id_second', $userId2);
-        })->where('status', 'pending')->pluck('user_id_first', 'user_id_second');
+        })->where('status', 'friends')->pluck('user_id_first', 'user_id_second');
 
         // Находим общих друзей
         $commonFriendIds = $friends1->intersect($friends2)->diff([$userId, $userId2]);
