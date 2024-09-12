@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ChatController extends Controller
 {
-    public function getChats()
+    public static function getChats()
     {   
         $user = auth()->user();
         $chats = Message::where('user_id', $user->id)
