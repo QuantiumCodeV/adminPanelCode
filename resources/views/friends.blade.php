@@ -2553,6 +2553,9 @@
     flex-grow: 1;
     overflow-y: auto;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   .chat__item {
