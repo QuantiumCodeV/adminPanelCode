@@ -1851,10 +1851,10 @@
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
                   <div class="flex gap-2">
-                  <div class="action">
+                  <button class="action">
                     <img src="{{ asset("assets/message.png") }}" class="" alt="">
-                  </div>
-                  <div class="action starAnimationBlock ">
+                  </button>
+                  <button class="action starAnimationBlock ">
                     <img src="{{ asset("assets/call.png") }}" class="" alt="">
                     <img style="    position: absolute;
             top: -20px;
@@ -1893,16 +1893,16 @@
                     }
                     }
                     </style>
-                  </div>
-                  <div class="action">
+                  </button>
+                  <button class="action">
                     <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
                   </div>
-                  <div class="action">
+                  <button class="action">
                     <img src="{{ asset("assets/block.png") }}" class="" alt="">
-                  </div>
-                  <div class="action">
+                  </button>
+                  <button class="action">
                     ID
-                  </div>
+                  </button>
 
                   </div>
 
