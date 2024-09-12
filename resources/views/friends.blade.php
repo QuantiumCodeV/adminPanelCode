@@ -2412,6 +2412,25 @@
       <path d="M1 7L12 18L23 7" stroke="black" stroke-width="2.5" />
     </svg>
   </div>
+  <div class="chat__list" id="chatList">
+    @if(count($chats) > 0)
+      @foreach($chats as $chat)
+        <div class="chat__item" onclick="openChat({{ $chat->id }})">
+          <h4>{{ $chat->name }}</h4>
+          <p>{{ $chat->last_message }}</p>
+        </div>
+      @endforeach
+    @else
+      <p>No chats available</p>
+    @endif
+  </div>
+  <div class="chat__messages" id="chatMessages" style="display: none;">
+    <div class="chat__body" id="chatBody"></div>
+    <div class="chat__input">
+      <input type="text" id="messageInput" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -2429,6 +2448,7 @@
     opacity: 0;
     transform: translateY(20px);
     flex-direction: column;
+    display: flex;
   }
   
   .chat.show {
@@ -2439,6 +2459,74 @@
   .chat__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .chat__list {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+  }
+
+  .chat__item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .chat__item:hover {
+    background-color: #f1f1f1;
+  }
+
+  .chat__messages {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .chat__body {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+  }
+
+  .chat__input {
+    display: flex;
+  }
+
+  .chat__input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .chat__input button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+  }
+
+  .message.sent {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+  }
+
+  .message.received {
+    background-color: #f1f1f1;
+    align-self: flex-start;
   }
 </style>
 
@@ -2457,4 +2545,49 @@ function toggleChat() {
     }, 300);
   }
 }
+
+function openChat(chatId) {
+  const chatList = document.getElementById('chatList');
+  const chatMessages = document.getElementById('chatMessages');
+  const chatBody = document.getElementById('chatBody');
+
+  chatList.style.display = 'none';
+  chatMessages.style.display = 'flex';
+  chatBody.innerHTML = '';
+
+  // Здесь вы можете добавить код для загрузки сообщений чата с сервера
+  // Например:
+  // fetchChatMessages(chatId);
+}
+
+function sendMessage() {
+  const messageInput = document.getElementById('messageInput');
+  const message = messageInput.value.trim();
+  if (message) {
+    appendMessage(message, 'sent');
+    messageInput.value = '';
+    // Здесь вы можете добавить код для отправки сообщения на сервер
+
+    // Имитация ответа от сервера
+    setTimeout(() => {
+      appendMessage('This is a response from the server', 'received');
+    }, 1000);
+  }
+}
+
+function appendMessage(message, type) {
+  const chatBody = document.getElementById('chatBody');
+  const messageElement = document.createElement('div');
+  messageElement.classList.add('message', type);
+  messageElement.textContent = message;
+  chatBody.appendChild(messageElement);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+// Обработчик события нажатия клавиши Enter в поле ввода
+document.getElementById('messageInput').addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    sendMessage();
+  }
+});
 </script>
