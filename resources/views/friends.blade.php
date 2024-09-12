@@ -2457,13 +2457,29 @@
         </div>
       </div>
       <div class="user_chat__message sent">
-        <div class="message__content">
+        <span class="message__content">
           fsdfsd
-        </div>
-        <div class="message_time">
+        </span>
+        <span class="message_time">
           12:00
-        </div>
+        </span>
       </div>
+      <style>
+        .user_chat__message.received .message__content {
+          padding: 10px 26px;
+          background: #EAEAEA;
+          border-radius: 35px 35px 35px 10px;
+        }
+
+        .user_chat__message.sent .message__content {
+          padding: 10px 26px;
+          background: #FBD570;
+          border-radius: 35px 35px 10px 35px;
+        }
+        .user_chat__message.sent .message_time{
+          text-align: right;
+        }
+      </style>
       <style>
         .hidden {
           display: none !important;
