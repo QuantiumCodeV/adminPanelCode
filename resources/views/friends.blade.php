@@ -2665,7 +2665,7 @@
               messageElement.classList.add('user_chat__message', message.user_id === {{ auth()->user()->id }} ? 'sent' : 'received');
               messageElement.innerHTML = `
                 <div class="message__content">${message.message}</div>
-                <div class="message_time">${message.created_at}</div>
+                <div class="message_time">${new Date(message.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })}</div>
               `;
               chatBody.appendChild(messageElement);
             });
