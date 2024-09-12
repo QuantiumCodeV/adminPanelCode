@@ -2472,6 +2472,7 @@
         .user_chat__body{
           display: flex;
           flex-direction: column;
+          padding: 35px 19px;
         }
         .user_chat__message.received{
           width: max-content;
