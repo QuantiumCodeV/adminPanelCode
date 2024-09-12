@@ -2413,7 +2413,7 @@
       <path d="M1 7L12 18L23 7" stroke="black" stroke-width="2.5" />
     </svg>
   </div>
-  <div class="chat__list" id="chatList">
+  <div class="chat__list hidden" id="chatList">
     @if(count($chats) > 0)
     @foreach($chats as $chat)
     <div class="chat__item" onclick="openChat({{ $chat->id }})">
