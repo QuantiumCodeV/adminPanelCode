@@ -2557,7 +2557,9 @@
     flex-direction: column;
     text-align: center;
   }
-
+  .chat__list img{
+    max-width: 100px;
+  }
   .chat__item {
     padding: 10px;
     border-bottom: 1px solid #ccc;
