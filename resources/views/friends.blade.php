@@ -2457,6 +2457,9 @@
 </div>
 
 <style>
+  .hidden {
+    display: none;
+  }
   .chat {
     width: 420px;
     height: 580px;
