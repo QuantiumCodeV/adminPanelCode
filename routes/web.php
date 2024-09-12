@@ -159,7 +159,7 @@ Route::prefix("/api")->group(function () {
 });
 
 Route::post("/send/message", [ChatController::class, "send"])->name("messages.index");
-Route::get("/get/messages", [ChatController::class, "get"])->name("messages.get");
+Route::get("/get/messages", [ChatController::class, "get"])->name("messages.store");
 // Папка product-discovery-bible
 
 Route::get('/product-discovery-bible/start-here/introduction', function () {
