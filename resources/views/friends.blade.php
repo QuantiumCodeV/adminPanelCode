@@ -2639,12 +2639,12 @@
 
   function toggleChat() {
     const chatContainer = document.getElementById('chatContainer');
+    
     if (chatContainer.style.display === 'none') {
       chatContainer.style.display = 'flex';
       setTimeout(() => {
         chatContainer.classList.add('show');
-        const chat__header = document.querySelector(".chat__header")
-    chat__header.classList.remove('hidden')
+        
       }, 10);
     } else {
       chatContainer.classList.remove('show');
