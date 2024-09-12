@@ -2473,6 +2473,13 @@
           display: flex;
           flex-direction: column;
         }
+        .user_chat__message.received{
+          width: max-content;
+        }
+        .user_chat__message.sent{
+          width: max-content;
+          align-self: end;
+        }
         .user_chat__message.received .message__content {
           padding: 10px 26px;
           background: #EAEAEA;
