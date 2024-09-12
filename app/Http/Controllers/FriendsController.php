@@ -96,7 +96,6 @@ class FriendsController extends Controller
             
             if ($friend_request) {
                 $friend_request->status = 'friend';
-                $friend_request->save();
                 return response()->json(['message' => 'success']);
             }
             else{
