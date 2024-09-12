@@ -1855,23 +1855,7 @@
                                 </div>
                                 
                               </div>
-                              <style>
-                                  .action {
-                                    width: 31px;
-                                    height: 31px;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    border-radius: 5px;
-                                    border: 2px solid #242425;
-                                    background-color: #FBD570;
-                                    color: #ffffff;
-                                    transition: background-color 0.3s ease;
-                                  }
-                                  .action:last-child{
-                                    padding: 15px 4px;
-                                  }
-                                </style>
+                              
                             </td>
                           </tr>
                           @endforeach
@@ -2236,4 +2220,21 @@
     font-size: 12px;
     font-weight: bold;
   }
-</style>
+</style><style>
+                                  .action {
+                                    width: 31px;
+                                    height: 31px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 5px;
+                                    border: 2px solid #242425;
+                                    background-color: #FBD570;
+                                    color: #ffffff;
+                                    transition: background-color 0.3s ease;
+                                  }
+                                  .action:last-child{
+                                    padding:4px 15px;
+                                    width: 52px;
+                                  }
+                                </style>
