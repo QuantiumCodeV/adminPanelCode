@@ -2471,6 +2471,10 @@
     flex-grow: 1;
     overflow-y: auto;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .chat__item {
