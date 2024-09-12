@@ -1806,7 +1806,7 @@
                                   
                                 @foreach($mutualFriends as $mutualFriend)
 
-                                <li class="avatar"><img src="{{ $mutualFriend->avatar ? asset('storage/' . $mutualFriend->avatar) : asset('assets/member_avatar_453.png') }}" alt=""></li>
+                                <img class="avatar" src="{{ $mutualFriend->avatar ? asset('storage/' . $mutualFriend->avatar) : asset('assets/member_avatar_453.png') }}" alt="">
                                 @endforeach
 
                                 </div>
@@ -1819,6 +1819,12 @@
                                 .avatar{
                                   border-radius: 100%;
                                   width: 30px;
+                                }
+                                .avatar:nth-child(2){
+                                  margin-left: -10px;
+                                }
+                                .avatar:nth-child(3){
+                                  margin-left: -10px;
                                 }
                               </style>
                               @else
