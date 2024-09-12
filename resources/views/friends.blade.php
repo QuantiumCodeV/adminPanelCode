@@ -2337,10 +2337,10 @@
                       tabindex="0" onclick="showInput1()">
 
                       <h4 id="main_text1" class="flex" style="gap:5px"><svg class="h-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroke-2 stroke-neutral-700" d="M6 12h6m0 0h6m-6 0v6m0-6V6" stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                      </svg>Add Friends</h4>
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path class="stroke-2 stroke-neutral-700" d="M6 12h6m0 0h6m-6 0v6m0-6V6" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg>Add Friends</h4>
                       <div id="inputContainer1" class="hidden">
                         <input type="text" id="meetingInput1" placeholder="">
                         <div class="line"></div>
@@ -2437,7 +2437,7 @@
                         /* Переходы */
                       }
                     </style>
-                  
+
                   </div>
                 </section>
 
@@ -3152,7 +3152,7 @@
                         </style>
 
 
-                    
+
                       </div>
                       <style>
                         .buttons {
@@ -3259,7 +3259,7 @@
                             }
                           </style>
                           @foreach($friends as $friend)
-                          {{ $friend }}
+                          {{ $friend->commonFriends($friend->userFirst->id != auth()->user()->id ? $friend->userFirst->id : $friend->userSecond->id) }}
                           <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
@@ -3567,87 +3567,89 @@
   </svg>
 </body>
 
-</html>@include('feedback')@include('profileSettings')    <script>
-                          function showInput() {
-                            var inputContainer = document.getElementById("inputContainer");
-                            var mainText = document.getElementById("main_text");
+</html>@include('feedback')@include('profileSettings') <script>
+  function showInput() {
+    var inputContainer = document.getElementById("inputContainer");
+    var mainText = document.getElementById("main_text");
 
-                            inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+    inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
 
-                            // Сокрытие текста
-                            mainText.classList.add("hidden-text");
+    // Сокрытие текста
+    mainText.classList.add("hidden-text");
 
-                            setTimeout(() => {
-                              inputContainer.classList.add("show"); // Добавить класс "show" для анимации
-                            }, 10); // Небольшая задержка для переходов
-                          }
+    setTimeout(() => {
+      inputContainer.classList.add("show"); // Добавить класс "show" для анимации
+    }, 10); // Небольшая задержка для переходов
+  }
 
-                          function showInput1() {
-                            var inputContainer = document.getElementById("inputContainer1");
-                            var mainText = document.getElementById("main_text1");
+  function showInput1() {
+    var inputContainer = document.getElementById("inputContainer1");
+    var mainText = document.getElementById("main_text1");
 
-                            inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+    inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
 
-                            // Сокрытие текста
-                            mainText.classList.add("hidden-text");
+    // Сокрытие текста
+    mainText.classList.add("hidden-text");
 
-                            setTimeout(() => {
-                              inputContainer.classList.add("show"); // Добавить класс "show" для анимации
-                            }, 10); // Небольшая задержка для переходов
-                          }
+    setTimeout(() => {
+      inputContainer.classList.add("show"); // Добавить класс "show" для анимации
+    }, 10); // Небольшая задержка для переходов
+  }
 
-                          function addFriend() {
-                            var meetingCode = document.getElementById("meetingInput").value;
-                            var button_block = document.getElementById("button_block");
+  function addFriend() {
+    var meetingCode = document.getElementById("meetingInput").value;
+    var button_block = document.getElementById("button_block");
 
-                            $.ajax({
-                              url: "{{ route("api.friends.add") }}",
-                              type: "POST",
-                              data: {
-                                user_identifier: meetingCode,
-                                _token: "{{ csrf_token() }}"
-                              },
-                              success: function(data) {
-                                console.log(data)
-                                if (data.message == "success") {
-                                  window.location.reload()
-                                } else {
-                                  button_block.classList.add("error_field");
-                                }
-                              },
-                              error: function(data) {
-                                console.log(data)
-                                button_block.classList.add("error_field");
-                              }
-                            })
+    $.ajax({
+      url: "{{ route("
+      api.friends.add ") }}",
+      type: "POST",
+      data: {
+        user_identifier: meetingCode,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function(data) {
+        console.log(data)
+        if (data.message == "success") {
+          window.location.reload()
+        } else {
+          button_block.classList.add("error_field");
+        }
+      },
+      error: function(data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+      }
+    })
 
-                          }
+  }
 
 
-                          function addFriend1() {
-                            var meetingCode = document.getElementById("meetingInput1").value;
-                            var button_block = document.getElementById("button_block1");
+  function addFriend1() {
+    var meetingCode = document.getElementById("meetingInput1").value;
+    var button_block = document.getElementById("button_block1");
 
-                            $.ajax({
-                              url: "{{ route("api.friends.add") }}",
-                              type: "POST",
-                              data: {
-                                user_identifier: meetingCode,
-                                _token: "{{ csrf_token() }}"
-                              },
-                              success: function(data) {
-                                console.log(data)
-                                if (data.message == "success") {
-                                  window.location.reload()
-                                } else {
-                                  button_block.classList.add("error_field");
-                                }
-                              },
-                              error: function(data) {
-                                console.log(data)
-                                button_block.classList.add("error_field");
-                              }
-                            })
+    $.ajax({
+      url: "{{ route("
+      api.friends.add ") }}",
+      type: "POST",
+      data: {
+        user_identifier: meetingCode,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function(data) {
+        console.log(data)
+        if (data.message == "success") {
+          window.location.reload()
+        } else {
+          button_block.classList.add("error_field");
+        }
+      },
+      error: function(data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+      }
+    })
 
-                          }
-                        </script>
+  }
+</script>
