@@ -3639,12 +3639,12 @@
                                 if (data.message == "success") {
                                   window.location.reload()
                                 } else {
-                                  button_block.classList.add("error_field1");
+                                  button_block.classList.add("error_field");
                                 }
                               },
                               error: function(data) {
                                 console.log(data)
-                                button_block.classList.add("error_field1");
+                                button_block.classList.add("error_field");
                               }
                             })
 
