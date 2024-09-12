@@ -2387,8 +2387,10 @@
         console.log('Friend ID copied to clipboard (fallback method)');
     }
     element.innerHTML = "Copied!";
+    element.style.width="70px"
     setTimeout(() => {
       element.innerHTML = "ID";
+      element.style.width="52px"
     }, 1000);
   }
 </script>
