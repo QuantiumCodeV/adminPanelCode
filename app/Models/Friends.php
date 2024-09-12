@@ -50,7 +50,7 @@ class Friends extends Model
         })->where('status', 'pending')->pluck('user_id_first', 'user_id_second');
 
         // Находим общих друзей
-        $commonFriendIds = $friends1->intersect($friends2);
+        $commonFriendIds = $friends1->intersect($friends2)->diff([$userId, $userId2]);
 
         return User::whereIn('id', $commonFriendIds)->get();
     }
