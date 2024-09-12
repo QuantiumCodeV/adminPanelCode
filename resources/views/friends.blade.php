@@ -1850,6 +1850,9 @@
                                 <div class="action">
                                   <img src="{{ asset("assets/block.png") }}" class="" alt="">
                                 </div>
+                                <div class="action">
+                                  ID
+                                </div>
                                 <style>
                                   .action {
                                     width: 31px;
@@ -1862,6 +1865,9 @@
                                     background-color: #FBD570;
                                     color: #ffffff;
                                     transition: background-color 0.3s ease;
+                                  }
+                                  .action:last-child{
+                                    padding: 15px 4px;
                                   }
                                 </style>
                               </div>
