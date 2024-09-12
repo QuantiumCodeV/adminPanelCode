@@ -94,8 +94,7 @@ class FriendsController extends Controller
 
         // Получите запрос на дружбу
         $friend_request = Friends::where('user_id_first', auth()->user()->id)
-            ->where('user_id_second', $data['friend_id'])
-            ->first();
+            ->where('user_id_second', $data['friend_id']);
 
         // Проверьте, есть ли запрос
         if ($friend_request) {
