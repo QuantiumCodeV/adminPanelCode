@@ -849,10 +849,11 @@
                       class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                       tabindex="0" onclick="showInput1()">
 
-                      <h4 id="main_text1" class="flex" style="gap:5px"><svg class="h-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                      <h4 id="main_text1" class="flex" style="gap:5px"><svg class="h-6" fill="none"
+                          style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg">
-                          <path class="stroke-2 stroke-neutral-700" d="M6 12h6m0 0h6m-6 0v6m0-6V6" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+                          <path class="stroke-2 stroke-neutral-700" d="M6 12h6m0 0h6m-6 0v6m0-6V6"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>Add Friends</h4>
                       <div id="inputContainer1" class="hidden">
                         <input type="text" id="meetingInput1" placeholder="">
@@ -955,917 +956,966 @@
                 </section>
 
                 @if($friends->isEmpty())
-                <div class="h-4/5 w-full relative">
-                  <div class="w-full h-full overflow-hidden">
-                    <div class="h-full w-full overflow-auto relative">
-                      <table class="w-full border-separate border-spacing-0">
-                        <thead class="bg-primary-100 top-0 z-10 sticky">
-                          <tr>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody class="divide-neutral-200">
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
-                            <td
-                              class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                            <td
-                              class="px-6 py-4 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300"></div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+          <div class="h-4/5 w-full relative">
+            <div class="w-full h-full overflow-hidden">
+            <div class="h-full w-full overflow-auto relative">
+              <table class="w-full border-separate border-spacing-0">
+              <thead class="bg-primary-100 top-0 z-10 sticky">
+                <tr>
+                <th
+                  class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
+                  style="position: relative">
+                  <div>
+                  <div class="h-full w-full">
+                    <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                  style="position: relative">
+                  <div>
+                  <div class="h-full w-full">
+                    <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                  style="position: relative">
+                  <div>
+                  <div class="h-full w-full">
+                    <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                  style="position: relative">
+                  <div>
+                  <div class="h-full w-full">
+                    <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                  style="position: relative">
+                  <div>
+                  <div class="h-full w-full">
+                    <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                  style="position: relative">
+                  <div>
+                  <div class="h-full w-full">
+                    <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
+                  style="position: relative">
+                  <div>
+                  <div class="h-full w-full">
+                    <div class="rounded w-20 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </th>
+                </tr>
+              </thead>
+              <tbody class="divide-neutral-200">
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+                <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height]">
+                <td
+                  class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l rounded-bl-lg border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap border border-neutral-300 rounded-br-lg border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300"></div>
+                  </div>
+                  </div>
+                </td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+            </div>
+            <div
+            class="flex flex-col gap-4 items-center justify-center h-full w-full absolute top-0 left-0 bg-gradient-to-t from-30% from-primary-100 to-primary-100/0">
+            <p class="text-8xl">🧸</p>
+            <h1>You don’t have users</h1>
+            <p class="text-center">
+              Enter a friend's name or ID
+              to search for and add to friends.
+            </p>
+            <section class="w-full h-fit flex flex-row items-center justify-center gap-4">
+              <div class="buttons">
+
+              <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                crossorigin="anonymous"></script>
+              <a id="button_block"
+                class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
+                tabindex="0" onclick="showInput()">
+
+                <h4 id="main_text" class="flex" style="gap:5px"><svg class="h-6 w-6" fill="none"
+                  style="max-width: 50vw; max-height: 50vh;" viewBox="0 0 19 17"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="stroke-2 stroke-neutral-700"
+                  d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>Add Friends</h4>
+                <div id="inputContainer" class="hidden">
+                <input type="text" id="meetingInput" placeholder="">
+                <div class="line"></div>
+                <button type="button" onclick="addFriend()">ADD</button>
+                </div>
+
+              </a>
+
+
+              <style>
+                #inputContainer {
+                display: flex;
+                gap: 13px;
+                opacity: 0;
+                /* Start invisible */
+                width: 0;
+                /* Start width as zero */
+                transition: opacity 0.3s ease, width 0.3s ease;
+                /* Transition effects */
+                overflow: hidden;
+                /* Hide overflow */
+                }
+
+                #inputContainer.show {
+                opacity: 1;
+                /* Fully visible */
+                width: auto;
+                /* Allow natural width */
+                /* Adjust max-width if desired */
+                max-width: 300px;
+                /* Limit width to prevent excess space */
+                }
+
+                #inputContainer input {
+                background-color: transparent;
+                color: black;
+                border: 2px solid black;
+                border-radius: 10px;
+                padding: 3px;
+                }
+
+                #inputContainer input::placeholder {
+                color: black;
+                }
+
+                .line {
+                height: auto;
+                border: 1px solid black;
+                }
+
+                .error_field {
+                border-color: red;
+                color: red;
+                }
+
+                .error_field #inputContainer input {
+                border-color: red;
+                color: red;
+
+                }
+
+                .error_field #inputContainer input::placeholder {
+                border-color: red;
+                color: red;
+
+                }
+
+                .error_field div {
+                border-color: red;
+                color: red;
+                }
+
+                .hidden {
+                display: none;
+                /* Скрыть по умолчанию */
+                }
+
+                .hidden-text {
+                display: none;
+                /* Скрыть текст */
+                }
+
+                .show {
+                display: flex;
+                /* Показать контейнер с вводом */
+                gap: 13px;
+                opacity: 1;
+                /* Полная видимость */
+                width: auto;
+                /* Автоматическая ширина */
+                max-width: 300px;
+                /* Ограничение ширины */
+                transition: opacity 0.3s ease, width 0.3s ease;
+                /* Переходы */
+                }
+              </style>
+
+
+
+              </div>
+              <style>
+              .buttons {
+                display: flex;
+                gap: 19px;
+              }
+              </style>
+            </section>
+            </div>
+          </div>
+        @else
+            <div class="h-4/5 w-full relative">
+              <div class="w-full h-full overflow-hidden">
+              <div class="h-full w-full overflow-auto relative">
+                <table class="w-full border-separate border-spacing-0">
+                <thead class="bg-primary-100 top-0 z-10 sticky">
+                  <tr>
+                  <th
+                    class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
+                    style="position: relative">
+                    <div>
+                    <div class="h-full w-full">
+                      <div class="rounded w-20 h-6 bg-neutral-300 centerContent"
+                      style="background-color: rgba(234, 234, 234, 1)">Name</div>
+                    </div>
+                    </div>
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                    style="position: relative">
+                    <div>
+                    <div class="h-full w-full">
+                      <div class="rounded w-20 h-6 bg-neutral-300 centerContent"
+                      style="background-color: rgba(234, 234, 234, 1)">Online</div>
+                    </div>
+                    </div>
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                    style="position: relative">
+                    <div>
+                    <div class="h-full w-full">
+                      <div class="rounded w-20 h-6 bg-neutral-300 centerContent"
+                      style="background-color: rgba(234, 234, 234, 1)">Mutual Group</div>
+                    </div>
+                    </div>
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                    style="position: relative">
+                    <div>
+                    <div class="h-full w-full">
+                      <div class="rounded w-20 h-6 bg-neutral-300 centerContent"
+                      style="background-color: rgba(234, 234, 234, 1)">Mutual Friends</div>
+                    </div>
+                    </div>
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                    style="position: relative">
+                    <div>
+                    <div class="h-full w-full">
+                      <div class="rounded w-20 h-6 bg-neutral-300 centerContent"
+                      style="background-color: rgba(234, 234, 234, 1)">Pro</div>
+                    </div>
+                    </div>
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
+                    style="position: relative">
+                    <div>
+                    <div class="h-full w-full">
+                      <div class="rounded w-20 h-6 bg-neutral-300 centerContent"
+                      style="background-color: rgba(234, 234, 234, 1)"> Status</div>
+                    </div>
+                    </div>
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
+                    style="position: relative">
+                    <div>
+                    <div class="h-full w-full">
+                      <div class="rounded w-20 h-6 bg-neutral-300 centerContent"
+                      style="background-color: rgba(234, 234, 234, 1)">Interactions</div>
+                    </div>
+                    </div>
+                  </th>
+                  </tr>
+                </thead>
+                <style>
+                  .centerContent {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: max-content;
+                  padding: 6px 19px;
+                  }
+                </style>
+                <tbody class="divide-neutral-200">
+                  <style>
+                  tr.yellow>td>div>div>div {
+                    background-color: #FBD570;
+                  }
+
+                  tr.gray>td>div>div>div {
+                    background-color: #D3CCB8;
+                  }
+
+                  tr.red>td>div>div>div {
+                    background-color: #FB9A70;
+                  }
+                  </style>
+                  @foreach($friends as $friend)
+                  @php
+          $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
+          $mutualFriends = $friend->commonFriends($friendNotMe->id);
+          @endphp
+                  <tr
+                  class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
+                  <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friendNotMe->login }}
                     </div>
                   </div>
-                  <div
-                    class="flex flex-col gap-4 items-center justify-center h-full w-full absolute top-0 left-0 bg-gradient-to-t from-30% from-primary-100 to-primary-100/0">
-                    <p class="text-8xl">🧸</p>
-                    <h1>You don’t have users</h1>
-                    <p class="text-center">
-                      Enter a friend's name or ID
-                      to search for and add to friends.
-                    </p>
-                    <section class="w-full h-fit flex flex-row items-center justify-center gap-4">
-                      <div class="buttons">
-
-                        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-                          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-                          crossorigin="anonymous"></script>
-                        <a id="button_block"
-                          class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
-                          tabindex="0" onclick="showInput()">
-
-                          <h4 id="main_text" class="flex" style="gap:5px"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
-                              viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
-                              <path class="stroke-2 stroke-neutral-700"
-                                d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>Add Friends</h4>
-                          <div id="inputContainer" class="hidden">
-                            <input type="text" id="meetingInput" placeholder="">
-                            <div class="line"></div>
-                            <button type="button" onclick="addFriend()">ADD</button>
-                          </div>
-
-                        </a>
-
-
-                        <style>
-                          #inputContainer {
-                            display: flex;
-                            gap: 13px;
-                            opacity: 0;
-                            /* Start invisible */
-                            width: 0;
-                            /* Start width as zero */
-                            transition: opacity 0.3s ease, width 0.3s ease;
-                            /* Transition effects */
-                            overflow: hidden;
-                            /* Hide overflow */
-                          }
-
-                          #inputContainer.show {
-                            opacity: 1;
-                            /* Fully visible */
-                            width: auto;
-                            /* Allow natural width */
-                            /* Adjust max-width if desired */
-                            max-width: 300px;
-                            /* Limit width to prevent excess space */
-                          }
-
-                          #inputContainer input {
-                            background-color: transparent;
-                            color: black;
-                            border: 2px solid black;
-                            border-radius: 10px;
-                            padding: 3px;
-                          }
-
-                          #inputContainer input::placeholder {
-                            color: black;
-                          }
-
-                          .line {
-                            height: auto;
-                            border: 1px solid black;
-                          }
-
-                          .error_field {
-                            border-color: red;
-                            color: red;
-                          }
-
-                          .error_field #inputContainer input {
-                            border-color: red;
-                            color: red;
-
-                          }
-
-                          .error_field #inputContainer input::placeholder {
-                            border-color: red;
-                            color: red;
-
-                          }
-
-                          .error_field div {
-                            border-color: red;
-                            color: red;
-                          }
-
-                          .hidden {
-                            display: none;
-                            /* Скрыть по умолчанию */
-                          }
-
-                          .hidden-text {
-                            display: none;
-                            /* Скрыть текст */
-                          }
-
-                          .show {
-                            display: flex;
-                            /* Показать контейнер с вводом */
-                            gap: 13px;
-                            opacity: 1;
-                            /* Полная видимость */
-                            width: auto;
-                            /* Автоматическая ширина */
-                            max-width: 300px;
-                            /* Ограничение ширины */
-                            transition: opacity 0.3s ease, width 0.3s ease;
-                            /* Переходы */
-                          }
-                        </style>
-
-
-
-                      </div>
-                      <style>
-                        .buttons {
-                          display: flex;
-                          gap: 19px;
-                        }
-                      </style>
-                    </section>
                   </div>
-                </div>
-                @else
-                <div class="h-4/5 w-full relative">
-                  <div class="w-full h-full overflow-hidden">
-                    <div class="h-full w-full overflow-auto relative">
-                      <table class="w-full border-separate border-spacing-0">
-                        <thead class="bg-primary-100 top-0 z-10 sticky">
-                          <tr>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tl-lg border-l"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Name</div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Online</div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Mutual Group</div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Mutual Friends</div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Pro</div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)"> Status</div>
-                                </div>
-                              </div>
-                            </th>
-                            <th
-                              class="px-6 py-3 text-left text-neutral-600 font-semibold border border-neutral-300 rounded-tr-lg border-l-0"
-                              style="position: relative">
-                              <div>
-                                <div class="h-full w-full">
-                                  <div class="rounded w-20 h-6 bg-neutral-300 centerContent" style="background-color: rgba(234, 234, 234, 1)">Interactions</div>
-                                </div>
-                              </div>
-                            </th>
-                          </tr>
-                        </thead>
-                        <style>
-                          .centerContent {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: max-content;
-                            padding: 6px 19px;
-                          }
-                        </style>
-                        <tbody class="divide-neutral-200">
-                          <style>
-                            tr.yellow>td>div>div>div {
-                              background-color: #FBD570;
-                            }
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">Online</div>
+                  </div>
+                  </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">-</div>
+                  </div>
+                  </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
-                            tr.gray>td>div>div>div {
-                              background-color: #D3CCB8;
-                            }
-
-                            tr.red>td>div>div>div {
-                              background-color: #FB9A70;
-                            }
-                          </style>
-                          @foreach($friends as $friend)
-                          @php
-                          $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
-                          $mutualFriends = $friend->commonFriends($friendNotMe->id);
-                          @endphp
-                          <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friendNotMe->login }}</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">Online</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">-</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-
-                              {{-- Пример вывода имён общих друзей --}}
-                              @if($mutualFriends->count())
-                              <div class="avatars">
-                                @foreach($mutualFriends->take(3) as $mutualFriend)
-                                <img class="avatar" src="{{ $mutualFriend->avatar ? asset('storage/' . $mutualFriend->avatar) : asset('assets/member_avatar_453.png') }}" alt="">
-                                @endforeach
-                                @if($mutualFriends->count() > 3)
-                                <div class="avatar-count">+{{ $mutualFriends->count() - 3 }}</div>
-                                @endif
-                              </div>
+                  {{-- Пример вывода имён общих друзей --}}
+                  @if($mutualFriends->count())
+            <div class="avatars">
+            @foreach($mutualFriends->take(3) as $mutualFriend)
+        <img class="avatar"
+        src="{{ $mutualFriend->avatar ? asset('storage/' . $mutualFriend->avatar) : asset('assets/member_avatar_453.png') }}"
+        alt="">
+      @endforeach
+            @if($mutualFriends->count() > 3)
+        <div class="avatar-count">+{{ $mutualFriends->count() - 3 }}</div>
+      @endif
+            </div>
 
 
-                              @else
+          @else
 
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">-</div>
-                                </div>
-                              </div>
-                              @endif
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">No</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friend->status }}</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+        <div class="text-small">
+        <div class="h-full w-full">
+        <div class="rounded w-28 h-6 bg-neutral-300 centerContent">-</div>
+        </div>
+        </div>
+      @endif
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">No</div>
+                  </div>
+                  </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
+                  <div class="text-small">
+                  <div class="h-full w-full">
+                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friend->status }}</div>
+                  </div>
+                  </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
-                              <div class="flex gap-2">
-                                <div class="action">
-                                  <img src="{{ asset("assets/message.png") }}" class="" alt="">
-                                </div>
-                                <div class="action">
-                                  <img src="{{ asset("assets/call.png") }}" class="" alt="">
-                                </div>
-                                <div class="action">
-                                  <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
-                                </div>
-                                <div class="action">
-                                  <img src="{{ asset("assets/block.png") }}" class="" alt="">
-                                </div>
-                                <div class="action">
-                                  ID
-                                </div>
-                                
-                              </div>
-                              
-                            </td>
-                          </tr>
-                          @endforeach
-                        </tbody>
-                      </table>
-                    </div>
+                  <div class="flex gap-2">
+                  <div class="action">
+                    <img src="{{ asset("assets/message.png") }}" class="" alt="">
+                  </div>
+                  <div class="action starAnimationBlock ">
+                    <img src="{{ asset("assets/call.png") }}" class="" alt="">
+                    <img style="    position: absolute;
+            top: -20px;
+            right: -15px;" src="http://109.120.187.138/assets/star.png" class="starAnimation" alt="">
+                    <style>
+                    .starAnimationBlock {
+                    position: relative;
+                    overflow: visible !important;
+                    }
+
+                    .starAnimationBlock:focus .starAnimation {
+                    animation: star 1s infinite;
+                    transform: rotate(-30deg);
+                    }
+
+
+                    @keyframes star {
+                    0% {
+                    transform: rotate(0deg);
+                    }
+
+                    25% {
+                    transform: rotate(30deg);
+                    }
+
+                    50% {
+                    transform: rotate(0deg);
+                    }
+
+                    75% {
+                    transform: rotate(-30deg);
+                    }
+
+                    100% {
+                    transform: rotate(0deg);
+                    }
+                    }
+                    </style>
+                  </div>
+                  <div class="action">
+                    <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
+                  </div>
+                  <div class="action">
+                    <img src="{{ asset("assets/block.png") }}" class="" alt="">
+                  </div>
+                  <div class="action">
+                    ID
                   </div>
 
-                </div>
-                @endif
+                  </div>
+
+                  </td>
+                  </tr>
+          @endforeach
+                </tbody>
+                </table>
+              </div>
+              </div>
+
+            </div>
+    @endif
               </div>
             </section>
           </div>
@@ -2154,7 +2204,7 @@
         user_identifier: meetingCode,
         _token: "{{ csrf_token() }}"
       },
-      success: function(data) {
+      success: function (data) {
         console.log(data)
         if (data.message == "success") {
           window.location.reload()
@@ -2162,7 +2212,7 @@
           button_block.classList.add("error_field");
         }
       },
-      error: function(data) {
+      error: function (data) {
         console.log(data)
         button_block.classList.add("error_field");
       }
@@ -2182,7 +2232,7 @@
         user_identifier: meetingCode,
         _token: "{{ csrf_token() }}"
       },
-      success: function(data) {
+      success: function (data) {
         console.log(data)
         if (data.message == "success") {
           window.location.reload()
@@ -2190,7 +2240,7 @@
           button_block.classList.add("error_field");
         }
       },
-      error: function(data) {
+      error: function (data) {
         console.log(data)
         button_block.classList.add("error_field");
       }
@@ -2220,22 +2270,25 @@
     font-size: 12px;
     font-weight: bold;
   }
-</style><style>
-                                  .action {
-                                    width: 31px;
-                                    height: 31px;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    border-radius: 5px;
-                                    border: 2px solid #242425;
-                                    background-color: #FBD570;
-                                    color: #ffffff;
-                                    transition: background-color 0.3s ease;
-                                  }
-                                  .action:last-child{
-                                    padding:4px 15px;
-                                    width: 52px;
-                                    color: black;
-                                  }
-                                </style>
+</style>
+<style>
+  .action {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid #242425;
+    background-color: #FBD570;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+
+  .action:last-child {
+    padding: 4px 15px;
+    width: 52px;
+    color: black;
+    font-weight: 700;
+  }
+</style>
