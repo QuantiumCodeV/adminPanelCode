@@ -2456,8 +2456,8 @@
     <div class="user_chat__footer">
       <div class="user_chat__footer__input">
         <input type="text" placeholder="Start new message" id="messageInput">
-        <svg id="sendMessageButton" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
-          fill="none" onclick="sendMessage()">
+        <svg id="sendMessageButton" data-friendId="" xmlns="http://www.w3.org/2000/svg" width="13" height="12"
+          viewBox="0 0 13 12" fill="none" onclick="sendMessage(this)">
           <path
             d="M12.5303 6.53033C12.8232 6.23744 12.8232 5.76256 12.5303 5.46967L7.75736 0.696698C7.46447 0.403805 6.98959 0.403805 6.6967 0.696699C6.40381 0.989592 6.40381 1.46447 6.6967 1.75736L10.9393 6L6.6967 10.2426C6.40381 10.5355 6.40381 11.0104 6.6967 11.3033C6.98959 11.5962 7.46447 11.5962 7.75736 11.3033L12.5303 6.53033ZM6.55671e-08 6.75L12 6.75L12 5.25L-6.55671e-08 5.25L6.55671e-08 6.75Z"
             fill="black" />
@@ -2645,10 +2645,33 @@
     chatBody.innerHTML = '';
     chatNameElement.textContent = chatName;
     chatIdElement.textContent = `ID ${chatId}`;
+    var sendMessageButton = document.getElementById("sendMessageButton")
+    sendMessageButton.setAttribute('data-friendId', chatId);
 
-    // Here you can load messages for the selected chat
-    // For example:
-    // loadMessages(chatId);
+    var waitMessageInterval = setInterval(function () {
+      $.ajax({
+        url: "{{ route('messages.index') }}",
+        type: "GET",
+        data: {
+          user_id: {{ auth()->user()->id }},
+          friendId: chatId
+        },
+        success: function (response) {
+          if (response.length > 0) {
+            clearInterval(waitMessageInterval);
+            response.forEach(function (message) {
+              var messageElement = document.createElement('div');
+              messageElement.classList.add('user_chat__message', message.user_id === {{ auth()->user()->id }} ? 'sent' : 'received');
+              messageElement.innerHTML = `
+                <div class="message__content">${message.message}</div>
+                <div class="message_time">${message.created_at}</div>
+              `;
+              chatBody.appendChild(messageElement);
+            });
+          }
+        }
+      });
+    }, 1000);
   }
 
   function backToChats() {
@@ -2660,24 +2683,28 @@
     currentChatId = null;
   }
 
-  function sendMessage() {
+  function sendMessage(element) {
     const messageInput = document.getElementById('messageInput');
     const message = messageInput.value.trim();
-    if (message && currentChatId) {
-      appendMessage(message, 'sent');
-      messageInput.value = '';
-
-      // Показываем индикатор ожидания
-      showWaitingIndicator(); s
-
-      // Имитация отправки сообщения на сервер и получения ответа
-      setTimeout(() => {
-        // Скрываем индикатор ожидания
-        hideWaitingIndicator();
-
-        // Получаем ответ от сервера
-        appendMessage('This is a response from the server', 'received');
-      }, 2000); // Увеличиваем задержку до 2 секунд для демонстрации
+    if (message) {
+      $.ajax({
+        url: "{{ route('messages.store') }}",
+        type: "POST",
+        data: {
+          _token: "{{ csrf_token() }}",
+          user_id: {{ auth()->user()->id }},
+          friendId: element.getAttribute('data-friendId'),
+          message: message
+        },
+        success: function (response) {
+          console.log(response);
+          appendMessage(message, 'sent');
+          messageInput.value = '';
+        },
+        error: function (xhr, status, error) {
+          console.log(xhr.responseText);
+        }
+      })
     }
   }
 
