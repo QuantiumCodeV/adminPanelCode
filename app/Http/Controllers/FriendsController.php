@@ -97,9 +97,13 @@ class FriendsController extends Controller
             if ($friend_request) {
                 $friend_request->status = 'friend';
                 $friend_request->save();
+                return response()->json(['message' => 'success']);
+            }
+            else{
+                return  response()->json(['message' => 'Friend request not found'], 404);
             }
         
-            return response()->json(['message' => 'success']);
+            
     }
 
     public function decline(Request $request)
