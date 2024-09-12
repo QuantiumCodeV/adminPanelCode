@@ -2428,6 +2428,7 @@
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     opacity: 0;
     transform: translateY(20px);
+    flex-direction: column;
   }
   
   .chat.show {
