@@ -1774,6 +1774,7 @@
                           @foreach($friends as $friend)
                           @php
                           $otherUserId = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond->id : $friend->userFirst->id;
+                          $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
                           $mutualFriends = $friend->commonFriends($otherUserId);
                           @endphp
                           {{-- Пример вывода имён общих друзей --}}
@@ -1790,7 +1791,7 @@
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friend->userFirst->name }}</div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friendNotMe->name }}</div>
                                 </div>
                               </div>
                             </td>
