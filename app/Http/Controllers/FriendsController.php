@@ -93,7 +93,7 @@ class FriendsController extends Controller
             ]);
 
             $friend_request = Friends::where('user_id_first', auth()->user()->id)->where('user_id_second', $data['friend_id'])->first();
-
+            return $friend_request;
             if ($friend_request) {
                 $friend_request->status = 'friend';
                 $friend_request->save();
