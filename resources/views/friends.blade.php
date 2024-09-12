@@ -1837,7 +1837,7 @@
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                   <div class="text-small">
                   <div class="h-full w-full">
-                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">No</div>
+                    <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{$friend}}</div>
                   </div>
                   </div>
                   </td>
@@ -2299,7 +2299,7 @@
   }
 </style>
 <script>
-  function deleteFriend(element,friendId) {
+  function deleteFriend(element, friendId) {
     $.ajax({
       url: "{{ route("api.friends.delete") }}",
       type: "POST",
@@ -2322,7 +2322,7 @@
     })
   }
 
-  function addFriend(element,friendId) {
+  function addFriend(element, friendId) {
     $.ajax({
       url: "{{ route("api.friends.accept") }}",
       type: "POST",
@@ -2346,7 +2346,7 @@
     })
   }
 
-  function blockFriend(element,friendId) {
+  function blockFriend(element, friendId) {
     $.ajax({
       url: "{{ route("api.friends.block") }}",
       type: "POST",
@@ -2371,27 +2371,27 @@
 
   function copyId(element, friendId) {
     if (navigator.clipboard) {
-        navigator.clipboard.writeText(friendId).then(() => {
-            console.log('Friend ID copied to clipboard');
-        }).catch(err => {
-            console.error('Failed to copy: ', err);
-        });
+      navigator.clipboard.writeText(friendId).then(() => {
+        console.log('Friend ID copied to clipboard');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
     } else {
-        console.warn('Clipboard API not available');
-        // Fallback method if clipboard API is not available
-        const textArea = document.createElement('textarea');
-        textArea.value = friendId;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        console.log('Friend ID copied to clipboard (fallback method)');
+      console.warn('Clipboard API not available');
+      // Fallback method if clipboard API is not available
+      const textArea = document.createElement('textarea');
+      textArea.value = friendId;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      console.log('Friend ID copied to clipboard (fallback method)');
     }
     element.innerHTML = "Copied!";
-    element.style.width="70px"
+    element.style.width = "70px"
     setTimeout(() => {
       element.innerHTML = "ID";
-      element.style.width="52px"
+      element.style.width = "52px"
     }, 1000);
   }
 </script>
