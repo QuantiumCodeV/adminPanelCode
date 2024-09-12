@@ -2465,6 +2465,10 @@
         </div>
       </div>
       <style>
+        .user_chat__message{
+          display: flex;
+          flex-direction: column;
+        }
         .user_chat__body{
           display: flex;
           flex-direction: column;
