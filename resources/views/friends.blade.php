@@ -2666,17 +2666,36 @@
     if (message && currentChatId) {
       appendMessage(message, 'sent');
       messageInput.value = '';
-      // Here you can add code to send the message to the server
-      // For example:
-      // sendMessageToServer(currentChatId, message);
 
-      // Simulating a response from the server
+      // Показываем индикатор ожидания
+      showWaitingIndicator(); s
+
+      // Имитация отправки сообщения на сервер и получения ответа
       setTimeout(() => {
+        // Скрываем индикатор ожидания
+        hideWaitingIndicator();
+
+        // Получаем ответ от сервера
         appendMessage('This is a response from the server', 'received');
-      }, 1000);
+      }, 2000); // Увеличиваем задержку до 2 секунд для демонстрации
     }
   }
 
+  function showWaitingIndicator() {
+    const chatBody = document.getElementById('chatBody');
+    const waitingIndicator = document.createElement('div');
+    waitingIndicator.id = 'waitingIndicator';
+    waitingIndicator.className = 'message received';
+    waitingIndicator.innerHTML = '<span class="typing-indicator">...</span>';
+    chatBody.appendChild(waitingIndicator);
+  }
+
+  function hideWaitingIndicator() {
+    const waitingIndicator = document.getElementById('waitingIndicator');
+    if (waitingIndicator) {
+      waitingIndicator.remove();
+    }
+  }
   function appendMessage(message, type) {
     const chatBody = document.getElementById('chatBody');
     const messageElement = document.createElement('div');
