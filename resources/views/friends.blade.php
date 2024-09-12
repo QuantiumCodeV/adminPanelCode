@@ -1903,9 +1903,15 @@
         <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
         </button>
       @endif
-                  <button class="action" onclick="blockFriend(this,'{{ $friendNotMe->id }}')">
-                    <img src="{{ asset("assets/block.png") }}" class="" alt="">
-                  </button>
+                  @if($friend->status == "blocked")
+            <button class="action" onclick="blockFriend(this,'{{ $friendNotMe->id }}')">
+            <img src="{{ asset("assets/block.png") }}" class="" alt="">
+            </button>
+          @else
+        <button class="action" onclick="addFriend(this,'{{ $friendNotMe->id }}')">
+        <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
+        </button>
+      @endif
                   <button class="action" onclick="copyId(this, '{{ $friendNotMe->id }}')">
                     ID
                   </button>
