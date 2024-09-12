@@ -1821,10 +1821,10 @@
                                   width: 30px;
                                 }
                                 .avatar:nth-child(2){
-                                  margin-left: -10px;
+                                  margin-left: -15px;
                                 }
                                 .avatar:nth-child(3){
-                                  margin-left: -10px;
+                                  margin-left: -15px;
                                 }
                               </style>
                               @else
