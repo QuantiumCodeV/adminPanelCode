@@ -2405,7 +2405,7 @@
   }
 </script>
 <div class="chat" id="chatContainer" style="display: none;">
-  <div class="chat__header">
+  <div class="chat__header hidden">
     <h3>All conversations</h3>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none"
       onclick="toggleChat()">
