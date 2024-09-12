@@ -2332,19 +2332,115 @@
                     </button>
                   </div>
                   <div>
-                    <button
+                    <a id="button_block1"
                       class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
-                      style="transform: none; transform-origin: 50% 50% 0px" tabindex="0" type="button">
-                      <svg class="h-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
+                      tabindex="0" onclick="showInput()">
+
+                      <h4 id="main_text1" class="flex" style="gap:5px"><svg class="h-6" fill="none" style="max-width: 50vw; max-height: 50vh" viewbox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path class="stroke-2 stroke-neutral-700" d="M6 12h6m0 0h6m-6 0v6m0-6V6" stroke-linecap="round"
                           stroke-linejoin="round"></path>
-                      </svg>
-                      <h5>Add friend</h5>
-                    </button>
+                      </svg>Add Friends</h4>
+                      <div id="inputContainer1" class="hidden">
+                        <input type="text" id="meetingInput1" placeholder="">
+                        <div class="line"></div>
+                        <button type="button" onclick="addFriend1()">ADD</button>
+                      </div>
+
+                    </a>
+
+
+                    <style>
+                      #inputContainer {
+                        display: flex;
+                        gap: 13px;
+                        opacity: 0;
+                        /* Start invisible */
+                        width: 0;
+                        /* Start width as zero */
+                        transition: opacity 0.3s ease, width 0.3s ease;
+                        /* Transition effects */
+                        overflow: hidden;
+                        /* Hide overflow */
+                      }
+
+                      #inputContainer.show {
+                        opacity: 1;
+                        /* Fully visible */
+                        width: auto;
+                        /* Allow natural width */
+                        /* Adjust max-width if desired */
+                        max-width: 300px;
+                        /* Limit width to prevent excess space */
+                      }
+
+                      #inputContainer input {
+                        background-color: transparent;
+                        color: black;
+                        border: 2px solid black;
+                        border-radius: 10px;
+                        padding: 3px;
+                      }
+
+                      #inputContainer input::placeholder {
+                        color: black;
+                      }
+
+                      .line {
+                        height: auto;
+                        border: 1px solid black;
+                      }
+
+                      .error_field {
+                        border-color: red;
+                        color: red;
+                      }
+
+                      .error_field #inputContainer input {
+                        border-color: red;
+                        color: red;
+
+                      }
+
+                      .error_field #inputContainer input::placeholder {
+                        border-color: red;
+                        color: red;
+
+                      }
+
+                      .error_field div {
+                        border-color: red;
+                        color: red;
+                      }
+
+                      .hidden {
+                        display: none;
+                        /* Скрыть по умолчанию */
+                      }
+
+                      .hidden-text {
+                        display: none;
+                        /* Скрыть текст */
+                      }
+
+                      .show {
+                        display: flex;
+                        /* Показать контейнер с вводом */
+                        gap: 13px;
+                        opacity: 1;
+                        /* Полная видимость */
+                        width: auto;
+                        /* Автоматическая ширина */
+                        max-width: 300px;
+                        /* Ограничение ширины */
+                        transition: opacity 0.3s ease, width 0.3s ease;
+                        /* Переходы */
+                      }
+                    </style>
+                  
                   </div>
                 </section>
-               
+
                 @if($friends->isEmpty())
                 <div class="h-4/5 w-full relative">
                   <div class="w-full h-full overflow-hidden">
@@ -2939,8 +3035,8 @@
                     <p class="text-8xl">🧸</p>
                     <h1>You don’t have users</h1>
                     <p class="text-center">
-                    Enter a friend's name or ID
-                    to search for and add to friends.
+                      Enter a friend's name or ID
+                      to search for and add to friends.
                     </p>
                     <section class="w-full h-fit flex flex-row items-center justify-center gap-4">
                       <div class="buttons">
@@ -2951,13 +3047,13 @@
                         <a id="button_block"
                           class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                           tabindex="0" onclick="showInput()">
-                          
+
                           <h4 id="main_text" class="flex" style="gap:5px"><svg class="h-6 w-6" fill="none" style="max-width: 50vw; max-height: 50vh;"
-                            viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
-                            <path class="stroke-2 stroke-neutral-700"
-                              d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
-                              stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>Add Friends</h4>
+                              viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+                              <path class="stroke-2 stroke-neutral-700"
+                                d="M17.5 10.9V13.3C17.5 14.6255 16.4255 15.7 15.1 15.7H3.9C2.57452 15.7 1.5 14.6255 1.5 13.3V10.9M9.5 1.30005V9.30005M9.5 1.30005L6.3 4.50005M9.5 1.30005L12.7 4.50005"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>Add Friends</h4>
                           <div id="inputContainer" class="hidden">
                             <input type="text" id="meetingInput" placeholder="">
                             <div class="line"></div>
@@ -3082,7 +3178,7 @@
                                 user_identifier: meetingCode,
                                 _token: "{{ csrf_token() }}"
                               },
-                              success: function (data) {
+                              success: function(data) {
                                 console.log(data)
                                 if (data.message == "success") {
                                   window.location.reload()
@@ -3090,9 +3186,37 @@
                                   button_block.classList.add("error_field");
                                 }
                               },
-                              error: function (data) {
+                              error: function(data) {
                                 console.log(data)
                                 button_block.classList.add("error_field");
+                              }
+                            })
+
+                          }
+
+
+                          function addFriend1() {
+                            var meetingCode = document.getElementById("meetingInput1").value;
+                            var button_block = document.getElementById("button_block1");
+
+                            $.ajax({
+                              url: "{{ route("api.friends.add") }}",
+                              type: "POST",
+                              data: {
+                                user_identifier: meetingCode,
+                                _token: "{{ csrf_token() }}"
+                              },
+                              success: function(data) {
+                                console.log(data)
+                                if (data.message == "success") {
+                                  window.location.reload()
+                                } else {
+                                  button_block.classList.add("error_field1");
+                                }
+                              },
+                              error: function(data) {
+                                console.log(data)
+                                button_block.classList.add("error_field1");
                               }
                             })
 
@@ -3181,7 +3305,7 @@
                           </tr>
                         </thead>
                         <style>
-                          .centerContent{
+                          .centerContent {
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -3191,17 +3315,19 @@
                         </style>
                         <tbody class="divide-neutral-200">
                           <style>
-                            tr.yellow > td > div> div> div{
+                            tr.yellow>td>div>div>div {
                               background-color: #FBD570;
                             }
-                            tr.gray > td > div> div> div{
+
+                            tr.gray>td>div>div>div {
                               background-color: #D3CCB8;
                             }
-                            tr.red > td > div> div> div{
+
+                            tr.red>td>div>div>div {
                               background-color: #FB9A70;
                             }
                           </style>
-                            @foreach($friends as $friend)
+                          @foreach($friends as $friend)
                           <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
@@ -3212,7 +3338,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
-                                <div class="h-full w-full"> 
+                                <div class="h-full w-full">
                                   <div class="rounded w-28 h-6 bg-neutral-300 centerContent">Online</div>
                                 </div>
                               </div>
@@ -3253,12 +3379,12 @@
                               </div>
                             </td>
                           </tr>
-                          @endforeach                        
+                          @endforeach
                         </tbody>
                       </table>
                     </div>
                   </div>
-              
+
                 </div>
                 @endif
               </div>
