@@ -1845,7 +1845,7 @@
                                   <img src="{{ asset("assets/call.png") }}" class="" alt="">
                                 </div>
                                 <div class="action">
-                                  <img src="{{ asset("assets/deleteFriends.png") }}" class="" alt="">
+                                  <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
                                 </div>
                                 <div class="action">
                                   <img src="{{ asset("assets/block.png") }}" class="" alt="">
