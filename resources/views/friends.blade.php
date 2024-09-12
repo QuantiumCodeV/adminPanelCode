@@ -2415,7 +2415,7 @@
     </svg>
   </div>
   <div class="chat__list" id="chatList">
-    {{$chats}}
+   
     @if(count($chats) > 0)
     @foreach($chats as $chat)
     <div class="chat__item" onclick="openChat({{ $chat['recipient']['id'] }}, '{{ $chat['recipient']['name'] }}')">
