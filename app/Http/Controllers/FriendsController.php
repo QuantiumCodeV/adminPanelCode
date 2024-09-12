@@ -88,15 +88,18 @@ class FriendsController extends Controller
 
     public function accept(Request $request)
     {
-        $data = $request->validate([
-            'friend_id' => 'required|string',
-        ]);
+            $data = $request->validate([
+                'friend_id' => 'required|string',
+            ]);
 
-        $friend_request = Friends::where('user_id_second', $data['friend_id']);
+            $friend_request = Friends::where('user_id_second', $data['friend_id'])->first();
 
-        $friend_request->status = 'friend';
+            if ($friend_request) {
+                $friend_request->status = 'friend';
+                $friend_request->save();
+            }
         
-        return response()->json(['message' => 'success']);
+            return response()->json(['message' => 'success']);
     }
 
     public function decline(Request $request)
