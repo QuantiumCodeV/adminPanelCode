@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     public function mutualFriends(User $otherUser)
     {
-        return (new Friends)->commonFriends($this->id, $otherUser->id);
+        return (new Friends)->commonFriends($this->id);
     }
 }
