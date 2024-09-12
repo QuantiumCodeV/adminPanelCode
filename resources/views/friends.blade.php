@@ -2634,6 +2634,8 @@
 
   function openChat(chatId, chatName) {
     currentChatId = chatId;
+    const chat__header =document.querySelector(".chat__header")
+    chat__header.classList.add('hidden')
     const chatList = document.getElementById('chatList');
     const userChat = document.querySelector('.user_chat');
     const chatBody = document.getElementById('chatBody');
