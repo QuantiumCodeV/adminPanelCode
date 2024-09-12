@@ -2418,8 +2418,11 @@
     {{$chats}}
     @if(count($chats) > 0)
     @foreach($chats as $chat)
-    <div class="chat__item" onclick="openChat({{ $chat->id }}, '{{ $chat->name }}')">
-      <h4>{{ $chat->name }}</h4>
+    {{
+      $user = App\Models\User::where('id', $chat->recipient_id)->first()
+    }}
+    <div class="chat__item" onclick="openChat({{ $chat->id }}, '{{ $user->name }}')">
+      <h4>{{ $user->name }}</h4>
       <p>{{ $chat->last_message }}</p>
     </div>
   @endforeach

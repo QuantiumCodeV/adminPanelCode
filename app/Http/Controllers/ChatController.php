@@ -19,8 +19,12 @@ class ChatController extends Controller
             ->groupBy(function ($item) use ($user) {
                 return $item->user_id === $user->id ? $item->recipient_id : $item->user_id;
             })
-            ->map(function ($group) {
-                return $group->first();
+            ->map(function ($group) use ($user) {
+                $otherUserId = $group->first()->user_id === $user->id ? $group->first()->recipient_id : $group->first()->user_id;
+                return [
+                    'recipient' => \App\Models\User::find($otherUserId),
+                    'last_message' => $group->sortByDesc('created_at')->first()
+                ];
             })
             ->values();
 
