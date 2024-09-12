@@ -3152,76 +3152,7 @@
                         </style>
 
 
-                        <script>
-                          function showInput() {
-                            var inputContainer = document.getElementById("inputContainer");
-                            var mainText = document.getElementById("main_text");
-
-                            inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
-
-                            // Сокрытие текста
-                            mainText.classList.add("hidden-text");
-
-                            setTimeout(() => {
-                              inputContainer.classList.add("show"); // Добавить класс "show" для анимации
-                            }, 10); // Небольшая задержка для переходов
-                          }
-
-                          function addFriend() {
-                            var meetingCode = document.getElementById("meetingInput").value;
-                            var button_block = document.getElementById("button_block");
-
-                            $.ajax({
-                              url: "{{ route("api.friends.add") }}",
-                              type: "POST",
-                              data: {
-                                user_identifier: meetingCode,
-                                _token: "{{ csrf_token() }}"
-                              },
-                              success: function(data) {
-                                console.log(data)
-                                if (data.message == "success") {
-                                  window.location.reload()
-                                } else {
-                                  button_block.classList.add("error_field");
-                                }
-                              },
-                              error: function(data) {
-                                console.log(data)
-                                button_block.classList.add("error_field");
-                              }
-                            })
-
-                          }
-
-
-                          function addFriend1() {
-                            var meetingCode = document.getElementById("meetingInput1").value;
-                            var button_block = document.getElementById("button_block1");
-
-                            $.ajax({
-                              url: "{{ route("api.friends.add") }}",
-                              type: "POST",
-                              data: {
-                                user_identifier: meetingCode,
-                                _token: "{{ csrf_token() }}"
-                              },
-                              success: function(data) {
-                                console.log(data)
-                                if (data.message == "success") {
-                                  window.location.reload()
-                                } else {
-                                  button_block.classList.add("error_field1");
-                                }
-                              },
-                              error: function(data) {
-                                console.log(data)
-                                button_block.classList.add("error_field1");
-                              }
-                            })
-
-                          }
-                        </script>
+                    
                       </div>
                       <style>
                         .buttons {
@@ -3635,4 +3566,73 @@
   </svg>
 </body>
 
-</html>@include('feedback')@include('profileSettings')
+</html>@include('feedback')@include('profileSettings')    <script>
+                          function showInput() {
+                            var inputContainer = document.getElementById("inputContainer");
+                            var mainText = document.getElementById("main_text");
+
+                            inputContainer.classList.remove("hidden"); // Убираем "hidden" класс
+
+                            // Сокрытие текста
+                            mainText.classList.add("hidden-text");
+
+                            setTimeout(() => {
+                              inputContainer.classList.add("show"); // Добавить класс "show" для анимации
+                            }, 10); // Небольшая задержка для переходов
+                          }
+
+                          function addFriend() {
+                            var meetingCode = document.getElementById("meetingInput").value;
+                            var button_block = document.getElementById("button_block");
+
+                            $.ajax({
+                              url: "{{ route("api.friends.add") }}",
+                              type: "POST",
+                              data: {
+                                user_identifier: meetingCode,
+                                _token: "{{ csrf_token() }}"
+                              },
+                              success: function(data) {
+                                console.log(data)
+                                if (data.message == "success") {
+                                  window.location.reload()
+                                } else {
+                                  button_block.classList.add("error_field");
+                                }
+                              },
+                              error: function(data) {
+                                console.log(data)
+                                button_block.classList.add("error_field");
+                              }
+                            })
+
+                          }
+
+
+                          function addFriend1() {
+                            var meetingCode = document.getElementById("meetingInput1").value;
+                            var button_block = document.getElementById("button_block1");
+
+                            $.ajax({
+                              url: "{{ route("api.friends.add") }}",
+                              type: "POST",
+                              data: {
+                                user_identifier: meetingCode,
+                                _token: "{{ csrf_token() }}"
+                              },
+                              success: function(data) {
+                                console.log(data)
+                                if (data.message == "success") {
+                                  window.location.reload()
+                                } else {
+                                  button_block.classList.add("error_field1");
+                                }
+                              },
+                              error: function(data) {
+                                console.log(data)
+                                button_block.classList.add("error_field1");
+                              }
+                            })
+
+                          }
+                        </script>
