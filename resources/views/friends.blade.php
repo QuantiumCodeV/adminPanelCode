@@ -2445,7 +2445,7 @@
 function toggleChat() {
   const chatContainer = document.getElementById('chatContainer');
   if (chatContainer.style.display === 'none') {
-    chatContainer.style.display = 'block';
+    chatContainer.style.display = 'flex';
     setTimeout(() => {
       chatContainer.classList.add('show');
     }, 10);
