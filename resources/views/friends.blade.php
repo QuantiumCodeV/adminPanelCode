@@ -1851,7 +1851,7 @@
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
                   <div class="flex gap-2">
-                  <button class="action" onclick="openChat(this,'{{ $friendNotMe->id }}')">
+                  <button class="action" onclick="openChatBlock(this,'{{ $friendNotMe->id }}')">
                     <img src="{{ asset("assets/message.png") }}" class="" alt="">
                   </button>
                   <button class="action starAnimationBlock ">
@@ -2305,7 +2305,7 @@
   }
 </style>
 <script>
-  function openChat(element, id) {
+  function openChatBlock(element, id) {
     toggleChat();
   }
 
@@ -2559,9 +2559,6 @@
     chatMessages.style.display = 'flex';
     chatBody.innerHTML = '';
 
-    // Здесь вы можете добавить код для загрузки сообщений чата с сервера
-    // Например:
-    // fetchChatMessages(chatId);
   }
 
   function sendMessage() {
