@@ -2653,6 +2653,7 @@
         url: "{{ route('messages.index') }}",
         type: "POST",
         data: {
+          _token: "{{ csrf_token() }}",
           user_id: {{ auth()->user()->id }},
           friendId: chatId
         },
