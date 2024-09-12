@@ -928,7 +928,7 @@
                       }
 
                       .hidden {
-                        display: none;
+                        display: none !important;
                         /* Скрыть по умолчанию */
                       }
 
