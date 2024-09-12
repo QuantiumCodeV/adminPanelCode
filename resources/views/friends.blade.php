@@ -3,6 +3,7 @@
 <!-- saved from url=(0040){{ route("friends") }} -->
 <html style="">
 @include('fonts')
+
 <head>
   @include('fonts')
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -1771,6 +1772,20 @@
                             }
                           </style>
                           @foreach($friends as $friend)
+                          @php
+                          $otherUserId = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond->id : $friend->userFirst->id;
+                          $mutualFriends = $friend->commonFriends($otherUserId);
+                          @endphp
+                          {{-- Пример вывода имён общих друзей --}}
+                          @if($mutualFriends->count())
+                          <ul>
+                            @foreach($mutualFriends as $mutualFriend)
+                            <li>{{ $mutualFriend->name }}</li>
+                            @endforeach
+                          </ul>
+                          @else
+                          <p>Нет общих друзей.</p>
+                          @endif
                           <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
@@ -2112,7 +2127,8 @@
     var button_block = document.getElementById("button_block");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("
+      api.friends.add ") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2140,7 +2156,8 @@
     var button_block = document.getElementById("button_block1");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("
+      api.friends.add ") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
