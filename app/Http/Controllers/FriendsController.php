@@ -59,7 +59,7 @@ class FriendsController extends Controller
         return $friends;
     }
 
-    public function accept(Request $request)
+    public function remove(Request $request)
     {
         $data = $request->validate([
             'friend_id' => 'required|string',
@@ -68,10 +68,10 @@ class FriendsController extends Controller
         // Get the friend request
         $friend_request = Friends::where(function ($query) use ($data) {
             $query->where('user_id_first', $data['friend_id'])
-                  ->where('user_id_second', auth()->id());
+                ->where('user_id_second', auth()->id());
         })->orWhere(function ($query) use ($data) {
             $query->where('user_id_first', auth()->id())
-                  ->where('user_id_second', $data['friend_id']);
+                ->where('user_id_second', $data['friend_id']);
         })->first();
 
         // Check if the request exists
@@ -108,10 +108,10 @@ class FriendsController extends Controller
         // Get the friend request
         $friend_request = Friends::where(function ($query) use ($data) {
             $query->where('user_id_first', $data['friend_id'])
-                  ->where('user_id_second', auth()->id());
+                ->where('user_id_second', auth()->id());
         })->orWhere(function ($query) use ($data) {
             $query->where('user_id_first', auth()->id())
-                  ->where('user_id_second', $data['friend_id']);
+                ->where('user_id_second', $data['friend_id']);
         })->first();
 
         // Check if the request exists
