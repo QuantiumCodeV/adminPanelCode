@@ -2493,7 +2493,7 @@
     padding-top: 35px 0px;
     overflow-y: auto;
     height: 100%;
-
+    max-height: 410px;
   }
 
   .user_chat__message.received {
