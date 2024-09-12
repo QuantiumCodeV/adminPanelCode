@@ -1779,9 +1779,12 @@
                           {{-- Пример вывода имён общих друзей --}}
                           @if($mutualFriends->count())
                           <ul>
+                            <li>-------</li>
                             @foreach($mutualFriends as $mutualFriend)
+
                             <li>{{ $mutualFriend->login }}</li>
                             @endforeach
+                            <li>-------</li>
                           </ul>
                           @else
                           <p>Нет общих друзей.</p>
@@ -2127,7 +2130,8 @@
     var button_block = document.getElementById("button_block");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("
+      api.friends.add ") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2155,7 +2159,8 @@
     var button_block = document.getElementById("button_block1");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("
+      api.friends.add ") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
