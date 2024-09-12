@@ -1773,9 +1773,9 @@
                           </style>
                           @foreach($friends as $friend)
                           @php
-                              $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
-                              $mutualFriends = $friend->commonFriends($friendNotMe->id);
-                              @endphp
+                          $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
+                          $mutualFriends = $friend->commonFriends($friendNotMe->id);
+                          @endphp
                           <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
@@ -1799,19 +1799,19 @@
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                             
+
                               {{-- Пример вывода имён общих друзей --}}
                               @if($mutualFriends->count())
-                                <div class="avatars">
-                                  @foreach($mutualFriends->take(3) as $mutualFriend)
-                                    <img class="avatar" src="{{ $mutualFriend->avatar ? asset('storage/' . $mutualFriend->avatar) : asset('assets/member_avatar_453.png') }}" alt="">
-                                  @endforeach
-                                  @if($mutualFriends->count() > 3)
-                                    <div class="avatar-count">+{{ $mutualFriends->count() - 3 }}</div>
-                                  @endif
-                                </div>
-                             
-                           
+                              <div class="avatars">
+                                @foreach($mutualFriends->take(3) as $mutualFriend)
+                                <img class="avatar" src="{{ $mutualFriend->avatar ? asset('storage/' . $mutualFriend->avatar) : asset('assets/member_avatar_453.png') }}" alt="">
+                                @endforeach
+                                @if($mutualFriends->count() > 3)
+                                <div class="avatar-count">+{{ $mutualFriends->count() - 3 }}</div>
+                                @endif
+                              </div>
+
+
                               @else
 
                               <div class="text-small">
@@ -1836,10 +1836,33 @@
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              <div class="text-small">
-                                <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent"></div>
+
+                              <div class="flex gap-2">
+                                <div class="action">
+                                  <img src="{{ asset("assets/message.png") }}" class="" alt="">
                                 </div>
+                                <div class="action">
+                                  <img src="{{ asset("assets/call.png") }}" class="" alt="">
+                                </div>
+                                <div class="action">
+                                  <img src="{{ asset("assets/deleteFriends.png") }}" class="" alt="">
+                                </div>
+                                <div class="action">
+                                  <img src="{{ asset("assets/block.png") }}" class="" alt="">
+                                </div>
+                                <style>
+                                  .action {
+                                    width: 31px;
+                                    height: 31px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    background-color: #000000;
+                                    color: #ffffff;
+                                    transition: background-color 0.3s ease;
+                                  }
+                                </style>
                               </div>
                             </td>
                           </tr>
@@ -2133,7 +2156,8 @@
     var button_block = document.getElementById("button_block");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("
+      api.friends.add ") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2161,7 +2185,8 @@
     var button_block = document.getElementById("button_block1");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route("
+      api.friends.add ") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2182,24 +2207,27 @@
     })
 
   }
-</script>   <style>
-                                .avatars {
-                                  display: flex;
-                                  align-items: center;
-                                }
-                                .avatar {
-                                  border-radius: 100%;
-                                  width: 30px;
-                                  margin-right: -15px;
-                                }
-                                .avatar-count {
-                                  margin-left: 20px;
-                                  width: 30px;
-                                  height: 30px;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-size: 12px;
-                                  font-weight: bold;
-                                }
-                              </style>
+</script>
+<style>
+  .avatars {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar {
+    border-radius: 100%;
+    width: 30px;
+    margin-right: -15px;
+  }
+
+  .avatar-count {
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+</style>
