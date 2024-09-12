@@ -41,4 +41,18 @@ class User extends Authenticatable
     {
         return $this->friendsAsFirst()->orWhere('user_id_second', $this->id);
     }
+
+    public function mutualFriends(User $otherUser)
+    {
+        return User::whereHas('friends', function ($query) use ($otherUser) {
+            $query->where(function ($q) use ($otherUser) {
+                $q->where('user_id_first', $this->id)
+                    ->orWhere('user_id_first', $otherUser->id);
+            })->where(function ($q) use ($otherUser) {
+                $q->where('user_id_second', $this->id)
+                    ->orWhere('user_id_second', $otherUser->id);
+            });
+        })->where('id', '!=', $this->id)
+            ->where('id', '!=', $otherUser->id);
+    }
 }
