@@ -1780,7 +1780,7 @@
                           @if($mutualFriends->count())
                           <ul>
                             @foreach($mutualFriends as $mutualFriend)
-                            <li>{{ $mutualFriend->name }}</li>
+                            <li>{{ $mutualFriend->login }}</li>
                             @endforeach
                           </ul>
                           @else
@@ -1790,7 +1790,7 @@
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friendNotMe->name }}</div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friendNotMe->login }}</div>
                                 </div>
                               </div>
                             </td>
