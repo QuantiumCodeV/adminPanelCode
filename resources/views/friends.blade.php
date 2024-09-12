@@ -1773,9 +1773,8 @@
                           </style>
                           @foreach($friends as $friend)
                           @php
-                          $otherUserId = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond->id : $friend->userFirst->id;
                           $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
-                          $mutualFriends = $friend->commonFriends($otherUserId);
+                          $mutualFriends = $friend->commonFriends($friendNotMe->id);
                           @endphp
                           {{-- Пример вывода имён общих друзей --}}
                           @if($mutualFriends->count())
