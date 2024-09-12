@@ -2419,6 +2419,9 @@
     position: fixed;
     bottom: 30px;
     right: 100px;
+    z-index: 999999;
+    background: white;
+    border-radius: 14px;
   }
 
   .chat__header {
