@@ -1772,7 +1772,10 @@
                             }
                           </style>
                           @foreach($friends as $friend)
-
+                          @php
+                              $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
+                              $mutualFriends = $friend->commonFriends($friendNotMe->id);
+                              @endphp
                           <tr class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-l border-t-0">
                               <div class="text-small">
@@ -1796,10 +1799,7 @@
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
-                              @php
-                              $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
-                              $mutualFriends = $friend->commonFriends($friendNotMe->id);
-                              @endphp
+                             
                               {{-- Пример вывода имён общих друзей --}}
                               @if($mutualFriends->count())
                                 <div class="avatars">
