@@ -62,18 +62,13 @@ class FriendsController extends Controller
     public function remove(Request $request)
     {
         $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
+            'friend_id' => 'required|string',
         ]);
 
-        \DB::table('friends')
-            ->where('user_id_first', $data['user_id_first'])
-            ->where('user_id_second', $data['user_id_second'])
-            ->orWhere(function ($query) use ($data) {
-                $query->where('user_id_first', $data['user_id_second'])
-                    ->where('user_id_second', $data['user_id_first']);
-            })
-            ->delete();
+        $friend_request = Friends::where('user_id_second', $data['friend_id']);
+
+        $friend_request->status = 'blocked';
+        $friend_request->save();
 
         return response()->json(['message' => 'Friend removed successfully']);
     }
@@ -81,20 +76,12 @@ class FriendsController extends Controller
     public function block(Request $request)
     {
         $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
+            'friend_id' => 'required|string',
         ]);
 
-        \DB::table('friends')->updateOrInsert(
-            [
-                'user_id_first' => $data['user_id_first'],
-                'user_id_second' => $data['user_id_second'],
-            ],
-            [
-                'status' => 'blocked',
-                'updated_at' => now(),
-            ]
-        );
+        $friend_request = Friends::where('user_id_second', $data['friend_id']);
+
+        $friend_request->delete();
 
         return response()->json(['message' => 'User blocked successfully']);
     }
@@ -102,16 +89,13 @@ class FriendsController extends Controller
     public function accept(Request $request)
     {
         $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
+            'friend_id' => 'required|string',
         ]);
 
-        \DB::table('friends')
-            ->where('user_id_first', $data['user_id_first'])
-            ->where('user_id_second', $data['user_id_second'])
-            ->where('status', 'pending')
-            ->update(['status' => 'friend', 'updated_at' => now()]);
+        $friend_request = Friends::where('user_id_second', $data['friend_id']);
 
+        $friend_request->status = 'friend';
+        $friend_request->save();
         return response()->json(['message' => 'Friend request accepted']);
     }
 
