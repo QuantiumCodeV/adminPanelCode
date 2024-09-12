@@ -2658,8 +2658,8 @@
           friendId: chatId
         },
         success: function (response) {
-          if (response.length > 0) {
-            response.forEach(function (message) {
+          if (response.messages.length > 0) {
+            response.messages.forEach(function (message) {
               var messageElement = document.createElement('div');
               messageElement.classList.add('user_chat__message', message.user_id === {{ auth()->user()->id }} ? 'sent' : 'received');
               messageElement.innerHTML = `
