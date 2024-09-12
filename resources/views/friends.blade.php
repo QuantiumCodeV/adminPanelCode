@@ -2400,3 +2400,29 @@
     }, 1000);
   }
 </script>
+<div class="chat">
+  <div class="chat__header">
+    <h3>All conversations</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+      <path d="M1 1L12 12L23 1" stroke="black" stroke-width="2.5" />
+      <path d="M1 7L12 18L23 7" stroke="black" stroke-width="2.5" />
+    </svg>
+  </div>
+
+
+</div>
+<style>
+  .chat {
+    width: 420px;
+    height: 580px;
+    padding: 25px 21px;
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+  }
+
+  .chat__header {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
