@@ -1851,7 +1851,7 @@
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
                   <div class="flex gap-2">
-                  <button class="action">
+                  <button class="action" onclick="openChat({{ $friend->id }})">
                     <img src="{{ asset("assets/message.png") }}" class="" alt="">
                   </button>
                   <button class="action starAnimationBlock ">
@@ -1895,18 +1895,18 @@
                     </style>
                   </button>
                   @if($friend->status == "friend")
-                  <button class="action">
+                  <button class="action" onclick="deleteFriend({{ $friend->id }})">
                     <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
                   </button>
                   @elseif($friend->status == "pending")
-                  <button class="action">
+                  <button class="action" onclick="addFriend({{ $friend->id }})">
                     <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
                   </button>
                   @endif
-                  <button class="action">
+                  <button class="action" onclick="blockFriend({{ $friend->id }})">
                     <img src="{{ asset("assets/block.png") }}" class="" alt="">
                   </button>
-                  <button class="action">
+                  <button class="action" onclick="copyId(this, '{{ $friend->id }}')">
                     ID
                   </button>
 
@@ -2298,3 +2298,81 @@
     font-weight: 700;
   }
 </style>
+<script>
+  function deleteFriend(friendId) {
+    $.ajax({
+      url: "{{ route("api.friends.delete") }}",
+      type: "POST",
+      data: {
+        friend_id: friendId,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function (data) {
+        console.log(data)
+        if (data.message == "success") {
+          window.location.reload()
+        } else {
+          button_block.classList.add("error_field");
+        }
+      },
+      error: function (data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+      }
+    })
+  }
+
+  function addFriend(friendId) {
+    $.ajax({
+      url: "{{ route("api.friends.add") }}",
+      type: "POST",
+      data: {
+        friend_id: friendId,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function (data) {
+        console.log(data)
+        if (data.message == "success") {
+          window.location.reload()
+        } else {
+          button_block.classList.add("error_field");
+        }
+      },
+      error: function (data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+      }
+    })
+  }
+
+  function blockFriend(friendId) {
+    $.ajax({
+      url: "{{ route("api.friends.block") }}",
+      type: "POST",
+      data: {
+        friend_id: friendId,
+        _token: "{{ csrf_token() }}"
+      },
+      success: function (data) {
+        console.log(data)
+        if (data.message == "success") {
+          window.location.reload()
+        } else {
+          button_block.classList.add("error_field");
+        }
+      },
+      error: function (data) {
+        console.log(data)
+        button_block.classList.add("error_field");
+      }
+    })
+  }
+
+  function copyId(element, friendId) {
+    navigator.clipboard.writeText(friendId);
+    element.innerHTML = "Copied!";
+    setTimeout(() => {
+      element.innerHTML = "ID";
+    }, 1000);
+  }
+</script>
