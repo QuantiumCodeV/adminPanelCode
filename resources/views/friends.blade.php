@@ -1903,7 +1903,7 @@
         <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
         </button>
       @endif
-                  @if($friend->status == "blocked")
+                  @if($friend->status != "blocked")
             <button class="action" onclick="blockFriend(this,'{{ $friendNotMe->id }}')">
             <img src="{{ asset("assets/block.png") }}" class="" alt="">
             </button>
