@@ -2415,15 +2415,18 @@
     </svg>
   </div>
   <div class="chat__list" id="chatList">
-   
+
     @if(count($chats) > 0)
     @foreach($chats as $chat)
     <div class="chat__item" onclick="openChat({{ $chat['recipient']['id'] }}, '{{ $chat['recipient']['name'] }}')">
-      
+
       <img class="avatar"
       src="{{ $chat['recipient']['avatar'] ? asset('storage/' . $chat['recipient']['avatar']) : asset('assets/member_avatar_453.png') }}"
       alt="">
-      <div style="display: flex; flex-direction:column">
+      <div style="display: flex;
+    margin-left: 30px;
+    flex-direction: column;
+    text-align: left;">
       <h4>{{ $chat['recipient']['name'] }}</h4>
       <p>{{ $chat['last_message']['message'] }}</p>
       </div>
