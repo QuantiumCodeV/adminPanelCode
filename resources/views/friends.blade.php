@@ -2236,5 +2236,6 @@
                                   .action:last-child{
                                     padding:4px 15px;
                                     width: 52px;
+                                    color: black;
                                   }
                                 </style>
