@@ -2419,12 +2419,11 @@
     @if(count($chats) > 0)
     @foreach($chats as $chat)
     <div class="chat__item" onclick="openChat({{ $chat['recipient']['id'] }}, '{{ $chat['recipient']['name'] }}')">
-      <div class="avatar">
-      <img
+      
+      <img class="avatar"
       src="{{ $chat['recipient']['avatar'] ? asset('storage/' . $chat['recipient']['avatar']) : asset('assets/member_avatar_453.png') }}"
       alt="">
-      </div>
-      <div style="display: flex; flex-direction:column">s
+      <div style="display: flex; flex-direction:column">
       <h4>{{ $chat['recipient']['name'] }}</h4>
       <p>{{ $chat['last_message']['message'] }}</p>
       </div>
