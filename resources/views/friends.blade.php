@@ -1857,8 +1857,9 @@
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    border-radius: 50%;
-                                    background-color: #000000;
+                                    border-radius: 5px;
+                                    border: 2px solid #242425;
+                                    background-color: #FBD570;
                                     color: #ffffff;
                                     transition: background-color 0.3s ease;
                                   }
