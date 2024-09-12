@@ -2351,7 +2351,7 @@
 
 
                     <style>
-                      #inputContainer {
+                      #inputContainer1 {
                         display: flex;
                         gap: 13px;
                         opacity: 0;
@@ -2364,7 +2364,7 @@
                         /* Hide overflow */
                       }
 
-                      #inputContainer.show {
+                      #inputContainer1.show {
                         opacity: 1;
                         /* Fully visible */
                         width: auto;
@@ -2374,7 +2374,7 @@
                         /* Limit width to prevent excess space */
                       }
 
-                      #inputContainer input {
+                      #inputContainer1 input {
                         background-color: transparent;
                         color: black;
                         border: 2px solid black;
@@ -2382,7 +2382,7 @@
                         padding: 3px;
                       }
 
-                      #inputContainer input::placeholder {
+                      #inputContainer1 input::placeholder {
                         color: black;
                       }
 
@@ -2396,13 +2396,13 @@
                         color: red;
                       }
 
-                      .error_field #inputContainer input {
+                      .error_field #inputContainer1 input {
                         border-color: red;
                         color: red;
 
                       }
 
-                      .error_field #inputContainer input::placeholder {
+                      .error_field #inputContainer1 input::placeholder {
                         border-color: red;
                         color: red;
 
