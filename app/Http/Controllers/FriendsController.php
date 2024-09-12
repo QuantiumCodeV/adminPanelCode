@@ -86,7 +86,7 @@ class FriendsController extends Controller
     }
 
 
-    public function accept(Request $request)
+    public function block(Request $request)
     {
         $data = $request->validate([
             'friend_id' => 'required|string',
