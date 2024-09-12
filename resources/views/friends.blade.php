@@ -2636,10 +2636,10 @@
 
 <script>
   let currentChatId = null;
-
+var waitMessageInterval = null;
   function toggleChat() {
     const chatContainer = document.getElementById('chatContainer');
-    
+    clearInterval(waitMessageInterval);
     if (chatContainer.style.display === 'none') {
       chatContainer.style.display = 'flex';
       setTimeout(() => {
@@ -2707,6 +2707,7 @@
     userChat.style.display = 'none';
     chatList.style.display = 'block';
     currentChatId = null;
+    clearInterval(waitMessageInterval);
   }
 
   function sendMessage(element) {
