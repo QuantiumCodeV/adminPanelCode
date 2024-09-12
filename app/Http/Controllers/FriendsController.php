@@ -70,7 +70,7 @@ class FriendsController extends Controller
         $friend_request->status = 'blocked';
         
 
-        return response()->json(['message' => 'Friend removed successfully']);
+        return response()->json(['message' => 'success']);
     }
 
     public function block(Request $request)
@@ -83,7 +83,7 @@ class FriendsController extends Controller
 
         $friend_request->delete();
 
-        return response()->json(['message' => 'User blocked successfully']);
+        return response()->json(['message' => 'success']);
     }
 
     public function accept(Request $request)
@@ -96,7 +96,7 @@ class FriendsController extends Controller
 
         $friend_request->status = 'friend';
         
-        return response()->json(['message' => 'Friend request accepted']);
+        return response()->json(['message' => 'success']);
     }
 
     public function decline(Request $request)
