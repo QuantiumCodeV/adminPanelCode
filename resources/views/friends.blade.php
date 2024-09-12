@@ -2557,6 +2557,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+    justify-content: center;
   }
   .chat__list img{
     max-width: 100px;
