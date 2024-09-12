@@ -2465,6 +2465,10 @@
         </span>
       </div>
       <style>
+        .user_chat__body{
+          display: flex;
+          flex-direction: column;
+        }
         .user_chat__message.received .message__content {
           padding: 10px 26px;
           background: #EAEAEA;
