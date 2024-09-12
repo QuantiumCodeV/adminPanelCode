@@ -906,8 +906,8 @@
                       }
 
                       .error_field {
-                        border-color: red;
-                        color: red;
+                        border-color: red !important;
+                        color: red !important;
                       }
 
                       .error_field #inputContainer1 input {
