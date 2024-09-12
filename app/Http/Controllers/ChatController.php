@@ -53,7 +53,7 @@ class ChatController extends Controller
 
     public function get(Request $request)
     {
-        $validator =  Validator::make($request->all(), [
+        $validator = Validator::make($request->all(), [
             'user_id' => 'required|integer',
             'friendId' => 'required|integer',
         ]);
@@ -62,19 +62,15 @@ class ChatController extends Controller
             return response()->json(['errors' => $validator->errors()], 422);
         }
 
-        $user = auth()->user();
-        $chats = Message::where('user_id', $user->id)
-        ->orWhere('recipient_id', $user->id)
-        ->orderBy('created_at', 'desc')
-        ->get()
-        ->groupBy(function ($item) use ($user) {
-            return $item->user_id === $user->id ? $item->recipient_id : $item->user_id;
-        })
-        ->map(function ($group) {
-            return $group->first();
-        })
-        ->values();
+        $user_id = $request->user_id;
+        $friend_id = $request->friendId;
 
-        return $chats;
+        $messages = Message::where(function ($query) use ($user_id, $friend_id) {
+            $query->where('user_id', $user_id)->where('recipient_id', $friend_id);
+        })->orWhere(function ($query) use ($user_id, $friend_id) {
+            $query->where('user_id', $friend_id)->where('recipient_id', $user_id);
+        })->orderBy('created_at', 'asc')->get();
+
+        return response()->json(['messages' => $messages]);
     }
 }
