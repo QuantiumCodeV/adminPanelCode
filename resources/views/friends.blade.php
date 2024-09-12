@@ -1851,7 +1851,7 @@
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
                   <div class="flex gap-2">
-                  <button class="action" onclick="openChat('{{ $friend->id }}')">
+                  <button class="action" onclick="openChat(this,'{{ $friend->id }}')">
                     <img src="{{ asset("assets/message.png") }}" class="" alt="">
                   </button>
                   <button class="action starAnimationBlock ">
@@ -1895,15 +1895,15 @@
                     </style>
                   </button>
                   @if($friend->status == "friend")
-            <button class="action" onclick="deleteFriend('{{ $friend->id }}')">
+            <button class="action" onclick="deleteFriend(this,'{{ $friend->id }}')">
             <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
             </button>
           @elseif($friend->status == "pending")
-        <button class="action" onclick="addFriend('{{ $friend->id }}')">
+        <button class="action" onclick="addFriend(this,'{{ $friend->id }}')">
         <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
         </button>
       @endif
-                  <button class="action" onclick="blockFriend('{{ $friend->id }}')">
+                  <button class="action" onclick="blockFriend(this,'{{ $friend->id }}')">
                     <img src="{{ asset("assets/block.png") }}" class="" alt="">
                   </button>
                   <button class="action" onclick="copyId(this, '{{ $friend->id }}')">
@@ -2299,7 +2299,7 @@
   }
 </style>
 <script>
-  function deleteFriend(friendId) {
+  function deleteFriend(element,friendId) {
     $.ajax({
       url: "{{ route("api.friends.delete") }}",
       type: "POST",
@@ -2312,12 +2312,12 @@
         if (data.message == "success") {
           window.location.reload()
         } else {
-          button_block.classList.add("error_field");
+          element.classList.add("error_field");
         }
       },
       error: function (data) {
         console.log(data)
-        button_block.classList.add("error_field");
+        element.classList.add("error_field");
       }
     })
   }
@@ -2335,17 +2335,17 @@
         if (data.message == "success") {
           window.location.reload()
         } else {
-          button_block.classList.add("error_field");
+          element.classList.add("error_field");
         }
       },
       error: function (data) {
         console.log(data)
-        button_block.classList.add("error_field");
+        element.classList.add("error_field");
       }
     })
   }
 
-  function blockFriend(friendId) {
+  function blockFriend(element,friendId) {
     $.ajax({
       url: "{{ route("api.friends.block") }}",
       type: "POST",
@@ -2358,12 +2358,12 @@
         if (data.message == "success") {
           window.location.reload()
         } else {
-          button_block.classList.add("error_field");
+          element.classList.add("error_field");
         }
       },
       error: function (data) {
         console.log(data)
-        button_block.classList.add("error_field");
+        element.classList.add("error_field");
       }
     })
   }
