@@ -1810,7 +1810,7 @@
                                     <div class="avatar-count">+{{ $mutualFriends->count() - 3 }}</div>
                                   @endif
                                 </div>
-                              @endif
+                             
                               <style>
                                 .avatars {
                                   display: flex;
