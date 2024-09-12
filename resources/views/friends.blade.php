@@ -1851,7 +1851,8 @@
                   <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
                   <div class="flex gap-2">
-                  <button class="action" onclick="openChatFromButton('{{ $friendNotMe->id }}','{{ $friendNotMe->name }}')">
+                  <button class="action"
+                    onclick="openChatFromButton('{{ $friendNotMe->id }}','{{ $friendNotMe->name }}')">
                     <img src="{{ asset("assets/message.png") }}" class="" alt="">
                   </button>
                   <button class="action starAnimationBlock ">
@@ -2420,29 +2421,29 @@
       <h4>{{ $chat->name }}</h4>
       <p>{{ $chat->last_message }}</p>
     </div>
-    @endforeach
-    @else
-    <img src="{{asset("assets/chat.png")}}" alt="">
-    <h2>
-      There are no messages yet
-    </h2>
-    @endif
+  @endforeach
+  @else
+  <img src="{{asset("assets/chat.png")}}" alt="">
+  <h2>
+    There are no messages yet
+  </h2>
+@endif
   </div>
   <div class="user_chat" style="display: none;">
     <div class="user_chat__header">
       <div style="display: flex; align-items: center;gap:10px">
-      <svg onclick="backToChats()" xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16"
-        fill="none">
-        <path
-          d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292893 7.29289ZM22.5 7H1V9H22.5V7Z"
-          fill="black" />
-      </svg>
-      <div class="header__content">
-        <span id="chatName"></span>
-        <span id="chatId"></span>
+        <svg onclick="backToChats()" xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16"
+          fill="none">
+          <path
+            d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292893 7.29289ZM22.5 7H1V9H22.5V7Z"
+            fill="black" />
+        </svg>
+        <div class="header__content">
+          <span id="chatName"></span>
+          <span id="chatId"></span>
+        </div>
       </div>
-      </div>
-      
+
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none"
         onclick="toggleChat()">
         <path d="M1 1L12 12L23 1" stroke="black" stroke-width="2.5" />
@@ -2454,8 +2455,9 @@
     </div>
     <div class="user_chat__footer">
       <div class="user_chat__footer__input">
-        <input type="text" placeholder="Type your message" id="messageInput">
-        <svg id="sendMessageButton" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none" onclick="sendMessage()">
+        <input type="text" placeholder="Start new message" id="messageInput">
+        <svg id="sendMessageButton" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+          fill="none" onclick="sendMessage()">
           <path
             d="M12.5303 6.53033C12.8232 6.23744 12.8232 5.76256 12.5303 5.46967L7.75736 0.696698C7.46447 0.403805 6.98959 0.403805 6.6967 0.696699C6.40381 0.989592 6.40381 1.46447 6.6967 1.75736L10.9393 6L6.6967 10.2426C6.40381 10.5355 6.40381 11.0104 6.6967 11.3033C6.98959 11.5962 7.46447 11.5962 7.75736 11.3033L12.5303 6.53033ZM6.55671e-08 6.75L12 6.75L12 5.25L-6.55671e-08 5.25L6.55671e-08 6.75Z"
             fill="black" />
@@ -2465,10 +2467,14 @@
   </div>
 </div>
 <style>
-  .user_chat__footer__input{
+  .user_chat__footer__input {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    background-color: #F3F3F3;
+  }
+
+  .user_chat__footer__input input {
     background-color: #F3F3F3;
   }
 </style>
@@ -2485,6 +2491,7 @@
     padding: 35px 0px;
     overflow-y: auto;
     height: 100%;
+
   }
 
   .user_chat__message.received {
@@ -2569,9 +2576,11 @@
     align-items: center;
     justify-content: center;
   }
-  .chat__list img{
+
+  .chat__list img {
     max-width: 100px;
   }
+
   .chat__item {
     padding: 10px;
     border-bottom: 1px solid #ccc;
@@ -2670,18 +2679,18 @@
     const chatBody = document.getElementById('chatBody');
     const messageElement = document.createElement('div');
     messageElement.classList.add('user_chat__message', type);
-    
+
     const contentElement = document.createElement('div');
     contentElement.classList.add('message__content');
     contentElement.textContent = message;
-    
+
     const timeElement = document.createElement('div');
     timeElement.classList.add('message_time');
     timeElement.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    
+
     messageElement.appendChild(contentElement);
     messageElement.appendChild(timeElement);
-    
+
     chatBody.appendChild(messageElement);
     chatBody.scrollTop = chatBody.scrollHeight;
   }
