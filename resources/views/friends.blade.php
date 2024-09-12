@@ -2470,9 +2470,10 @@
   .user_chat__footer__input {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 5px 10px;
     background-color: #F3F3F3;
     border-radius: 16px;
+    align-items: center;
   }
 
   .user_chat__footer__input input {
