@@ -439,8 +439,12 @@
     document.addEventListener('click', function (event) {
         const modal = document.getElementById('modalSettings');
         const overlay = document.getElementById('overlay');
+        const profileDropdown = document.getElementById('profileDropdown');
         if (modal && event.target === overlay) {
             closeSettings();
+        }
+        if (profileDropdown && !profileDropdown.contains(event.target) && !profile.contains(event.target)) {
+            profileDropdown.classList.add('hidden');
         }
     });
 
