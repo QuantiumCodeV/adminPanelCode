@@ -62,74 +62,84 @@ class FriendsController extends Controller
     public function remove(Request $request)
     {
         $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
+            'friend_id' => 'required|string',
         ]);
 
-        \DB::table('friends')
-            ->where('user_id_first', $data['user_id_first'])
-            ->where('user_id_second', $data['user_id_second'])
-            ->orWhere(function ($query) use ($data) {
-                $query->where('user_id_first', $data['user_id_second'])
-                    ->where('user_id_second', $data['user_id_first']);
-            })
-            ->delete();
+        // Get the friend request
+        $friend_request = Friends::where(function ($query) use ($data) {
+            $query->where('user_id_first', $data['friend_id'])
+                ->where('user_id_second', auth()->id());
+        })->orWhere(function ($query) use ($data) {
+            $query->where('user_id_first', auth()->id())
+                ->where('user_id_second', $data['friend_id']);
+        })->first();
 
-        return response()->json(['message' => 'Friend removed successfully']);
+        // Check if the request exists
+        if ($friend_request) {
+            // Update the status
+            $friend_request->delete();
+
+            return response()->json(['message' => 'success']);
+        } else {
+            return response()->json(['message' => 'Friend request not found'], 404);
+        }
     }
+
 
     public function block(Request $request)
     {
         $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
+            'friend_id' => 'required|string',
         ]);
 
-        \DB::table('friends')->updateOrInsert(
-            [
-                'user_id_first' => $data['user_id_first'],
-                'user_id_second' => $data['user_id_second'],
-            ],
-            [
-                'status' => 'blocked',
-                'updated_at' => now(),
-            ]
-        );
+        // Get the friend request
+        $friend_request = Friends::where(function ($query) use ($data) {
+            $query->where('user_id_first', $data['friend_id'])
+                ->where('user_id_second', auth()->id());
+        })->orWhere(function ($query) use ($data) {
+            $query->where('user_id_first', auth()->id())
+                ->where('user_id_second', $data['friend_id']);
+        })->first();
 
-        return response()->json(['message' => 'User blocked successfully']);
-    }
+        // Check if the request exists
+        if ($friend_request) {
+            // Update the status
+            $friend_request->status = 'blocked';
+            $friend_request->save();
 
-    public function unblock(Request $request)
-    {
-        $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
-        ]);
-
-        \DB::table('friends')
-            ->where('user_id_first', $data['user_id_first'])
-            ->where('user_id_second', $data['user_id_second'])
-            ->where('status', 'friend')
-            ->delete();
-
-        return response()->json(['message' => 'User unblocked successfully']);
+            return response()->json(['message' => 'success']);
+        } else {
+            return response()->json(['message' => 'Friend request not found'], 404);
+        }
     }
 
     public function accept(Request $request)
     {
         $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
+            'friend_id' => 'required|string',
         ]);
 
-        \DB::table('friends')
-            ->where('user_id_first', $data['user_id_first'])
-            ->where('user_id_second', $data['user_id_second'])
-            ->where('status', 'pending')
-            ->update(['status' => 'friend', 'updated_at' => now()]);
+        // Get the friend request
+        $friend_request = Friends::where(function ($query) use ($data) {
+            $query->where('user_id_first', $data['friend_id'])
+                ->where('user_id_second', auth()->id());
+        })->orWhere(function ($query) use ($data) {
+            $query->where('user_id_first', auth()->id())
+                ->where('user_id_second', $data['friend_id']);
+        })->first();
 
-        return response()->json(['message' => 'Friend request accepted']);
+        // Check if the request exists
+        if ($friend_request) {
+            // Update the status
+            $friend_request->status = 'friend';
+            $friend_request->save();
+
+            return response()->json(['message' => 'success']);
+        } else {
+            return response()->json(['message' => 'Friend request not found'], 404);
+        }
     }
+
 
     public function decline(Request $request)
     {
@@ -146,4 +156,6 @@ class FriendsController extends Controller
 
         return response()->json(['message' => 'Friend request declined']);
     }
+
+    
 }

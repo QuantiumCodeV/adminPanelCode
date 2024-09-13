@@ -10,6 +10,7 @@ use App\Http\Controllers\IpController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\FriendsController;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -124,7 +125,8 @@ Route::middleware("auth")->group(function () {
 
     Route::get('/spaces/522/friends', function () {
         return view("friends",[
-            'friends' => FriendsController::getFriends()
+            'friends' => FriendsController::getFriends(),
+            'chats' => ChatController::getChats()
         ]);
     })->name("friends");
 
@@ -150,15 +152,14 @@ Route::prefix("/api")->group(function () {
     });
     Route::prefix('/friends')->group(function () {
         Route::post("/add", [FriendsController::class, "add"])->name("api.friends.add");
-        Route::post("/remove", [FriendsController::class, "remove"])->name("api.friends.remove");
+        Route::post("/remove", [FriendsController::class, "remove"])->name("api.friends.delete");
         Route::post("/block", [FriendsController::class, "block"])->name("api.friends.block");
-        Route::post("/unblock", [FriendsController::class, "unblock"])->name("api.friends.unblock");
         Route::post("/accept", [FriendsController::class, "accept"])->name("api.friends.accept");
-        Route::post("/decline", [FriendsController::class, "decline"])->name("api.friends.decline");
     });
 });
 
-
+Route::post("/send/message", [ChatController::class, "send"])->name("messages.store");
+Route::post("/get/messages", [ChatController::class, "get"])->name("messages.index");
 // Папка product-discovery-bible
 
 Route::get('/product-discovery-bible/start-here/introduction', function () {

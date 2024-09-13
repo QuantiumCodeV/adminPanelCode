@@ -46,7 +46,7 @@ class Friends extends Model
             $this->where(function ($query) use ($userId) {
                 $query->where('user_id_first', $userId)
                     ->orWhere('user_id_second', $userId);
-            })->where('status', 'pending')->pluck('user_id_second')
+            })->where('status', 'friend')->pluck('user_id_second')
         );
 
         // Получаем друзей второго пользователя
@@ -57,7 +57,7 @@ class Friends extends Model
             $this->where(function ($query) use ($userId2) {
                 $query->where('user_id_first', $userId2)
                     ->orWhere('user_id_second', $userId2);
-            })->where('status', 'pending')->pluck('user_id_second')
+            })->where('status', 'friend')->pluck('user_id_second')
         );
 
         // Находим общих друзей
