@@ -1548,7 +1548,7 @@
                   <div
                     class="flex flex-col gap-4 items-center justify-center h-full w-full absolute top-0 left-0 bg-gradient-to-t from-30% from-primary-100 to-primary-100/0">
                     <p class="text-8xl">🧸</p>
-                    <h1>You don’t have users</h1>
+                    <h1>You don’t have friends</h1>
                     <p class="text-center" id="change_text_friends">
 
                       No insights yet! Start adding friends and getting to know them, invite them to calls, chat and much more!
