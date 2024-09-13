@@ -2213,8 +2213,7 @@
     var button_block = document.getElementById("button_block");
 
     $.ajax({
-      url: "{{ route("
-      api.friends.add ") }}",
+      url: "{{ route("api.friends.add") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2248,8 +2247,7 @@
     var button_block = document.getElementById("button_block1");
 
     $.ajax({
-      url: "{{ route("
-      api.friends.add ") }}",
+      url: "{{ route("api.friends.add") }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2328,8 +2326,7 @@
 
   function deleteFriend(element, friendId) {
     $.ajax({
-      url: "{{ route("
-      api.friends.delete ") }}",
+      url: "{{ route("api.friends.delete") }}",
       type: "POST",
       data: {
         friend_id: friendId,
@@ -2358,8 +2355,7 @@
 
   function addFriendRequest(element, friendId) {
     $.ajax({
-      url: "{{ route("
-      api.friends.accept ") }}",
+      url: "{{ route("api.friends.accept") }}",
       type: "POST",
       data: {
         friend_id: friendId,
@@ -2388,8 +2384,7 @@
 
   function blockFriend(element, friendId) {
     $.ajax({
-      url: "{{ route("
-      api.friends.block ") }}",
+      url: "{{ route("api.friends.block") }}",
       type: "POST",
       data: {
         friend_id: friendId,
