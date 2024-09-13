@@ -2311,21 +2311,21 @@
                             tabindex="0" onclick="showInput()">
                             <h4 id="main_text">Join meeting</h4>
                             <div id="inputContainer" class="hidden">
-                              <input type="text" id="meetingInput" placeholder="Enter meeting code">
+                              <input type="text" style="font-weight: 700;" id="meetingInput" placeholder="Enter meeting code">
                               <div class="line"></div>
-                              <button type="button" onclick="joinMeeting()">ENTER</button>
+                              <button type="button" style="font-weight: 700;" onclick="joinMeeting()">ENTER</button>
                             </div>
                           </a>
                           <a id="download_block" style="display: none;"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0">
-                            <h4 id="download_block_a_href">Download the app</h4>
+                            <h4 id="download_block_a_href" style="font-weight: 700;">Download the app</h4>
                           </a>
 
                           <a id="synchronize_block" style="display: none;"
                             class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                             tabindex="0">
-                            <h4 id="download_app">Synchronize</h4>
+                            <h4 id="download_app" style="font-weight: 700;">Synchronize</h4>
                           </a>
                           <style>
                             #inputContainer {

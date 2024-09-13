@@ -817,11 +817,11 @@
                             tabindex="0" onclick="showInput()">
                             <h4 id="main_text">Join meeting</h4>
                             <div id="inputContainer" class="hidden">
-                              <input type="text" id="meetingInput" placeholder="Enter meeting code">
+                              <input type="text" style="font-weight: 700;" id="meetingInput" placeholder="Enter meeting code">
                               <div class="line"></div>
-                              <button type="button" onclick="joinMeeting()">ENTER</button>
+                              <button type="button" style="font-weight: 700;" onclick="joinMeeting()">ENTER</button>
                             </div>
-                            <h4 id="download_app" class="hidden">Download the app</h4>
+                            <h4 id="download_app" style="font-weight: 700;" class="hidden">Download the app</h4>
                           </a>
 
 

@@ -865,6 +865,7 @@
 
                     <style>
                       #inputContainer1 {
+                        font-weight: 700;
                         display: flex;
                         gap: 13px;
                         opacity: 0;
@@ -1570,7 +1571,7 @@
                           <div id="inputContainer" class="hidden">
                             <input type="text" id="meetingInput" placeholder="">
                             <div class="line"></div>
-                            <button type="button" onclick="addFriend()">ADD</button>
+                            <button type="button" style="font-weight: 700;" onclick="addFriend()">ADD</button>
                           </div>
 
                         </a>
@@ -1578,6 +1579,7 @@
 
                         <style>
                           #inputContainer {
+                            font-weight: 700;
                             display: flex;
                             gap: 13px;
                             opacity: 0;
@@ -1603,6 +1605,7 @@
                           #inputContainer input {
                             background-color: transparent;
                             color: black;
+                            font-weight: 700;
                             border: 2px solid black;
                             border-radius: 10px;
                             padding: 3px;
