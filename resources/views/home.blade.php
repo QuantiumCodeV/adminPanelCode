@@ -5995,12 +5995,18 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
         } else {
           button_block.classList.add("error_field");
           button_block.style.transition = "all 0.3s ease";
+          setTimeout(function(){
+            button_block.classList.remove("error_field");
+          },2000)
         }
       },
       error: function (data) {
         console.log(data)
         button_block.classList.add("error_field");
         button_block.style.transition = "all 0.3s ease";
+        setTimeout(function(){
+            button_block.classList.remove("error_field");
+          },2000)
       }
     })
   }
