@@ -945,8 +945,6 @@
                         opacity: 1;
                         /* Полная видимость */
                         width: auto;
-                        /* Автоматическая ширина */
-                        max-width: 300px;
                         /* Ограничение ширины */
                         transition: opacity 0.3s ease, width 0.3s ease;
                         /* Переходы */
@@ -956,7 +954,11 @@
                   </div>
                 </section>
 
-                @if($friends->isEmpty())
+                @if($friends->isEmpty() || $friends->every(function($friend) {
+                $blockedUserId = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond->id : $friend->userFirst->id;
+                return $friend->status === 'blocked_to_user_' . $blockedUserId;
+                }))
+
                 <div class="h-4/5 w-full relative">
                   <div class="w-full h-full overflow-hidden">
                     <div class="h-full w-full overflow-auto relative">
@@ -1784,6 +1786,8 @@
                           @php
                           $friendNotMe = $friend->userFirst->id === auth()->user()->id ? $friend->userSecond : $friend->userFirst;
                           $mutualFriends = $friend->commonFriends($friendNotMe->id);
+
+                          if($friend->status != 'blocked_to_user_' . $friendNotMe->id){
                           @endphp
                           <tr
                             class="bg-neutral-50 hover:bg-neutral-100 transition-colors min-h-[content-height] {{ $friend->status == 'friend' ? 'yellow' : ($friend->status == 'pending' ? 'gray' : 'red') }}">
@@ -1844,18 +1848,41 @@
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
                               <div class="text-small">
                                 <div class="h-full w-full">
-                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ $friend->status }}</div>
+                                  <div class="rounded w-28 h-6 bg-neutral-300 centerContent">{{ strpos($friend->status, 'blocked_to_user_') !== false ? 'Blocked' : $friend->status }}</div>
                                 </div>
                               </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap border border-neutral-300 border-t-0 border-l-0">
 
                               <div class="flex gap-2">
-                                <button class="action"
-                                  onclick="openChatFromButton('{{ $friendNotMe->id }}','{{ $friendNotMe->name }}')">
+                                <button class="action" onclick="openChatFromButton('{{ $friendNotMe->id }}','{{ $friendNotMe->name }}')" @if($friend->status == "pending")
+                                  style="
+                                  background-color: #D3CCB8;
+                                  pointer-events: none;
+                                  "
+                                  @endif
+                                  @if(strpos($friend->status, 'blocked_to_user_') !== false)
+                                  style="
+                                  background-color: #FB9A70;
+                                  pointer-events: none;
+                                  "
+                                  @endif
+                                  >
                                   <img src="{{ asset("assets/message.png") }}" class="" alt="">
                                 </button>
-                                <button class="action starAnimationBlock ">
+                                <button class="action starAnimationBlock " @if($friend->status == "pending")
+                                  style="
+                                  background-color: #D3CCB8;
+
+                                  "
+                                  @endif
+                                  @if(strpos($friend->status, 'blocked_to_user_') !== false)
+                                  style="
+                                  background-color: #FB9A70;
+
+                                  "
+                                  @endif
+                                  >
                                   <img src="{{ asset("assets/call.png") }}" class="" alt="">
                                   <img style="    position: absolute;
               top: -20px;
@@ -1899,13 +1926,21 @@
                                 <button class="action" onclick="deleteFriend(this,'{{ $friendNotMe->id }}')">
                                   <img src="{{ asset("assets/deleteFriend.png") }}" class="" alt="">
                                 </button>
-                                @elseif($friend->status == "pending")
-                                <button class="action" onclick="addFriendRequest(this,'{{ $friendNotMe->id }}')">
+                                @elseif($friend->status == "pending" && $friend->user_id_second == Auth::user()->id)
+                                <button class="action"
+
+                                  onclick="addFriendRequest(this,'{{ $friendNotMe->id }}')">
                                   <img src="{{ asset("assets/addFriend.png") }}" class="" alt="">
                                 </button>
                                 @endif
-                                @if($friend->status != "blocked")
-                                <button class="action" onclick="blockFriend(this,'{{ $friendNotMe->id }}')">
+                                @if($friend->status != "blocked_to_user_" . Auth::user()->id)
+                                <button class="action"
+                                  @if($friend->status == "pending")
+                                  onclick="deleteFriend(this,'{{ $friendNotMe->id }}')"
+                                  @else
+                                  onclick="blockFriend(this,'{{ $friendNotMe->id }}')"
+                                  @endif
+                                  >
                                   <img src="{{ asset("assets/block.png") }}" class="" alt="">
                                 </button>
                                 @else
@@ -1921,6 +1956,9 @@
 
                             </td>
                           </tr>
+                          @php
+                          }
+                          @endphp
                           @endforeach
                         </tbody>
                       </table>
@@ -2175,9 +2213,35 @@
       ">
     <text id="__react_svg_text_measurement_id">25</text>
   </svg>
+
+
+  <div class="chatButton" id="chatButton" onclick="toggleChat()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+      <path d="M9.5 0C4.25308 0 0 3.546 0 7.92C0 10.345 1.31051 12.5125 3.36982 13.9655C3.4224 15.0714 3.24847 16.5984 1.69989 17.3025L1.69704 17.3039C1.62785 17.3298 1.56829 17.3758 1.52623 17.4359C1.48418 17.4959 1.46162 17.5671 1.46154 17.64C1.46154 17.7355 1.50003 17.827 1.56856 17.8946C1.63708 17.9621 1.73002 18 1.82692 18C1.83565 18 1.8439 17.9986 1.85261 17.9986C1.85452 17.9986 1.85642 17.9986 1.85832 17.9986C3.63703 17.9874 5.14701 17.0403 6.1887 16.0397C6.51901 15.7222 6.97949 15.5659 7.43329 15.6502C8.09829 15.7747 8.78969 15.84 9.5 15.84C14.7469 15.84 19 12.294 19 7.92C19 3.546 14.7469 0 9.5 0Z" fill="#222222" />
+    </svg>
+  </div>
+  <style>
+    .chatButton {
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      border-radius: 100%;
+      border: 2px solid #FBD570;
+      background-color: #FFF9DE;
+      position: fixed;
+      bottom: 9px;
+      right: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
 </body>
 
-</html>@include('feedback')@include('profileSettings') <script>
+</html>
+@include('feedback')
+@include('profileSettings')
+<script>
   function showInput() {
     var inputContainer = document.getElementById("inputContainer");
     var mainText = document.getElementById("main_text");
@@ -2213,7 +2277,7 @@
     var button_block = document.getElementById("button_block");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route('api.friends.add') }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2241,13 +2305,12 @@
 
   }
 
-
   function addFriend1() {
     var meetingCode = document.getElementById("meetingInput1").value;
     var button_block = document.getElementById("button_block1");
 
     $.ajax({
-      url: "{{ route("api.friends.add") }}",
+      url: "{{ route('api.friends.add') }}",
       type: "POST",
       data: {
         user_identifier: meetingCode,
@@ -2326,7 +2389,7 @@
 
   function deleteFriend(element, friendId) {
     $.ajax({
-      url: "{{ route("api.friends.delete") }}",
+      url: "{{ route('api.friends.delete') }}",
       type: "POST",
       data: {
         friend_id: friendId,
@@ -2355,7 +2418,7 @@
 
   function addFriendRequest(element, friendId) {
     $.ajax({
-      url: "{{ route("api.friends.accept") }}",
+      url: "{{ route('api.friends.accept') }}",
       type: "POST",
       data: {
         friend_id: friendId,
@@ -2384,7 +2447,7 @@
 
   function blockFriend(element, friendId) {
     $.ajax({
-      url: "{{ route("api.friends.block") }}",
+      url: "{{ route('api.friends.block') }}",
       type: "POST",
       data: {
         friend_id: friendId,
@@ -2452,17 +2515,18 @@
     @foreach($chats as $chat)
     <div class="chat__item" onclick="openChat({{ $chat['recipient']['id'] }}, '{{ $chat['recipient']['name'] }}')">
 
-      <img class="avatar"
+      <img
         src="{{ $chat['recipient']['avatar'] ? asset('storage/' . $chat['recipient']['avatar']) : asset('assets/member_avatar_453.png') }}"
         alt="">
       <div style="display: flex;
-    margin-left: 30px;
     flex-direction: column;
     text-align: left;">
-        <h4>{{ $chat['recipient']['name'] }}</h4>
+        <h4>{{ $chat['recipient']['name'] }} <span class="chat_item__id">ID {{ $chat['recipient']['id'] }}</span> <span class="chat_item__time">{{ \Carbon\Carbon::parse($chat['last_message']['created_at'])->format('M j') }}</span></h4>
         <p>{{ $chat['last_message']['message'] }}</p>
       </div>
-
+      @if($chat['unread_count'] > 0)
+      <span class="unread-badge">{{ $chat['unread_count'] }}</span>
+      @endif
     </div>
     @endforeach
     @else
@@ -2478,13 +2542,34 @@
       align-items: center;
       gap: 10px;
       padding: 10px;
-      border-bottom: 1px solid #242425;
+      position: relative;
+    }
+
+    .unread-badge {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: #FBD570;
+      color: black;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 12px;
+    }
+
+    .chat_item__id {
+      font-size: 16px;
+      color: #878787;
+    }
+
+    .chat_item__time {
+      font-size: 16px;
+      color: #878787;
     }
   </style>
   <div class="user_chat" style="display: none;">
     <div class="user_chat__header">
       <div style="display: flex; align-items: center;gap:10px">
-        <svg onclick="backToChats()" xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16"
+        <svg style="cursor: pointer;" onclick="backToChats()" xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16"
           fill="none">
           <path
             d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292893 7.29289ZM22.5 7H1V9H22.5V7Z"
@@ -2503,11 +2588,11 @@
       </svg>
     </div>
     <div class="user_chat__body" id="chatBody">
-      <!-- Messages will be dynamically added here -->
+      <!-- Сообщения будут добавляться динамически -->
     </div>
     <div class="user_chat__footer">
       <div class="user_chat__footer__input">
-        <input type="text" placeholder="Start new message" id="messageInput">
+        <input type="text" placeholder="Начните новое сообщение" id="messageInput">
         <svg id="sendMessageButton" data-friendId="" xmlns="http://www.w3.org/2000/svg" width="13" height="12"
           viewBox="0 0 13 12" fill="none" onclick="sendMessage(this)">
           <path
@@ -2519,6 +2604,12 @@
   </div>
 </div>
 <style>
+  .user_chat__footer {
+    padding: 8px 15px;
+    box-shadow: 0px -7px 7px rgba(0, 0, 0, 0.05);
+  }
+
+
   .user_chat__footer__input {
     display: flex;
     justify-content: space-between;
@@ -2528,8 +2619,14 @@
     align-items: center;
   }
 
+  .user_chat__footer__input input:focus {
+    outline: none;
+    border: none;
+  }
+
   .user_chat__footer__input input {
     background-color: #F3F3F3;
+
   }
 </style>
 <style>
@@ -2542,10 +2639,9 @@
   .user_chat__body {
     display: flex;
     flex-direction: column;
-    padding-top: 35px 0px;
+    padding: 35px 20px;
     overflow-y: auto;
     height: 100%;
-    max-height: 410px;
   }
 
   .user_chat__message.received {
@@ -2575,9 +2671,8 @@
   }
 
   .chat {
-    width: 420px;
+    width: 400px;
     height: 580px;
-    padding: 25px 21px;
     position: fixed;
     bottom: 30px;
     right: 100px;
@@ -2589,6 +2684,8 @@
     transform: translateY(20px);
     flex-direction: column;
     display: flex;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.2);
   }
 
   .user_chat {
@@ -2598,9 +2695,11 @@
   }
 
   .user_chat__header {
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 20px;
   }
 
   .header__content {
@@ -2614,10 +2713,11 @@
   }
 
   .chat__header {
+    padding: 21px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
   }
 
   .chat__list {
@@ -2628,17 +2728,19 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    justify-content: center;
   }
 
   .chat__list img {
     max-width: 100px;
+    width: 47px;
+    border-radius: 100%;
+
   }
 
   .chat__item {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    padding: 8px 28px;
     cursor: pointer;
+    width: 100%;
   }
 
   .chat__item:hover {
@@ -2668,7 +2770,13 @@
 
 <script>
   let currentChatId = null;
-  var waitMessageInterval = null;
+  let waitMessageInterval = null;
+  let lastMessageId = null;
+
+  function openChatFromButton(chatId, chatName) {
+    toggleChat();
+    openChat(chatId, chatName);
+  }
 
   function toggleChat() {
     const chatContainer = document.getElementById('chatContainer');
@@ -2677,7 +2785,6 @@
       chatContainer.style.display = 'flex';
       setTimeout(() => {
         chatContainer.classList.add('show');
-
       }, 10);
     } else {
       chatContainer.classList.remove('show');
@@ -2688,7 +2795,11 @@
   }
 
   function openChat(chatId, chatName) {
+    if (currentChatId !== null) {
+      clearInterval(waitMessageInterval);
+    }
     currentChatId = chatId;
+    lastMessageId = null;
     const chat__header = document.querySelector(".chat__header")
     chat__header.classList.add('hidden')
     const chatList = document.getElementById('chatList');
@@ -2705,31 +2816,48 @@
     var sendMessageButton = document.getElementById("sendMessageButton")
     sendMessageButton.setAttribute('data-friendId', chatId);
 
-    var waitMessageInterval = setInterval(function() {
+    // Отметить сообщения как прочитанные
+    $.ajax({
+      url: "{{ route('messages.markAsRead') }}",
+      type: "POST",
+      data: {
+        _token: "{{ csrf_token() }}",
+        friendId: chatId
+      },
+      success: function(response) {
+        console.log('Сообщения отмечены как прочитанные');
+        // Обновить счетчик непрочитанных сообщений
+        updateUnreadCount(chatId, 0);
+      }
+    });
+
+    waitMessageInterval = setInterval(function() {
       $.ajax({
         url: "{{ route('messages.index') }}",
         type: "POST",
         data: {
           _token: "{{ csrf_token() }}",
-          user_id: {
-            {
-              auth() - > user() - > id
-            }
-          },
-          friendId: chatId
+          user_id: '{{ auth()->user()->id }}',
+          friendId: chatId,
+          lastMessageId: lastMessageId
         },
         success: function(response) {
           if (response.messages.length > 0) {
-            var messagesHTML = '';
+            let newMessagesHTML = '';
             response.messages.forEach(function(message) {
-              messagesHTML += `
-                <div class="user_chat__message ${message.user_id === {{ auth()->user()->id }} ? 'sent' : 'received'}">
+              newMessagesHTML += `<div class="user_chat__message ${message.user_id === <?= auth()->user()->id ?> ? 'sent' : 'received'}">
                   <div class="message__content">${message.message}</div>
-                  <div class="message_time">${new Date(message.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true })}</div>
+                  <div class="message_time">${new Date(message.created_at).toLocaleString('en-EN', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false })}</div>
                 </div>
               `;
             });
-            chatBody.innerHTML = messagesHTML;
+
+            if (newMessagesHTML !== chatBody.innerHTML) {
+              chatBody.innerHTML = newMessagesHTML;
+              chatBody.scrollTop = chatBody.scrollHeight;
+            }
+
+            lastMessageId = response.messages[response.messages.length - 1].id;
           }
         }
       });
@@ -2742,9 +2870,10 @@
     const chat__header = document.querySelector(".chat__header")
     chat__header.classList.remove('hidden')
     userChat.style.display = 'none';
-    chatList.style.display = 'block';
-    currentChatId = null;
+    chatList.style.display = 'flex';
     clearInterval(waitMessageInterval);
+    currentChatId = null;
+    lastMessageId = null;
   }
 
   function sendMessage(element) {
@@ -2756,11 +2885,7 @@
         type: "POST",
         data: {
           _token: "{{ csrf_token() }}",
-          user_id: {
-            {
-              auth() - > user() - > id
-            }
-          },
+          user_id: "{{ auth()->user()->id }}",
           friendId: element.getAttribute('data-friendId'),
           message: message
         },
@@ -2803,10 +2928,15 @@
 
     const timeElement = document.createElement('div');
     timeElement.classList.add('message_time');
-    timeElement.textContent = new Date().toLocaleTimeString([], {
-      hour: '2-digit',
+    const now = new Date();
+    const options = {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
       minute: '2-digit'
-    });
+    };
+    timeElement.textContent = now.toLocaleString('en-EN', options);
 
     messageElement.appendChild(contentElement);
     messageElement.appendChild(timeElement);
@@ -2815,16 +2945,27 @@
     chatBody.scrollTop = chatBody.scrollHeight;
   }
 
-  // Event listener for Enter key in the input field
+  function updateUnreadCount(chatId, count) {
+    const chatItem = document.querySelector(`.chat__item[onclick*="${chatId}"]`);
+    if (chatItem) {
+      let badge = chatItem.querySelector('.unread-badge');
+      if (count > 0) {
+        if (!badge) {
+          badge = document.createElement('span');
+          badge.className = 'unread-badge';
+          chatItem.appendChild(badge);
+        }
+        badge.textContent = count;
+      } else if (badge) {
+        badge.remove();
+      }
+    }
+  }
+
+  // Слушатель для клавиши Enter в поле ввода
   document.getElementById('messageInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
-      sendMessage();
+      sendMessage(document.getElementById('sendMessageButton'));
     }
   });
-
-  // Function to open chat from another button
-  function openChatFromButton(chatId, chatName) {
-    toggleChat();
-    openChat(chatId, chatName);
-  }
 </script>

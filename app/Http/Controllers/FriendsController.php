@@ -104,7 +104,7 @@ class FriendsController extends Controller
         // Check if the request exists
         if ($friend_request) {
             // Update the status
-            $friend_request->status = 'blocked';
+            $friend_request->status = 'blocked_to_user_'.auth()->user()->id;
             $friend_request->save();
 
             return response()->json(['message' => 'success']);
@@ -156,6 +156,4 @@ class FriendsController extends Controller
 
         return response()->json(['message' => 'Friend request declined']);
     }
-
-    
 }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Message;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 
 class ChatController extends Controller
 {
@@ -21,9 +21,11 @@ class ChatController extends Controller
             })
             ->map(function ($group) use ($user) {
                 $otherUserId = $group->first()->user_id === $user->id ? $group->first()->recipient_id : $group->first()->user_id;
+                $unreadCount = $group->where('recipient_id', $user->id)->where('read', false)->count();
                 return [
                     'recipient' => \App\Models\User::find($otherUserId),
-                    'last_message' => $group->sortByDesc('created_at')->first()
+                    'last_message' => $group->sortByDesc('created_at')->first(),
+                    'unread_count' => $unreadCount
                 ];
             })
             ->values();
@@ -50,9 +52,6 @@ class ChatController extends Controller
         $message->save();
 
         return response()->json(['message' => 'Message sent successfully']);
-
-
-
     }
 
     public function get(Request $request)
@@ -76,5 +75,24 @@ class ChatController extends Controller
         })->orderBy('created_at', 'asc')->get();
 
         return response()->json(['messages' => $messages]);
+    }
+
+    public function markAsRead(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'friendId' => 'required|integer',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+
+        $friend_id = $request->friendId;
+
+        Message::where('recipient_id', auth()->user()->id)
+            ->where('user_id', $friend_id)->update(['read' => true]);
+
+        return response()->json(['message' => 'Messages marked as read']);
     }
 }
