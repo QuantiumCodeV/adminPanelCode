@@ -2781,7 +2781,8 @@ video {
 
 .object-cover {
     -o-object-fit: cover;
-    object-fit: cover
+    object-fit: cover;
+    height: 100%;
 }
 
 .p-0 {

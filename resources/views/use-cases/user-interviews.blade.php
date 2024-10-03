@@ -49,27 +49,7 @@
   <script
     src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
     type="text/javascript"></script>
-  <script type="text/javascript">
-    WebFont.load({
-      google: {
-        families: [
-          "Varela Round:400",
-          "Plus Jakarta Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic",
-          "Just Another Hand:regular",
-        ],
-      },
-    });
-  </script>
-  <script type="text/javascript">
-    !(function(o, c) {
-      var n = c.documentElement,
-        t = " w-mod-";
-      (n.className += t + "js"),
-      ("ontouchstart" in o ||
-        (o.DocumentTouch && c instanceof DocumentTouch)) &&
-      (n.className += t + "touch");
-    })(window, document);
-  </script>
+
   <link
     href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
     rel="shortcut icon"
@@ -77,29 +57,6 @@
   <link
     href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f5e63bfed5fc2509a07_256.png"
     rel="apple-touch-icon" />
-
-  <!-- Plausible Analytics -->
-  <script
-    defer
-    data-domain="listenup.ai"
-    src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
-  <script>
-    var toTag = [{
-      elementId: "copy-to-figma",
-      classes: "plausible-event-name=Copy+To+Figma",
-    }, ];
-
-    document.addEventListener("DOMContentLoaded", function(_e) {
-      toTag.forEach(function(tagObject) {
-        var element = document.getElementById(tagObject.elementId);
-        tagObject.classes.split(" ").forEach(function(className) {
-          if (element) {
-            element.classList.add(className);
-          }
-        });
-      });
-    });
-  </script>
 
   <!-- Intercom -->
   <style>
@@ -177,14 +134,14 @@
                       alt="" />
                   </div>
                 </a><a
-                  href="https://www.listenup.ai/product/ai-features"
+                  href="/product/ai-features"
                   class="ressouce-card hide w-inline-block"><img
-                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png"
+                    src="{{ asset('assets/recorder.png') }}"
                     loading="lazy"
                     sizes="100vw"
                     srcset="
                         https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2)-p-500.png 500w,
-                        https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png       838w
+                        {{ asset('assets/recorder.png') }}       838w
                       "
                     alt=""
                     class="image-57" />
@@ -206,12 +163,12 @@
                   href="meeting-recorder"
                   aria-current="page"
                   class="ressouce-card hover-button w-inline-block w--current"><img
-                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png"
+                    src="{{ asset('assets/recorder.png') }}"
                     loading="lazy"
                     sizes="100vw"
                     srcset="
                         https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2)-p-500.png 500w,
-                        https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png       838w
+                        {{ asset('assets/recorder.png') }}       838w
                       "
                     alt=""
                     class="image-57" />
@@ -249,7 +206,7 @@
               </div>
               <nav class="navigation-dropdown-list-usecases w-dropdown-list">
                 <a
-                  href="../use-cases/user-interviews"
+                  href="/use-cases/user-interviews"
                   class="ressouce-card hover-button w-inline-block"><img
                     src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66324378855129dd79b5a995_flow%20(1).png"
                     loading="lazy"
@@ -279,7 +236,7 @@
                 </a>
               </nav>
             </div>
-            <a href="../pricing" class="navigation-link w-inline-block"><img
+            <a href="/pricing" class="navigation-link w-inline-block"><img
                 src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654fbaddf6654b94902055ad_Frame%2035236.svg"
                 loading="lazy"
                 alt=""
@@ -301,7 +258,7 @@
               </div>
               <nav class="navigation-dropdown-list w-dropdown-list">
                 <a
-                  href="../product-discovery-bible/start-here/introduction"
+                  href="/product-discovery-bible/start-here/introduction"
                   target="_blank"
                   class="ressouce-card hover-button w-inline-block"><img
                     src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623f50c731baa0f615eab04_product%20bible%20(1).png"
@@ -401,478 +358,259 @@
       </style>
     </div>
   </div>
-  <div class="recorder-page-wrapper">
+  <div class="usecase-page">
     <div class="container">
-      <div class="recorder-h1-wrapper">
-        <div class="h1-wrapper">
-          <div class="h1-underlign-wrapper">
-            <img
-              src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/65b8004e0ac06f97a6e62263_record.svg"
-              loading="lazy"
-              alt=""
-              class="h1-image-recorder" />
-            <h1 class="home-h1-recorder">Open-Source</h1>
-          </div>
-          <h1 class="home-h1-recorder">SoundLine AI project</h1>
-        </div>
-        <div class="recorder-hero-description">
-          a transparent open source project with all its data.
-        </div>
-        <div class="div-block-99">
-          <a
-            href="https://chromewebstore.google.com/detail/listenup-capture-feedback/ionhideogcpnnmkndkpcmcpdnipeihak"
-            target="_blank"
-            class="yellow-cta w-inline-block">
-            <div class="_16-bold">
-              GitHub <span class="text-span-5">- go over</span>
-            </div>
-            <img
-              src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
-              loading="lazy"
-              alt="" />
-          </a>
-        </div>
-
+      <div class="usecase-h1-wrapper">
+        <div class="tag">User interviews</div>
+        <h1 class="usecase-h1">You should do more user interviews. And you know it.</h1>
+        <div class="usecase-section-text">But why? Because your process is 💩<br>Let’s try something new.</div>
       </div>
-      <div class="section-wrapper">
-        <div class="div-block-127">
-          <img
-            src="{{ asset("assets/img_custom_use_cases_1.png") }}"
-            loading="lazy"
-            sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 1439px) 98vw, 1200px"
-
-            alt=""
-            class="image-46" />
-          <style>
-            .image-46 {
-              box-shadow: none !important;
-
-            }
-          </style>
-        </div>
-      </div>
-
       <div class="usecase-wrapper">
         <div class="usecase-section-wrapper">
-          <h1 class="chrome-ext-title">Access all recordings in one place</h1>
-          <div class="usecase-image-wrapper">
-            <img
-              src="{{ asset("assets/img_custom_use_cases_2.png") }}"
-              loading="lazy"
-
-              alt=""
-              class="normal-usecase-img" />
+          <div class="usecase-text-wrapper">
+            <h1 class="usecase-section-title">Step 1 - Use the right meeting recorder</h1>
+            <div class="usecase-section-text">Stop inviting suspicious bots to your calls. People feel that they are being watched and will not behave as naturally and comfortably as they would without it.<br><br>Use <a href="/" target="_blank" class="text-link hover-button">SoundLine!</a> to record your calls on Zoom, Google Meet and Microsoft teams without inviting bots to your calls. Also, you will always have the AI voice translator function at your fingertips. The extension will record the sound and image directly in the call source. The sound will be recorded perfectly, even if you put on headphones or there will be noise around you during a conversation, which will significantly improve decoding with the help of artificial intelligence.</div>
           </div>
+          <div class="usecase-image-wrapper"><img src="{{ asset('assets/img_custom_use_cases_1.png') }}" loading="lazy" alt="" class="usecase-image"></div>
         </div>
         <div class="usecase-section-wrapper">
-          <h1 class="chrome-ext-title">Let AI do the manual work</h1>
-          <div class="usecase-image-wrapper">
-            <img
-              src="{{ asset("assets/img_custom_use_cases_3.png") }}" loading="lazy"
-
-              alt=""
-              class="normal-usecase-img" />
+          <div class="usecase-text-wrapper">
+            <h1 class="usecase-section-title">Step 2 - Centralize all recordings</h1>
+            <div class="usecase-section-text">All recordings from <a href="" target="_blank" class="text-link hover-button">SoundLine!</a> Apps are automatically added to your SoundLine! included in the web version. From there, you can access all the records, view each one and share them with your team to share information.</div>
           </div>
+          <div class="usecase-image-wrapper"><img src="{{ asset('assets/img_custom_use_cases_2.png') }}" loading="lazy" alt="" class="normal-usecase-img"></div>
         </div>
         <div class="usecase-section-wrapper">
-          <h1 class="chrome-ext-title">Highlight to create user insights</h1>
-          <div class="usecase-image-wrapper">
-            <img
-              src="{{ asset("assets/img_custom_use_cases_4.png") }}" loading="lazy"
-              alt=""
-              class="normal-usecase-img" />
+          <div class="usecase-text-wrapper">
+            <h1 class="usecase-section-title">Step 3 - Let AI do the manual work</h1>
+            <div class="usecase-section-text">Each meeting recording added to your inbox is automatically transcribed with one of the most accurate AIs on the market - <a href="/" target="_blank" class="text-link hover-button">try for yourself</a>.&nbsp;<br>You can also access and create custom AI summaries with your own prompt.</div>
           </div>
+          <div class="usecase-image-wrapper"><img src="{{ asset('assets/img_custom_use_cases_3.png') }}" alt="" class="normal-usecase-img"></div>
         </div>
         <div class="usecase-section-wrapper">
-          <h1 class="chrome-ext-title">Create patterns of user insights</h1>
-          <div class="usecase-image-wrapper">
-            <img
-              src="{{ asset("assets/img_custom_use_cases_5.png") }}" loading="lazy"
-              alt=""
-              class="normal-usecase-img" />
+          <div class="usecase-text-wrapper">
+            <h1 class="usecase-section-title">Step 4 - Create user insights</h1>
+            <div class="usecase-section-text">You'll unlock the real value when you highlight the most valuable parts of the interview to create user insights - SoundLine's AI will automatically suggest insights to create to make speed up the process while leaving you the control. <br><br>After creating insights, you can mark your interview as done (you can still find it with filters) and move to the "insights" tab to access all your user insights.</div>
           </div>
+          <div class="usecase-image-wrapper"><img src="{{ asset('assets/img_custom_use_cases_4.png') }}" alt="" class="normal-usecase-img"></div>
         </div>
         <div class="usecase-section-wrapper">
-          <h1 class="chrome-ext-title">Share to align your team</h1>
-          <img
-            src="{{ asset("assets/img_custom_use_cases_6.png") }}" loading="lazy"
-            alt=""
-            class="normal-usecase-img" />
+          <div class="usecase-text-wrapper">
+            <h1 class="usecase-section-title">Step 5 - Create patterns</h1>
+            <div class="usecase-section-text">This is the place where you will identify what you should work on next to bring value to your users. Find common insights and create patterns to see what comes up the most from your users. <br><br>SoundLine's AI will also automatically suggest new patterns or insights to add to existing patterns.</div>
+          </div>
+          <div class="usecase-image-wrapper"><img src="{{ asset('assets/img_custom_use_cases_5.png') }}" alt="" class="normal-usecase-img"></div>
+        </div>
+        <div class="usecase-section-wrapper">
+          <div class="usecase-text-wrapper">
+            <h1 class="usecase-section-title">Step 6 - Share everything seamlessly</h1>
+            <div class="usecase-section-text">Share patterns anywhere to share your users' voice in your organization and explain why you should work on this problem next.<br>‍<br>Integrate your users' voice in your product process by embedding insights and patterns in your favorite delivery tool. Make it a norm to have user patterns sitting beside the problem you want to solve, the business opportunity, the final solution, tech specifications, etc.</div>
+          </div><img src="{{ asset('assets/img_custom_use_cases_6.png') }}" alt="" class="normal-usecase-img">
+          <h1 class="usecase-section-title">Ready to give it a try?</h1>
         </div>
       </div>
-      <div class="qna-wrapper">
-        <div class="faqs_wrapper">
-          <h1 class="home-h2">Any questions?</h1>
-          <div class="faq-wrapper">
-            <div class="faq-triger">
-              <div class="is-txt-small is-txt-semibold">
-                How does this extension work?
-              </div>
-              <div class="faq-plus-wrap">
-                <div class="faq-plus-l"></div>
-                <div class="faq-plus"></div>
-              </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="div-block-56">
+        <div class="huge-yellow-cta-wrapper"><a data-w-id="53678440-9976-8967-2914-b7fb1ae1b11e" href="/" class="yellow-cta-huge w-inline-block">
+            <div class="home-cta-text-huge">Get started</div><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg" loading="lazy" alt="" class="image-20">
+          </a>
+          <div class="new-checklist-wrapper">
+            <div class="new-checklist"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665b5d050c98a3612d2ce9fb_check.svg" loading="lazy" alt="">
+              <div class="text-block-74">No card required</div>
             </div>
-            <div class="faq-answer">
-              <div class="faq_answer">
-                <a
-                  href="https://chromewebstore.google.com/detail/listenup-capture-feedback/ionhideogcpnnmkndkpcmcpdnipeihak"
-                  target="_blank"
-                  class="text-link hover-button">Add the SoundLine! extension to Chrome</a>, and pin it to your tool bar<br />2. Open the SoundLine!
-                extensions when you enter a call and press on “start
-                recording”<br />3. At the end of your call, go back to the
-                extension and press on “stop recording”<br /><br />The
-                extension will record the sound and audio of your call
-                directly at the source. This means you can safely use
-                headphones during the call.<br /><br />Call recordings will
-                automatically be added to your Sound<em>Line!</em> inbox. The
-                recording will automatically be transcribed with one of the
-                best AI transcriptions available today (32 languages
-                supported). <br />
-              </div>
+            <div class="new-checklist"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665b5d050c98a3612d2ce9fb_check.svg" loading="lazy" alt="">
+              <div class="text-block-74">14-day free trial</div>
             </div>
-          </div>
-          <div class="faq-wrapper">
-            <div class="faq-triger">
-              <div class="is-txt-small is-txt-semibold">
-                How much does it cost?
-              </div>
-              <div class="faq-plus-wrap">
-                <div class="faq-plus-l"></div>
-                <div class="faq-plus"></div>
-              </div>
-            </div>
-            <div class="faq-answer">
-              <div class="faq_answer">
-                To use the extension, you need a
-                <a href="/" target="_blank" class="text-link">Sound<em>Line!</em></a>
-                account as the call recordings will automatically be sent to
-                your Sound<em>Line!</em> inbox for transcription. You can start
-                using Sound<em>Line!</em> for free.
-              </div>
-            </div>
-          </div>
-          <div class="faq-wrapper">
-            <div class="faq-triger">
-              <div class="is-txt-small is-txt-semibold">
-                How do I use it to record calls on Zoom or Microsoft Teams?
-              </div>
-              <div class="faq-plus-wrap">
-                <div class="faq-plus-l"></div>
-                <div class="faq-plus"></div>
-              </div>
-            </div>
-            <div class="faq-answer">
-              <div class="faq_answer">
-                The process is the same as to record Google Meet calls.
-                However, for Zoom and Microsoft Teams, you need to join
-                meetings on your web browser and not the native application.
-                <a
-                  href="../how-to-use-zoom-and-teams-on-your-web-browser-tutorial"
-                  target="_blank"
-                  class="text-link hover-button">Here&#x27;s a step-by-step tutorial to join a meeting on
-                  Zoom and Microst Teams on the web</a>.
-              </div>
-            </div>
-          </div>
-          <div class="faq-wrapper">
-            <div class="faq-triger">
-              <div class="is-txt-small is-txt-semibold">
-                How many calls can I record? For how long?
-              </div>
-              <div class="faq-plus-wrap">
-                <div class="faq-plus-l"></div>
-                <div class="faq-plus"></div>
-              </div>
-            </div>
-            <div class="faq-answer">
-              <div class="faq_answer">
-                You can record as many calls as you want so long as you have
-                enough credits with your Sound<em>Line!</em> account to add
-                more videos.
-              </div>
-            </div>
-          </div>
-          <div class="faq-wrapper">
-            <div class="faq-triger">
-              <div class="is-txt-small is-txt-semibold">
-                How is the sound recorded?
-              </div>
-              <div class="faq-plus-wrap">
-                <div class="faq-plus-l"></div>
-                <div class="faq-plus"></div>
-              </div>
-            </div>
-            <div class="faq-answer">
-              <div class="faq_answer">
-                We record the audio as you hear it when you are in the call.
-                This means the sound will properly be recorded, even if you
-                wear headphones.  
-              </div>
-            </div>
-          </div>
-          <div class="faq-wrapper">
-            <div class="faq-triger">
-              <div class="is-txt-small is-txt-semibold">
-                Will a &quot;bot&quot; join my meeting to record the call,
-                like other tools?
-              </div>
-              <div class="faq-plus-wrap">
-                <div class="faq-plus-l"></div>
-                <div class="faq-plus"></div>
-              </div>
-            </div>
-            <div class="faq-answer">
-              <div class="faq_answer">
-                No. It will only be you and the people with whom you have
-                planned a call with. The Sound<em>Line!</em> chrome extension
-                doesn&#x27;t need to join the call to record it.
-              </div>
+            <div class="new-checklist"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665b5d050c98a3612d2ce9fb_check.svg" loading="lazy" alt="">
+              <div class="text-block-74">Unlimited seats</div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="section-wrapper">
-        <div class="div-block-117">
-          <div class="div-block-118 hide">
-            <h1 class="heading-14">$0</h1>
-            <div class="text-block-55">/month</div>
-          </div>
-          <div class="recorder-check-wrapper hide">
-            <div class="checklist-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/650f4227244001d586493c04_check.svg"
-                alt=""
-                class="checklist-icon-recorder" />
-              <div class="checklist-text--recorder">Unlimited calls</div>
-            </div>
-            <div class="checklist-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/650f4227244001d586493c04_check.svg"
-                alt=""
-                class="checklist-icon-recorder" />
-              <div class="checklist-text--recorder">Download recordings</div>
-            </div>
-            <div class="checklist-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/650f4227244001d586493c04_check.svg"
-                alt=""
-                class="checklist-icon-recorder" />
-              <div class="checklist-text--recorder">
-                Up to 1h/call
-                <span class="text-span-9">(unlimited for SoundLine! users)</span>
-              </div>
-            </div>
-            <div class="checklist-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/650f4227244001d586493c04_check.svg"
-                alt=""
-                class="checklist-icon-recorder" />
-              <div class="checklist-text--recorder">
-                Works with Meet, Zoom &amp; Teams
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer">
-        <div class="container">
-          <div class="div-block-56">
-            <div class="huge-yellow-cta-wrapper">
+        <div class="div-block-7">
+          <div class="div-block-78">
+            <div class="div-block-77">
               <a
-                data-w-id="a04e7d60-d5b3-2f74-1693-890c60c2f873"
-                href="https://chromewebstore.google.com/detail/listenup-capture-feedback/ionhideogcpnnmkndkpcmcpdnipeihak"
-                target="_blank"
-                class="yellow-cta-huge w-inline-block">
-                <div class="home-cta-text-huge-recorder">Add to chrome</div>
+                href="/"
+                class="footer-home-link hover-button w-inline-block"><img
+                  src="/assets/logo.png"
+                  loading="lazy"
+                  alt="SoundLine!&#x27;s logo"
+                  class="image-30" /></a><a href="#" class="yellow-cta w-inline-block">
+                <div class="_16-bold">Get started for free</div>
                 <img
                   src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
                   loading="lazy"
-                  alt=""
-                  class="icon-bigcta-recorder" />
-              </a>
+                  alt="" />
+              </a><a
+                href="#"
+
+                class="product-hunt-badge hover-button w-inline-block"><img
+                  src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1).png"
+                  loading="lazy"
+                  sizes="100vw"
+                  srcset="
+                      https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1)-p-500.png  500w,
+                      https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1)-p-800.png  800w,
+                      https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1).png       1062w
+                    "
+                  alt="" /></a>
             </div>
-            <div class="div-block-7">
-              <div class="div-block-78">
-                <div class="div-block-77">
-                  <a
-                    href="/"
-                    class="footer-home-link hover-button w-inline-block"><img
-                      src="/assets/logo.png"
-                      loading="lazy"
-                      alt="SoundLine!&#x27;s logo"
-                      class="image-30" /></a><a href="{{  route("login") }}" class="yellow-cta w-inline-block">
-                    <div class="_16-bold">Get started for free</div>
-                    <img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
-                      loading="lazy"
-                      alt="" />
-                  </a>
-                </div>
-                <div class="div-block-69">
-                  <div class="footer-container">
-                    <div class="footer-link-title">Ressources</div>
-                    <a
-                      href="../product-discovery-bible/start-here/introduction"
-                      target="_blank"
-                      class="navigation-link-footer w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654fbadddd598ef6fc073746_Vector.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">
-                        Product Discovery Bible
-                      </div>
-                    </a><a
-                      href="https://www.listenup.ai/manifesto"
-                      target="_blank"
-                      class="navigation-link-footer hide w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654fbadd3557b10a7009fabb_Group.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">Manifesto</div>
-                    </a><a
-                      href="https://www.listenup.ai/manifesto"
-                      target="_blank"
-                      class="navigation-link-footer hide w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b2b0551ecb8d664be517_blog%20icon.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">Blog</div>
-                    </a>
-                  </div>
-                  <div class="footer-container">
-                    <div class="footer-link-title">Product</div>
-                    <a
-                      href="../pricing"
-                      class="navigation-link-footer w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654fbaddf6654b94902055ad_Frame%2035236.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">Pricing</div>
-                    </a><a
-                      href="integrations"
-                      class="navigation-link-footer w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6631f481c84041962ba1081a_integration.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">Integrations</div>
-                    </a><a
-                      href="https://www.listenup.ai/product/ai-features"
-                      class="navigation-link-footer hide w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66323213ce51b39cdb6fb114_Magic%20Wand%2C%20Photo%2C%20Edit.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">AI features</div>
-                    </a><a
-                      href="meeting-recorder"
-                      aria-current="page"
-                      class="navigation-link-footer w-inline-block w--current"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fb160210e3a584352145_record%20black.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">
-                        Meeting recorder
-                      </div>
-                    </a><a
-                      href="#"
-                      target="_blank"
-                      class="navigation-link-footer hide w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b2ee4503332060ed2652_login.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">Login</div>
-                    </a>
-                    <div class="footer-link-title">Use cases</div>
-                    <a
-                      href="../use-cases/user-interviews"
-                      target="_blank"
-                      class="navigation-link-footer w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe9b69cfaf072661b24c_users.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">
-                        User interviews
-                      </div>
-                    </a>
-                  </div>
-                  <div class="footer-container">
-                    <div class="footer-link-title">Company</div>
-                    <a
-                      href="https://www.linkedin.com/company/listenup-ai/about/"
-                      target="_blank"
-                      class="navigation-link w-inline-block"><img
-                        src="assets/twitter.png"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">Twitter</div>
-                    </a><a
-                      href="mailto:robin@listenup.ai?subject=Question%20about%20SoundLine!"
-                      class="navigation-link w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b3d3e4faf7c2d5e4d61a_Chat%2C%20Messages%2C%20Bubble.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">Contact us</div>
-                    </a><a
-                      href="../privacy-policy"
-                      target="_blank"
-                      class="navigation-link-footer w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/662502eaaa3a7203a35e1ab4_Vector.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">
-                        Privacy Policy
-                      </div>
-                    </a><a
-                      href="../terms"
-                      target="_blank"
-                      class="navigation-link-footer w-inline-block"><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg"
-                        loading="lazy"
-                        alt=""
-                        class="navigation-icon" />
-                      <div class="navigation-link-text">Terms</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="div-block-53">
-                <div class="div-block-55">
-                  <img
-                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6550c3c726c56cfcfb18ab71_c.svg"
+            <div class="div-block-69">
+              <div class="footer-container">
+                <div class="footer-link-title">Ressources</div>
+                <a
+                  href="product-discovery-bible/start-here/introduction"
+                  target="_blank"
+                  class="navigation-link-footer w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654fbadddd598ef6fc073746_Vector.svg"
                     loading="lazy"
                     alt=""
-                    class="image-16" />
-                  <div class="footer-text">2024  - All rights reserved</div>
-                </div>
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">
+                    Product Discovery Bible
+                  </div>
+                </a><a
+                  href="/manifesto"
+                  target="_blank"
+                  class="navigation-link-footer hide w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654fbadd3557b10a7009fabb_Group.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Manifesto</div>
+                </a><a
+                  href="/manifesto"
+                  target="_blank"
+                  class="navigation-link-footer hide w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b2b0551ecb8d664be517_blog%20icon.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Blog</div>
+                </a>
               </div>
+              <div class="footer-container">
+                <div class="footer-link-title">Product</div>
+                <a
+                  href="pricing"
+                  class="navigation-link-footer w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654fbaddf6654b94902055ad_Frame%2035236.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Pricing</div>
+                </a><a
+                  href="product/integrations"
+                  class="navigation-link-footer w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6631f481c84041962ba1081a_integration.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Integrations</div>
+                </a><a
+                  href="/product/ai-features"
+                  class="navigation-link-footer hide w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66323213ce51b39cdb6fb114_Magic%20Wand%2C%20Photo%2C%20Edit.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">AI features</div>
+                </a><a
+                  href="product/meeting-recorder"
+                  class="navigation-link-footer w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fb160210e3a584352145_record%20black.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Meeting recorder</div>
+                </a><a
+                  href="#"
+                  target="_blank"
+                  class="navigation-link-footer hide w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b2ee4503332060ed2652_login.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Login</div>
+                </a>
+                <div class="footer-link-title">Use cases</div>
+                <a
+                  href="use-cases/user-interviews"
+                  target="_blank"
+                  class="navigation-link-footer w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe9b69cfaf072661b24c_users.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">User interviews</div>
+                </a>
+              </div>
+              <div class="footer-container">
+                <div class="footer-link-title">Company</div>
+                <a
+                  href="https://www.linkedin.com/company/listenup-ai/about/"
+                  target="_blank"
+                  class="navigation-link w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/656caff10b2fc19ffdb057a5_linkedin.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">LinkedIn</div>
+                </a><a
+                  href="mailto:robin@listenup.ai?subject=Question%20about%20SoundLine!"
+                  class="navigation-link w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b3d3e4faf7c2d5e4d61a_Chat%2C%20Messages%2C%20Bubble.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Contact us</div>
+                </a><a
+                  href="privacy-policy"
+                  target="_blank"
+                  class="navigation-link-footer w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/662502eaaa3a7203a35e1ab4_Vector.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Privacy Policy</div>
+                </a><a
+                  href="terms"
+                  target="_blank"
+                  class="navigation-link-footer w-inline-block"><img
+                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg"
+                    loading="lazy"
+                    alt=""
+                    class="navigation-icon" />
+                  <div class="navigation-link-text">Terms</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="div-block-53">
+            <div class="div-block-55">
+              <img
+                src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6550c3c726c56cfcfb18ab71_c.svg"
+                loading="lazy"
+                alt=""
+                class="image-16" />
+              <div class="footer-text">2024  - All rights reserved</div>
+            </div>
+            <div class="made-by-product-lovers">
+              <img
+                src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6631ef01ab4c6d990ba11f4d_Path.svg"
+                loading="lazy"
+                alt=""
+                class="image-16" />
+              <div class="footer-text">Made by Product Lovers</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script
-    src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=635584277e62506ebe08fb74"
-    type="text/javascript"></script>
-  <script
-    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/js/webflow.4d07f6c0f.js"
-    type="text/javascript"></script>
   <!-- Intercom -->
 </body>
 

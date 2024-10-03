@@ -224,12 +224,12 @@
                     href="https://www.listenup.ai/product/ai-features"
                     class="ressouce-card hide w-inline-block"
                     ><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png"
+                      src="{{ asset('assets/recorder.png') }}"
                       loading="lazy"
                       sizes="100vw"
                       srcset="
                         https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2)-p-500.png 500w,
-                        https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png       838w
+                        {{ asset('assets/recorder.png') }}       838w
                       "
                       alt=""
                       class="image-57" />
@@ -252,12 +252,12 @@
                     href="product/meeting-recorder"
                     class="ressouce-card hover-button w-inline-block"
                     ><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png"
+                      src="{{ asset('assets/recorder.png') }}"
                       loading="lazy"
                       sizes="100vw"
                       srcset="
                         https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2)-p-500.png 500w,
-                        https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png       838w
+                        {{ asset('assets/recorder.png') }}       838w
                       "
                       alt=""
                       class="image-57" />

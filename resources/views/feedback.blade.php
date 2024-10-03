@@ -93,12 +93,12 @@
 <script>
     var openModalButton = document.querySelector("#app-navbar > div > button.flex.items-center.font-bold.rounded.text-base.font-bold.px-3.py-3")
     var closeModalButton = document.querySelector("#closeButton");
-    openModalButton.addEventListener("click", function () {
+    openModalButton.addEventListener("click", function() {
         console.log('fsdfsd')
         openText()
     })
 
-    closeModalButton.addEventListener("click", function () {
+    closeModalButton.addEventListener("click", function() {
         const modal = document.getElementById('modalFeedback');
         const overlay = document.querySelector('#overlay');
         if (modal && overlay) {
@@ -107,11 +107,19 @@
         }
     })
 
+    document.addEventListener('click', function (event) {
+        const modal = document.getElementById('modalFeedback');
+        const overlay = document.getElementById('overlay');
+        if (modal && event.target === overlay) {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    });
 
     var completeImportButton = document.getElementById("submitButton");
     var textArea = document.getElementById("feedbackHTML");
 
-    textArea.addEventListener("input", function () {
+    textArea.addEventListener("input", function() {
         if (textArea.value.trim().length > 0) {
             completeImportButton.disabled = false;
             completeImportButton.classList.remove("opacity-60");
@@ -122,14 +130,14 @@
             completeImportButton.classList.remove("opacity-100");
         }
     });
-    completeImportButton.addEventListener("click", function (e) {
+    completeImportButton.addEventListener("click", function(e) {
         e.preventDefault()
         if (!completeImportButton.disabled) {
             var notification = document.getElementById("notification");
             notification.classList.remove("hiddenNOTIF");
             notification.classList.add("visibleNOTIF");
             notification.style.zIndex = 1;
-            setTimeout(function () {
+            setTimeout(function() {
                 notification.classList.remove("visibleNOTIF");
                 notification.classList.add("hiddenNOTIF");
                 notification.style.zIndex = -111111;
@@ -145,4 +153,3 @@
         }
     });
 </script>
-

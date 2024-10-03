@@ -45,13 +45,13 @@
     });
   </script>
   <script type="text/javascript">
-    !(function (o, c) {
+    !(function(o, c) {
       var n = c.documentElement,
         t = " w-mod-";
       (n.className += t + "js"),
-        ("ontouchstart" in o ||
-          (o.DocumentTouch && c instanceof DocumentTouch)) &&
-        (n.className += t + "touch");
+      ("ontouchstart" in o ||
+        (o.DocumentTouch && c instanceof DocumentTouch)) &&
+      (n.className += t + "touch");
     })(window, document);
   </script>
   <link href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
@@ -65,12 +65,12 @@
     var toTag = [{
       elementId: "copy-to-figma",
       classes: "plausible-event-name=Copy+To+Figma",
-    },];
+    }, ];
 
-    document.addEventListener("DOMContentLoaded", function (_e) {
-      toTag.forEach(function (tagObject) {
+    document.addEventListener("DOMContentLoaded", function(_e) {
+      toTag.forEach(function(tagObject) {
         var element = document.getElementById(tagObject.elementId);
-        tagObject.classes.split(" ").forEach(function (className) {
+        tagObject.classes.split(" ").forEach(function(className) {
           if (element) {
             element.classList.add(className);
           }
@@ -103,10 +103,10 @@
     let insightsLastValue = 0;
     let userLastValue = 0;
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
       document
         .getElementById("ai-enrich")
-        .addEventListener("click", function () {
+        .addEventListener("click", function() {
           if (animationState === 0) {
             startAnimation();
           } else if (animationState === 1) {
@@ -263,10 +263,10 @@
                       loading="lazy" alt="" />
                   </div>
                 </a><a href="https://www.listenup.ai/product/ai-features" class="ressouce-card hide w-inline-block"><img
-                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png"
+                    src="{{ asset('assets/recorder.png') }}"
                     loading="lazy" sizes="100vw" srcset="
                         https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2)-p-500.png 500w,
-                        https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png       838w
+                        {{ asset('assets/recorder.png') }}       838w
                       " alt="" class="image-57" />
                   <div class="div-block-148">
                     <div class="div-block-149">
@@ -280,10 +280,10 @@
                       loading="lazy" alt="" />
                   </div>
                 </a><a href="product/meeting-recorder" class="ressouce-card hover-button w-inline-block"><img
-                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png"
+                    src="{{ asset('assets/recorder.png') }}"
                     loading="lazy" sizes="100vw" srcset="
                         https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2)-p-500.png 500w,
-                        https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2).png       838w
+                        {{ asset('assets/recorder.png') }}       838w
                       " alt="" class="image-57" />
                   <div class="div-block-148">
                     <div class="div-block-149">
@@ -371,14 +371,14 @@
             </div>
           </div>
           <div class="div-block-151">
-    <a href="{{ route('login') }}" class="navigation-link w-inline-block">
-      <div class="navigation-link-text">Log in</div>
-    </a>
-    <a href="{{ route('login') }}" class="yellow-cta w-inline-block">
-      <div class="_16-bold">Get started</div>
-      <img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
-      loading="lazy" alt="" />
-    </a>
+            <a href="{{ route('login') }}" class="navigation-link w-inline-block">
+              <div class="navigation-link-text">Log in</div>
+            </a>
+            <a href="{{ route('login') }}" class="yellow-cta w-inline-block">
+              <div class="_16-bold">Get started</div>
+              <img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
+                loading="lazy" alt="" />
+            </a>
           </div>
         </nav>
         <div class="menu-button w-nav-button">
@@ -2662,15 +2662,15 @@
     <!-- Dragable elements -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-      $(function () {
+      $(function() {
         $(".draggable").draggable({});
       });
     </script>
 
     <!-- Pricing dropdown -->
     <script>
-      $(function () {
-        $("[price-sel]").change(function () {
+      $(function() {
+        $("[price-sel]").change(function() {
           const priceType = $(this).attr("price-sel");
           const selectedValue = $(this).val().replace(",", ""); // Remove comma for parsing
 
@@ -2678,9 +2678,9 @@
           const textDisplay = $(`[text-display="${priceType}"]`);
           const newTextValue = (parseInt(selectedValue) / 4).toLocaleString(
             "en-US", {
-            maximumFractionDigits: 1,
-            minimumFractionDigits: 0
-          }
+              maximumFractionDigits: 1,
+              minimumFractionDigits: 0
+            }
           );
           textDisplay.text(newTextValue);
 
@@ -2689,8 +2689,8 @@
           const videoValue = (parseInt(selectedValue) / 6 / 60).toFixed(1); // Ensure one digit after decimal
           videoDisplay.text(
             Math.floor(videoValue) === parseFloat(videoValue) ?
-              Math.floor(videoValue) :
-              videoValue
+            Math.floor(videoValue) :
+            videoValue
           );
 
           // Update "price-display" and "old-price-display" only if "price-sel" matches "priceType"

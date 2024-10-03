@@ -3239,25 +3239,24 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                           }
 
                           .starAnimationBlock:focus .starAnimation {
-                            animation: star 1s infinite;
-                            transform: rotate(-30deg);
-                          }
+                                animation: star 1s infinite ease-in-out;
+                                transform: rotate(-30deg);
+                              }
 
+                              
+                              @keyframes star {
+                                0% {
+                                  transform: rotate(0deg);
+                                }
 
-                          @keyframes star {
-                            0% {
-                              transform: rotate(0deg);
-                            }
+                                50% {
+                                  transform: rotate(30deg);
+                                }
 
-                            25% {
-                              transform: rotate(30deg);
-                            }
-
-                            100% {
-                              transform: rotate(-30deg);
-                            }
-
-                          }
+                                100% {
+                                  transform: rotate(0deg);
+                                }
+                              }
                         </style>
                       </button></section>
 

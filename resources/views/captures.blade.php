@@ -2275,32 +2275,24 @@
                               }
 
                               .starAnimationBlock:focus .starAnimation {
-                                animation: star 1s infinite;
+                                animation: star 1s infinite ease-in-out;
                                 transform: rotate(-30deg);
                               }
 
-
-                                @keyframes star {
-                                  0% {
-                                    transform: rotate(0deg);
-                                  }
-
-                                  25% {
-                                    transform: rotate(30deg);
-                                  }
-
-                                  50% {
-                                    transform: rotate(0deg);
-                                  }
-
-                                  75% {
-                                    transform: rotate(-30deg);
-                                  }
-
-                                  100% {
-                                    transform: rotate(0deg);
-                                  }
+                              
+                              @keyframes star {
+                                0% {
+                                  transform: rotate(0deg);
                                 }
+
+                                50% {
+                                  transform: rotate(30deg);
+                                }
+
+                                100% {
+                                  transform: rotate(0deg);
+                                }
+                              }
                               </style>
                             </button></div><button aria-autocomplete="none" aria-controls="radix-:r46:"
                             aria-expanded="false"
