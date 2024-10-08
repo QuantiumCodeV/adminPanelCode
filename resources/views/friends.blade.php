@@ -858,7 +858,7 @@
                       <div id="inputContainer1" class="hidden">
                         <input type="text" id="meetingInput1" placeholder="">
                         <div class="line"></div>
-                        <button type="button" onclick="addFriend1()">ADD</button>
+                        <button type="button" style="font-weight: 700" onclick="addFriend1()">ADD</button>
                       </div>
 
                     </a>
@@ -1574,7 +1574,7 @@
                           <div id="inputContainer" class="hidden">
                             <input type="text" id="meetingInput" placeholder="">
                             <div class="line"></div>
-                            <button type="button" onclick="addFriend()">ADD</button>
+                            <button type="button" style="font-weight: 700" onclick="addFriend()">ADD</button>
                           </div>
 
                         </a>

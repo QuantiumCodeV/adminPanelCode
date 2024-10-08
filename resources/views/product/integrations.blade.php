@@ -229,7 +229,7 @@
                           class="navigation-icon"
                         />
                         <div class="navigation-link-text">
-                          Record user interviews
+                          Open-Source project
                         </div>
                       </div>
                       <img
@@ -460,7 +460,7 @@
                         </div>
                         <div class="div-block-131">
                           <a
-                            href="../integrations/intercom"
+                            href="/login"
                             target="_blank"
                             class="secondary-cta-fullwidth hide w-inline-block"
                             ><img
@@ -470,7 +470,7 @@
                             />
                             <div class="_16-semi-bold">How it works</div></a
                           ><a
-                            href="#"
+                            href="/login"
                             target="_blank"
                             class="yellow-cta-integrations hover-button w-inline-block"
                             ><img
@@ -515,7 +515,7 @@
                         </div>
                         <div class="div-block-131">
                           <a
-                            href="../integrations/slack"
+                            href="/login"
                             target="_blank"
                             class="secondary-cta-fullwidth hide w-inline-block"
                             ><img
@@ -525,7 +525,7 @@
                             />
                             <div class="_16-semi-bold">How it works</div></a
                           ><a
-                            href="#"
+                            href="/login"
                             target="_blank"
                             class="yellow-cta-integrations hover-button w-inline-block"
                             ><img
@@ -581,7 +581,7 @@
                         </div>
                         <div class="div-block-131">
                           <a
-                            href="../integrations/google-meet"
+                            href="/login"
                             target="_blank"
                             class="secondary-cta-fullwidth hide w-inline-block"
                             ><img
@@ -591,7 +591,7 @@
                             />
                             <div class="_16-semi-bold">How it works</div></a
                           ><a
-                            href="meeting-recorder"
+                            href="/login"
                             target="_blank"
                             class="yellow-cta-integrations hover-button w-inline-block"
                             ><img
@@ -637,7 +637,7 @@
                         </div>
                         <div class="div-block-131">
                           <a
-                            href="../integrations/zoom"
+                            href="/login"
                             target="_blank"
                             class="secondary-cta-fullwidth hide w-inline-block"
                             ><img
@@ -647,7 +647,7 @@
                             />
                             <div class="_16-semi-bold">How it works</div></a
                           ><a
-                            href="meeting-recorder"
+                            href="/login"
                             target="_blank"
                             class="yellow-cta-integrations hover-button w-inline-block"
                             ><img
@@ -693,7 +693,7 @@
                         </div>
                         <div class="div-block-131">
                           <a
-                            href="../integrations/teams"
+                            href="/login"
                             target="_blank"
                             class="secondary-cta-fullwidth hide w-inline-block"
                             ><img
@@ -703,7 +703,7 @@
                             />
                             <div class="_16-semi-bold">How it works</div></a
                           ><a
-                            href="meeting-recorder"
+                            href="/login"
                             target="_blank"
                             class="yellow-cta-integrations hover-button w-inline-block"
                             ><img
@@ -749,7 +749,7 @@
                         </div>
                         <div class="div-block-131">
                           <a
-                            href="../integrations/api"
+                            href="/login"
                             target="_blank"
                             class="secondary-cta-fullwidth hide w-inline-block"
                             ><img
@@ -759,7 +759,7 @@
                             />
                             <div class="_16-semi-bold">How it works</div></a
                           ><a
-                            href="https://developers.listenup.ai/"
+                            href="/login"
                             target="_blank"
                             class="yellow-cta-integrations hover-button w-inline-block"
                             ><img
@@ -814,7 +814,7 @@
                         </div>
                         <div class="div-block-131">
                           <a
-                            href="../integrations/zapier"
+                            href="/login"
                             target="_blank"
                             class="secondary-cta-fullwidth hide w-inline-block"
                             ><img
@@ -824,7 +824,7 @@
                             />
                             <div class="_16-semi-bold">How it works</div></a
                           ><a
-                            href="https://zapier.com/developer/public-invite/204091/a21c911cd43392962e32aed372512fca/"
+                            href="/login"
                             target="_blank"
                             class="yellow-cta-integrations hover-button w-inline-block"
                             ><img
@@ -883,7 +883,7 @@
               <div class="huge-yellow-cta-wrapper">
                 <a
                   data-w-id="53678440-9976-8967-2914-b7fb1ae1b11e"
-                  href="#"
+                  href="/login"
                   class="yellow-cta-huge w-inline-block"
                   ><div class="home-cta-text-huge">Get started</div>
                   <img
@@ -930,45 +930,12 @@
                         loading="lazy"
                         alt="SoundLine!&#x27;s logo"
                         class="image-30" /></a
-                    ><a href="#" class="yellow-cta w-inline-block"
-                      ><div class="_16-bold">Get started for free</div>
-                      <img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
-                        loading="lazy"
-                        alt="" /></a
-                    ><a
-                      href="https://www.producthunt.com/posts/meeting-recorder-for-product-teams"
-                      target="_blank"
-                      class="product-hunt-badge hover-button w-inline-block"
-                      ><img
-                        src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1).png"
-                        loading="lazy"
-                        sizes="100vw"
-                        srcset="
-                          https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1)-p-500.png  500w,
-                          https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1)-p-800.png  800w,
-                          https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1).png       1062w
-                        "
-                        alt=""
-                    /></a>
+                    ><a href="{{  route("login") }}" class="yellow-cta w-inline-block"><div class="_16-bold">Get started for free</div><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg" loading="lazy" alt=""/></a><a href="#" class="product-hunt-badge hover-button w-inline-block"><img src="{{ asset('assets/product.png')}}"></a>
                   </div>
                   <div class="div-block-69">
                     <div class="footer-container">
                       <div class="footer-link-title">Ressources</div>
-                      <a
-                        href="../real-saas-design-inspirations"
-                        target="_blank"
-                        class="navigation-link-footer w-inline-block"
-                        ><img
-                          src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/65a29ff57eb6560d92a394a1_diamond.svg"
-                          loading="lazy"
-                          alt=""
-                          class="navigation-icon"
-                        />
-                        <div class="navigation-link-text">
-                          Design inspirations
-                        </div></a
-                      ><a
+                     <a
                         href="../product-discovery-bible/start-here/introduction"
                         target="_blank"
                         class="navigation-link-footer w-inline-block"
@@ -1048,7 +1015,7 @@
                           class="navigation-icon"
                         />
                         <div class="navigation-link-text">
-                          Meeting recorder
+                          Open Source
                         </div></a
                       ><a
                         href="#"
@@ -1085,7 +1052,7 @@
                         target="_blank"
                         class="navigation-link w-inline-block"
                         ><img
-                          src="assets/twitter.png"
+                          src="/assets/twitter.png"
                           loading="lazy"
                           alt=""
                           class="navigation-icon"
@@ -1104,18 +1071,7 @@
                         <div class="navigation-link-text">
                           Privacy Policy
                         </div></a
-                      ><a
-                        href="../terms"
-                        target="_blank"
-                        class="navigation-link-footer w-inline-block"
-                        ><img
-                          src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg"
-                          loading="lazy"
-                          alt=""
-                          class="navigation-icon"
-                        />
-                        <div class="navigation-link-text">Terms</div></a
-                      >
+                      ><a href="terms" target="_blank" class="navigation-link-footer w-inline-block"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg" loading="lazy" alt="" class="navigation-icon"/><div class="navigation-link-text">Terms</div></a><a href="https://github.com/soundlinedev" target="_blank" class="navigation-link-footer w-inline-block"><img src="/assets/github.svg" loading="lazy" alt="" class="navigation-icon"> <div class="navigation-link-text">Github</div> </a>
                     </div>
                   </div>
                 </div>

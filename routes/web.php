@@ -169,6 +169,11 @@ Route::get('/product-discovery-bible/start-here/introduction', function () {
 });
 
 
+Route::get('/terms', function () {
+
+    return view('terms');
+});
+
 // Папка integrations
 
 Route::get('/integrations/api', function () {

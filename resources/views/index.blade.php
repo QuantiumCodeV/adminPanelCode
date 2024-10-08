@@ -45,13 +45,13 @@
     });
   </script>
   <script type="text/javascript">
-    !(function(o, c) {
+    !(function (o, c) {
       var n = c.documentElement,
         t = " w-mod-";
       (n.className += t + "js"),
-      ("ontouchstart" in o ||
-        (o.DocumentTouch && c instanceof DocumentTouch)) &&
-      (n.className += t + "touch");
+        ("ontouchstart" in o ||
+          (o.DocumentTouch && c instanceof DocumentTouch)) &&
+        (n.className += t + "touch");
     })(window, document);
   </script>
   <link href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
@@ -65,12 +65,12 @@
     var toTag = [{
       elementId: "copy-to-figma",
       classes: "plausible-event-name=Copy+To+Figma",
-    }, ];
+    },];
 
-    document.addEventListener("DOMContentLoaded", function(_e) {
-      toTag.forEach(function(tagObject) {
+    document.addEventListener("DOMContentLoaded", function (_e) {
+      toTag.forEach(function (tagObject) {
         var element = document.getElementById(tagObject.elementId);
-        tagObject.classes.split(" ").forEach(function(className) {
+        tagObject.classes.split(" ").forEach(function (className) {
           if (element) {
             element.classList.add(className);
           }
@@ -103,10 +103,10 @@
     let insightsLastValue = 0;
     let userLastValue = 0;
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       document
         .getElementById("ai-enrich")
-        .addEventListener("click", function() {
+        .addEventListener("click", function () {
           if (animationState === 0) {
             startAnimation();
           } else if (animationState === 1) {
@@ -179,6 +179,7 @@
     }
   </script>
 </head>
+
 
 <body class="body-grey">
   <div class="mouse">
@@ -263,8 +264,7 @@
                       loading="lazy" alt="" />
                   </div>
                 </a><a href="https://www.listenup.ai/product/ai-features" class="ressouce-card hide w-inline-block"><img
-                    src="{{ asset('assets/recorder.png') }}"
-                    loading="lazy" sizes="100vw" srcset="
+                    src="{{ asset('assets/recorder.png') }}" loading="lazy" sizes="100vw" srcset="
                         https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2)-p-500.png 500w,
                         {{ asset('assets/recorder.png') }}       838w
                       " alt="" class="image-57" />
@@ -280,8 +280,7 @@
                       loading="lazy" alt="" />
                   </div>
                 </a><a href="product/meeting-recorder" class="ressouce-card hover-button w-inline-block"><img
-                    src="{{ asset('assets/recorder.png') }}"
-                    loading="lazy" sizes="100vw" srcset="
+                    src="{{ asset('assets/recorder.png') }}" loading="lazy" sizes="100vw" srcset="
                         https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fe4fd21ff54f50fa8e59_recorder%20(2)-p-500.png 500w,
                         {{ asset('assets/recorder.png') }}       838w
                       " alt="" class="image-57" />
@@ -291,7 +290,7 @@
                         src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fb160210e3a584352145_record%20black.svg"
                         loading="lazy" alt="" class="navigation-icon" />
                       <div class="navigation-link-text">
-                        Record user interviews
+                        Open-Source project
                       </div>
                     </div>
                     <img
@@ -1535,7 +1534,11 @@
                         </div>
                       </div>
                     </div>
-                    <div class="card-1 purple-card">
+                    <div tabindex="0" class="starAnimationBlock card-1 purple-card">
+                      <img style="    position: absolute;
+    top: -20px;
+    right: -15px;" src="{{ asset("assets/star.png") }}" class="starAnimation" alt="">
+
                       <div class="div-block-13">
                         <div class="text-block-8">Pro</div>
                         <div class="plan-description">
@@ -1667,7 +1670,7 @@
                             src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665b5d050c98a3612d2ce9fb_check.svg"
                             alt="" class="checklist-icon" />
                           <div class="checklist-text">
-                            AI chat with your data
+                            Create meeting rooms
                           </div>
                         </div>
                         <div class="checklist-wrapper">
@@ -1955,7 +1958,36 @@
                         </div>
                       </div>
                     </div>
-                    <div class="card-1 purple-card">
+                    <div tabindex="0" class="starAnimationBlock card-1 purple-card">
+                      <img style="    position: absolute;
+    top: -20px;
+    right: -15px;" src="{{ asset("assets/star.png") }}" class="starAnimation" alt="">
+                      <style>
+                        .starAnimationBlock {
+                          position: relative;
+                          overflow: visible !important;
+                        }
+
+                        .starAnimationBlock:focus .starAnimation {
+                          animation: star 1s infinite ease-in-out;
+                          transform: rotate(-30deg);
+                        }
+
+
+                        @keyframes star {
+                          0% {
+                            transform: rotate(0deg);
+                          }
+
+                          50% {
+                            transform: rotate(30deg);
+                          }
+
+                          100% {
+                            transform: rotate(0deg);
+                          }
+                        }
+                      </style>
                       <div class="div-block-13">
                         <div class="text-block-8">Pro</div>
                         <div class="plan-description">
@@ -2085,7 +2117,7 @@
                             src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665b5d050c98a3612d2ce9fb_check.svg"
                             alt="" class="checklist-icon" />
                           <div class="checklist-text">
-                            AI chat with your data
+                            Create meeting rooms
                           </div>
                         </div>
                         <div class="checklist-wrapper">
@@ -2559,14 +2591,12 @@
           <div class="div-block-7">
             <div class="div-block-78">
               <div class="div-block-77">
-                <a href="/" aria-current="page" class="footer-home-link hover-button w-inline-block w--current"><img
-                    src="assets/logo.png" loading="lazy" alt="SoundLine!&#x27;s logo" class="image-30" /></a><a
-                  href="{{  route("login") }}" class="yellow-cta w-inline-block">
-                  <div class="_16-bold">Get started for free</div>
-                  <img
+                <a href="{{  route("login") }}" class="yellow-cta w-inline-block">
+                  <div class="_16-bold">Get started for free</div><img
                     src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
                     loading="lazy" alt="" />
-                </a>
+                </a><a href="#" class="product-hunt-badge hover-button w-inline-block"><img
+                    src="{{ asset('assets/product.png')}}"></a>
               </div>
               <div class="div-block-69">
                 <div class="footer-container">
@@ -2598,7 +2628,7 @@
                   </a><a href="product/meeting-recorder" class="navigation-link-footer w-inline-block"><img
                       src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623fb160210e3a584352145_record%20black.svg"
                       loading="lazy" alt="" class="navigation-icon" />
-                    <div class="navigation-link-text">Meeting recorder</div>
+                    <div class="navigation-link-text">Open Source</div>
                   </a><a href="#" target="_blank" class="navigation-link-footer hide w-inline-block"><img
                       src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b2ee4503332060ed2652_login.svg"
                       loading="lazy" alt="" class="navigation-icon" />
@@ -2614,23 +2644,16 @@
                 <div class="footer-container">
                   <div class="footer-link-title">Company</div>
                   <a href="https://www.linkedin.com/company/listenup-ai/about/" target="_blank"
-                    class="navigation-link w-inline-block"><img src="assets/twitter.png" loading="lazy" alt=""
+                    class="navigation-link w-inline-block"><img src="/assets/twitter.png" loading="lazy" alt=""
                       class="navigation-icon" />
                     <div class="navigation-link-text">Twitter</div>
-                  </a><a href="mailto:robin@listenup.ai?subject=Question%20about%20SoundLine!"
-                    class="navigation-link w-inline-block"><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b3d3e4faf7c2d5e4d61a_Chat%2C%20Messages%2C%20Bubble.svg"
-                      loading="lazy" alt="" class="navigation-icon" />
-                    <div class="navigation-link-text">Contact us</div>
                   </a><a href="privacy-policy" target="_blank" class="navigation-link-footer w-inline-block"><img
                       src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/662502eaaa3a7203a35e1ab4_Vector.svg"
                       loading="lazy" alt="" class="navigation-icon" />
                     <div class="navigation-link-text">Privacy Policy</div>
-                  </a><a href="terms" target="_blank" class="navigation-link-footer w-inline-block"><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg"
-                      loading="lazy" alt="" class="navigation-icon" />
-                    <div class="navigation-link-text">Terms</div>
-                  </a>
+                  </a><a href="https://github.com/soundlinedev" target="_blank" class="navigation-link-footer w-inline-block"><img src="/assets/github.svg" loading="lazy" alt="" class="navigation-icon">
+                      <div class="navigation-link-text">Github</div>
+                    </a>
                 </div>
               </div>
             </div>
@@ -2662,15 +2685,15 @@
     <!-- Dragable elements -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-      $(function() {
+      $(function () {
         $(".draggable").draggable({});
       });
     </script>
 
     <!-- Pricing dropdown -->
     <script>
-      $(function() {
-        $("[price-sel]").change(function() {
+      $(function () {
+        $("[price-sel]").change(function () {
           const priceType = $(this).attr("price-sel");
           const selectedValue = $(this).val().replace(",", ""); // Remove comma for parsing
 
@@ -2678,9 +2701,9 @@
           const textDisplay = $(`[text-display="${priceType}"]`);
           const newTextValue = (parseInt(selectedValue) / 4).toLocaleString(
             "en-US", {
-              maximumFractionDigits: 1,
-              minimumFractionDigits: 0
-            }
+            maximumFractionDigits: 1,
+            minimumFractionDigits: 0
+          }
           );
           textDisplay.text(newTextValue);
 
@@ -2689,8 +2712,8 @@
           const videoValue = (parseInt(selectedValue) / 6 / 60).toFixed(1); // Ensure one digit after decimal
           videoDisplay.text(
             Math.floor(videoValue) === parseFloat(videoValue) ?
-            Math.floor(videoValue) :
-            videoValue
+              Math.floor(videoValue) :
+              videoValue
           );
 
           // Update "price-display" and "old-price-display" only if "price-sel" matches "priceType"
