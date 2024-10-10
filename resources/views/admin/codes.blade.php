@@ -764,7 +764,7 @@
                   data: {
                     code: document.querySelector('input[name="code"]').value,
                     _token: '{{ csrf_token() }}',
-                    workerId: '{{ Auth::user()->id }}'
+                    workerId: '{{ $activeUser->id }}'
                   },
                   success: function(data) {
                     console.log(data)
