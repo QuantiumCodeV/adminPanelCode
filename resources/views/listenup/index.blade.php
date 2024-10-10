@@ -382,7 +382,7 @@
                           class="navigation-icon"
                         />
                         <div class="navigation-link-text">
-                          Record user interviews
+                          Open-Source project
                         </div>
                       </div>
                       <img
@@ -2354,7 +2354,36 @@
                         </div>
                       </div>
                     </div>
-                    <div class="card-1 purple-card">
+                    <div  tabindex="0" class="starAnimationBlock card-1 purple-card">
+                    <img style="    position: absolute;
+    top: -20px;
+    right: -15px;" src="{{ asset("assets/star.png") }}" class="starAnimation" alt="">
+                      <style>
+                        .starAnimationBlock {
+                          position: relative;
+                          overflow: visible !important;
+                        }
+
+                        .starAnimationBlock:focus .starAnimation {
+                          animation: star 1s infinite ease-in-out;
+                          transform: rotate(-30deg);
+                        }
+
+
+                        @keyframes star {
+                          0% {
+                            transform: rotate(0deg);
+                          }
+
+                          50% {
+                            transform: rotate(30deg);
+                          }
+
+                          100% {
+                            transform: rotate(0deg);
+                          }
+                        }
+                      </style>
                       <div class="div-block-13">
                         <div class="text-block-8">Pro</div>
                         <div class="plan-description">
@@ -2519,7 +2548,7 @@
                             class="checklist-icon"
                           />
                           <div class="checklist-text">
-                            AI chat with your data
+                            Create meeting rooms
                           </div>
                         </div>
                         <div class="checklist-wrapper">
@@ -2900,7 +2929,11 @@
                         </div>
                       </div>
                     </div>
-                    <div class="card-1 purple-card">
+                    <div tabindex="0" class="starAnimationBlock card-1 purple-card">
+                    <img style="    position: absolute;
+    top: -20px;
+    right: -15px;" src="{{ asset("assets/star.png") }}" class="starAnimation" alt="">
+                      
                       <div class="div-block-13">
                         <div class="text-block-8">Pro</div>
                         <div class="plan-description">
@@ -3063,7 +3096,7 @@
                             class="checklist-icon"
                           />
                           <div class="checklist-text">
-                            AI chat with your data
+                            Create meeting rooms
                           </div>
                         </div>
                         <div class="checklist-wrapper">
@@ -3682,15 +3715,7 @@
                     loading="lazy"
                     alt="SoundLine!&#x27;s logo"
                     class="image-30" /></a
-                ><a
-                  href="{{  route("login") }}"
-                  class="yellow-cta w-inline-block"
-                  ><div class="_16-bold">Get started for free</div>
-                  <img
-                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
-                    loading="lazy"
-                    alt="" /></a
-                >
+                ><a href="{{  route("login") }}" class="yellow-cta w-inline-block"><div class="_16-bold">Get started for free</div><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg" loading="lazy" alt=""/></a><a href="#" class="product-hunt-badge hover-button w-inline-block"><img src="{{ asset('assets/product.png')}}"></a>
               </div>
               <div class="div-block-69">
                 <div class="footer-container">
@@ -3751,7 +3776,7 @@
                       alt=""
                       class="navigation-icon"
                     />
-                    <div class="navigation-link-text">Meeting recorder</div></a
+                    <div class="navigation-link-text">Open Source</div></a
                   ><a
                     href="#"
                     target="_blank"
@@ -3785,22 +3810,12 @@
                     target="_blank"
                     class="navigation-link w-inline-block"
                     ><img
-                      src="assets/twitter.png"
+                      src="/assets/twitter.png"
                       loading="lazy"
                       alt=""
                       class="navigation-icon"
                     />
                     <div class="navigation-link-text">Twitter</div></a
-                  ><a
-                    href="mailto:robin@listenup.ai?subject=Question%20about%20SoundLine!"
-                    class="navigation-link w-inline-block"
-                    ><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b3d3e4faf7c2d5e4d61a_Chat%2C%20Messages%2C%20Bubble.svg"
-                      loading="lazy"
-                      alt=""
-                      class="navigation-icon"
-                    />
-                    <div class="navigation-link-text">Contact us</div></a
                   ><a
                     href="privacy-policy"
                     target="_blank"
@@ -3812,18 +3827,7 @@
                       class="navigation-icon"
                     />
                     <div class="navigation-link-text">Privacy Policy</div></a
-                  ><a
-                    href="terms"
-                    target="_blank"
-                    class="navigation-link-footer w-inline-block"
-                    ><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg"
-                      loading="lazy"
-                      alt=""
-                      class="navigation-icon"
-                    />
-                    <div class="navigation-link-text">Terms</div></a
-                  >
+                  ><a href="terms" target="_blank" class="navigation-link-footer w-inline-block"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg" loading="lazy" alt="" class="navigation-icon"/><div class="navigation-link-text">Terms</div></a><a href="https://github.com/soundlinedev" target="_blank" class="navigation-link-footer w-inline-block"><img src="/assets/github.svg" loading="lazy" alt="" class="navigation-icon"> <div class="navigation-link-text">Github</div> </a>
                 </div>
               </div>
             </div>

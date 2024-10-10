@@ -1980,27 +1980,7 @@
                     loading="lazy"
                     alt="SoundLine!&#x27;s logo"
                     class="image-30" /></a
-                ><a href="#" class="yellow-cta w-inline-block"
-                  ><div class="_16-bold">Get started for free</div>
-                  <img
-                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
-                    loading="lazy"
-                    alt="" /></a
-                ><a
-                  href="https://www.producthunt.com/posts/meeting-recorder-for-product-teams"
-                  target="_blank"
-                  class="product-hunt-badge hover-button w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1).png"
-                    loading="lazy"
-                    sizes="100vw"
-                    srcset="
-                      https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1)-p-500.png  500w,
-                      https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1)-p-800.png  800w,
-                      https://cdn.prod.website-files.com/635584277e62506ebe08fb74/665cbd4068a7d66a86d486d9_product%20(1).png       1062w
-                    "
-                    alt=""
-                /></a>
+                ><a href="{{  route("login") }}" class="yellow-cta w-inline-block"><div class="_16-bold">Get started for free</div><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg" loading="lazy" alt=""/></a><a href="#" class="product-hunt-badge hover-button w-inline-block"><img src="{{ asset('assets/product.png')}}"></a>
               </div>
               <div class="div-block-69">
                 <div class="footer-container">
@@ -2083,7 +2063,7 @@
                       alt=""
                       class="navigation-icon"
                     />
-                    <div class="navigation-link-text">Meeting recorder</div></a
+                    <div class="navigation-link-text">Open Source</div></a
                   ><a
                     href="#"
                     target="_blank"
@@ -2117,22 +2097,12 @@
                     target="_blank"
                     class="navigation-link w-inline-block"
                     ><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/656caff10b2fc19ffdb057a5_linkedin.svg"
+                      src="/assets/twitter.png"
                       loading="lazy"
                       alt=""
                       class="navigation-icon"
                     />
-                    <div class="navigation-link-text">LinkedIn</div></a
-                  ><a
-                    href="mailto:robin@listenup.ai?subject=Question%20about%20SoundLine!"
-                    class="navigation-link w-inline-block"
-                    ><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b3d3e4faf7c2d5e4d61a_Chat%2C%20Messages%2C%20Bubble.svg"
-                      loading="lazy"
-                      alt=""
-                      class="navigation-icon"
-                    />
-                    <div class="navigation-link-text">Contact us</div></a
+                    <div class="navigation-link-text">Twitter</div></a
                   ><a
                     href="privacy-policy"
                     target="_blank"
@@ -2144,18 +2114,7 @@
                       class="navigation-icon"
                     />
                     <div class="navigation-link-text">Privacy Policy</div></a
-                  ><a
-                    href="terms"
-                    target="_blank"
-                    class="navigation-link-footer w-inline-block"
-                    ><img
-                      src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg"
-                      loading="lazy"
-                      alt=""
-                      class="navigation-icon"
-                    />
-                    <div class="navigation-link-text">Terms</div></a
-                  >
+                  ><a href="terms" target="_blank" class="navigation-link-footer w-inline-block"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg" loading="lazy" alt="" class="navigation-icon"/><div class="navigation-link-text">Terms</div></a><a href="https://github.com/soundlinedev" target="_blank" class="navigation-link-footer w-inline-block"><img src="/assets/github.svg" loading="lazy" alt="" class="navigation-icon"> <div class="navigation-link-text">Github</div> </a>
                 </div>
               </div>
             </div>
