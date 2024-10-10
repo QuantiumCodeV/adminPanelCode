@@ -682,7 +682,7 @@
                   transform: translate3d(0, -20px, 0) scale3d(1, 1, 1)
                     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                 "
-                href="#"
+                href="{{ route('login') }}"
                 class="yellow-cta w-inline-block"
                 ><div class="_16-bold">
                   Get started <span class="text-span-5">- it&#x27;s free</span>

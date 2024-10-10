@@ -1145,7 +1145,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                 Use the native integrations to import them automatically or
                                 import manually via a CSV.</p>
                               <div class="pb-2 w-full flex items-center justify-start">
-                                <button type="button"
+                                <button type="button" onclick="window.location.href='{{ route('inbox') }}'"
                                   class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                                   tabindex="0" style="transform: none">
                                   <h4>Import your first feedback</h4>
@@ -1215,7 +1215,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                 valuable parts. This will create an insight. You will find all your insights in its tab.
                               </p>
                               <div class="pb-2 w-full flex items-center justify-start">
-                                <button type="button"
+                                <button type="button" onclick="window.location.href='{{ route('inbox') }}'"
                                   class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                                   tabindex="0" style="transform: none">
                                   <h4>Create your first insight</h4>
@@ -1287,7 +1287,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                 forget about the AI translator!
                               </p>
                               <div class="pb-2 w-full flex items-center justify-start">
-                                <button type="button"
+                                <button type="button" onclick="window.location.href='{{ route('inbox') }}'"
                                   class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                                   tabindex="0" style="transform: none">
                                   <h4>Create your first pattern</h4>
@@ -1358,7 +1358,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                 solving and share the pattern with a friend
                               </p>
                               <div class="pb-2 w-full flex items-center justify-start">
-                                <button type="button"
+                                <button type="button" onclick="window.location.href='{{ route('inbox') }}'"
                                   class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                                   tabindex="0" style="transform: none">
                                   <h4>Share a pattern</h4>
@@ -1428,7 +1428,7 @@ right: -15px;" src="{{ asset("assets/star.png")}}" class="starAnimation" alt="">
                                 functionality on the website and in the SoundLine app!
                               </p>
                               <div class="pb-2 w-full flex items-center justify-start">
-                                <button type="button"
+                                <button type="button" onclick="window.location.href='{{ route('friends') }}'"
                                   class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-3 py-2 bg-secondary-300 border-[2px] border-neutral-700 shadow-smoothxl opacity-100"
                                   tabindex="0" style="transform: none">
                                   <h4>Invite your friends</h4>

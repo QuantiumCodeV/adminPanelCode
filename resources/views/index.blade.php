@@ -489,7 +489,7 @@
         </div>
         <div class="div-block-99">
           <div class="div-block-159">
-            <a data-w-id="3e1194d8-951a-1f30-7470-7d7fa88074ef" style="
+            <a data-w-id="3e1194d8-951a-1f30-7470-7d7fa88074ef"  style="
                   opacity: 0;
                   -webkit-transform: translate3d(0, -20px, 0) scale3d(1, 1, 1)
                     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
@@ -499,7 +499,7 @@
                     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                   transform: translate3d(0, -20px, 0) scale3d(1, 1, 1)
                     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                " href="#" class="yellow-cta w-inline-block">
+                " href="{{ route('login') }}" class="yellow-cta w-inline-block">
               <div class="_16-bold">
                 Get started <span class="text-span-5">- it&#x27;s free</span>
               </div>
