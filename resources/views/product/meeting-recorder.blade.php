@@ -47,13 +47,13 @@
     });
   </script>
   <script type="text/javascript">
-    !(function (o, c) {
+    !(function(o, c) {
       var n = c.documentElement,
         t = " w-mod-";
       (n.className += t + "js"),
-        ("ontouchstart" in o ||
-          (o.DocumentTouch && c instanceof DocumentTouch)) &&
-        (n.className += t + "touch");
+      ("ontouchstart" in o ||
+        (o.DocumentTouch && c instanceof DocumentTouch)) &&
+      (n.className += t + "touch");
     })(window, document);
   </script>
   <link href="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/63558f9ff9e1cc03ead6aea4_32.png"
@@ -64,17 +64,15 @@
   <!-- Plausible Analytics -->
   <script defer data-domain="listenup.ai" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
   <script>
-    var toTag = [
-      {
-        elementId: "copy-to-figma",
-        classes: "plausible-event-name=Copy+To+Figma",
-      },
-    ];
+    var toTag = [{
+      elementId: "copy-to-figma",
+      classes: "plausible-event-name=Copy+To+Figma",
+    }, ];
 
-    document.addEventListener("DOMContentLoaded", function (_e) {
-      toTag.forEach(function (tagObject) {
+    document.addEventListener("DOMContentLoaded", function(_e) {
+      toTag.forEach(function(tagObject) {
         var element = document.getElementById(tagObject.elementId);
-        tagObject.classes.split(" ").forEach(function (className) {
+        tagObject.classes.split(" ").forEach(function(className) {
           if (element) {
             element.classList.add(className);
           }
@@ -317,13 +315,13 @@
           <h1 class="home-h1-recorder">SoundLine AI project</h1>
         </div>
         <div class="recorder-hero-description">
-        A transparent open source project with all its data.
+          A transparent open source project with all its data.
         </div>
         <div class="div-block-99">
           <a href="/login"
             target="_blank" class="yellow-cta w-inline-block">
             <div class="_16-bold">
-            GitHub<span class="text-span-5">- go over</span>
+              GitHub<span class="text-span-5">- go over</span>
             </div>
             <img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654aa5379216bde4e6c4ea1c_arrow.svg"
               loading="lazy" alt="" />
@@ -333,43 +331,43 @@
       <div class="section-wrapper">
         <div class="div-block-127">
           <img
-          src="{{ asset('assets/img_custom_use_cases_1.png') }}" class="image-46" />
+            src="{{ asset('assets/img_custom_use_cases_1.png') }}" class="image-46" />
         </div>
       </div>
-      
+
       <div class="usecase-wrapper">
         <div class="usecase-section-wrapper">
           <h1 class="chrome-ext-title">Access all recordings in one place</h1>
           <div class="usecase-image-wrapper">
             <img
-            src="{{ asset('assets/img_custom_use_cases_2.png') }}" class="normal-usecase-img" />
+              src="{{ asset('assets/img_custom_use_cases_2.png') }}" class="normal-usecase-img" />
           </div>
         </div>
         <div class="usecase-section-wrapper">
           <h1 class="chrome-ext-title">Let AI do the manual work</h1>
           <div class="usecase-image-wrapper">
             <img
-            src="{{ asset('assets/img_custom_use_cases_3.png') }}" class="normal-usecase-img" />
+              src="{{ asset('assets/img_custom_use_cases_3.png') }}" class="normal-usecase-img" />
           </div>
         </div>
         <div class="usecase-section-wrapper">
           <h1 class="chrome-ext-title">Highlight to create user insights</h1>
           <div class="usecase-image-wrapper">
             <img
-            src="{{ asset('assets/img_custom_use_cases_4.png') }}" class="normal-usecase-img" />
+              src="{{ asset('assets/img_custom_use_cases_4.png') }}" class="normal-usecase-img" />
           </div>
         </div>
         <div class="usecase-section-wrapper">
           <h1 class="chrome-ext-title">Create patterns of user insights</h1>
           <div class="usecase-image-wrapper">
             <img
-            src="{{ asset('assets/img_custom_use_cases_5.png') }}" class="normal-usecase-img" />
+              src="{{ asset('assets/img_custom_use_cases_5.png') }}" class="normal-usecase-img" />
           </div>
         </div>
         <div class="usecase-section-wrapper">
           <h1 class="chrome-ext-title">Share to align your team</h1>
           <img
-          src="{{ asset('assets/img_custom_use_cases_6.png') }}" class="normal-usecase-img" />
+            src="{{ asset('assets/img_custom_use_cases_6.png') }}" class="normal-usecase-img" />
         </div>
       </div>
       <div class="qna-wrapper">
@@ -387,7 +385,7 @@
             </div>
             <div class="faq-answer">
               <div class="faq_answer">
-                 Yes! SoundLine is an open source project that supports a large number of people. You can get acquainted
+                Yes! SoundLine is an open source project that supports a large number of people. You can get acquainted
                 with all the internal functionality and all the code by clicking on <a href="https://github.com/soundlinedev/soundline">this link</a>.
               </div>
             </div>
@@ -615,7 +613,11 @@
                       <div class="navigation-link-text">
                         Privacy Policy
                       </div>
-                    </a><a href="/terms" target="_blank" class="navigation-link-footer w-inline-block"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg" loading="lazy" alt="" class="navigation-icon"/><div class="navigation-link-text">Terms</div></a><a href="https://github.com/soundlinedev" target="_blank" class="navigation-link-footer w-inline-block"><img src="/assets/github.svg" loading="lazy" alt="" class="navigation-icon"> <div class="navigation-link-text">Github</div> </a>
+                    </a><a href="/terms" target="_blank" class="navigation-link-footer w-inline-block"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg" loading="lazy" alt="" class="navigation-icon" />
+                      <div class="navigation-link-text">Terms</div>
+                    </a><a href="https://github.com/soundlinedev" target="_blank" class="navigation-link-footer w-inline-block"><img src="/assets/github.svg" loading="lazy" alt="" class="navigation-icon">
+                      <div class="navigation-link-text">Github</div>
+                    </a>
                   </div>
                 </div>
               </div>
