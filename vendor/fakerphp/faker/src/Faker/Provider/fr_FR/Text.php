@@ -3244,7 +3244,7 @@ coeur, s'écartent, il me semble, du vrai but de l'Art. Il est si
 doux, parmi les désenchantements de la vie, de pouvoir se reporter
 en idée sur de nobles caractères, des affections pures et des
 tableaux de bonheur. Quant à moi, vivant ici, loin du monde, c'est
-ma seule distraction; mais Yonville offre si peu de ressources!
+ma seule distraction; mais Yonville offre si peu de Resources!
 
 -- Comme Tostes, sans doute, reprit Emma; aussi j'étais toujours
 abonnée à un cabinet de lecture.
@@ -12039,7 +12039,7 @@ idoles: la dorure en reste aux mains.
 
 Ils en vinrent à parler plus souvent de choses indifférentes à
 leur amour; et, dans les lettres qu'Emma lui envoyait, il était
-question de fleurs, de vers, de la lune et des étoiles, ressources
+question de fleurs, de vers, de la lune et des étoiles, Resources
 naïves d'une passion affaiblie, qui essayait de s'aviver à tous
 les secours extérieurs. Elle se promettait continuellement, pour
 son prochain voyage, une félicité profonde; puis elle s'avouait ne

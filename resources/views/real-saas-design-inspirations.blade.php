@@ -5354,7 +5354,7 @@
               </div>
               <div class="div-block-69">
                 <div class="footer-container">
-                  <div class="footer-link-title">Ressources</div>
+                  <div class="footer-link-title">Resources</div>
                   <a
                     href="product-discovery-bible/start-here/introduction"
                     target="_blank"
@@ -5484,7 +5484,7 @@
                       class="navigation-icon"
                     />
                     <div class="navigation-link-text">Privacy Policy</div></a
-                  ><a href="terms" target="_blank" class="navigation-link-footer w-inline-block"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg" loading="lazy" alt="" class="navigation-icon"/><div class="navigation-link-text">Terms</div></a><a href="https://github.com/soundlinedev" target="_blank" class="navigation-link-footer w-inline-block"><img src="/assets/github.svg" loading="lazy" alt="" class="navigation-icon"> <div class="navigation-link-text">Github</div> </a>
+                  ><a href="/terms" target="_blank" class="navigation-link-footer w-inline-block"><img src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/66250379c598beee7b5ef6ac_Vector.svg" loading="lazy" alt="" class="navigation-icon"/><div class="navigation-link-text">Terms</div></a><a href="https://github.com/soundlinedev" target="_blank" class="navigation-link-footer w-inline-block"><img src="/assets/github.svg" loading="lazy" alt="" class="navigation-icon"> <div class="navigation-link-text">Github</div> </a>
                 </div>
               </div>
             </div>

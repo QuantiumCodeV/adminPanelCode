@@ -341,7 +341,7 @@
                 <img
                   src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6623ff3a50414800d0927010_Vector.svg"
                   loading="lazy" alt="" class="navigation-icon" />
-                <div class="navigation-link-text">Ressources</div>
+                <div class="navigation-link-text">Resources</div>
                 <div class="icon w-icon-dropdown-toggle"></div>
               </div>
               <nav class="navigation-dropdown-list w-dropdown-list">
@@ -2600,7 +2600,7 @@
               </div>
               <div class="div-block-69">
                 <div class="footer-container">
-                  <div class="footer-link-title">Ressources</div>
+                  <div class="footer-link-title">Resources</div>
                   <a href="product-discovery-bible/start-here/introduction" target="_blank"
                     class="navigation-link-footer w-inline-block"><img
                       src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/654fbadddd598ef6fc073746_Vector.svg"

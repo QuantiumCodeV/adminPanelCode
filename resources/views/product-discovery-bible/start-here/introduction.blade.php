@@ -374,7 +374,7 @@
             <p>
               A book that takes a firm stance, that won&#x27;t delve too much
               into details, yet will stay very actionable and avoid being too
-              theoritical. So, we also try to recommend other ressources to dig
+              theoritical. So, we also try to recommend other Resources to dig
               specific topics deeper.
             </p>
             <figure
