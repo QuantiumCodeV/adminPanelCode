@@ -302,8 +302,7 @@
                                         } else {
                                             emailInput.classList.remove("border-red-500");
                                             $.ajax({
-                                                url: "{{ route("
-                                                api.user.change_login ") }}",
+                                                url: "{{ route('api.user.change_login') }}",
                                                 method: "POST",
                                                 data: {
 
