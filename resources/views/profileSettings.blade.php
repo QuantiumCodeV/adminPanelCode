@@ -130,8 +130,8 @@
     role="dialog" aria-describedby="radix-:ru:" aria-labelledby="radix-:rt:" data-state="open" tabindex="-1"
     style="z-index: 200; opacity: 1; transform: none; pointer-events: auto;">
     <div class="w-full h-full flex">
-     
-    
+
+
         <section class="w-full flex flex-col gap-4  overflow-y-auto">
             <div class="h-full w-full overflow-y-auto">
                 <div class="h-full w-full px-10 py-5">
@@ -191,132 +191,108 @@
                                 <div style="transform-origin: center center; perspective: 500px; transform: none;">
                                     <input
                                         class="px-2 py-2 rounded transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal bg-neutral-50 border-1 border-neutral-400 w-60 p focus:outline-primary-500 overflow-hidden text-ellipsis-clip"
-                                        type="text" placeholder="First name" value="{{auth()->user()->name    }}" id="name">
-                                    <script>
-                                        document.addEventListener("DOMContentLoaded", function() {
-                                            const nameInput = document.getElementById("name");
-                                            nameInput.addEventListener("change", function() {
-                                                const name = nameInput.value;
-                                                if (name.length < 1) {
-                                                    nameInput.classList.add("border-red-500");
-                                                } else {
-                                                    nameInput.classList.remove("border-red-500");
-                                                    $.ajax({
-                                                        url: "{{ route('api.user.change_name') }}",
-                                                        method: "POST",
-                                                        data: {
-                                                            name: name,
-                                                            _token: "{{ csrf_token() }}",
-                                                        },
-                                                        success: function(response) {
-                                                            console.log(response)
-                                                        },
-                                                        error: function(error) {
-                                                            console.error("Error changing name:", error);
-                                                        }
-                                                    });
-                                                }
-                                            });
-                                        });
-                                    </script>
+                                        type="text" placeholder="First name" value="{{auth()->user()->name}}" id="name">
                                 </div>
                             </div>
                             <div class="flex flex-col gap-1">
                                 <div style="transform-origin: center center; perspective: 500px; transform: none;">
                                     <input
                                         class="px-2 py-2 rounded transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal bg-neutral-50 border-1 border-neutral-400 w-60 p focus:outline-primary-500 overflow-hidden text-ellipsis-clip"
-                                        type="text" placeholder="Last name" value="{{auth()->user()->subname    }}"
+                                        type="text" placeholder="Last name" value="{{auth()->user()->subname}}"
                                         id="subname">
                                 </div>
-                                <script>
-                                    document.addEventListener("DOMContentLoaded", function() {
-                                        const subnameInput = document.getElementById("subname");
-                                        subnameInput.addEventListener("change", function() {
-                                            const subname = subnameInput.value;
-                                            if (subname.length < 1) {
-                                                subnameInput.classList.add("border-red-500");
-                                            } else {
-                                                subnameInput.classList.remove("border-red-500");
-                                                $.ajax({
-                                                    url: "{{ route('api.user.change_subname') }}",
-                                                    method: "POST",
-                                                    data: {
-                                                        subname: subname,
-                                                        _token: "{{ csrf_token() }}",
-                                                    },
-                                                    success: function(response) {
-                                                        console.log(response)
-                                                    },
-                                                    error: function(error) {
-                                                        console.error("Error changing subname:", error);
-                                                    }
-                                                });
-                                            }
-                                        });
-                                    });
-                                </script>
                             </div>
                         </div>
                         <p class="text-small">This is the name all your team members will see. Choose it wisely.</p>
                         <h3 class="mt-4">Login</h3>
                         <div class="flex flex-col gap-2">
                             <div class="relative">
-
                                 <div class="flex flex-col gap-1">
                                     <div style="transform-origin: center center; perspective: 500px; transform: none;">
                                         <input
                                             class="px-2 py-2 rounded transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal bg-neutral-50 border-1 border-neutral-400 w-[25rem] p focus:outline-primary-500 overflow-hidden text-ellipsis-clip"
                                             type="email" placeholder="example@gmail.com" id="email" name="email"
-                                            value="{{auth()->user()->login    }}">
+                                            value="{{auth()->user()->login}}">
                                     </div>
                                 </div>
                             </div>
-                            <script>
-                                document.addEventListener("DOMContentLoaded", function() {
-                                    const emailInput = document.getElementById("email");
-                                    emailInput.addEventListener("change", function() {
-                                        const email = emailInput.value;
-                                        if (email.length < 1) {
-                                            emailInput.classList.add("border-red-500");
-
-                                        } else {
-                                            emailInput.classList.remove("border-red-500");
-                                            $.ajax({
-                                                url: "{{ route('api.user.change_login') }}",
-                                                method: "POST",
-                                                data: {
-
-                                                    login: email,
-                                                    _token: "{{ csrf_token() }}",
-                                                },
-                                                success: function(response) {
-                                                    console.log(response)
-                                                },
-                                                error: function(error) {
-                                                    console.error("Error checking email:", error);
-                                                }
-                                            });
-                                        }
-                                    });
-                                });
-                            </script>
-                            <p role="alert" class="text-danger-500 pt-1 pl-1 text-transparent"> </p>
+                            <p role="alert" class="text-danger-500 pt-1 pl-1 text-transparent" id="errorMessage"></p>
                             <div class="relative">
-                                <div class="absolute right-0 -top-[2.5px]"><button
-                                        class="flex items-center font-bold rounded text-base font-bold px-3 py-3"
-                                        tabindex="0" style="transform: none; transform-origin: 50% 50% 0px;">
-                                        <h5>Change password</h5>
-                                    </button></div>
                                 <div class="flex flex-col gap-1">
                                     <div style="transform-origin: center center; perspective: 500px; transform: none;">
                                         <input
                                             class="px-2 py-2 rounded transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal bg-neutral-50 border-1 border-neutral-400 w-[25rem] p focus:outline-primary-500 overflow-hidden text-ellipsis-clip opacity-70"
-                                            disabled="" type="password" placeholder="Password" value="password123">
+                                            type="password" placeholder="Password" value="" id="password">
                                     </div>
                                 </div>
                             </div>
+                            <div>
+                                <button id="saveButton" class="flex items-center justify-center gap-2 rounded font-medium leading-4 whitespace-nowrap overflow-hidden text-overflow-ellipsis w-auto min-w-0 min-h-0 select-none px-2 py-1 bg-neutral-200 border-1 border-neutral-400 opacity-100 cursor-pointer" style="padding: 0.5rem 3rem;">
+                                    <h5 class="text-neutral-600">Save</h5>
+                                </button>
+                            </div>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    const saveButton = document.getElementById("saveButton");
+                                    const nameInput = document.getElementById("name");
+                                    const subnameInput = document.getElementById("subname");
+                                    const emailInput = document.getElementById("email");
+                                    const passwordInput = document.getElementById("password");
+                                    const errorMessage = document.getElementById("errorMessage");
+
+                                    saveButton.addEventListener("click", function() {
+                                        const name = nameInput.value;
+                                        const subname = subnameInput.value;
+                                        const email = emailInput.value;
+                                        const password = passwordInput.value;
+
+                                        if (name.length < 1 || subname.length < 1 || email.length < 1) {
+                                            errorMessage.textContent = "Пожалуйста, заполните все поля";
+                                            errorMessage.classList.remove("text-transparent");
+                                            return;
+                                        }
+                                        if (password.length < 5 && password.length > 0) {
+                                            errorMessage.textContent = "Password must be at least 5 characters long";
+                                            errorMessage.classList.remove("text-transparent");
+                                            return;
+                                        }
+                                        fetch("{{ route('api.user.change_info') }}", {
+                                                method: "POST",
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                    "X-CSRF-TOKEN": "{{ csrf_token() }}"
+                                                },
+                                                body: JSON.stringify({
+                                                    name: name,
+                                                    subname: subname,
+                                                    login: email,
+                                                    password: password
+                                                })
+                                            })
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (data.message === "success") {
+                                                    errorMessage.textContent = "Data successfully updated";
+                                                    errorMessage.classList.remove("text-danger-500");
+                                                    errorMessage.classList.add("text-success-500");
+                                                    errorMessage.classList.remove("text-transparent");
+                                                } else {
+                                                    errorMessage.textContent = "Error updating data";
+                                                    errorMessage.classList.add("text-danger-500");
+                                                    errorMessage.classList.remove("text-transparent");
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error("Error:", error);
+                                                errorMessage.textContent = "An error occurred while sending the request";
+                                                errorMessage.classList.add("text-danger-500");
+                                                errorMessage.classList.remove("text-transparent");
+                                            });
+                                    });
+                                });
+                            </script>
                         </div>
-                        <div class="mt-16 flex flex-col gap-2 pb-20 w-full">
+                        <div class="mt-16 flex flex-col gap-2  w-full">
                             <h3>Danger zone</h3>
                             <section id="deleteButton"
                                 class="bg-danger-100 py-2 px-4 rounded flex items-center justify-center gap-2 w-fit hover:cursor-cool-clickable disabled:cursor-cool-normal">
@@ -333,6 +309,7 @@
                                 <h5 class="text-danger-500">Delete my account - All your data will be lost for ever</h5>
                             </section>
                         </div>
+
                     </section>
                 </div>
             </div>

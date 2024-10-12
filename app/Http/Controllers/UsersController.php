@@ -151,7 +151,7 @@ class UsersController extends Controller
     }
 
 
-    public function change_subname(Request $request)
+public function change_subname(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'subname' => 'required',
@@ -163,6 +163,31 @@ class UsersController extends Controller
 
         $user = Auth::user();
         $user->subname = $request->input('subname');
+        $user->save();
+
+        return response()->json(['message' => 'success', 'user' => $user]);
+    }
+
+    public function changeInfo(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'login' => 'required|unique:users,login,' . Auth::id(),
+            'name' => 'required',
+            'subname' => 'required',
+            'password' => 'min:5|nullable',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
+        }
+
+        $user = Auth::user();
+        $user->login = $request->input('login');
+        $user->name = $request->input('name');
+        $user->subname = $request->input('subname');
+        if ($request->input('password')) {
+            $user->password = Hash::make($request->input('password'));
+        }
         $user->save();
 
         return response()->json(['message' => 'success', 'user' => $user]);
