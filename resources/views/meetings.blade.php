@@ -3195,8 +3195,15 @@
                         <div class="flex items-center w-full overflow-hidden" style="max-width: 475.094px;">
                           <div contenteditable="true" translate="no"
                             class="tiptap ProseMirror z-0 antialiased h-full w-full" tabindex="0">
-                            <p class="p text-base is-empty is-editor-empty" data-placeholder="Ask away..."><br
+                            <p id="chatInput" class="p text-base is-empty is-editor-empty" data-placeholder="Ask away..."><br
                                 class="ProseMirror-trailingBreak"></p>
+                                <script>
+                                  var chatInput = document.getElementById("chatInput")
+
+                                  chatInput.addEventListener("input", function () {
+                                    console.log(chatInput.innerText)
+                                  })
+                                </script>
                           </div>
                         </div>
                       </div>
