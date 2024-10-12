@@ -3205,7 +3205,11 @@
 
                             chatInput.addEventListener("input", function () {
                               var chatBlock = document.getElementById("chatBlock")
-                              chatBlock.innerText = chatInput.innerText
+                              if (chatInput.innerText == "") {
+                                chatBlock.classList.add("is-editor-empty")
+                              } else {
+                                chatBlock.classList.remove("is-editor-empty")
+                              }
                             })
                           </script>
                         </div>
