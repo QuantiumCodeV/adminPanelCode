@@ -12,7 +12,7 @@
   <title>Settings</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="./favicon.ico" />
+  <link rel="shortcut icon" href="{{ asset("assets/favicon.ico")  }}" />
 
   <!-- Font -->
   <link

@@ -17,7 +17,7 @@
   <link
     rel="icon"
     type="image/ico"
-    href="https://app.listenup.ai/favicon.ico" />
+    href="{{ asset("assets/favicon.ico")  }}" />
   <title>Welcome |&nbsp;SoundLine!</title>
   <script>
     try {
