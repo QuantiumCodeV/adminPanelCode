@@ -3206,7 +3206,8 @@
                             chatInput.addEventListener("input", function () {
                               var chatBlock = document.getElementById("chatBlock")
                               if (chatInput.innerText == "") {
-                                chatBlock.classList.add("is-editor-empty")
+                                chatInput.innerHTML = `<p id="chatBlock" class="p text-base is-empty is-editor-empty" data-placeholder="Ask away..."><br
+                                class="ProseMirror-trailingBreak"></p>`;
                               } else {
                                 chatBlock.classList.remove("is-editor-empty")
                               }
