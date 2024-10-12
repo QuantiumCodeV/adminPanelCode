@@ -3195,7 +3195,7 @@
                         <div class="flex items-center w-full overflow-hidden" style="max-width: 475.094px;">
                           <div contenteditable="true" id="chatInput" translate="no"
                             class="tiptap ProseMirror z-0 antialiased h-full w-full" tabindex="0">
-                            <p  class="p text-base is-empty is-editor-empty" data-placeholder="Ask away..."><br
+                            <p id="chatBlock" class="p text-base is-empty is-editor-empty" data-placeholder="Ask away..."><br
                                 class="ProseMirror-trailingBreak"></p>
 
                           </div>
@@ -3204,7 +3204,8 @@
 
 
                             chatInput.addEventListener("input", function () {
-                              console.log(chatInput.innerText)
+                              var chatBlock = document.getElementById("chatBlock")
+                              chatBlock.innerText = chatInput.innerText
                             })
                           </script>
                         </div>
