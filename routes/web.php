@@ -156,6 +156,10 @@ Route::prefix("/api")->group(function () {
     });
 });
 
+Route::get('/product-discovery-bible/start-here', function () {
+    return view('product-discovery-bible.start-here.introduction');
+})->name('product-discovery-bible.start-here');
+
 Route::post("/send/message", [ChatController::class, "send"])->name("messages.store");
 Route::post("/get/messages", [ChatController::class, "get"])->name("messages.index");
 Route::post("/mark/as/read", [ChatController::class, "markAsRead"])->name("messages.markAsRead");

@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div role="menuitem" onclick="window.location.href='{{  route('user.logout')  }}'"
+            <div role="menuitem" onclick="window.location.href='{{  route('product-discovery-bible.start-here')  }}'"
                 class="hover:cursor-cool-clickable flex select-none items-center justify-between gap-2 rounded px-2 py-3 outline-none hover:bg-primary-300 focus:bg-primary-300 transition-colors"
                 tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
                 <div class="flex gap-2 items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
