@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div role="group" >
+        <div role="group">
             <div role="separator" aria-orientation="horizontal"
                 class="h-[1px] bg-neutral-300 m-1 rounded-full mx-auto w-[87%]"></div>
             <div role="menuitem" onclick="openSettings()"
@@ -125,7 +125,7 @@
         </div>
     </div>
 </div>
-<div style="display:none; z-index:999999" id="modalSettings"
+<div style="display:none; z-index:999999; max-width:40rem !important;" id="modalSettings"
     class="focus:outline-none rounded m-auto fixed inset-x-0 inset-y-0 flex items-center absolute bg-neutral-100 overflow-hidden min-w-[30rem] max-w-[80rem] h-[90%] rounded-2xl p-0"
     role="dialog" aria-describedby="radix-:ru:" aria-labelledby="radix-:rt:" data-state="open" tabindex="-1"
     style="z-index: 200; opacity: 1; transform: none; pointer-events: auto;">
@@ -171,8 +171,8 @@
 
                             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                             <script>
-                                $(document).ready(function () {
-                                    $("#uploadFile").on("change", function () {
+                                $(document).ready(function() {
+                                    $("#uploadFile").on("change", function() {
                                         var formData = new FormData();
                                         formData.append("file", $(this)[0].files[0]);
                                         formData.append("user_id", "{{ auth()->user()->id }}");
@@ -183,7 +183,7 @@
                                             data: formData,
                                             contentType: false,
                                             processData: false,
-                                            success: function (jsonResponse) {
+                                            success: function(jsonResponse) {
                                                 console.log(jsonResponse)
                                                 try {
                                                     if (jsonResponse.message == "success") {
@@ -197,7 +197,7 @@
                                                     alert("Error parsing response: " + e);
                                                 }
                                             },
-                                            error: function (jqXHR, textStatus, errorThrown) {
+                                            error: function(jqXHR, textStatus, errorThrown) {
                                                 alert("Error upload photo: " + textStatus);
                                             },
                                         });
@@ -213,14 +213,13 @@
                                         class="px-2 py-2 rounded transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal bg-neutral-50 border-1 border-neutral-400 w-60 p focus:outline-primary-500 overflow-hidden text-ellipsis-clip"
                                         type="text" placeholder="First name" value="{{auth()->user()->name    }}" id="name">
                                     <script>
-                                        document.addEventListener("DOMContentLoaded", function () {
+                                        document.addEventListener("DOMContentLoaded", function() {
                                             const nameInput = document.getElementById("name");
-                                            nameInput.addEventListener("change", function () {
+                                            nameInput.addEventListener("change", function() {
                                                 const name = nameInput.value;
                                                 if (name.length < 1) {
                                                     nameInput.classList.add("border-red-500");
-                                                }
-                                                else {
+                                                } else {
                                                     nameInput.classList.remove("border-red-500");
                                                     $.ajax({
                                                         url: "{{ route('api.user.change_name') }}",
@@ -229,17 +228,16 @@
                                                             name: name,
                                                             _token: "{{ csrf_token() }}",
                                                         },
-                                                        success: function (response) {
+                                                        success: function(response) {
                                                             console.log(response)
                                                         },
-                                                        error: function (error) {
+                                                        error: function(error) {
                                                             console.error("Error changing name:", error);
                                                         }
                                                     });
                                                 }
                                             });
                                         });
-
                                     </script>
                                 </div>
                             </div>
@@ -251,14 +249,13 @@
                                         id="subname">
                                 </div>
                                 <script>
-                                    document.addEventListener("DOMContentLoaded", function () {
+                                    document.addEventListener("DOMContentLoaded", function() {
                                         const subnameInput = document.getElementById("subname");
-                                        subnameInput.addEventListener("change", function () {
+                                        subnameInput.addEventListener("change", function() {
                                             const subname = subnameInput.value;
                                             if (subname.length < 1) {
                                                 subnameInput.classList.add("border-red-500");
-                                            }
-                                            else {
+                                            } else {
                                                 subnameInput.classList.remove("border-red-500");
                                                 $.ajax({
                                                     url: "{{ route('api.user.change_subname') }}",
@@ -267,17 +264,16 @@
                                                         subname: subname,
                                                         _token: "{{ csrf_token() }}",
                                                     },
-                                                    success: function (response) {
+                                                    success: function(response) {
                                                         console.log(response)
                                                     },
-                                                    error: function (error) {
+                                                    error: function(error) {
                                                         console.error("Error changing subname:", error);
                                                     }
                                                 });
                                             }
                                         });
                                     });
-
                                 </script>
                             </div>
                         </div>
@@ -296,28 +292,28 @@
                                 </div>
                             </div>
                             <script>
-                                document.addEventListener("DOMContentLoaded", function () {
+                                document.addEventListener("DOMContentLoaded", function() {
                                     const emailInput = document.getElementById("email");
-                                    emailInput.addEventListener("change", function () {
+                                    emailInput.addEventListener("change", function() {
                                         const email = emailInput.value;
                                         if (email.length < 1) {
                                             emailInput.classList.add("border-red-500");
 
-                                        }
-                                        else {
+                                        } else {
                                             emailInput.classList.remove("border-red-500");
                                             $.ajax({
-                                                url: "{{ route("api.user.change_login") }}",
+                                                url: "{{ route("
+                                                api.user.change_login ") }}",
                                                 method: "POST",
                                                 data: {
 
                                                     login: email,
                                                     _token: "{{ csrf_token() }}",
                                                 },
-                                                success: function (response) {
+                                                success: function(response) {
                                                     console.log(response)
                                                 },
-                                                error: function (error) {
+                                                error: function(error) {
                                                     console.error("Error checking email:", error);
                                                 }
                                             });
@@ -436,7 +432,7 @@
         }
     }
 
-    document.addEventListener('click', function (event) {
+    document.addEventListener('click', function(event) {
         const modal = document.getElementById('modalSettings');
         const overlay = document.getElementById('overlay');
         const profileDropdown = document.getElementById('profileDropdown');
@@ -450,14 +446,14 @@
 
     var deleteButton = document.getElementById("deleteButton")
 
-    deleteButton.addEventListener("click", function (e) {
+    deleteButton.addEventListener("click", function(e) {
         e.preventDefault()
         if (!deleteButton.disabled) {
             var notification = document.getElementById("errorNotification");
             notification.classList.remove("hiddenNOTIF");
             notification.classList.add("visibleNOTIF");
             notification.style.zIndex = 4423423423423;
-            setTimeout(function () {
+            setTimeout(function() {
                 notification.classList.remove("visibleNOTIF");
                 notification.classList.add("hiddenNOTIF");
                 notification.style.zIndex = -111111;

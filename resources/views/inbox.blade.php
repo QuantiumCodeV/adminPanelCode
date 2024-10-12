@@ -2213,7 +2213,7 @@
                   </svg>
                   <p class="text-neutral-600">Send us a feedback</p>
                 </div>
-              </button><button aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r15:" tabindex="0" type="button">
+              </button><button id="profile" aria-expanded="false" aria-haspopup="menu" class="flex items-center justify-center w-fit rounded font-medium transition-colors select-none text-neutral-600 px-3 py-2" data-state="closed" id="radix-:r15:" tabindex="0" type="button">
                 <div class="flex flex-row items-center justify-center gap-2 text-left mr-2">
                   <div class="relative">
                     <div class="rounded-full border-neutral-700 relative overflow-hidden flex items-center justify-center bg-primary-500 relative w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] border-1">
