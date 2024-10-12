@@ -2842,10 +2842,9 @@
                 class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between gap-10"
                 id=":r6p:" cmdk-item="" role="option" data-value="extension" aria-selected="true" data-selected="true">
                 <div class="w-full flex items-center gap-2">
-                  <div class=""><img alt="ListenUp! Chrome Extension" loading="lazy" width="20" height="20"
-                      decoding="async" data-nimg="1"
-                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=48&amp;q=75 2x"
-                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_chrome_extension.png&amp;w=48&amp;q=75"
+                  <div class=""><img alt="ListenUp! Chrome Extension"width="20" height="20"
+                     
+                      src="{{ asset("assets/chrome_import_logo.png") }}"
                       style="color: transparent;"></div>
                   <h5>Extension</h5>
                 </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
@@ -2882,10 +2881,8 @@
                 class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
                 id=":r6v:" cmdk-item="" role="option" data-value="slack">
                 <div class="w-full flex items-center gap-2">
-                  <div class=""><img alt="Slack" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
-                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=48&amp;q=75 2x"
-                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fslack_logo.png&amp;w=48&amp;q=75"
-                      style="color: transparent;"></div>
+                  <div class=""><img alt="Slack"  width="20" height="20" 
+                      src="{{ asset("assets/import_slack_logo.png") }}" style="color: transparent;"></div>
                   <h5>Slack</h5>
                 </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
                   class="w-11 h-[24px] flex rounded-full">
@@ -2899,10 +2896,8 @@
                 class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
                 id=":r72:" cmdk-item="" role="option" data-value="intercom">
                 <div class="w-full flex items-center gap-2">
-                  <div class=""><img alt="Intercom" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
-                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=48&amp;q=75 2x"
-                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fintercom_logo.png&amp;w=48&amp;q=75"
-                      style="color: transparent;"></div>
+                  <div class=""><img alt="Intercom" width="20" height="20" 
+                  src="{{ asset("assets/import_intercom_logo.png") }}" style="color: transparent;"></div>
                   <h5>Intercom</h5>
                 </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
                   class="w-11 h-[24px] flex rounded-full">
@@ -2916,10 +2911,8 @@
                 class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
                 id=":r75:" cmdk-item="" role="option" data-value="zendesk">
                 <div class="w-full flex items-center gap-2">
-                  <div class=""><img alt="Zendesk" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
-                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=48&amp;q=75 2x"
-                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fzendesk_logo.png&amp;w=48&amp;q=75"
-                      style="color: transparent;"></div>
+                  <div class=""><img alt="Zendesk" width="20" height="20" 
+                  src="{{ asset("assets/zendesk.png") }}" style="color: transparent;"></div>
                   <h5>Zendesk</h5>
                 </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
                   class="w-11 h-[24px] flex rounded-full">
@@ -2933,10 +2926,8 @@
                 class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
                 id=":r78:" cmdk-item="" role="option" data-value="hubspot">
                 <div class="w-full flex items-center gap-2">
-                  <div class=""><img alt="Hubspot" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
-                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=48&amp;q=75 2x"
-                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fhubspot_logo.png&amp;w=48&amp;q=75"
-                      style="color: transparent;"></div>
+                  <div class=""><img alt="Hubspot" width="20" height="20" decoding="async"
+                  src="{{ asset("assets/hubspot.png") }}" style="color: transparent;"></div>
                   <h5>Hubspot</h5>
                 </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
                   class="w-11 h-[24px] flex rounded-full">
@@ -2950,10 +2941,8 @@
                 class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
                 id=":r7b:" cmdk-item="" role="option" data-value="email">
                 <div class="w-full flex items-center gap-2">
-                  <div class=""><img alt="Email" loading="lazy" width="20" height="20" decoding="async" data-nimg="1"
-                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=48&amp;q=75 2x"
-                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Fgmail_logo.png&amp;w=48&amp;q=75"
-                      style="color: transparent;"></div>
+                  <div class=""><img alt="Email"width="20" height="20" decoding="async"
+                  src="{{ asset("assets/gmail.png") }}" style="color: transparent;"></div>
                   <h5>Email</h5>
                 </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
                   class="w-11 h-[24px] flex rounded-full">
@@ -2967,11 +2956,8 @@
                 class="relative flex select-none items-center rounded px-2 py-3 outline-none aria-selected:bg-primary-300 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 transition-colors hover:cursor-cool-clickable disabled:cursor-cool-normal flex justify-between"
                 id=":r7e:" cmdk-item="" role="option" data-value="api">
                 <div class="w-full flex items-center gap-2">
-                  <div class=""><img alt="ListenUp! API" loading="lazy" width="20" height="20" decoding="async"
-                      data-nimg="1"
-                      srcset="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=48&amp;q=75 2x"
-                      src="/_next/image?url=%2Fimages%2Fimport_sources_logos%2Flistenup_api_logo.png&amp;w=48&amp;q=75"
-                      style="color: transparent;"></div>
+                  <div class=""><img alt="ListenUp! API"  width="20" height="20" 
+                      src="{{ asset("assets/api.png") }}" style="color: transparent;"></div>
                   <h5>API</h5>
                 </div><button type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
                   class="w-11 h-[24px] flex rounded-full">
