@@ -174,6 +174,11 @@ Route::get('/terms', function () {
     return view('terms');
 });
 
+
+Route::get('/privacy-policy', function () {
+
+    return view('privacy-policy');
+});
 // Папка integrations
 
 Route::get('/integrations/api', function () {
