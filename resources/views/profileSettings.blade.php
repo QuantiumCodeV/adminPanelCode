@@ -130,28 +130,8 @@
     role="dialog" aria-describedby="radix-:ru:" aria-labelledby="radix-:rt:" data-state="open" tabindex="-1"
     style="z-index: 200; opacity: 1; transform: none; pointer-events: auto;">
     <div class="w-full h-full flex">
-        <div class=" w-1/4 min-w-[13rem] max-w-[13rem] overflow-y-auto p-4">
-            <div dir="ltr" data-orientation="vertical" class="relative h-fit select-none w-full">
-                <div role="tablist" aria-orientation="vertical" class="rounded flex flex-col w-full gap-1" tabindex="0"
-                    data-orientation="vertical" style="outline: none;">
-                    <div class="px-3 py-2 rounded border-opacity-0 flex items-center z-10 hover:cursor-cool-clickable disabled:cursor-cool-normal w-full px-2 py-3 flex items-center gap-2"
-                        type="button" role="tab" aria-selected="true" aria-controls="radix-:rv:-content-personal"
-                        data-state="active" id="radix-:rv:-trigger-personal" tabindex="-1" data-orientation="vertical"
-                        data-radix-collection-item=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            class="h-6" style="max-width: 50vw; max-height: 50vh;">
-                            <rect width="8" height="8" x="8" y="3" fill="none" class="stroke-1.5 stroke-neutral-700"
-                                stroke-linecap="round" stroke-linejoin="round" rx="4"></rect>
-                            <path fill="none" class="stroke-1.5 stroke-neutral-700" stroke-linecap="round"
-                                stroke-linejoin="round" d="M20 21v-2.429a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4V21"></path>
-                        </svg>
-                        <h5>Personal</h5>
-                    </div>
-
-                </div>
-                <div class="absolute top-0 left-0 rounded bg-neutral-200 border-1 border-neutral-400"
-                    style="width: 171px; height: 48px; transform: none;"></div>
-            </div>
-        </div>
+     
+    
         <section class="w-full flex flex-col gap-4  overflow-y-auto">
             <div class="h-full w-full overflow-y-auto">
                 <div class="h-full w-full px-10 py-5">
