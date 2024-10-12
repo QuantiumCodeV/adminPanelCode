@@ -2647,7 +2647,7 @@
                     class="navigation-link w-inline-block"><img src="/assets/twitter.png" loading="lazy" alt=""
                       class="navigation-icon" />
                     <div class="navigation-link-text">Twitter</div>
-                  </a><a href="privacy-policy" target="_blank" class="navigation-link-footer w-inline-block"><img
+                  </a><a href="/privacy-policy" target="_blank" class="navigation-link-footer w-inline-block"><img
                       src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/662502eaaa3a7203a35e1ab4_Vector.svg"
                       loading="lazy" alt="" class="navigation-icon" />
                     <div class="navigation-link-text">Privacy Policy</div>

@@ -1059,7 +1059,7 @@
                         />
                         <div class="navigation-link-text">Twitter</div></a
                       ><a
-                        href="../privacy-policy"
+                        href="/privacy-policy"
                         target="_blank"
                         class="navigation-link-footer w-inline-block"
                         ><img

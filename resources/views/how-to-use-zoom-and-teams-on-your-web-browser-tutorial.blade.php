@@ -678,7 +678,7 @@
                       class="navigation-link w-inline-block"><img src="/assets/twitter.png" loading="lazy" alt=""
                         class="navigation-icon" />
                       <div class="navigation-link-text">Twitter</div>
-                    </a><a href="privacy-policy" target="_blank" class="navigation-link-footer w-inline-block"><img
+                    </a><a href="/privacy-policy" target="_blank" class="navigation-link-footer w-inline-block"><img
                         src="https://cdn.prod.website-files.com/635584277e62506ebe08fb74/6563b36b182d45f5ba74f0fd_legal-scale.svg"
                         loading="lazy" alt="" class="navigation-icon" />
                       <div class="navigation-link-text">
