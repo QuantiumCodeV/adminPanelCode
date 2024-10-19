@@ -1,0 +1,120 @@
+<?php
+
+namespace App\Http\Service;
+
+use Illuminate\Support\Facades\Http;
+
+class SoundLineApiService
+{
+    private $backendDomain;
+
+    public function __construct()
+    {
+        // Определение домена бекенда в зависимости от окружения
+        $this->backendDomain = config('app.env') === 'production' 
+            ? 'https://api.' . request()->getHost()
+            : 'http://casintymi.com';
+    }
+
+    private function getHeaders($token = null)
+    {
+        $headers = ['Accept' => 'application/json'];
+        if ($token) {
+            $headers['Authorization'] = "Bearer $token";
+        }
+        return $headers;
+    }
+
+    // 1. Регистрация пользователя
+    public function register($data)
+    {
+        return Http::post("{$this->backendDomain}/soundline/register/", $data);
+    }
+
+    // 2. Логин пользователя
+    public function login($data)
+    {
+        return Http::post("{$this->backendDomain}/backend/api/user/token/", $data);
+    }
+
+    // 3. Получение данных профиля пользователя
+    public function getProfile($token)
+    {
+        return Http::withHeaders($this->getHeaders($token))->get("{$this->backendDomain}/soundline/profile/");
+    }
+
+    // 4. Изменение данных профиля пользователя
+    public function updateProfile($token, $data)
+    {
+        return Http::withHeaders($this->getHeaders($token))->patch("{$this->backendDomain}/soundline/profile/", $data);
+    }
+
+    // 5. Удаление профиля
+    public function deleteProfile($token)
+    {
+        return Http::withHeaders($this->getHeaders($token))->delete("{$this->backendDomain}/soundline/profile/");
+    }
+
+    // 6. Получение ссылки на загрузку
+    public function getDownloadLink($token, $code)
+    {
+        return Http::withHeaders($this->getHeaders($token))->get("{$this->backendDomain}/soundline/retreive/$code/");
+    }
+
+    // 7. Получение списка друзей
+    public function getFriends($token)
+    {
+        return Http::withHeaders($this->getHeaders($token))->get("{$this->backendDomain}/soundline/friends/");
+    }
+
+    // 8. Добавление друга
+    public function addFriend($token, $data)
+    {
+        return Http::withHeaders($this->getHeaders($token))->post("{$this->backendDomain}/soundline/friends/", $data);
+    }
+
+    // 9. Принять/Отклонить предложение о добавлении в друзья
+    public function respondToFriendRequest($token, $data)
+    {
+        return Http::withHeaders($this->getHeaders($token))->put("{$this->backendDomain}/soundline/friends/", $data);
+    }
+
+    // 10. Заблокировать/Разблокировать друга
+    public function toggleBlockFriend($token, $data)
+    {
+        return Http::withHeaders($this->getHeaders($token))->patch("{$this->backendDomain}/soundline/friends/", $data);
+    }
+
+    // 11. Удалить друга
+    public function deleteFriend($token, $data)
+    {
+        return Http::withHeaders($this->getHeaders($token))->delete("{$this->backendDomain}/soundline/friends/", $data);
+    }
+
+    // 12. Получить список чатов
+    public function getChats($token)
+    {
+        return Http::withHeaders($this->getHeaders($token))->get("{$this->backendDomain}/soundline/chat/");
+    }
+
+    // 13. Получить сообщения в чате
+    public function getChatMessages($token, $userId)
+    {
+        return Http::withHeaders($this->getHeaders($token))->get("{$this->backendDomain}/soundline/chat/$userId/");
+    }
+
+    // 14. Отправить сообщение
+    public function sendMessage($token, $data)
+    {
+        return Http::withHeaders($this->getHeaders($token))->post("{$this->backendDomain}/soundline/chat/", $data);
+    }
+}
+
+// Комментарии:
+// - Все методы соответствуют описанным API-запросам
+// - Для каждого запроса добавлен соответствующий метод
+// - В конструкторе реализована логика определения домена бекенда
+// - Используется метод getHeaders для добавления токена авторизации
+// - Все запросы отправляются с использованием Guzzle HTTP-клиента (Http фасад Laravel)
+// - Ответы от API не обрабатываются в этом сервисе, это должно происходить в контроллерах
+// - Коды ошибок и успешные ответы должны обрабатываться в контроллерах

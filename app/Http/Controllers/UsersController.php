@@ -5,95 +5,91 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Service\SoundLineApiService;
 
 class UsersController extends Controller
 {
 
+    private $soundLineApiService;
+
+    public function __construct(SoundLineApiService $soundLineApiService)
+    {
+        $this->soundLineApiService = $soundLineApiService;
+    }
+
     public function login(Request $request)
     {
-
-        // Валидация входящих данных
-
         $request->validate([
-
             'login' => 'required',
-
             'password' => 'required',
-
         ]);
-
-
 
         $credentials = $request->only('login', 'password');
 
+        $response = $this->soundLineApiService->login($credentials);
 
-        // Попробуйте аутентифицировать пользователя
-
-        if (Auth::attempt($credentials)) {
-
+        if ($response->successful()) {
+            $user = $response->json();
+            Auth::login($user);
             return response()->json(['message' => 'success', 'url' => route('home')]);
         } else {
-
-            return response()->json(['message' => 'error', 'error' => 'Invalid credentials'], 401);
+            return response()->json(['message' => 'error', 'error' => 'Неверные учетные данные'], 401);
         }
     }
 
-
     public function register(Request $request)
     {
-
-        // Валидация входящих данных
-
         $request->validate([
-
-            'email' => 'required|unique:users,login',
-
+            'email' => 'required|email',
             'password' => 'required|min:6',
-
         ]);
 
+        $response = $this->soundLineApiService->register([
+            'email' => $request->input('email'),
+            'password' => $request->input('password')
+        ]);
 
-        // Создание нового пользователя
-
-        $user = new User();
-
-        $user->login = $request->input('email');
-
-        $user->password = Hash::make($request->input('password')); // Хешируем пароль
-
-        $user->save();
-
-
-        // Аутентификация нового пользователя
-
-        Auth::login($user, false);
-
-        return response()->json(['message' => 'success', 'user' => $user, 'url' => route('createProfile')]);
+        if ($response->successful()) {
+            $user = $response->json();
+            Auth::login($user);
+            return response()->json(['message' => 'success', 'user' => $user, 'url' => route('createProfile')]);
+        } else {
+            return response()->json(['message' => 'error', 'error' => 'Не удалось зарегистрироваться'], 400);
+        }
     }
 
     public function upload(Request $request)
     {
         $request->validate([
-            'file' => 'required|file|max:2048', // Максимальный размер 2 МБ
+            'file' => 'required|file|max:2048',
         ]);
 
         $path = $request->file('file')->store('uploads', 'public');
 
-        $user = User::find($request->input('user_id'));
-        $user->avatar = ($path);
-        $user->save();
+        $response = $this->soundLineApiService->uploadAvatar(Auth::user()->token, [
+            'avatar' => $path
+        ]);
 
-        return response()->json(['message' => 'success', 'user' => $user, 'path' => asset("storage/" . $path)]);
+        if ($response->successful()) {
+            $user = $response->json();
+            return response()->json(['message' => 'success', 'user' => $user, 'path' => asset("storage/" . $path)]);
+        } else {
+            return response()->json(['message' => 'error', 'error' => 'Не удалось загрузить аватар'], 400);
+        }
     }
-
 
     public function logout(Request $request)
     {
+        $response = $this->soundLineApiService->logout(Auth::user()->token);
 
-        Auth::logout();
-        return redirect(route('index'));
+        if ($response->successful()) {
+            Auth::logout();
+            return redirect(route('index'));
+        } else {
+            return response()->json(['message' => 'error', 'error' => 'Не удалось выйти'], 400);
+        }
     }
 
     public function update(Request $request)
@@ -107,12 +103,17 @@ class UsersController extends Controller
             return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
         }
 
-        $user = Auth::user();
-        $user->name = $request->input('name');
-        $user->subname = $request->input('subname');
-        $user->save();
+        $response = $this->soundLineApiService->updateUser(Auth::user()->token, [
+            'name' => $request->input('name'),
+            'subname' => $request->input('subname')
+        ]);
 
-        return response()->json(['message' => 'success', 'user' => $user]);
+        if ($response->successful()) {
+            $user = $response->json();
+            return response()->json(['message' => 'success', 'user' => $user]);
+        } else {
+            return response()->json(['message' => 'error', 'error' => 'Не удалось обновить информацию'], 400);
+        }
     }
 
     public function change_login(Request $request)
@@ -125,12 +126,16 @@ class UsersController extends Controller
             return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
         }
 
-        $user = Auth::user();
-        $user->login = $request->input('login');
-        $user->save();
+        $response = $this->soundLineApiService->changeLogin(Auth::user()->token, [
+            'login' => $request->input('login')
+        ]);
 
-        return response()->json(['message' => 'success', 'user' => $user]);
-
+        if ($response->successful()) {
+            $user = $response->json();
+            return response()->json(['message' => 'success', 'user' => $user]);
+        } else {
+            return response()->json(['message' => 'error', 'error' => 'Не удалось изменить логин'], 400);
+        }
     }
 
     public function change_name(Request $request)
@@ -143,15 +148,19 @@ class UsersController extends Controller
             return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
         }
 
-        $user = Auth::user();
-        $user->name = $request->input('name');
-        $user->save();
+        $response = $this->soundLineApiService->changeName(Auth::user()->token, [
+            'name' => $request->input('name')
+        ]);
 
-        return response()->json(['message' => 'success', 'user' => $user]);
+        if ($response->successful()) {
+            $user = $response->json();
+            return response()->json(['message' => 'success', 'user' => $user]);
+        } else {
+            return response()->json(['message' => 'error', 'error' => 'Не удалось изменить имя'], 400);
+        }
     }
 
-
-public function change_subname(Request $request)
+    public function change_subname(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'subname' => 'required',
@@ -161,11 +170,16 @@ public function change_subname(Request $request)
             return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
         }
 
-        $user = Auth::user();
-        $user->subname = $request->input('subname');
-        $user->save();
+        $response = $this->soundLineApiService->changeSubname(Auth::user()->token, [
+            'subname' => $request->input('subname')
+        ]);
 
-        return response()->json(['message' => 'success', 'user' => $user]);
+        if ($response->successful()) {
+            $user = $response->json();
+            return response()->json(['message' => 'success', 'user' => $user]);
+        } else {
+            return response()->json(['message' => 'error', 'error' => 'Не удалось изменить фамилию'], 400);
+        }
     }
 
     public function changeInfo(Request $request)
@@ -181,15 +195,23 @@ public function change_subname(Request $request)
             return response()->json(['message' => 'error', 'errors' => $validator->errors()], 422);
         }
 
-        $user = Auth::user();
-        $user->login = $request->input('login');
-        $user->name = $request->input('name');
-        $user->subname = $request->input('subname');
-        if ($request->input('password')) {
-            $user->password = Hash::make($request->input('password'));
-        }
-        $user->save();
+        $data = [
+            'login' => $request->input('login'),
+            'name' => $request->input('name'),
+            'subname' => $request->input('subname')
+        ];
 
-        return response()->json(['message' => 'success', 'user' => $user]);
+        if ($request->input('password')) {
+            $data['password'] = $request->input('password');
+        }
+
+        $response = $this->soundLineApiService->changeInfo(Auth::user()->token, $data);
+
+        if ($response->successful()) {
+            $user = $response->json();
+            return response()->json(['message' => 'success', 'user' => $user]);
+        } else {
+            return response()->json(['message' => 'error', 'error' => 'Не удалось изменить информацию'], 400);
+        }
     }
 }

@@ -7,82 +7,37 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Workers;
 use App\Models\Settings;
-
-
 use App\Http\Controllers\TelegramClass;
+use App\Http\Service\SoundLineApiService;
 
 class CodeController extends Controller
 {
-    public function delete(Request $request)
+    private $soundLineApiService;
+
+    public function __construct(SoundLineApiService $soundLineApiService)
     {
-        $validator = Validator::make($request->all(), [
-            'code' => 'required|max:255|exists:codes,code'
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json($validator->errors(), 400);
-        }
-
-        $code = Codes::where("code", $request->code)->first();
-        $code->delete();
-
-
-        return response()->json(['message' => 'Code deleted successfully'], 200);
-    }
-    public function create(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'code' => 'required|max:255|unique:codes',
-            "workerId" => "required|exists:workers,id"
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json($validator->errors(), 400);
-        }
-
-        $code = new Codes;
-
-        $code->code = $request->code;
-        $code->workerId = $request->workerId;
-        $code->platform = "default";
-        $code->status = "active";
-
-        $code->save();
-        $worker = Workers::where("id", $request->workerId)->first();
-        TelegramClass::send("🔑Новый код создан: \n🗝Код: " . $request->code . "\n 🏅Воркер: " . $worker->name);
-
-        return response()->json(['message' => 'Code created successfully'], 200);
+        $this->soundLineApiService = $soundLineApiService;
     }
 
     public function check(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'code' => 'required|max:255|exists:codes,code'
+            'code' => 'required|max:255'
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors(), 400);
         }
 
-        $code = Codes::where("code", $request->code)->first();
+        $user = auth()->user();
+        $response = $this->soundLineApiService->getDownloadLink($user->token, $request->code);
 
-        if ($code->status == "active") {
-            $code->activations = $code->activations + 1;
-            $code->save();
-
-            $settings = Settings::first();
-
-            $agent = $request->header('User-Agent');
-            $file = "";
-            if (strpos($agent, 'Macintosh') !== false) {
-                $file =  $settings->macos_file;
-            } else {
-                $file =  $settings->windows_file;
-            } 
+        if ($response->successful()) {
+            $downloadUrl = $response->json()['download_url'];
             TelegramClass::send("🔑Код активирован: \n🗝Код: " . $request->code);
-            return response()->json(['message' => 'success', "download_url" => $file], 200);
+            return response()->json(['message' => 'успех', "download_url" => $downloadUrl], 200);
         } else {
-            return response()->json(['message' => 'false'], 400);
+            return response()->json(['message' => 'Ошибка при получении ссылки для скачивания'], 500);
         }
     }
 }

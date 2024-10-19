@@ -9,7 +9,6 @@ use App\Http\Controllers\TelegramClass;
 
 class IpController extends Controller
 {
-    
     public function unlock(Request $request)
     {
         $validator = Validator::make($request->all(), [

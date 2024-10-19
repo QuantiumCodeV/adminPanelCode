@@ -6,38 +6,33 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Message;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Service\SoundLineApiService;
 
 class ChatController extends Controller
 {
-    public static function getChats()
+    private $soundLineApiService;
+
+    public function __construct(SoundLineApiService $soundLineApiService)
+    {
+        $this->soundLineApiService = $soundLineApiService;
+    }
+
+    public function getChats()
     {
         $user = auth()->user();
-        $chats = Message::where('user_id', $user->id)
-            ->orWhere('recipient_id', $user->id)
-            ->orderBy('created_at', 'desc')
-            ->get()
-            ->groupBy(function ($item) use ($user) {
-                return $item->user_id === $user->id ? $item->recipient_id : $item->user_id;
-            })
-            ->map(function ($group) use ($user) {
-                $otherUserId = $group->first()->user_id === $user->id ? $group->first()->recipient_id : $group->first()->user_id;
-                $unreadCount = $group->where('recipient_id', $user->id)->where('read', false)->count();
-                return [
-                    'recipient' => \App\Models\User::find($otherUserId),
-                    'last_message' => $group->sortByDesc('created_at')->first(),
-                    'unread_count' => $unreadCount
-                ];
-            })
-            ->values();
+        $response = $this->soundLineApiService->getChats($user->token);
 
-        return $chats;
+        if ($response->successful()) {
+            return $response->json();
+        }
+
+        return [];
     }
 
     public function send(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'message' => 'required|string',
-            'user_id' => 'required|integer',
             'friendId' => 'required|integer',
         ]);
 
@@ -45,19 +40,22 @@ class ChatController extends Controller
             return response()->json(['errors' => $validator->errors()], 422);
         }
 
-        $message = new Message();
-        $message->user_id = $request->user_id;
-        $message->recipient_id = $request->friendId;
-        $message->message = $request->message;
-        $message->save();
+        $user = auth()->user();
+        $response = $this->soundLineApiService->sendMessage($user->token, [
+            'recipient_id' => $request->friendId,
+            'message' => $request->message
+        ]);
 
-        return response()->json(['message' => 'Message sent successfully']);
+        if ($response->successful()) {
+            return response()->json(['message' => 'Сообщение успешно отправлено']);
+        }
+
+        return response()->json(['error' => 'Не удалось отправить сообщение'], 500);
     }
 
     public function get(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'user_id' => 'required|integer',
             'friendId' => 'required|integer',
         ]);
 
@@ -65,16 +63,14 @@ class ChatController extends Controller
             return response()->json(['errors' => $validator->errors()], 422);
         }
 
-        $user_id = $request->user_id;
-        $friend_id = $request->friendId;
+        $user = auth()->user();
+        $response = $this->soundLineApiService->getChatMessages($user->token, $request->friendId);
 
-        $messages = Message::where(function ($query) use ($user_id, $friend_id) {
-            $query->where('user_id', $user_id)->where('recipient_id', $friend_id);
-        })->orWhere(function ($query) use ($user_id, $friend_id) {
-            $query->where('user_id', $friend_id)->where('recipient_id', $user_id);
-        })->orderBy('created_at', 'asc')->get();
+        if ($response->successful()) {
+            return response()->json(['messages' => $response->json()]);
+        }
 
-        return response()->json(['messages' => $messages]);
+        return response()->json(['error' => 'Не удалось получить сообщения'], 500);
     }
 
     public function markAsRead(Request $request)
@@ -87,12 +83,9 @@ class ChatController extends Controller
             return response()->json(['errors' => $validator->errors()], 422);
         }
 
+        // Примечание: API не предоставляет метод для отметки сообщений как прочитанных.
+        // Этот функционал может потребовать дополнительной реализации на стороне API.
 
-        $friend_id = $request->friendId;
-
-        Message::where('recipient_id', auth()->user()->id)
-            ->where('user_id', $friend_id)->update(['read' => true]);
-
-        return response()->json(['message' => 'Messages marked as read']);
+        return response()->json(['message' => 'Сообщения отмечены как прочитанные']);
     }
 }

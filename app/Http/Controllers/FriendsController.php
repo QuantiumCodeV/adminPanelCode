@@ -6,9 +6,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Friends;
+use App\Http\Service\SoundLineApiService;
 
 class FriendsController extends Controller
 {
+
+    private $soundLineApiService;
+
+    public function __construct(SoundLineApiService $soundLineApiService)
+    {
+        $this->soundLineApiService = $soundLineApiService;
+    }
 
     public function add(Request $request)
     {
@@ -16,47 +24,28 @@ class FriendsController extends Controller
             'user_identifier' => 'required|string',
         ]);
 
-        $user = User::where('id', $data['user_identifier'])
-            ->orWhere('login', $data['user_identifier'])
-            ->first();
-
-        if (!$user) {
-            return response()->json(['message' => 'User not found'], 404);
-        }
-        if ($user->id == auth()->id()) {
-            return response()->json(['message' => 'You cannot add yourself as a friend'], 400);
-        }
-
-        $existingFriend = Friends::where(function ($query) use ($user) {
-            $query->where('user_id_first', auth()->id())
-                ->where('user_id_second', $user->id);
-        })->orWhere(function ($query) use ($user) {
-            $query->where('user_id_first', $user->id)
-                ->where('user_id_second', auth()->id());
-        })->first();
-
-        if ($existingFriend) {
-            return response()->json(['message' => 'Friend request already sent or you are already friends'], 400);
-        }
-
-        $friend = Friends::create([
-            'user_id_first' => auth()->id(),
-            'user_id_second' => $user->id,
-            'status' => 'pending',
+        $user = auth()->user();
+        $response = $this->soundLineApiService->addFriend($user->token, [
+            'user_identifier' => $data['user_identifier']
         ]);
 
-        return response()->json(['message' => 'success']);
+        if ($response->successful()) {
+            return response()->json(['message' => 'успех']);
+        }
+
+        return response()->json(['message' => 'Не удалось добавить друга'], 500);
     }
 
-
-    public static function getFriends()
+    public function getFriends()
     {
-        $friends = Friends::where(function ($query) {
-            $query->where('user_id_first', auth()->id())
-                ->orWhere('user_id_second', auth()->id());
-        })->get();
+        $user = auth()->user();
+        $response = $this->soundLineApiService->getFriends($user->token);
 
-        return $friends;
+        if ($response->successful()) {
+            return response()->json(['friends' => $response->json()]);
+        }
+
+        return response()->json(['error' => 'Не удалось получить список друзей'], 500);
     }
 
     public function remove(Request $request)
@@ -65,26 +54,17 @@ class FriendsController extends Controller
             'friend_id' => 'required|string',
         ]);
 
-        // Get the friend request
-        $friend_request = Friends::where(function ($query) use ($data) {
-            $query->where('user_id_first', $data['friend_id'])
-                ->where('user_id_second', auth()->id());
-        })->orWhere(function ($query) use ($data) {
-            $query->where('user_id_first', auth()->id())
-                ->where('user_id_second', $data['friend_id']);
-        })->first();
+        $user = auth()->user();
+        $response = $this->soundLineApiService->deleteFriend($user->token, [
+            'friend_id' => $data['friend_id']
+        ]);
 
-        // Check if the request exists
-        if ($friend_request) {
-            // Update the status
-            $friend_request->delete();
-
-            return response()->json(['message' => 'success']);
-        } else {
-            return response()->json(['message' => 'Friend request not found'], 404);
+        if ($response->successful()) {
+            return response()->json(['message' => 'успех']);
         }
-    }
 
+        return response()->json(['message' => 'Не удалось удалить друга'], 500);
+    }
 
     public function block(Request $request)
     {
@@ -92,25 +72,17 @@ class FriendsController extends Controller
             'friend_id' => 'required|string',
         ]);
 
-        // Get the friend request
-        $friend_request = Friends::where(function ($query) use ($data) {
-            $query->where('user_id_first', $data['friend_id'])
-                ->where('user_id_second', auth()->id());
-        })->orWhere(function ($query) use ($data) {
-            $query->where('user_id_first', auth()->id())
-                ->where('user_id_second', $data['friend_id']);
-        })->first();
+        $user = auth()->user();
+        $response = $this->soundLineApiService->toggleBlockFriend($user->token, [
+            'friend_id' => $data['friend_id'],
+            'action' => 'block'
+        ]);
 
-        // Check if the request exists
-        if ($friend_request) {
-            // Update the status
-            $friend_request->status = 'blocked_to_user_'.auth()->user()->id;
-            $friend_request->save();
-
-            return response()->json(['message' => 'success']);
-        } else {
-            return response()->json(['message' => 'Friend request not found'], 404);
+        if ($response->successful()) {
+            return response()->json(['message' => 'успех']);
         }
+
+        return response()->json(['message' => 'Не удалось заблокировать друга'], 500);
     }
 
     public function accept(Request $request)
@@ -119,41 +91,35 @@ class FriendsController extends Controller
             'friend_id' => 'required|string',
         ]);
 
-        // Get the friend request
-        $friend_request = Friends::where(function ($query) use ($data) {
-            $query->where('user_id_first', $data['friend_id'])
-                ->where('user_id_second', auth()->id());
-        })->orWhere(function ($query) use ($data) {
-            $query->where('user_id_first', auth()->id())
-                ->where('user_id_second', $data['friend_id']);
-        })->first();
+        $user = auth()->user();
+        $response = $this->soundLineApiService->respondToFriendRequest($user->token, [
+            'friend_id' => $data['friend_id'],
+            'action' => 'accept'
+        ]);
 
-        // Check if the request exists
-        if ($friend_request) {
-            // Update the status
-            $friend_request->status = 'friend';
-            $friend_request->save();
-
-            return response()->json(['message' => 'success']);
-        } else {
-            return response()->json(['message' => 'Friend request not found'], 404);
+        if ($response->successful()) {
+            return response()->json(['message' => 'успех']);
         }
-    }
 
+        return response()->json(['message' => 'Не удалось принять запрос на дружбу'], 500);
+    }
 
     public function decline(Request $request)
     {
         $data = $request->validate([
-            'user_id_first' => 'required|string',
-            'user_id_second' => 'required|string',
+            'friend_id' => 'required|string',
         ]);
 
-        \DB::table('friends')
-            ->where('user_id_first', $data['user_id_first'])
-            ->where('user_id_second', $data['user_id_second'])
-            ->where('status', 'pending')
-            ->delete();
+        $user = auth()->user();
+        $response = $this->soundLineApiService->respondToFriendRequest($user->token, [
+            'friend_id' => $data['friend_id'],
+            'action' => 'decline'
+        ]);
 
-        return response()->json(['message' => 'Friend request declined']);
+        if ($response->successful()) {
+            return response()->json(['message' => 'Запрос на дружбу отклонен']);
+        }
+
+        return response()->json(['message' => 'Не удалось отклонить запрос на дружбу'], 500);
     }
 }
